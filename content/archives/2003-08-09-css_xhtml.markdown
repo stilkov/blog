@@ -1,0 +1,11 @@
+---
+layout: post
+title: "CSS & XHTML"
+date: "2003-08-09T00:02:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://www.russellbeattie.com/notebook/1003780.html" title="Russell Beattie Notebook">Russell Beattie</a> has some thoughts on XHTML and CSS - and I agree so much that I can't think of much I would want to add. While I don't care much about XHTML, I think that <em>valid</em> HTML is just so obviously a good idea that there's not much to say against it, and using CSS for layout, especially instead of the huge amount of crap that is the result of laying out pages with tables, is also pretty convincing. <br />
+That said, CSS is not without problems - a recent experiment of mine that led to a great-looking page in Firebird, and looked like crap in IE. But comparing the way <a href="http://www.csszengarden.com/">CSSZenGarden</a>  looks in both browsers, as well as in Safari, should convince even the most hardened pessimist.</p>
+

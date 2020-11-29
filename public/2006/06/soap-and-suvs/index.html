@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2006/06/soap-and-suvs/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>SOAP and SUVs [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>SOAP and SUVs</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">Jun 4, 2006</time></small><p>
+	</header>
+	<section>
+	  <p><a href="http://loekb.blogspot.com/2006/06/soapws-services-are-like-suvs.html">Loek Bakker</a> makes an analogy, likening SOAP to SUVs. </p>
+
+<blockquote>
+<p>Now the good thing about this analogy is that it holds a very clear lesson for when to use it: if you do not need the off-road capabilities or if you never flick the 4WD switch, probably you do not need an SUV. If you do not need the SOAP extension /WS-* possibilities or if you never make clever use of the SOAP header, probably you do not need SOAP services.</p>
+</blockquote>
+
+<p>One might argue, though, that SUVs just create an illusion of being capable of off-road usage &#8230; if I needed one, I&#8217;d rather use a real off-road car than one that just resembles one.</p>
+
+<section class="comments">
+
+<div class="comment" id="comment-916">
+On <a href="#comment-916" title="Permalink to this comment">June  5, 2006 12:12 AM</a>, Steve Loughran
+said:
+<p>I&#8217;d use a full suspension mountain bike and cut up the SUV the moment it got bumpy. While Landrovers can climb and do river crossings nicely, they lack the agility to do technical stuff and their centre of gravity is such that they can flip if you try and traverse the steep stuff.</p>
+
+<p>The only time I&#8217;ve been overtaken by a motor vehicle on an offroad descent was in the french pyrenees, by farmers in an old renault van.</p>
+
+
+<div class="comment" id="comment-917">
+On <a href="#comment-917" title="Permalink to this comment">June  5, 2006  4:37 AM</a>, <a href="http://blogs.msdn.com/mikechampion" title="http://blogs.msdn.com/mikechampion" rel="nofollow">Mike Champion</a>
+said:
+<p>Ahh, but how about the <em>ascent</em> :-)  And how well does your mountain bike keep you dry in the rain?</p>
+
+<p>I kindof like this analogy even if so many people hate it.  Your choice of, uhh, &#8220;transport protocol&#8221; depends on the job at hand.  If it&#8217;s a nice day in those months where it is light at both ends of my commute,  I ride my bike to work.  If not, I take my old Honda.  If it is snowing I take my wife&#8217;s AWD Subaru.  I&#8217;m not going to get into any religious wars about whether the bike or the Subaru are &#8220;better&#8221;, just use the appropriate one for the job at hand.  I know there are bike-afarians who will proudly put on their rain gear and ride every day, and SUV devotees who spend $10 a day on gas  (they might rationalize) just in case  it rains or they have to go off-road.  Basically, they&#8217;re doing one or the other for reasons that have little to do with the pragmatics of how to get to work in reasonable comfort / safety at the lowest price, however, and there&#8217;s not much point in arguing.</p>
+
+<p>Back to web services &#8230; people who <em>do</em> care about the pragmatics and don&#8217;t care about the dogma have a very similar choice between the lightweight, cheap approach that is very good for fair weather requirements (nothing bad happens if messages are lost or intercepted) but more of a challenge for heavy weather requirements (the smelly stuff happens if messages are lost, intercepted, misdirected, etc.).  You can of course put on your rain gear (lots of application-level programming) and make the lightweight solution work, but I suspect that most sensible and successful implementers think, &#8220;hmm, lots of smart people have been thinking about the problems I&#8217;m having for 5 years now and all the big companies implement &#8220;WS-SUV&#8221;.  What I don&#8217;t know is how well either actually succeeds in the real world.</p>
+
+<p>So, for my plug:  Please submit your experiences implementing either BIKEafarianism or WS-SUV as a proposal for a talk at the XML 2006 (Boston, in December)  See <a href="http://2006.xmlconference.org/call-for-participation.html" rel="nofollow" /><a href="http://2006.xmlconference.org/call-for-participation.html" rel="nofollow">http://2006.xmlconference.org/call-for-participation.html</a> I&#8217;m thinking of the Enterprise XML track, but you may wish to go with another.  It would be SO nice to bring some concrete evidence to this permathread.</p>
+
+
+<div class="comment" id="comment-918">
+On <a href="#comment-918" title="Permalink to this comment">June  5, 2006 10:31 AM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>It seems the car of choice for REStafarians is a little different: <a href="http://www.markbaker.ca/2001/04/Z8/" rel="nofollow" /><a href="http://www.markbaker.ca/2001/04/Z8/" rel="nofollow">http://www.markbaker.ca/2001/04/Z8/</a></p>
+
+<p>;-)</p>
+
+
+<div class="comment" id="comment-919">
+On <a href="#comment-919" title="Permalink to this comment">June  6, 2006  3:48 AM</a>, <a href="http://www.fuzzypanic.blogspot.com/" title="http://www.fuzzypanic.blogspot.com/" rel="nofollow">Mike Herrick</a>
+said:
+<p>Mike Champion said: </p>
+
+<p>&#8220;Back to web services … people who do care about the pragmatics and don’t care about the dogma have a very similar choice between the lightweight, cheap approach that is very good for fair weather requirements (nothing bad happens if messages are lost or intercepted) but more of a challenge for heavy weather requirements (the smelly stuff happens if messages are lost, intercepted, misdirected, etc.). &#8220;</p>
+
+<p>Mike, can you please enumerate which specs you are talking about? And cite a couple impls?</p>
+
+<p>And don&#8217;t say WS-RM because that doesn&#8217;t guarantee squat.</p>
+
+<p>Cheers,</p>
+
+<p>Mike</p>
+
+
+<div class="comment" id="comment-920">
+On <a href="#comment-920" title="Permalink to this comment">June  6, 2006  6:37 AM</a>, <a href="http://blogs.msdn.com/mikechampion" title="http://blogs.msdn.com/mikechampion" rel="nofollow">Mike Champion</a>
+said:
+<p>I&#8217;m thinking of the specs that are supported both by Microsoft WCF (&#8220;Indigo&#8221;) and Sun&#8217;s Project Tango.  I don&#8217;t have the complete list handy but it should be be fairly easy to figure out.   WS-ReliableMessaging is one of them.  It doesn&#8217;t &#8220;guarantee squat&#8221; as far as actual message delivery, to be sure.  It does guarantee that a failure to deliver a message will be reported to the sender, doesn&#8217;t it?</p>
+
+<p>Anyway, don&#8217;t look to me for success stories for WS-SUV. I&#8217;m trying to get people who do have experiences one way or the other to talk about them at XML 2006.</p>
+
+
+<div class="comment" id="comment-921">
+On <a href="#comment-921" title="Permalink to this comment">June  6, 2006  2:07 PM</a>, <a href="http://loekb.blogspot.com" title="http://loekb.blogspot.com" rel="nofollow">Loek</a>
+said:
+<p>Hmmm, you guys are discussing at the wrong blog, give me credits for my creative work on the analogy guys ;-). Anyways, I love the &#8220;WS-SUV&#8221; Mike C.!</p>
+
+
+<div class="comment" id="comment-922">
+On <a href="#comment-922" title="Permalink to this comment">June  6, 2006  2:14 PM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>Since I positive hate SUVs, I&#8217;m happy to give you credit for the invention ;-)</p>
+
+
+<div class="comment" id="comment-923">
+On <a href="#comment-923" title="Permalink to this comment">June  7, 2006 11:26 AM</a>, <a href="http://loekb.blogspot.com" title="http://loekb.blogspot.com" rel="nofollow">Loek</a>
+said:
+<p>The question is then: how about SOAP services? Hate those too? ;-)</p>
+
+
+</section>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

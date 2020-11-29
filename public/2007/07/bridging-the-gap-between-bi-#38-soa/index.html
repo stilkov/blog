@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2007/07/bridging-the-gap-between-bi-">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>Bridging the gap between BI &amp;#38; SOA [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>Bridging the gap between BI &amp;#38; SOA</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">Jul 18, 2007</time></small><p>
+	</header>
+	<section>
+	  <p><a href="http://www.rgoarchitects.com/blog/">Arnon Rotem-Gal-Oz</a> has written an excellent article for InfoQ: <a href="http://www.infoq.com/articles/BI-and-SOA">Bridging the gap between BI &#38; SOA</a>. This very much resembles the conclusions we came to in one of my last projects &#8212; essentially, we arrived at a model where each service interface included three (optional) facets:</p>
+
+<ul>
+<li>the &#8220;transactional&#8221; request/reply interface</li>
+<li>an interface to get at pure data</li>
+<li>an event interface, i.e. one that pushes data out instead of providing it for retrieval</li>
+</ul>
+
+<p>(This architecture was based on SOAP/WS-* services; in a REST variant, the three facets essentially become one.)</p>
+
+<section class="comments">
+
+
+
+<div class="comment" id="comment-1388">
+On <a href="#comment-1388" title="Permalink to this comment">July 27, 2007 12:30 PM</a>, <a href="http://www.holgerarendt.de/uncommented" title="http://www.holgerarendt.de/uncommented" rel="nofollow">holger</a>
+said:
+<p>Working on a rather large scale ROA/SOA implementaton project, we also have identified the need for &#8220;pushing data out of services&#8221;, primarily to propage state changes from service/resources to trigger subsequent processes, since this keeps our processes small and separated (like in an EDA approach), without the need to specify each and every interaction or information need explicitly.</p>
+
+<p>So, i find the idea of &#8220;in a REST variant, the three facets become one&#8221; quite interesting, especially with regards to the last bullet point. Could you explain this a little more extensivly, especially how one does get the &#8220;pushing data out&#8221; aspect by &#8220;simply&#8221; utilizing REST?</p>
+
+
+</section>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

@@ -1,0 +1,11 @@
+---
+layout: post
+title: "MarsEdit"
+date: "2009-02-27T08:19:00+01:00"
+comments: false
+categories: 
+---
+
+<p>After a long time, I&#8217;m giving <a href="http://www.red-sweater.com/marsedit/">MarsEdit</a> a try again as an alternative to <a href="http://illuminex.com/ecto/">ecto</a>, the Weblog editor I&#8217;ve been using for the past few years.</p>
+
+

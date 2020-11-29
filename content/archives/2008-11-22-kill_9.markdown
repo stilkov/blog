@@ -1,0 +1,22 @@
+---
+layout: post
+title: "kill -9"
+date: "2008-11-22T00:50:00+01:00"
+comments: false
+categories: 
+---
+
+<p>Funniest thing in a long, long time – KILL DASH NINE:</p>
+
+<blockquote>
+<p>With my finger on the trigger I run ./configure<br />
+Yo, this package is big, but MY package is bigger.<br />
+I roll my weed with Zig Zag while I zag-zig splay,<br />
+And I do a bounds check before I write to an array.</p>
+</blockquote>
+
+<p>Check out <a href="http://www.catonmat.net/blog/musical-geek-friday-kill-dash-nine/">the complete song</a>.</p>
+
+<p>[via <a href="http://maik-schmidt.de/">Maik Schmidt</a>]</p>
+
+

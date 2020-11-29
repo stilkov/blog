@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2003/11/xml-schema-usage-and-winfs/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>XML Schema usage and WinFS [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>XML Schema usage and WinFS</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">Nov 4, 2003</time></small><p>
+	</header>
+	<section>
+	  <p><a href="http://www.gotdotnet.com/team/dbox/default.aspx?key=2003-11-04T09:14:15Z" title="Don Box's Spoutlet">Don Box</a> writes:</p>
+<blockquote>
+As for WinFS's choice of coining a new schema language vs. using XML Schema, unless the WinFS data model is identical to the XML Infoset, it would be a mistake to bastardize XSD to describe something it wasn't intended to describe. WSDL/1.1 made that mistake once before (see use="encoded") and it's taking years to undo the damage.
+</blockquote>
+<p>I'm seriously puzzled, and I would kindly ask anyone to explain this to me. I was always convinced that it's actually <source>use="encoded"</source> where XML Schema is <strong>not</strong> used, while it is with <source>use="literal"</source>. So isn't this backwards &mdash; shouldn't the critique of WSDL/1.1/encoded be that it did <strong>not</strong> use XML Schema for something it was intended for?</p>
+<p><strong>Update:</strong> After a longish IM session with <a href="http://www.radovanjanecek.net">Radovan</a>, I believe this is more due to a misunderstanding on the way the original article was phrased. I was wrong in assuming that WSDL/1.1 and SOAP encoding did not use XSD - it used it, but added WSDL-specific extensions, e.g. for array, while the use=literal sticked to pure XSD.</p>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

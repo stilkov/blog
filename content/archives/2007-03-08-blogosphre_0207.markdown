@@ -1,0 +1,15 @@
+---
+layout: post
+title: "Blogosph&#228;re 02/07"
+date: "2007-03-08T07:20:00+01:00"
+comments: false
+categories: 
+---
+
+<blockquote>
+<p>Dieses Mal f&#252;hrt uns die Tour durch die Blogosph&#228;re von REST und SOAP &#252;ber einen neuen JSR zur REST-Unterst&#252;tzung in Java vorbei an Java-Properties zu einem fehlgeschlagenen Software-Patent und dem Business-Case f&#252;r SOA.</p>
+</blockquote>
+
+<p>Meine aktuelle Blog-Kolumne aus dem JavaSPEKTRUM <a href="http://www.sigs.de/blog/js/?p=27">ist online</a> &#8212; wer hier regelm&#228;&#223;ig mitliest, kennt viel, aber nicht alles &#8230;</p>
+
+

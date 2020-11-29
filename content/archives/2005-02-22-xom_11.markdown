@@ -1,0 +1,11 @@
+---
+layout: post
+title: "XOM 1.1"
+date: "2005-02-22T21:08:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://www.cafeaulait.org/#news2005February22">EHR</a> has released a first alpha version of <a href="http://www.xom.nu/unstable.html">XOM 1.1</a>, including XPath support.</p>
+
+

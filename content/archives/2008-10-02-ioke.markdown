@@ -1,0 +1,17 @@
+---
+layout: post
+title: "Ioke"
+date: "2008-10-02T22:08:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://olabini.com/blog/2008/09/ioke/">Ola Bini</a>:</p>
+
+<blockquote>
+<p>So it seems only fitting that I’ve decided to go public with Ioke, the source code, what it is and where it’s going.<br /><br />Ioke is a strongly typed, extremely dynamic, prototype based object oriented language. It’s homoiconic and got built in support for several kinds of macros. The languages that most closely influence Ioke is Io, Smalltalk, Self, Ruby and Lisp (Specifically Common Lisp).</p>
+</blockquote>
+
+<p>This sounds a lot like a language I'd like.  </p>
+
+

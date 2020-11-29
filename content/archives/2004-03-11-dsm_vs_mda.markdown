@@ -1,0 +1,11 @@
+---
+layout: post
+title: "DSM vs. MDA"
+date: "2004-03-11T16:01:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://blogs.msdn.com/michael_platt/">Michael Platt</a> has a <a href="http://blogs.msdn.com/michael_platt/archive/2004/03/03/83248.aspx">well-written explanation</a> about the differences between MDA and the DSM approach favored by Microsoft. I agree with some of the criticisms, while I still hate to think that we&#8217;ll be left with a new Microsoft-vs.-Rest-of-the-World battle.</p>
+
+

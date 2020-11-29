@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2008/04/servicereg----getting-rid-of-restful-properties-via-get/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>ServiceReg -- Getting Rid of RESTful Properties via GET [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>ServiceReg -- Getting Rid of RESTful Properties via GET</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">Apr 10, 2008</time></small><p>
+	</header>
+	<section>
+	  <p><a href="http://www.servicereg.com/">This</a> may seem like a good idea at first sight -- a service that turns </p>
+
+<pre><code>http://servicereg.com/verb/{user:password@}domain/noun{/id?params}
+</code></pre>
+
+<p>into a corresponding GET, PUT, POST or DELETE against a RESTful Rails app. </p>
+
+<p>Unfortunately, it has two major problems:</p>
+
+<ul>
+<li>It defeats the whole purpose of RESTful design, which is to use the HTTP verbs according to their meaning</li>
+<li>It basically assumes "RESTful service" equals the way Rails does them, which is one, but definitely not the only way</li>
+</ul>
+
+<section class="comments">
+
+
+
+<div class="comment" id="comment-1674">
+On <a href="#comment-1674" title="Permalink to this comment">April 10, 2008  8:31 AM</a>, <a href="http://tomayko.com" title="http://tomayko.com" rel="nofollow">Various Artists</a>
+
+<a href="http://tomayko.com" class="commenter-profile"></a>
+said:
+<p>Actually, it seemed like a bad idea at first sight :)</p>
+
+
+<div class="comment" id="comment-1675">
+On <a href="#comment-1675" title="Permalink to this comment">April 10, 2008 11:56 AM</a>, <a href="http://blog.springsource.com/arjen/" title="http://blog.springsource.com/arjen/" rel="nofollow">Arjen Poutsma</a>
+said:
+<blockquote>It basically assumes &#8220;RESTful service&#8221; equals the way REST does them</blockquote>
+
+<p>I think you mean: </p>
+
+<p>It basically assumes &#8220;RESTful service&#8221; equals the way <strong>RoR</strong> does them.</p>
+
+
+<div class="comment" id="comment-1676">
+On <a href="#comment-1676" title="Permalink to this comment">April 10, 2008 12:13 PM</a>, <a href="/blog/st/">Stefan Tilkov</a>
+
+<a href="/blog/st/" class="commenter-profile"><img src="/mt4/mt-static/images/comment/mt_logo.png" height="16" alt="Author Profile Page" width="16" /></a>
+said:
+<p>Thanks - fixed.</p>
+
+
+<div class="comment" id="comment-1677">
+On <a href="#comment-1677" title="Permalink to this comment">April 10, 2008  7:08 PM</a>, Mike Davison
+said:
+<p>Why would I ever even contemplate doing something like this?  Am I missing something obvious?  Bad indeed&#8230;</p>
+
+
+</section>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

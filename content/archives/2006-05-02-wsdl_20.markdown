@@ -1,0 +1,42 @@
+---
+layout: post
+title: "WSDL 2.0?"
+date: "2006-05-02T23:02:00+01:00"
+comments: false
+categories: 
+---
+
+<p>SearchWebServices.com has an article about the upcoming WS-I Basic Profile updates. I find this especially interesting:</p>
+
+<blockquote>
+Basic Profile 2.0 will incorporate the following specs:
+<ul>
+<li>W3C WS-Addressing 1.0 Core</li>
+<li>W3C WS-Addressing 1.0 SOAP Binding</li>
+<li>W3C WS-Addressing 1.0 WSDL Binding</li>
+<li>W3C SOAP Version 1.2 Part 1: Messaging Framework, and Part 2: Adjuncts</li>
+<li>W3C Message Transmission Optimization Method (MTOM)</li>
+<li>W3C XML-binary Optimized Packaging</li>
+<li>W3C Namespaces in XML</li>
+<li>W3C XML 1.0 Second Edition</li>
+<li>W3C WSDL 1.1</li>
+<li>W3C XML Schema 2001 Part 1: Structures, and Part 2: Datatypes</li>
+<li>OASIS UDDI 2 and UDDI 3</li>
+<li>WSDL 1.1 Binding Extension for SOAP 1.2</li>
+</ul>
+</blockquote>
+
+<p>Very suspiciously missing from this list is WSDL 2.0 &#8230;</p>
+
+<section class="comments">
+
+<div class="comment" id="comment-890">
+On <a href="#comment-890" title="Permalink to this comment">May  3, 2006 10:36 AM</a>, <a href="http://blog.whatfettle.com" title="http://blog.whatfettle.com" rel="nofollow">Paul Downey</a>
+said:
+<p>Well, the role of WS-I is to &#8216;clean up after the parade&#8217; and there has to be a high level of concensus on the WS-I board to agree upon such work - all of the other specs are W3C Recommendations (or as good as), WSDL 2.0 is still in CR and still has yet to march past in glory :-) </p>
+
+<p>I have to wonder who will do this work, participation in the WS-I hasn&#8217;t been great of late.</p>
+
+
+</section>
+

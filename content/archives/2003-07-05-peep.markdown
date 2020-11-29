@@ -1,0 +1,10 @@
+---
+layout: post
+title: "Peep"
+date: "2003-07-05T20:57:00+01:00"
+comments: false
+categories: 
+---
+
+<p>Jon Udell <a href="http://www.infoworld.com/infoworld/article/03/07/03/26OPstrategic_1.html" title="InfoWorld: Listening to my server: July 03, 2003: By Jon Udell: Web services">writes about</a> <a href="http://sourceforge.net/projects/peep/">Peep</a>, a program that allows you to monitor a system by listening to sounds that encode specific events.</p>
+

@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Identity 2.0"
+date: "2005-10-05T23:05:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://identity20.com/media/OSCON2005/">This presentation</a> just blows me away. <em>Unbelievable</em>!</p>
+
+

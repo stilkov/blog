@@ -1,0 +1,21 @@
+---
+layout: post
+title: "UDDI 3"
+date: "2005-02-07T22:30:00+01:00"
+comments: false
+categories: 
+---
+
+<p>So <a href="http://www.uddi.org/">UDDI version 3</a> (3.0.2, to be exact) <a href="http://www.oasis-open.org/news/oasis_news_02_03_05.php"> becomes an OASIS standard</a>, only some 2.5 years after <a href="http://www.uddi.org/news/uddi_news_07_30_02.html">this press release</a>! </p>
+
+<p>Impressive.</p>
+
+<p><a href="http://radovanjanecek.net/blog/archives/000179.html">Radovan Janecek comments</a> on <a href="http://www.looselycoupled.com/stories/2005/registry-infr0131.html">this Loosely Coupled article</a> on the subject. While it contains way too much marketing speak for my taste, I liked this statement from Graham Glass:</p>
+
+<blockquote>
+<p>Glass called for UDDI to widen its scope and embrace some of the emerging standards in the semantice (sic) web such as RDF.</p>
+</blockquote>
+
+<p>Right &#8212; if only they had done that 3 years ago instead of inventing their own metadata concept.</p>
+
+

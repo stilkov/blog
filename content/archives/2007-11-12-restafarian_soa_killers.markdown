@@ -1,0 +1,204 @@
+---
+layout: post
+title: "RESTafarian SOA killers?"
+date: "2007-11-12T17:38:00+01:00"
+comments: false
+categories: 
+---
+
+<p>Recently, <a href="http://www.ebpml.org/ebpml_radio.htm">Jean-Jacques (JJ) Dubray</a>, a long-time SOA and BPM expert and one of my co-editors at <a href="http://www.infoq.com">InfoQ</a>, has posted quite a bit about REST &#8212; and his posts are definitely not favorable. I don&#8217;t really know why, but some of them seem to express the belief that a) there&#8217;s some serious hype going on about REST and RESTful HTTP, b) it&#8217;s obvious that both REST and WS-*-style SOA have their place, c) that the RESTafarians (including me), despite knowing better, claim REST is a silver bullet that should be used for everything, and d) and have set out on some sort of crusade against SOA. (If I have paraphrases </p>
+
+<p>JJ&#8217;s recent posts strongly remind me of those of <a href="http://www.scripting.com/">a certain other gentleman</a> who somehow expects everybody of having hidden agendas and secret motives for doing what they do, instead of doing what they actually believe. I find this somewhat annoying, to say the least. But I have a lot of respect for JJ &#8212; so I&#8217;m writing this to try to move the discussion towards more rational ground.</p>
+
+<p>First of all &#8212; i.e., addressing (a) &#8212; I disagree there is a hype around REST. &#8220;Huh?&#8221; I hear you cry - &#8220;is this guy serious?&#8221; - Yes, I am, because in fact it&#8217;s a tiny minority that knows anything about REST at all. When I go to conferences (QCon excepted), visit customers, talk to business partners or other consultants, 95% of them have never even heard about REST, RESTful HTTP, or some debate about Web services. In contrast, virtually all of them &#8212; definitely more than 90% &#8212; know about web services. And while some of the vendors have talked about their REST support, this pretty obviously seems to be to ensure the alpha geeks don&#8217;t turn to other solutions &#8212; I have seen no vendor or analyst throw any marketing dollars behind REST (yet &#8212; this may of course change anytime soon). <em>Don&#8217;t confuse the blog echo chamber with reality</em>.    </p>
+
+<p>As to (b), it&#8217;s not at all obvious that WS-* and REST both have their place, at least not from a technical standpoint, and provided what you&#8217;re trying to achieve is actually what SOA promises: modularization, loose coupling, evolvability, scalability etc. It seems that most of the WS-* proponents who have spent some time looking at REST, listened to the arguments of the REST proponents but never actually tried it out now take this point of view: REST is suited for simple data-access scenarios, while you need WS-* if you want to do &#8220;real&#8221; business services. <em>Bullshit.</em> I am strongly convinced that when you look at architectural merits only, every time you convert even a well-designed web services system to the RESTful alternative, you end up with a better system. It would be nice &#8212; from a diplomacy point of view &#8212; if we could all agree that both alternatives are reasonable, and that the real question is to find the right criteria of when to apply which. But I refuse to agree to such an assertion if I honestly don&#8217;t believe there are any cases where WS-* is the better choice (exceptions not motivated by architecture follow). We (the RESTafarians) are not stubborn zealots. We&#8217;re just <em>right</em>. Sorry :-)</p>
+
+<p>Of course this was just a little polemic. I actually <em>do</em> believe there are a lot of reasons to choose WS-* &#8212; but almost <em>none</em> of them are technical. They are political (e.g. a company may already have spent millions on some WS-* infrastructure), related to costs (switching from existing transactional solutions to REST might require more effort than switching to WS-*), and in some very rare cases &#8212; notably security &#8212; related to stuff that&#8217;s actually missing from the existing RESTful HTTP tooling.</p>
+
+<p>I actually get slightly mad with regards to (c) (we&#8217;re out to destroy SOA because we&#8217;re evil!). This is so silly I wouldn&#8217;t waste time replying, but &#8212; as I said before &#8212; I like and respect JJ, so I&#8217;ll address this point, too. Right now, I doubt that anyone in the REST camp actually profits from arguing that RESTful HTTP is superior. Most of the time, you just get blank stares; sometimes, people get interested before turning back to the crap they get fed by the vendors. Only very, very rarely someone listens and understands the arguments <em>and</em> is actually able to spend some money to have this explored further (i.e. pay for some consulting). It&#8217;s much, much easier to go with mainstream, WS-* style SOA if you&#8217;re a consultant. And if you make money through reselling commercial products (or alternatively, through referral fees), choosing REST is absolutely counter-productive.</p>
+
+<p>I&#8217;m convinced that <a href="/">my company</a> could make <em>more</em> money right now if we simply stuck with the WS-* story. But we don&#8217;t make choices for business reasons only (otherwise we&#8217;d probably do SAP customizing), but also because we believe we&#8217;re delivering good results if we actually believe in what we sell. And you may call me na&#239;ve, but I actually believe that the better solution will win in the long run &#8212; which means that we&#8217;ll be able to reference existing, successful customer projects based on the Web&#8217;s architecture when others only start to deal with the WS-* legacy they&#8217;re responsible for.</p>
+
+<section class="comments">
+
+
+
+<div class="comment" id="comment-1504">
+On <a href="#comment-1504" title="Permalink to this comment">November 12, 2007  8:38 PM</a>, <a href="http://appside.blogspot.com" title="http://appside.blogspot.com" rel="nofollow">Erik Johnson</a>
+said:
+<blockquote>
+<p>And if you make money through reselling commercial products (or
+alternatively, through referral fees), choosing REST is absolutely
+counter-productive.</p>
+</blockquote>
+
+<p>Perhaps REST seems less profitable if you only look at the top-line benefit.  I think there are plenty of situations where RESTishness lowers your costs, possibly in equal measure.  </p>
+
+<p>ps. &#8230;even if your payload has an &#8216;Operation=&#8221;foo&#8221;&#8217; tag :)</p>
+
+
+<div class="comment" id="comment-1505">
+On <a href="#comment-1505" title="Permalink to this comment">November 12, 2007 10:13 PM</a>, <a href="http://dehora.net/journal" title="http://dehora.net/journal" rel="nofollow">Bill de hOra</a>
+said:
+<p>&#8220;When I go to conferences (QCon excepted), visit customers, talk to business partners or other consultants, 95% of them have never even heard about REST, RESTful HTTP, or some debate about Web services&#8221;</p>
+
+<p>I&#8217;m getting asked about REST a lot from outside the usual circles. It&#8217;s kind of startling.</p>
+
+<p>&#8220;I doubt that anyone in the REST camp actually profits from arguing that RESTful HTTP is superior.&#8221;</p>
+
+<p>Then again recommending REST is no longer a career limiting move the way it could be a few years ago :)</p>
+
+
+<div class="comment" id="comment-1506">
+On <a href="#comment-1506" title="Permalink to this comment">November 12, 2007 11:11 PM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<blockquote>
+<p>Then again recommending REST is no longer a career limiting move the way it could be a few years ago :)</p>
+</blockquote>
+
+<p>Yes, I agree &#8212; awareness is rising, but I still consider &#8220;hype&#8221; to be an extreme exaggeration.</p>
+
+
+<div class="comment" id="comment-1507">
+On <a href="#comment-1507" title="Permalink to this comment">November 12, 2007 11:47 PM</a>, <a href="http://blog.whatfettle.com" title="http://blog.whatfettle.com" rel="nofollow">Paul Downey</a>
+said:
+<p>State of my corner of the world: expect genuine irritation from business types when they realise that Web services ARE NOT on the Web and that said services don&#8217;t fit the world of widgets and mashups. Most every savvy techie I meet now gets the value if Web exposures and recommending WS-* seems to be, well, a well understood as an overly complex mechanism designed to sell tooling. Even when you could get the stuff to work, often by shipping SDKs, not WSDL/WS-Policy, it&#8217;s brittle, and doesn&#8217;t have that wide a reach - try using WS-Security from a bog standard server running PHP 5 (most ISPs ship with SOAP and dsig turned off). However, as you point out, the sunk costs for many companies are enormous, and for that reason, they&#8217;ll be with us for some time to come, increasingly buried behind Web servers.</p>
+
+<p>However, many of those enterprise types who now want REST, not SOAP, seem to think metadata, in particular &#8220;description&#8221; and &#8220;orchestration&#8221; is still required. It seems to me that folks want REST but don&#8217;t yet have faith in the hypertext as the engine of application state.. but we&#8217;re working on that ;-)</p>
+
+<p>Anyway, I promised not to gripe about SOAP (v) REST anymore, &#8220;The Web is Agreement&#8221; was supposed to be my last word on that, heh.</p>
+
+
+<div class="comment" id="comment-1508">
+On <a href="#comment-1508" title="Permalink to this comment">November 13, 2007  9:42 AM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<blockquote>
+<p>ps. …even if your payload has an ‘Operation=”foo”’ tag :)</p>
+</blockquote>
+
+<p>Ah yes &#8212; I meant to reply to that for a long time &#8230;</p>
+
+
+<div class="comment" id="comment-1509">
+On <a href="#comment-1509" title="Permalink to this comment">November 13, 2007 11:19 PM</a>, <a href="http://service-architecture.blogspot.com" title="http://service-architecture.blogspot.com" rel="nofollow">Steve Jones</a>
+said:
+<p>Stefan, one of my biggest concerns is the &#8220;belief&#8221; bit around REST.  Like you say its a small, vocal group of people preach a given set of principles as being &#8220;right&#8221;.  Like all IT fundamentalist approaches it takes the solution to a single set of problems and trys to scale it up to everything. The &#8220;belief&#8221; is the agenda.</p>
+
+<p>Let me be clear.  REST (as in WWW/HTTP) works in lots of places, especially late aggregation (browser, mashups) and rendering to people.  WS-* works (today) in lots of places, especially B2B and system to system integration.  FTP works in places as well, for instance shifting large files for batch processing, other things work in other places.</p>
+
+<p>One size doesn&#8217;t fit all and no one technology or approach represents a silver bullet.</p>
+
+
+<div class="comment" id="comment-1510">
+On <a href="#comment-1510" title="Permalink to this comment">November 14, 2007  9:30 AM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>I&#8217;m not religious, in no sense of the word. Roy is not Jesus, the dissertation is not the bible, and REST is no silver bullet.</p>
+
+<p>Saying that I like Macs better than Windows PCs doesn&#8217;t make me a Mac zealot. Considering REST to be superior to WS-style technical SOA doesn&#8217;t make me religious. Both you and JJ seem to believe that just because I consider RESTful HTTP superior to WS-* <em>beyond simple CRUD scenarios</em> I believe it&#8217;s appropriate for every scenario. It&#8217;s not. But it&#8217;s useful for way more than you believe &#8212; specifically, building a &#8220;business application&#8221; including &#8220;business semantics&#8221; in a REST-style meets high-level SOA goals better than the WS approach.</p>
+
+
+<div class="comment" id="comment-1511">
+On <a href="#comment-1511" title="Permalink to this comment">November 14, 2007 10:42 AM</a>, <a href="http://service-architecture.blogspot.com" title="http://service-architecture.blogspot.com" rel="nofollow">Steve Jones</a>
+said:
+<p>See there you go being reasonable again :)  I wish all RESTafarians I came across were as educated and reasonable.</p>
+
+<p>I&#8217;m still waiting for the proof around the business level REST implementations, I&#8217;ve not come across one in an enterprise environment and specifically in a system to system scenario. </p>
+
+<p>My question still remains on REST though, the question should be &#8220;why isn&#8217;t WS-* good <em>enough</em>&#8221; rather than this continual search for a better wheel.</p>
+
+
+<div class="comment" id="comment-1512">
+On <a href="#comment-1512" title="Permalink to this comment">November 14, 2007 11:17 AM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>Good enough? Well, why isn&#8217;t sending fixed-length records over TCP using plain sockets not good enough? Or exchanging XML files via FTP? Or using CORBA? You know I like to have discussions at both a high-level as well as a technical one, but if we&#8217;re discussing the merits of different technical architectures, it&#8217;s surely allowed to discuss technical aspects? ;-)</p>
+
+
+<div class="comment" id="comment-1513">
+On <a href="#comment-1513" title="Permalink to this comment">November 14, 2007 11:48 PM</a>, <a href="http://www.markbaker.ca" title="http://www.markbaker.ca" rel="nofollow">Mark Baker</a>
+said:
+<p>Steve, I&#8217;m curious which RESTafarians have taken a position other than the one Stefan explained above, that REST is no silver bullet, just far more general than believed by SOA/WS proponents.</p>
+
+
+<div class="comment" id="comment-1514">
+On <a href="#comment-1514" title="Permalink to this comment">November 15, 2007 10:19 AM</a>, <a href="http://www.dulciana.com" title="http://www.dulciana.com" rel="nofollow">Mike Glendinning</a>
+said:
+<p>Far be it for me to be provocative and throw fuel on this fire, but wouldn&#8217;t any form of &#8220;system to system&#8221; communication violate REST&#8217;s &#8220;client-server&#8221; constraint. From Fielding 5.1.2:</p>
+
+<p>&#8220;&#8230;separating the user interface concerns from the data storage concerns&#8230;allows the components to evolve independently&#8230;&#8221;</p>
+
+<p>This could be why Steve hasn&#8217;t come across REST in typical enterprise application integration scenarios.</p>
+
+
+<div class="comment" id="comment-1515">
+On <a href="#comment-1515" title="Permalink to this comment">November 16, 2007  8:34 PM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>Hi Mike, I&#8217;m not entirely sure what you intend to say. The dissertation talks about &#8220;user interface&#8221; clients that need to evolve independently from the server. This need seems to apply to SOA &#8220;consumer&#8221;/&#8221;provider&#8221; at least as much - doesn&#8217;t it?</p>
+
+<p>I agree that many people (wrongly) perceive Web architecture to be applicable to UI clients only, and this is why we don&#8217;t see RESTful HTTP being used for integration much (yet).</p>
+
+
+<div class="comment" id="comment-1516">
+On <a href="#comment-1516" title="Permalink to this comment">November 18, 2007 12:43 PM</a>, <a href="http://www.dulciana.com" title="http://www.dulciana.com" rel="nofollow">Mike Glendinning</a>
+said:
+<p>I was suggesting, somewhat provocatively as I haven&#8217;t had a good argument for ages, that server-to-server interactions break the client-server constraint of REST.</p>
+
+<p>Of course you might say that in any given interaction, the server is merely performing the <em>role</em> of a client and that as long as we make sure there is no circularity in the dependency graph of systems, we&#8217;ll be allright.  In pure engineering terms, this is undoubtedly true and corresponds to what has been best practice in distributed systems design for many decades.</p>
+
+<p>But Fielding doesn&#8217;t say this and is much more explicit in wanting to use constraints to drive the design of a &#8220;principled&#8221; architecture.  And he wants user interface and data storage concerns to be separated through the client-server constraint (1).</p>
+
+<p>Simply put, if your client is doing data storage (2), you&#8217;re not doing REST.  This probably discounts most enterprise application integration scenarios.</p>
+
+<p>Oh come on, Mike, I hear you say, you&#8217;re not expected to take the constraints <em>that</em> literally.  We routinely ignore the &#8220;hypermedia as the engine of application state&#8221; constraint, partly because nobody understands how to apply it, and often fudge the &#8220;uniform interface&#8221; constraint because in fact not all resources behave in the same way.  But who cares?  We&#8217;re just engineers trying to build working systems.</p>
+
+<p>Fair enough, I would respond.  I am an engineer as well.  But why make such a fuss over strict adherence to &#8220;constraints&#8221; and &#8220;principled design&#8221; if in practice you&#8217;re going to play fast and loose with your definitions in the pursuit of working systems?</p>
+
+<p>Maybe I should write a thesis entitled &#8220;pragmatic engineering principles&#8221; and then berate you all for not following my rules to the letter, to hell with whether they actually work or not :-)</p>
+
+<p>Footnotes:
+(1) Let&#8217;s leave aside for the moment Fielding&#8217;s misunderstanding of what exactly constitutes a &#8220;client&#8221; in REST as we&#8217;ve discussed that before.
+(2) Remember also the &#8220;stateless&#8221; constraint.</p>
+
+
+<div class="comment" id="comment-1517">
+On <a href="#comment-1517" title="Permalink to this comment">November 18, 2007  8:08 PM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>I believe the constraints can be taken literally, even in integration scenarios (although obviously they don&#8217;t have to all the time). I agree exactly with your point - the client and server aspects are just roles. I don&#8217;t ignore the hypermedia constraint, on the contrary - I think REST derives a lot of its value from it. I also strongly believe in the uniform interface constraint&#8217;s value (exactly because of the hypermedia aspect). And what does the client&#8217;s storage of data have to do with the stateless constraint? In my reading of the dissertation, the client is perfectly allowed to keep (application) state.</p>
+
+
+<div class="comment" id="comment-1518">
+On <a href="#comment-1518" title="Permalink to this comment">November 19, 2007  9:41 AM</a>, <a href="http://www.dulciana.com" title="http://www.dulciana.com" rel="nofollow">Mike Glendinning</a>
+said:
+<p>Hmnnn.  In what circumstances don&#8217;t the REST constraints have to be taken literally?</p>
+
+<p>And I wonder how many of your present REST designs have the client application state driven <em>only</em> by hypermedia documents delivered from the server.  Not many, I guess.  The current state-of-the-art appears to be about sprinkling a few URIs in returned resource representations, but still having the state-change decision logic hard-wired in the client.</p>
+
+<p>The client-server and stateless constraints are (to some extent) mutually reinforcing in that it appears that clients MUST NOT store &#8220;data&#8221;, but can store session/application state, whereas servers MUST NOT store session/application state but may (perhaps MUST) store &#8220;data&#8221;.  Actually, Fielding is very vague over exactly what he considers &#8220;session state&#8221;, &#8220;application state&#8221; and &#8220;data&#8221;.  I seem to remember we had a similar debate on the Yahoo SOA list a few months ago.</p>
+
+<p>Probably more than 99% of current web applications violate these constraints, thanks to all those &#8220;session manaagement&#8221; features of application servers.</p>
+
+
+<div class="comment" id="comment-1519">
+On <a href="#comment-1519" title="Permalink to this comment">November 21, 2007 10:51 AM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<blockquote>
+<p>I wonder how many of your present REST designs have the client application state driven only by hypermedia documents delivered from the server. Not many, I guess. The current state-of-the-art appears to be about sprinkling a few URIs in returned resource representations, but still having the state-change decision logic hard-wired in the client.</p>
+</blockquote>
+
+<p>True, most of the time the client drives the state changes, using the URIs, but definitely not only them. I believe there&#8217;s a lot to be gained from exploring this further &#8212; I haven&#8217;t yet seen a client-side REST approach, let alone programming model that really exploited this. At QCon, Jim Webber suggested there&#8217;s a need for a more declarative way to do this, but clearly this is at the moment just a research area.</p>
+
+<blockquote>
+<p>The client-server and stateless constraints are (to some extent) mutually reinforcing in that it appears that clients MUST NOT store “data”, but can store session/application state, whereas servers MUST NOT store session/application state but may (perhaps MUST) store “data”. </p>
+</blockquote>
+
+<p>IMO, in a machine-to-machine scenario, both partners are likely to have their own resource state and application state &#8212; where one can become the respective other if you change the point of view. That is, my current state of usage of your resources &#8212; i.e., my application state &#8212; can be a resource from my POV, and vice versa. </p>
+
+<blockquote>
+<p>Probably more than 99% of current web applications violate these constraints, thanks to all those “session manaagement” features of application servers.</p>
+</blockquote>
+
+<p>Yes &#8212; which they take great pains to store persistently to support clustering (instead of putting them into the DB in the first place).</p>
+
+
+</section>
+

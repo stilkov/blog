@@ -1,0 +1,17 @@
+---
+layout: post
+title: "Simple 4.1.3"
+date: "2009-02-09T08:08:00+01:00"
+comments: false
+categories: 
+---
+
+<p>I never heard of <a href="http://www.simpleframework.org/index.php">Simple</a> before:</p>
+
+<blockquote>
+<p>The goal of Simple is to bring the power of simplicity to the world of server side Java. The primary focus of the project is to provide a truly embeddable Java based HTTP engine capable of handling enormous loads. Simple provides a truly asynchronous service model, request completion is driven using an internal, transparent, monitoring system. This allows Simple to vastly outperform most popular Java based servers in a multi-tier environment, as it requires only a very limited number of threads to handle very high quantities of concurrent clients. Simple has consistently out performed both commercial and open source Java Servlet engines and has a fully comprehensive API that is as usable for experienced Java developers as it is for beginners. Best of all, Simple is completely free, and is released under the terms of the GNU Lesser General Public License, LGPL, which ensures its availability for use by open source and proprietary developers alike.</p>
+</blockquote>
+
+<p>[via <a href="http://www.holgerarendt.de/uncommented/#2974">Holger</a>]</p>
+
+

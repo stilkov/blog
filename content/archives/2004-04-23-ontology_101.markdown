@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Ontology 101"
+date: "2004-04-23T08:51:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://www.ksl.stanford.edu/people/dlm/papers/ontology101/ontology101-noy-mcguinness.html">Ontology 101</a></p>
+
+

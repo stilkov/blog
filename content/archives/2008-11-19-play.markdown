@@ -1,0 +1,17 @@
+---
+layout: post
+title: "Play!"
+date: "2008-11-19T07:17:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://www.playframework.org/">Play!</a> looks really cool at first sight:</p>
+
+<blockquote>
+<p>The Play! framework makes it easier to build Web applications with Java. It's a clean alternative to bloated Enterprise Java stacks. It focuses on developers productivity and targets RESTfull architectures.</p>
+</blockquote>
+
+<p>Obviously very much inspired by Rails' handling of HTTP-to-code mapping.</p>
+
+

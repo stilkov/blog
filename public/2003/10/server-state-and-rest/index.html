@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2003/10/server-state-and-rest/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>Server state and REST [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>Server state and REST</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">Oct 19, 2003</time></small><p>
+	</header>
+	<section>
+	  <p><a href="http://www.dehora.net/journal/">Bill de hÓra</a> writes about <a href="http://www.dehora.net/journal/archives/000308.html">the Web scalability myth</a>:</p>
+<blockquote>
+The ideal multi-server model is where state is manged on the client. It's the one place on a client-server or service oriented network topology where a single point of failure is ok (think about it).
+Now, this idea, this management of state of the server is also where the deployed web (HTTP  browsers) breaks with REST architecture.
+</blockquote>
+<p>Exactly! Very cool that this comes from a REST proponent. When I try to explain what REST is about, and get to the part of the story where I mention that it's not keeping state in server sessions what makes the Web's architecture so great, experienced developers look at me with doubtful eyes and wonder what the hell I'm talking about, with most of them having spent numerous days of their lives circumventing HTTP's statelesness by means of server-side state ID'd by cookies or session rewriting.</p>
+<p>Maybe it's fair to say that REST is what the Web should have been. To use the existing Web as an example for a successful, RESTful system, might just be bogus.</p>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

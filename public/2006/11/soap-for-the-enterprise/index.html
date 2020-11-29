@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2006/11/soap-for-the-enterprise/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>SOAP for the Enterprise [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>SOAP for the Enterprise</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">Nov 8, 2006</time></small><p>
+	</header>
+	<section>
+	  <p>A great post by <a href="http://wanderingbarque.com/nonintersecting/2006/11/06/rest-and-soap-and-all-that/">Pete Lacey</a>:</p>
+
+<blockquote>
+<ol>
+<li>The number of people using WS-ReliableMessaging in production today totals zero.</li>
+<li>The number of people using all of WS-Security (and not just username tokens) approaches zero</li>
+<li>These numbers hold true for WS-this-that-and-the-other-thing too.</li>
+</ol>
+<p>Zeroing in on WS-Security we can note a few other things. To argue that securing the message (admittedly handy, but handled by XML Digital Signatures and XML Encryption, and only complicated by WSS) and not the protocol is of absolute importance, ignores the fact that we&#8217;ve been building secure applications without this ability since time immemorial. It further ignores that a sound architecture does not ask the endpoint to do the decryption, but that the decryption is done upstream in a web service intermediary of some sort, possibly one that precedes other intermediaries, thus negating this argument entirely.
+</p>
+</blockquote>
+
+<p>Pete highlights an aspect I did not address <a href="/blog/st/2006/11/06/soap_vs_pox_vs_rest.html">in my post</a> on this topic:</p>
+
+<blockquote>
+<p>Yes, the SOAP envelope all by itself can be a good thing, but SOAP is more than an envelope. You can&#8217;t ignore how SOAP is packaged and sold, how it is specified, and how it is implemented. SOAP, despite everyone&#8217;s best efforts, is still a remote object protocol, and somewhere in the message, whether it be in the SOAP Body, in a WS-Addressing header, the outer element of a wrapped doc/lit message, or in the SOAPAction HTTP Header, is the method to invoke on the remote object. And, remember, to the business developer, SOAP is also WSDL, and a mish-mash of encoding styles and serializations, and impenetrable XML Schema, and tModels, and vendor wars, and ESBs, and shoddy specifications, and on, and on, and on.</p>
+</blockquote>
+
+<p>I both agree and disagree with this assertion; it&#8217;s true that the current tools and frameworks still carry all of the old RPC baggage, but from a technical standpoint, SOAP <em>can</em> be used differently.</p>
+
+<section class="comments">
+
+<div class="comment" id="comment-1091">
+On <a href="#comment-1091" title="Permalink to this comment">November  9, 2006  2:22 AM</a>, <a href="http://www.mnot.net/" title="http://www.mnot.net/" rel="nofollow">Mark Nottingham</a>
+said:
+<p>Well said. In theory, SOAP can be used in a way that&#8217;s complimentary to the Web. In practice, the tools don&#8217;t let you do this. This tripped up a number of Web enthusiasts who thought they could tame SOAP.</p>
+
+<p>WRT WS-Security, I asked how many people were using it in a crowd of about 500 developers during a panel I was on at last year&#8217;s Java One. Two people held up their hands (and one was Axis maven Glen Daniels). I asked how many would be using it in the next year; still only a smattering of hands. Then we asked the same question about SSL, and most of the room had their hands up. Go figure.</p>
+
+
+<div class="comment" id="comment-1092">
+On <a href="#comment-1092" title="Permalink to this comment">November 10, 2006  5:58 AM</a>, <a href="http://www.markbaker.ca" title="http://www.markbaker.ca" rel="nofollow">Mark Baker</a>
+said:
+<p>Maybe Mark misread your last sentence Stefan, because I agree with him, and not with you; the tools don&#8217;t let you use SOAP in a Web friendly way.  IMO, that&#8217;s game over for SOAP.</p>
+
+
+<div class="comment" id="comment-1093">
+On <a href="#comment-1093" title="Permalink to this comment">November 10, 2006  7:47 AM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>OK; let me rephrase that: From a <em>theoretical</em> standpoint, SOAP can be used in a Web-friendly way; from a <em>practical</em> standpoint, it&#8217;s very hard because the tools don&#8217;t give a damn (yet).</p>
+
+
+</section>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

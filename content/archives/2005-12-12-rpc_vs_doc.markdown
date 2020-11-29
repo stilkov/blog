@@ -1,0 +1,37 @@
+---
+layout: post
+title: "RPC vs. Doc"
+date: "2005-12-12T21:27:00+01:00"
+comments: false
+categories: 
+---
+
+<p>Another of those permathreads regarding RPC vs. document-oriented Web services:</p>
+
+<ul>
+<li><a href="http://weblog.infoworld.com/udell/2005/12/08.html#a1351" title="Eric Newcomer on the RPC/doc-literal cultural divide">Eric Newcomer on the RPC/doc-literal cultural divide</a> (Jon Udell)</li>
+<li><a href="http://pluralsight.com/blogs/tewald/archive/2005/12/08/17331.aspx" title="On Jon on Eric on RPC and XML">On Jon on Eric on RPC and XML</a> (Tim Ewald)</li>
+<li><a href="http://blog.whatfettle.com/archives/000328.html" title="RPC/doc-literal divide">RPC/doc-literal divide</a> (Paul Downey)</li>
+<li><a href="http://www.iona.com/blogs/newcomer/archives/000238.html" title="RPC vs Doc Literal">RPC vs Doc Literal</a> (Eric Newcomer)</li>
+</ul>
+
+<p>I&#8217;m with <a href="http://pluralsight.com/blogs/tewald/archive/2005/12/08/17331.aspx">Tim</a> regarding the mis-use of the document/literal vs. rpc/encoded WSDL distinction, which really has got nothing to do with the debate. The key point, to me, is that you not only should not, but <em>cannot</em> abstract away the fact that you&#8217;re using XML &#8212; if you want to see any benefit at all, that is.</p>
+
+<section class="comments">
+
+<div class="comment" id="comment-732">
+On <a href="#comment-732" title="Permalink to this comment">December 13, 2005  1:03 AM</a>, <a href="http://www.markbaker.ca" title="http://www.markbaker.ca" rel="nofollow">Mark Baker</a>
+said:
+<p>Hey, if protocol independence is good, then surely format independence is also good, no? 8-)</p>
+
+<p>Any bets on when we&#8217;ll get &#8220;architectural style independence&#8221;?</p>
+
+
+<div class="comment" id="comment-733">
+On <a href="#comment-733" title="Permalink to this comment">December 13, 2005  7:23 PM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>I thought we had that already: <a href="/blog/st/2005/11/30/service_component_architecture.html" rel="nofollow" /><a href="/blog/st/2005/11/30/service" rel="nofollow">/blog/st/2005/11/30/service</a><em>component</em>architecture.html :-)</p>
+
+
+</section>
+

@@ -1,0 +1,25 @@
+---
+layout: post
+title: "Firebird"
+date: "2003-05-18T23:47:00+01:00"
+comments: false
+categories: 
+---
+
+<p>So I thought I might give <a href="http://www.mozilla.org/projects/firebird/" title="Firebird Browser Project Page">Firebird</a> a try. Firebird is the newest Mozilla offsprint, and its aim is to be a small, fast browser without the bloat that burdens the rest of the pack. Installation is great - because there is none. Very Mac-like, you simply download an archive, put it somewhere, and run the application. No registry entries, no cluttering of the start menu ... very nice. <br />
+It runs nicely and seems to be very fast. It supports tabbed browsing, something I really like on the Mac with Safari.<br />
+But then I switched back to IE.<br />
+The reason is very simple - Firebird does not support scrolling via the third mousebutton. Well, it does so, sort of, with an extension called autoscroll - but this forces me to reconfigure the ThinkPad's mouse to have the third button be just that. Then it works, but only in Firebird - but no longer in any other Windows app. That's something I simply can't live with since I have got so used to using this.<br />
+Sigh.</p>
+<section class="comments">
+
+<div class="comment" id="comment-24">
+On <a href="#comment-24" title="Permalink to this comment">May 19, 2003  2:50 AM</a>, Asa
+said:
+<p>Sorry &#8216;bout that trackback noise. MT struggled with pinging the big list of links I posted and seems to have decide that each of my edits deserved a fresh hit. </p>
+
+<p>&#8212;Asa</p>
+
+
+</section>
+

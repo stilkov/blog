@@ -1,0 +1,14 @@
+---
+layout: post
+title: "links for 2005-06-08"
+date: "2005-06-09T01:20:00+01:00"
+comments: false
+categories: 
+---
+
+<ul class="delicious">
+<li>
+</li>
+</ul>
+
+

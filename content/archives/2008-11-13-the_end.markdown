@@ -1,0 +1,15 @@
+---
+layout: post
+title: "The End"
+date: "2008-11-13T07:30:00+01:00"
+comments: false
+categories: 
+---
+
+<blockquote>
+<p>That’s when Eisman finally got it. Here he’d been making these side bets with Goldman Sachs and Deutsche Bank on the fate of the BBB tranche without fully understanding why those firms were so eager to make the bets. Now he saw. There weren’t enough Americans with shitty credit taking out loans to satisfy investors’ appetite for the end product. The firms used Eisman’s bet to synthesize more of them. […] The only assets backing the bonds were the side bets Eisman and others made with firms like Goldman Sachs. Eisman, in effect, was paying to Goldman the interest on a subprime mortgage. In fact, there was no mortgage at all. “They weren’t satisfied getting lots of unqualified borrowers to borrow money to buy a house they couldn’t afford,” Eisman says. “They were creating them out of whole cloth. One hundred times over! That’s why the losses are so much greater than the loans. But that’s when I realized they needed us to keep the machine running. I was like, This is allowed?” </p>
+</blockquote>
+
+<p><a href="http://www.portfolio.com/news-markets/national-news/portfolio/2008/11/11/The-End-of-Wall-Streets-Boom">Fascinating and scary</a> [via <a href="http://www.tbray.org/ongoing/When/200x/2008/11/11/Angry">Tim Bray</a>]</p>
+
+

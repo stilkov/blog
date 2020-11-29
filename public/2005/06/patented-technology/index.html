@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2005/06/patented-technology/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>Patented Technology [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>Patented Technology</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">Jun 5, 2005</time></small><p>
+	</header>
+	<section>
+	  <p>In one of his weaker weblog entries (every time he starts to pitch Artix, I hardly recognize his writing style anymore), <a href="http://www.iona.com/blogs/vinoski/archives/000169.html">Steve Vinoski mentioned</a> IONA&#8217;s patented ART technology. So I took the time to look for it and found <a href="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&amp;Sect2=HITOFF&amp;d=PALL&amp;p=1&amp;u=/netahtml/srchnum.htm&amp;r=1&amp;f=G&amp;l=50&amp;s1=6,633,923.WKU.&amp;OS=PN/6,633,923&amp;RS=PN/6,633,923">U.S. patent # 6,633,923</a>, &#8220;Method and system for dynamic configuration of interceptors in a  client-server environment&#8221;. It&#8217;s well-written and an interesting read, but I find it really hard to find the actual invention. This is the abstract:</p>
+
+<blockquote>
+<p>A computer implemented method of creating and managing one or more  interceptors. The method comprises the steps of intrinsically chaining the  interceptors, and storing state information, in at least one of the  chained interceptors, directed to a reference to the next interceptor. A  server computer in a client-server environment that includes a processor  configured to generate one or more interceptors and to intriscally chain  the interceptors, and a memory associated with at least one of the chained  interceptors and configured to store state information directed to a reference to the next interceptor thereof.</p>
+</blockquote>
+
+<p>Steve has probably forgotten more about distributed computing than I&#8217;m ever likely to know &#8212; I&#8217;m puzzled that he would have to play the patent card (referring to the blog entry only, he&#8217;s not among the patent authors). I recognize that with the existing patent legislation you might be forced to patent something before someone else does; still, I find the use of software patents as marketing instruments appalling.</p>
+
+<section class="comments">
+
+<div class="comment" id="comment-566">
+On <a href="#comment-566" title="Permalink to this comment">June  5, 2005  9:44 PM</a>, <a href="http://www.iona.com/blogs/vinoski/" title="http://www.iona.com/blogs/vinoski/" rel="nofollow">Steve Vinoski</a>
+said:
+<p>Hi Stefan, I don&#8217;t like writing such blog entries any more than you like reading them. However, when someone takes a cheap shot at you like in the blog entry I was responding to, I feel that you have to respond just to set the facts straight.</p>
+
+<p>To understand the inventions of a patent, you have to read the claims. The claims for the patent you mention revolve around how interceptors are chained together for maximal sharing between multiple chains within a single process while still allowing for per-interceptor uniqueness where necessary, perhaps for per-object or per-thread purposes. Since interceptors are so fundamental to ART, and the way we implemented them is what allows ART to be as fast as other approaches while providing much more flexibility than other similar frameworks, IONA saw fit to patent this invention.</p>
+
+<p>ART has at least one other patent to its credit as well, number 6,453,320. I also think there might still be one or two other applications in process, I&#8217;m not sure.</p>
+
+<p>Even though I was the main technical lead for ART&#8217;s development, my name is not on these patents for two reasons. First, the folks who did the detailed work on these areas deserve the patent rewards, not me. I didn&#8217;t participate in the detailed work enough to feel that I deserved any such credit. Second, I personally feel that so many software patents in general are wrongly awarded that I didn&#8217;t want to personally be involved in any such patents, whether valid or not. That&#8217;s a personal choice.</p>
+
+<p>The reason I mentioned in my blog that ART is patented is mainly out of habit: when I mention ART in a general setting, I often mention that key elements of it are patented. Given that so many technical approaches today in 2005 are based around interceptors and other approaches that are critical elements of ART, elements that we came up with nearly a decade ago when we started developing ART, I don&#8217;t think it hurts to mention it from time to time.</p>
+
+
+<div class="comment" id="comment-567">
+On <a href="#comment-567" title="Permalink to this comment">June  5, 2005 10:04 PM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>Hi Steve, it&#8217;s just pure coincidence that I came across your blog post when I was just pissed at all of this software patent nonsense. I believe that Artix will be chosen, or not chosen, because it either is, or is not, good software. Software patents are just such a bad idea that while I can understand that a company might have to end up playing the game because the others do, I&#8217;m disappointed when technical people &#8212; especially those that really don&#8217;t need to, like you &#8212; embrace what I consider to be the last resort of those who can&#8217;t compete otherwise.</p>
+
+
+</section>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

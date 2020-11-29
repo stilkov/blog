@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Azure"
+date: "2008-11-24T14:27:00+01:00"
+comments: false
+categories: 
+---
+
+<p>I'm late in linking to this, but Clemens Vasters has put up an excellent description of Micosoft's Cloud offering, <a href="http://vasters.com/clemensv/PermaLink,guid,92d78bee-2cfd-4a29-95ab-c5abb9b905e7.aspx">Azure</a>.</p>
+
+

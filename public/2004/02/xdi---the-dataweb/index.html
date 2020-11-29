@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2004/02/xdi---the-dataweb/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>XDI - the Dataweb [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>XDI - the Dataweb</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">Feb 9, 2004</time></small><p>
+	</header>
+	<section>
+	  <p><a href="http://xml.coverpages.org/XDI-IntroWhitePaper20040120.pdf"><img src="/blog/st/images/dataweb.jpg" border="0" height="210" alt="dataweb" width="400" /></a><br />
+I had never heard of this before (not sure whether I need to feel ashamed now) and came across XDI due to <a href="http://www.markbaker.ca/2002/09/Blog//2004/02/09#2004-02-content-vs-data">Mark Baker&#8217;s post</a>. I just speedread the <a href="http://www.markbaker.ca/2002/09/Blog//2004/02/09#2004-02-content-vs-data">whitepaper</a>, and I believe in this case, he has a point &mdash; it doesn&#8217;t seem obvious how this differs from the Web so much as to merit a complete set of new standards (as if we didn&#8217;t have enough of those, already). The notion of automatic synchronization between resources seems interesting, though; I&#8217;m not sure whether a purely Web/REST-based approach to this exists  somewhere &#8230;</p>
+
+<section class="comments">
+
+<div class="comment" id="comment-215">
+On <a href="#comment-215" title="Permalink to this comment">February 10, 2004  4:41 PM</a>, <a href="http://www.markbaker.ca" title="http://www.markbaker.ca" rel="nofollow">Mark Baker</a>
+said:
+<p>It&#8217;s good to know that I occasionally have a point. 8-)</p>
+
+<p>Re synchronization, it depends what your needs are but there are a number of possible solutions including DRP, delta encoding (RFC 3229), vanilla GET or POST (depending upon who&#8217;s the master), or more generally, pub/sub ala KnowNow.  That&#8217;s just off the top of my head.  The key REST constraint to keep in mind when syncing is to remain stateless; entity tags help a lot there.</p>
+
+
+<div class="comment" id="comment-216">
+On <a href="#comment-216" title="Permalink to this comment">February 11, 2004  8:40 AM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>Thanks for the pointers, Mark!</p>
+
+
+</section>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

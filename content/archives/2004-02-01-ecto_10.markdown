@@ -1,0 +1,12 @@
+---
+layout: post
+title: "ecto 1.0"
+date: "2004-02-01T11:35:00+01:00"
+comments: false
+categories: 
+---
+
+<p>Jio Ito reports that <a href="http://joi.ito.com/archives/2004/02/01/ecto_10_released.html">ecto 1.0 has been released</a>. Definitely the coolest blog client on earth.
+Downloaded, paid, registered.</p>
+
+

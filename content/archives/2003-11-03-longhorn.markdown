@@ -1,0 +1,14 @@
+---
+layout: post
+title: "Longhorn"
+date: "2003-11-03T19:06:00+01:00"
+comments: false
+categories: 
+---
+
+<p>In <a href="http://w-uh.com/index.cgi/articles/031102-emperors_new_code.html" title="Critical Section - The Emperor's New Code">The Emperor's New Code</a>, his comments on Microsoft's Longhorn, Ole Eichhorn writes:</p>
+<blockquote>
+It was interesting that in Don Box' introduction to Indigo at the PDC, he asked the roomful of developers "how many people have successfully deployed DCOM?"  Nobody raised their hands.  "How many people have successfully deployed .NET remoting?"  Nobody raised their hands.  "How many people have successfully deployed CORBA?"  Only a few hands.  Out of 3,000 developers essentially none had successfully deployed an object-oriented remote communication method.  It is good that Microsoft has abandoned OO and embraced SOA.
+</blockquote>
+<p>Maybe, just maybe, it might have something to do with the audience being composed of Microsoft-centric developers - my guess is that the answer to "How may of you have ever successfully deployed an OO/RDBMS" mapper might have similar, and also similarly insignificant.</p>
+

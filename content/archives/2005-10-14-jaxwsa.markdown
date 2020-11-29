@@ -1,0 +1,13 @@
+---
+layout: post
+title: "JAX-WSA"
+date: "2005-10-14T22:28:00+01:00"
+comments: false
+categories: 
+---
+
+<p>&#8220;Java&trade; API for XML Web Services Addressing (JAX-WSA)&#8221; &#8212; I never even knew <a href="http://www.jcp.org/en/jsr/detail?id=261">this JSR</a> existed, let alone <a href="http://jcp.org/aboutJava/communityprocess/edr/jsr261/index.html">an early draft</a> has been released.</p>
+
+<p>For some reason, I am severely unexcited about the JCP&#8217;s results with regards to Web services, but maybe that&#8217;s just me.</p>
+
+

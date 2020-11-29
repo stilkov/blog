@@ -1,0 +1,11 @@
+---
+layout: post
+title: "XOM 1.1b3"
+date: "2005-09-12T20:16:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://www.cafeconleche.org/#news2005September12">Elliotte Rusty Harold</a> has released <a href="http://www.xom.nu/unstable.html">Beta 3 of XOM 1.1</a>. In case you have program XML applications in Java, you should definitely take a look.</p>
+
+

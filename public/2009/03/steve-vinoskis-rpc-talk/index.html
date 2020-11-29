@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2009/03/steve-vinoskis-rpc-talk/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>Steve Vinoski&#39;s RPC Talk [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>Steve Vinoski&#39;s RPC Talk</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">Mar 18, 2009</time></small><p>
+	</header>
+	<section>
+	  <p>I actually think <a href="http://steve.vinoski.net/blog/2009/03/18/qcon-london-the-best-one-yet/">Steve Vinovski</a>'s <a href="http://qconlondon.com/london-2009/file?path=/qcon-london-2009/slides/SteveVinoski_RPCAndItsOffspringConvenientYetFundamentallyFlawed.pdf">slide deck from his QCon talk</a> is way too wordy to be used in an actual presentation (in other words, Steve, the talk would probably be even more effective if you just used the titles and used the rest as notes). It's excellent for you, dear reader, if you weren't there :-) </p>
+
+<p>I do actually have a real disagreement, though. Steve's research is sound (as always), but I stil think there are two aspects that merit distinct treatment: One is the idea of making a remote invocation look like a local one (bad, bad idea); the other one is to have a different interface for every specific occasion (another bad idea). I think even the most die-hard RPC fans now concede the first one is a failure; it's the second one that is still not widely accepted. </p>
+
+<section class="comments">
+
+
+
+<div class="comment" id="comment-1948">
+On <a href="#comment-1948" title="Permalink to this comment">March 18, 2009 11:30 PM</a>, <a href="http://steve.vinoski.net/" title="http://steve.vinoski.net/" rel="nofollow">Steve Vinoski</a>
+said:
+<p>Hi Stefan, thanks for the feedback. A couple things to note:</p>
+
+<ol><li>I specifically wrote the slides to be read, not only to be presented, because I figure far more people see them after the conference than attend the talk. When I gave the talk, I didn&#8217;t read from the slides, but rather just talked about what was on them.</li>
+<li>I specifically chose to focus on the history of RPC rather than on all the problems with RPC, including the one you mention, because I think the issues are already more than adequately covered elsewhere. The text in the slides that mentions RPC problems is due to the coverage of those problems in the sources I cite, and from the fact that programming languages played such a key role in the evolution of RPC.</li></ol>
+
+<p>That said, I fully agree with you that the second issue you mention, while certainly not a new issue, is still not widely accepted as being a problem. The answer seems quite obvious to me, and became so when I first read Roy&#8217;s thesis, but I fear too many argue the issue without ever having read Roy&#8217;s thesis, or anything else on the topic for that matter. I&#8217;ve never met Roy in person but I feel like I owe him big time for helping put me on the right track.</p>
+
+<p>All in all, getting the industry over the effects of the long history of language-first distributed systems development just isn&#8217;t going to be easy.</p>
+
+
+<div class="comment" id="comment-1949">
+On <a href="#comment-1949" title="Permalink to this comment">March 19, 2009  9:43 AM</a>, <a href="http://www.mbohlen.de" title="http://www.mbohlen.de" rel="nofollow">Matthias Bohlen</a>
+said:
+<p>Stefan, what do you mean by &#8220;to have a different interface for every specific occasion&#8221;?</p>
+
+
+<div class="comment" id="comment-1950">
+On <a href="#comment-1950" title="Permalink to this comment">March 19, 2009  9:44 PM</a>, 
+<a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>Matthias, I&#8217;m referring to the difference between a SOAP/WSDL style interface with specific methods for every service vs. the generic (uniform) REST interface.</p>
+
+
+</section>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

@@ -1,0 +1,13 @@
+---
+layout: post
+title: "FUD? Me?"
+date: "2007-05-09T18:57:00+01:00"
+comments: false
+categories: 
+---
+
+<p>I have a feeling Sanjiva, <a href="http://www.bloglines.com/blog/sanjiva?id=213">who objects</a> to my <a href="/blog/st/2007/05/05/wstyping_or_404_and_doesnotunderstandmethod_missing.html">static-vs.-dynamic analogy</a>, is getting a little defensive about this WS-* vs. REST thing &#8212; last time I checked, FUD was something spread by certain major vendors, and while  <a href="/">our company</a> is a multi-national player <span style="font-size: smaller">[1]</span>, I&#8217;m not sure anything I utter can be qualified as such &#8230; </p>
+
+<p style="font-size: smaller">[1] just kidding</p>
+
+

@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stefan Tilkov’s Blog</title>
+    <link>https://www.innoq.com/blog/st/index.xml</link>
+    <description>Recent content on Stefan Tilkov’s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 22 Jan 2017 18:00:00 +0100</lastBuildDate>
+    <atom:link href="https://www.innoq.com/blog/st/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Software Engineering Radio Update</title>
+      <link>https://www.innoq.com/blog/st/2017/01/software-engineering-radio-update/</link>
+      <pubDate>Sun, 22 Jan 2017 18:00:00 +0100</pubDate>
+      
+      <guid>https://www.innoq.com/blog/st/2017/01/software-engineering-radio-update/</guid>
+      <description>&lt;p&gt;Good news: SE Radio &lt;a href=&#34;http://www.se-radio.net/2017/01/were-listening/&#34;&gt;has decided to stop the ad&lt;/a&gt; I was offended by, and will even remove it from past episodes. I think that is pretty great for the show’s listeners and for the show itself.&lt;/p&gt;
+
+&lt;p&gt;As for me, I won’t return to the show. We’re parting on good terms, no hard feelings on either side. On the contrary: I encourage you to listen to the show – I know I will continue to do so, it’s pretty great.&lt;/p&gt;
+
+&lt;p&gt;Nevertheless, I’ll be taking the chance to start a new podcast, together with a few of my former show hosts and some esteemed co-workers. Preparations are progressing smoothly, and I expect I’ll be able to announce something over the next few days.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>No More End-to-End-Cyber: Why I&#39;ve Resigned from Software Engineering Radio</title>
+      <link>https://www.innoq.com/blog/st/2017/01/no-more-end-to-end-cyber-why-ive-resigned-from-software-engineering-radio/</link>
+      <pubDate>Sat, 14 Jan 2017 18:00:00 +0100</pubDate>
+      
+      <guid>https://www.innoq.com/blog/st/2017/01/no-more-end-to-end-cyber-why-ive-resigned-from-software-engineering-radio/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve just announced my resignation from &lt;a href=&#34;http://www.se-radio.net&#34;&gt;Software Engineering Radio&lt;/a&gt;, a podcast I&amp;rsquo;ve been involved with for quite some time.&lt;/p&gt;
+
+&lt;p&gt;The TL;DR of the explanation: I refuse to have ads from US arms manufacturers placed into a podcast against my will.&lt;/p&gt;
+
+&lt;p&gt;I first appeared as a guest on SE Radio talking about REST
+&lt;a href=&#34;http://www.se-radio.net/2008/05/episode-98-stefan-tilkov-on-rest/&#34;&gt;a very long time ago&lt;/a&gt;,
+interviewed by &lt;a href=&#34;http://www.voelter.de&#34;&gt;Markus Völter&lt;/a&gt;, the podcast’s
+founder. I joined again as a guest
+&lt;a href=&#34;http://www.se-radio.net/2014/09/episode-210-stefan-tilkov-on-architecture-and-micro-services/&#34;&gt;talking about monoliths and microservices&lt;/a&gt;,
+before becoming one of the hosts. I recorded a number of episodes with
+an amazingly great set of guests, including
+&lt;a href=&#34;http://www.se-radio.net/2016/07/se-radio-episode-263-camille-fournier-on-real-world-distributed-systems/&#34;&gt;Camille Fournier&lt;/a&gt;,
+&lt;a href=&#34;http://www.se-radio.net/2016/06/se-radio-episode-261-david-heinemeier-hansson-on-the-state-of-rails-monoliths-and-more/&#34;&gt;David Heinemeier Hansson&lt;/a&gt;,
+&lt;a href=&#34;http://www.se-radio.net/2016/05/se-radio-episode-257-michael-nygard-on-clojure-in-practice/&#34;&gt;Michael Nygard&lt;/a&gt;,
+&lt;a href=&#34;http://www.se-radio.net/2016/05/se-radio-episode-256-jay-fields-on-working-effectively-with-unit-tests/&#34;&gt;Jay Fields&lt;/a&gt;,
+&lt;a href=&#34;http://www.se-radio.net/2016/02/se-radio-episode-249-vaughn-vernon-on-reactive-programming-with-the-actor-model/&#34;&gt;Vaughn Vernon&lt;/a&gt;,
+&lt;a href=&#34;http://www.se-radio.net/2015/11/se-radio-episode-241-kyle-kingsbury-on-consensus-in-distributed-systems/&#34;&gt;Kyle Kingsbury&lt;/a&gt;,
+&lt;a href=&#34;http://www.se-radio.net/2015/07/episode-232-mark-nottingham-on-http2/&#34;&gt;Mark Nottingham&lt;/a&gt;,
+and
+&lt;a href=&#34;http://www.se-radio.net/2014/12/episode-216-adrian-cockcroft-on-the-modern-cloud-based-platform/&#34;&gt;Adrian Cockcroft&lt;/a&gt;. I
+enjoyed the chance to spend time talking to my guests tremendously,
+and I’m pretty sure quite a few listeners enjoyed the results, too.&lt;/p&gt;
+
+&lt;p&gt;For a long time, SE Radio has been run by the IEEE Computer Society, the organization Markus Völter handed the podcast over to when he resigned from it. This has had positive effects, such as taking on &lt;a href=&#34;http://www.se-radio.net/team/robert-blumen/&#34;&gt;Robert Blumen&lt;/a&gt; as an editor, who does a great job maintaining the herd of cats that is the show host team.&lt;/p&gt;
+
+&lt;p&gt;The decision to run ads was discussed with the podcast hosts, and while I prefer podcasts that don’t have ads, I understand that they’re a great way to offset the cost and potentially even make some money. But the first ad to appear in the SE Radio podcast was one by &lt;a href=&#34;https://en.wikipedia.org/wiki/Northrop_Grumman&#34;&gt;Northrop Grumman&lt;/a&gt;, and it was not only one that I found very questionable from an ethics standpoint, but also intolerably stupid (“your leader in end-to-end cyber”, you’ve got to be kidding me).&lt;/p&gt;
+
+&lt;p&gt;I might have tolerated this, but the straw that broke the camel’s back
+were some discussions about editorial policies regarding politics and
+ethics discussions in the podcasts itself. This, in combination with
+running an ad for technology for today’s battlefield (which, you know,
+“is increasingly cyber”), was just too much.&lt;/p&gt;
+
+&lt;p&gt;Sadly, SE Radio is now part of the IEEE Computer Society, an
+organization with strong ties to the US military and its vendors, and
+my and some other hosts’ attempts to do anything about this led to no
+resolution. The IEEE CS is free to not care about the views of its
+hosts. I’m free to spend my free time somewhere else.&lt;/p&gt;
+
+&lt;p&gt;Which is actually something I’m currently actively planning on doing;
+stay tuned for some podcast-related news sometime soon.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Don’t start with a monolith</title>
+      <link>https://www.innoq.com/blog/st/2015/06/dont-start-with-a-monolith/</link>
+      <pubDate>Mon, 08 Jun 2015 12:12:00 +0100</pubDate>
+      
+      <guid>https://www.innoq.com/blog/st/2015/06/dont-start-with-a-monolith/</guid>
+      <description>&lt;p&gt;I’ve been an avid follower of Martin Fowler’s work ever since I read
+&lt;a href=&#34;https://books.google.de/books/about/Analysis_Patterns.html?id=4V8pZmpwmBYC&amp;amp;redir_esc=y&#34;&gt;“Analysis Patterns”&lt;/a&gt; almost 20 years ago. I’ve always appreciated the
+way he manages to distill complex topics down to their essence, and I
+think the immense number of people reading &lt;a href=&#34;http://martinfowler.com&#34;&gt;martinfowler.com&lt;/a&gt; is well
+deserved. I’m also lucky to have met Martin in person numerous times and was
+thus able to discuss many of the topics we share an interest in with
+him.&lt;/p&gt;
+
+&lt;p&gt;Therefore I couldn’t be more pleased to have been able to publish
+&lt;a href=&#34;http://martinfowler.com/articles/dont-start-monolith.html&#34;&gt;my rebuttal&lt;/a&gt; to &lt;a href=&#34;http://martinfowler.com/bliki/MonolithFirst.html&#34;&gt;his latest piece&lt;/a&gt; on Microservices over on his website.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Thoughts on a Canonical Data Model</title>
+      <link>https://www.innoq.com/blog/st/2015/03/thoughts-on-a-canonical-data-model/</link>
+      <pubDate>Mon, 30 Mar 2015 12:12:00 +0100</pubDate>
+      
+      <guid>https://www.innoq.com/blog/st/2015/03/thoughts-on-a-canonical-data-model/</guid>
+      <description>&lt;p&gt;Over on the innoQ company blog, I&amp;rsquo;ve published a post on why I believe a canonical data model is a bad idea. &lt;a href=&#34;https://www.innoq.com/en/blog/thoughts-on-a-canonical-data-model/&#34;&gt;Enjoy&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Wenn AngularJS eine schlechte Idee ist</title>
+      <link>https://www.innoq.com/blog/st/2014/12/wenn-angularjs-eine-schlechte-idee-ist/</link>
+      <pubDate>Thu, 04 Dec 2014 11:23:00 +0100</pubDate>
+      
+      <guid>https://www.innoq.com/blog/st/2014/12/wenn-angularjs-eine-schlechte-idee-ist/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Mein Kollege Sebastian Janzen, seines Zeichens bekennender
+AngularJS-Fan, hat den folgenden Text in seinem internen Blog
+gepostet – und ich konnte es mir nicht verkneifen, ihn zu fragen, ob
+ich ihn als Gast-Post hier veröffentlichen darf. Hier also seine
+(weisen) Worte …&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Ich habe nun mehrmals zwei Phänomene beobachtet: Ein Entscheider - je
+größer die Firma desto eher zutreffend - hat keine Lust mehr, in die
+gelangweilten, von Prozess-Narben geprägten Gesichter seiner
+Entwickler zu schauen. Er möchte das Team positiv überraschen und überträgt
+für das nächste Projekt AngularJS von einer Buzzword- in die
+Requirements-Liste, denn Entwickler möchten endlich mal was Cooles
+machen. In einem Meeting für eine neue Webseite packt er stolz den
+heiligen SPA-Gral AngularJS aus. Alle Probleme sind gelöst, die
+Entwickler sind happy, das kommt in die Requirements.&lt;/p&gt;
+
+&lt;p&gt;Und nun wird noch jemand von innoQ dazu geholt und hinterfragt
+kritisch das Entwickler-Glück. &amp;ldquo;AngularJS? Sie wissen schon, dass dies
+an der Stelle nicht so ganz zu Ihrem Problem passt?&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;So sehr ich Angular mag und es im ein oder anderen Bereich für richtig
+halte eine SPA zu bauen, so fatal kann es auch laufen, wenn man damit
+versucht Probleme zu erschlagen, die gegensätzlicher nicht sein
+könnten. Beispiele:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Meine Anwendung soll rasend schnell sein!&lt;/em&gt; &lt;br/&gt; Ja, das kann sie als SPA
+sein, jedoch nicht, wenn man zwischen dieser und anderen Seiten
+ständig hin und her wechselt. Ein OpenID-Provider liefert in der Regel
+zwei Seiten aus: Login und Success + Redirect. Die Aufenthaltsdauer
+muss eine SPA rechtfertigen! Und für den Besucher ist es egal, ob es
+eine technisch perfekte Seite ist. Das wird seine Aufenthaltszeit
+nicht verlängern, sondern verkürzen.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Die coolen Seitenübergänge gehen nur in Angular!&lt;/em&gt; &lt;br/&gt;  Nein, die sind
+mit CSS erzeugt oder im Fallback mit jQuery.animate. Genau dieser
+Technik bedient sich Angular auch, denn es ist in JavaScript
+geschrieben - nicht mehr und nicht weniger. Es hat weder Zugriff auf
+Hardware, noch kann es den IE 8 zu einem coolen Browser machen.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Bei Angular muss ich mich nicht mehr um den DOM kümmern&lt;/em&gt; &lt;br/&gt;  Uiuiui,
+als ich das mal gehört habe hat sich bei mir alles rumgedreht. Ich
+glaube ich habe in meiner Angular-Zeit noch nie so viel über die
+Verzahnung zwischen DOM und JS gelernt - einfach aus der Not heraus,
+Bugs zu finden. Manch einer erschlägt diese Bugs mit genügend
+Timeouts. Und viele Plugin-Entwickler machen das auch so, aber das ist
+ziemlich weit weg von geil. Und vom eigentlichen
+Performance-Ziel. Grundkonzepte wie Asynchronität in einem Browser
+müssen verstanden werden, nicht hintergangen! Aus meiner Sicht geht
+Angular mit diesem Umstand hervorragend um, es muss nur genutzt
+werden.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Wir haben viel Angular-Erfahrung im Team&lt;/em&gt; &lt;br/&gt;  Sicher? Unterhaltet Euch
+vorher mit dem Team, stellt Fragen, was die do&amp;rsquo;s und don&amp;rsquo;ts sind. Wenn
+da nichts kommt oder die Frage &amp;ldquo;Wofür setzt man Angular nicht ein?&amp;rdquo;
+unbeantwortet bleibt, dann haben diese Menschen nicht viel damit
+gemacht. Da ist eine Lernphase von teilweise mehreren Wochen
+einzuplanen und viel Debugging-Zeit. Eine schöne Frage ist auch &amp;ldquo;Was
+sind Promises?&amp;rdquo;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Dieses Angular ist nur Frontend, dafür plane ich als Senior
+Consultant mal zwei Stunden ein&lt;/em&gt; &lt;br/&gt;  Das wird scheitern. Angular ist ein
+Framework, mit dem man tatsächlich eine Frontend-Architektur, die
+diesem Namen auch gerecht wird, aufsetzen und planen kann. Es gibt
+mehr als nur Data-Binding und Routen!&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Performante SPAs, die in allen modernen Browsern und im IE &amp;gt;= 8 laufen
+sind das Werk von Menschen, die sich durch und durch mit der Materie
+beschäftigt haben und sehr viel Arbeit dort hinein gesteckt haben. Das
+muss in den Zeitschätzungen berücksichtigt werden, wenn man mal wieder
+&amp;ldquo;Die beste Seite aller Zeiten&amp;rdquo; bauen will.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Web-based frontend integration</title>
+      <link>https://www.innoq.com/blog/st/2014/11/web-based-frontend-integration/</link>
+      <pubDate>Sat, 29 Nov 2014 17:40:35 +0100</pubDate>
+      
+      <guid>https://www.innoq.com/blog/st/2014/11/web-based-frontend-integration/</guid>
+      <description>&lt;p&gt;So &lt;a href=&#34;https://www.innoq.com/blog/st/2013/10/on-monoliths/&#34;&gt;you started with a monolith&lt;/a&gt;, and decided to split things into
+smaller units. Obviously, the next thing you need to consider is how
+to integrate them to form a consistent whole. To do this, let’s start
+with the non-obvious part: The frontend (the UI).&lt;/p&gt;
+
+&lt;p&gt;If you look at what’s typically proposed, it seems entirely obvious
+that there are two options: (1) We integrate on the client side, which
+when dealing with web applications typically means using some sort of
+integrating, JavaScript-based MVC framework or (2) We integrate on the
+server side, using some sort of “orchestration”. (As you might have
+guessed, I will be presenting a third option, the one that I actually
+prefer, but let me set the stage first.)&lt;/p&gt;
+
+&lt;p&gt;Let’s start with (1), the client-side integration option, since things
+like Angular.js are all the rage these days. Our goal is to create an
+integrated UI, so as a first step, we can assume that if our server
+just provides us with lots of small services, each of them offering an
+HTTP/JSON API (RESTful or not, doesn’t really matter in this
+context). Our client-side JavaScript logic will talk to multiple
+services and create a composite UI based on the results. It’s the
+client code’s responsibility to call the services in the right
+sequence and combine their results (if all goes well) or deal with
+failure (if it doesn’t). There are excellent libraries and frameworks
+for doing this, and you can pick the one that best suits your taste
+from the likes of Angular, Ember, and many others.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.innoq.com/blog/st/blog/st/images/client.png&#34; alt=&#34;Integration via a
+client-side framework&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;One problem you’ll very often run into with option (1) is that the
+services on the server side end up being quite fine-grained (a
+consequence of their being reusable in many contexts), which leads to
+a huge number of remote calls that are required between the client and
+the server. Another downside typically results from the fact that you
+can never rely on anything computed by the client, so you’ll have to
+validate it on the server side. This, in turn, can lead to duplication
+of at least parts of your logic.&lt;/p&gt;
+
+&lt;p&gt;The solution to both of these problems typically is to perform
+integration, or orchestration if you prefer, on the server side –
+option (2). In other words, a server-side service will invoke other,
+lower-level services, taking care of combination and error handling,
+interpreting the client request and returning the aggregated result in
+the end. This is of course completely orthogonal to the architecture you
+choose for your client, i.e. you could just as well return HTML from
+your server and have a traditional, non-JS based client.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.innoq.com/blog/st/blog/st/images/server.png&#34; alt=&#34;Integration via a server-side
+orchestration service&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;What’s not to like? What I do not like about this approach is that you
+create yet another server-side service, which makes me question why
+you created the lower-level ones in the first place. This also becomes
+a bottleneck, as any change to one of the lower-level services will
+require a change to the orchestrating service.&lt;/p&gt;
+
+&lt;p&gt;But there’s a third option (finally!), one that doesn’t seem to even be
+considered in many cases, although it is (in my not so humble opinion)
+the most powerful one. This option (3) relies on an absolutely
+magical concept called “link” (dumb joke, I know). To explore this, we
+question one of the initial assumptions that led to having to
+integrate on the client side or server side in the first place, namely
+that for a web UI to be integrated, it needs to aggregate UIs from
+different backend services into a single HTML page.&lt;/p&gt;
+
+&lt;p&gt;Instead, we have each service return HTML that can be rendered by the
+browser – in other words, we assume that each page can be assigned to
+one of the services. Of course there are lots of relations to other
+things, but we simply use links to point to them. One nice side effect
+of this is that it becomes much easier to ensure we have a meaningful
+URI for each of the pages returned (or resources exposed, pick
+whatever terminology you prefer).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://www.innoq.com/blog/st/blog/st/images/link.png&#34; alt=&#34;Integration via links&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So option (3) leaves us with a number of self-contained web
+applications that are integrated only by means of being linked to each
+other. Apart from not connecting them to each other at all, I am not
+aware of any sort of weaker coupling.&lt;/p&gt;
+
+&lt;p&gt;Of course you should be highly skeptical by now: How is that supposed
+to be “integration”? Surely this guy isn’t serious? Is he seriously
+suggesting we revert back to a model that was hip a decade or two ago?
+You bet I am, and I’ll explore some of your doubts in a future post.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Minor Blog Updates, and Where Have the Comments Gone?</title>
+      <link>https://www.innoq.com/blog/st/2014/11/minor-blog-updates-and-where-have-the-comments-gone/</link>
+      <pubDate>Tue, 18 Nov 2014 21:13:00 +0100</pubDate>
+      
+      <guid>https://www.innoq.com/blog/st/2014/11/minor-blog-updates-and-where-have-the-comments-gone/</guid>
+      <description>&lt;p&gt;First of all, you’re likely only reading this because you’re one of
+the few remaining souls who rely on RSS/Atom to follow a blog, just
+like I do. That’s great! And I apologize for messing with your feed
+(it’s quite likely a whole bunch of articles were marked as unread in
+your feedreader, something I hate when it happens to me). Sorry.&lt;/p&gt;
+
+&lt;p&gt;As you can see (or could see if you bothered to visit the site, which
+you probably don’t as it provides a full-text feed so why would you? I
+know I wouldn’t), I have tweaked the design a bit to align it a bit
+more with our &lt;a href=&#34;https://www.innoq.com/en/&#34;&gt;main company site&lt;/a&gt;, which I
+happen to like quite a bit. I also included nicely unobtrusive,
+&lt;a href=&#34;http://schier.co/blog/2014/10/22/pure-html-share-buttons.html&#34;&gt;pure HTML share buttons&lt;/a&gt;
+(because I keep hearing people like them and didn’t want to include
+more JavaScript code provided by a party interested in tracking your
+every move then absolutely necessary). Most importantly, the fact that
+the whole site is now delivered via HTTPS only is reflected in the
+URIs used as IDs for the posts, which is likely the change that
+triggered that unread mark.&lt;/p&gt;
+
+&lt;p&gt;I will try to treat you better in the future, fellow Atom die-hard.&lt;/p&gt;
+
+&lt;p&gt;In the same spirit (less JS), I also removed the Disqus comments. I
+love the idea of Disqus (externalized comments), but I hate the
+implementation. But if you have feedback to some of the stuff I write,
+feel free to &lt;a href=&#34;mailto:stefan.tilkov@innoq.com&#34;&gt;write me an email&lt;/a&gt;! I might not answer immediately (or
+rarely not at all), but I’ll try to incorporate whatever you send me
+into future posts.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How small should your microservice be?</title>
+      <link>https://www.innoq.com/blog/st/2014/11/how-small-should-your-microservice-be/</link>
+      <pubDate>Mon, 17 Nov 2014 07:53:00 +0100</pubDate>
+      
+      <guid>https://www.innoq.com/blog/st/2014/11/how-small-should-your-microservice-be/</guid>
+      <description>&lt;p&gt;Given that microservices are supposed to be, well, “micro”, there’s a
+lot of discussion about the right size. A typical answer to this
+question is: A microservice should do just one thing. I don’t really
+think that’s an answer, as “one thing” leaves a lot of room for
+interpretation. But I’ve seen people suggest that each individual
+microservice should be as small as a single function, and I strongly
+disagree with this for almost every situation. Consider, for example,
+a function that computes something based on three input values, and
+returns a result. Is that a good candidate for a microservice,
+i.e. should it be a separately deployable application of its own?&lt;/p&gt;
+
+&lt;p&gt;I believe it’s easier to approach this from the opposite
+direction. Let’s take an example: A web-based email system. Let’s not
+overcomplicate things and assume it’s traditional and offers the
+minimal features you’d expect, such as logging in and out, maintaining
+some user settings, creating messages (from scratch or by replying to
+or forwarding an existing one), deleting messages, viewing your inbox,
+moving messages into folders (that you can create, view and delete),
+maintaining an address book, search for messages … I’m sure you get
+the picture. At one extreme, we could absolutely build this as a
+single application and ensure it’s built not as a single package, but
+using a reasonable internal modularization strategy. We could decide
+to write its core as a set of collaborating classes, maybe adhering to
+the DDD approach (which would classify the classes according to the
+role they play). Then we’d add the dependencies to the outside world,
+such as the UI, the data storage, external systems (such as maybe
+external mail handlers, LDAP directories, etc.), possibly using a
+layered or hexagonal architecture.&lt;/p&gt;
+
+&lt;p&gt;The team(s) working on this application would need to synchronize very
+tightly, as the whole thing is released at once. It will also be
+scalad in an all-or-nothing fashion, and it will be down or up and
+running completely, not partially. That may be perfectly fine! But
+let’s just assume (again) you deem it’s not, and want to cut it apart
+into separate parts that have their own life-cycle and are isolated
+from each other.&lt;/p&gt;
+
+&lt;p&gt;How would you go about decomposing this into separate applications or
+services? First of all, the login/logout stuff (the auth system) is
+a good candidate, as is the user profile. They could go into one
+service, but if we consider that the auth system has to maintain
+passwords (or rather, password hashes), it makes sense in my view to
+treat it differently from the rest. The emails and folders themselves
+seem quite cohesive to me, though: You could separate them, but I
+probably wouldn’t. If there are multiple ways to connect to the
+outside world, say, via the Web interface, POP3, IMAP, and SMTP, I can
+imagine each of those being their own service. Maybe I’d factor out
+the storage of messages into its own service, one that doesn’t know
+the difference between a document and an email. I think the address
+book, including its data storage, its UI and its API seems like a
+natural candidate to be separated from the rest.&lt;/p&gt;
+
+&lt;p&gt;But in all, I’d probably end up with a dozen, maybe twenty or thirty
+services (or &lt;em&gt;self-contained systems&lt;/em&gt;, as I prefer to call them). And
+more importantly, I think that for any given interaction triggered by
+some outside event – like e.g. a user clicking a button after entering
+data into a form – I’d end up touching maybe 3-5 of them.&lt;/p&gt;
+
+&lt;p&gt;In other words, I think it’s not a goal to make your services as small
+as possible. Doing so would mean you view the separation into
+individual, stand-alone services as your &lt;em&gt;only&lt;/em&gt; structuring
+mechanism, while it should be only one of many.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Just do it</title>
+      <link>https://www.innoq.com/blog/st/2014/11/just-do-it/</link>
+      <pubDate>Mon, 10 Nov 2014 20:20:00 +0100</pubDate>
+      
+      <guid>https://www.innoq.com/blog/st/2014/11/just-do-it/</guid>
+      <description>&lt;p&gt;Three posts in quick succession: &lt;a href=&#34;http://scribbling.net/2014/10/16/short-form-blogging/&#34;&gt;This one&lt;/a&gt; by Gina Trapani, &lt;a
+href=&#34;http://sixcolors.com/post/2014/10/bigger-than-a-tweet/&#34;&gt;this one&lt;/a&gt; by Jason Snell, and &lt;a
+href=&#34;http://www.marco.org/2014/11/01/short-form-blogging&#34;&gt;this one&lt;/a&gt; from Marco Arment, all make the same point: There should be more blogging, and maybe one way to get this into real, live, actual posts is to reduce the amount of rules you as a writer subject yourself to. In this spirit, I’ll try to get this thing restarted.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Women in Tech</title>
+      <link>https://www.innoq.com/blog/st/2014/08/women-in-tech/</link>
+      <pubDate>Mon, 04 Aug 2014 18:13:00 +0100</pubDate>
+      
+      <guid>https://www.innoq.com/blog/st/2014/08/women-in-tech/</guid>
+      <description>&lt;p&gt;For a long time, I’ve been convinced that we need more women, or in general, a lot more diversity, in the tech community. While I’m typically not at a loss for words on any topic, I find this one pretty hard. My guess is the major reason is that my own perspective on this is constantly changing. In fact I’m quite convinced that if I spoke to a version of myself that had been transported to the present from, say, 5 years ago, I’d disagree with me a lot. And there are a lot of capable people writing and talking about this topic already, more than enough to ensure my input is not really needed.&lt;/p&gt;
+
+&lt;p&gt;On the other hand, though, I know that sometimes it’s easier to listen to someone from your own demographic, and accept that they expose a point of view you disagree with, so maybe I should say something from time to time. And I haven’t put this blog to good use for a while, so why not start with this topic? I’d be extremely interested in getting your feedback, so please do use the comments or let me know what you think via Twitter.&lt;/p&gt;
+
+&lt;p&gt;First of all, to set up a bit of a foundation, here are some of the things I consider to be and personally have no doubts about at all:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;There is no inherent reason at all why men should be better at technical tasks than women (or vice versa).&lt;/li&gt;
+&lt;li&gt;The software community (or IT/tech industry, if you prefer) does not have a remotely reasonable share of women.&lt;/li&gt;
+&lt;li&gt;The reason for this is a complex mixture of
+a) things that happen in our education system, very early in peoples’ lives, that make women pursue a different career
+b) things that the tech industry does that make it unattractive for women
+c) things the tech industry does that drive women who do enter it into leaving it again&lt;/li&gt;
+&lt;li&gt;Whatever the reasons may be, the effect is undoubtedly negative because
+a) there is a lot on unused potential, i.e. there could be almost double the number of great programmers if it weren’t mostly men who worked in this industry and
+b) a more diverse group is way more fun to work with and (if studies are to be believed) more productive&lt;/li&gt;
+&lt;li&gt;A lot of the discussion about women is equally applicable to other groups, such is people with disabilities, minority ethnic groups, LGBT folks, etc.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Do you disagree with any of these?&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>On Monoliths</title>
+      <link>https://www.innoq.com/blog/st/2013/10/on-monoliths/</link>
+      <pubDate>Tue, 22 Oct 2013 10:47:00 +0100</pubDate>
+      
+      <guid>https://www.innoq.com/blog/st/2013/10/on-monoliths/</guid>
+      <description>&lt;p&gt;A while ago, I gave a talk at QCon about breaking up monoliths
+(&lt;a href=&#34;http://www.infoq.com/presentations/Breaking-the-Monolith&#34; title=&#34;Breaking the Monolith&#34;&gt;there&amp;rsquo;s a video up on InfoQ&lt;/a&gt;), repeated it in a slightly improved version
+at JavaZone (see
+&lt;a href=&#34;https://speakerdeck.com/stilkov/breaking-the-monolith-1&#34;&gt;slides&lt;/a&gt; and
+&lt;a href=&#34;http://vimeo.com/74354372&#34;&gt;video&lt;/a&gt;), and the topic continues to come
+up in almost every consulting engagement and client workshop I&amp;rsquo;ve been
+involved in since then. Like many of the topics I talk about, it&amp;rsquo;s
+somewhat unfair that I get the positive feedback and people assume I
+came up with the ideas all on my own: Most of stuff like this is the
+result of collaboration, with my colleagues at &lt;a href=&#34;http://www.innoq.com&#34;&gt;innoQ&lt;/a&gt; (see for
+example
+&lt;a href=&#34;http://www.sigs-datacom.de/fachzeitschriften/objektspektrum/online-themenspecials/artikelansicht.html?tx_mwjournals_pi1%5Bpointer%5D=0&amp;amp;tx_mwjournals_pi1%5Bmode%5D=1&amp;amp;tx_mwjournals_pi1%5BshowUid%5D=7022&#34;&gt;an article I wrote with Phillip Ghadir for ObjektSpektrum&lt;/a&gt;
+if you read German), as well as customer staff. But wherever it
+originated, I found that it strikes a nerve with many developers and
+architects, not only in big companies that conduct million-Euro
+development projects, but also in smaller e-commerce companies and
+even startups that have started to become successful.&lt;/p&gt;
+
+&lt;p&gt;The main idea is this (no surprise for almost everyone, I guess):
+&lt;em&gt;Nobody&lt;/em&gt; wants monoliths, i.e. big systems composed of hundreds of
+thousands or millions of lines of code (in a language like Java) or
+tens of thousands (e.g. in Ruby), yet everyone ends up having
+them. And once you have one, you&amp;rsquo;re basically stuck with them: They&amp;rsquo;re
+incredibly hard to maintain, extend, and modernize; yet they provide
+value and can&amp;rsquo;t simply be replaced (something that many organizations
+attempt but fail at, because it&amp;rsquo;s awfully hard to create something new
+that is not only great in terms of architecture, but also can actually
+function as a full replacement for all of the old system&amp;rsquo;s features.&lt;/p&gt;
+
+&lt;p&gt;So what&amp;rsquo;s the proposed remedy? To talk about that, we need to take a
+step back and find out how we actually end up systems that are too big
+in the first place. My theory is that the number one reason is &lt;em&gt;project
+scope&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;When a project is started, there is an assumption that it&amp;rsquo;s the goal
+of a project to create a single system. This typically goes
+unquestioned, even though the people or person coming up with the
+project boundaries often don&amp;rsquo;t decide this consciously. This is most
+obvious if they&amp;rsquo;re non-technical people who make decisions on a budget
+basis.&lt;/p&gt;
+
+&lt;p&gt;So the very first thing we should be doing as architects (or lead
+developers if you don&amp;rsquo;t like the term) is to find out what it actually
+is we should be building. Is it really a single system? If our task is
+to replace an existing system with a new one, it&amp;rsquo;s very tempting to
+just accept existing boundaries and go with them. If we&amp;rsquo;re
+consolidating two systems, it&amp;rsquo;s equally tempting to view our scope as
+the union of the predecessor systems&amp;rsquo; scope. In the rare cases where
+our task is to actually modularize something existing, it&amp;rsquo;s because of
+business reasons (such as deregulation). Again, while it might seem
+like a good idea to just accept the boundaries being suggested to us,
+it&amp;rsquo;s not at all clear why this should be a good idea. After all,
+if whoever came up with those boundaries is not an architect or
+developer, what makes us think they made a good choice?&lt;/p&gt;
+
+&lt;p&gt;In my view, the most important thing to do, then, is to find out how
+many systems we should be building in the first place. It may be a
+single one, but it may also be two, five or a dozen (though probably
+not more) &amp;ndash; clearly, the decision should be made very consciously,
+because whatever system boundaries you pick, you will likely be stuck
+with them for a very long time.&lt;/p&gt;
+
+&lt;p&gt;As &amp;ldquo;system&amp;rdquo; is a term that can mean almost anything, I need to define
+what I mean by it in this context. A system is an independent unit
+that is developed according to its own rules, and only connected to
+other systems in an unobstrusive fashion. A system, according to this
+model, has its own database, business logic, and user interface; it&amp;rsquo;s
+deployed separately. It&amp;rsquo;s likely developed by a different team than
+other systems. It has its own life cycle, in terms of development as
+well as deployment. It&amp;rsquo;s operated autonomously. It has its own test
+suite. In basically every regard, it&amp;rsquo;s as different from all the other
+systems as a piece of commercial off-the-shelf software would be. (In
+fact, one of the systems may end up being a piece of standard
+software.) Is that the same as the &amp;ldquo;Micro Services&amp;rdquo; idea? If you watch
+James Lewis&amp;rsquo;s great talk
+(&lt;a href=&#34;http://vimeo.com/74452550&#34;&gt;here&amp;rsquo;s a recording&lt;/a&gt;, also done at
+JavaZone; in fact his was scheduled directly after mine), you&amp;rsquo;ll find
+a lot of similarities, but the major difference is probably the size
+of each individual unit. But to me, seeing similar concepts appear in
+different contexts is a very good sign.&lt;/p&gt;
+
+&lt;p&gt;It doesn&amp;rsquo;t really matter that much whether you get the number and
+distribution right with the first attempt &amp;ndash; in fact, you can
+reasonably consider that to be highly improbable. But it&amp;rsquo;s one thing
+to find out you should have built six or eight systems instead of seven,
+i.e. get it wrong in one or two places, and a completely different one
+to notice it should have been seven instead of one.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve rambled on for long enough for a single post, so here&amp;rsquo;s a
+preliminary conclusion: How many systems you build should be a very
+conscious decision. It will affect the life of those tasked with
+evolving and maintaining it for years to come.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Harassed by Getty Images</title>
+      <link>https://www.innoq.com/blog/st/2013/10/harassed-by-getty-images/</link>
+      <pubDate>Mon, 07 Oct 2013 11:52:00 +0100</pubDate>
+      
+      <guid>https://www.innoq.com/blog/st/2013/10/harassed-by-getty-images/</guid>
+      <description>&lt;p&gt;Ah, the joys of &amp;ldquo;Intellectual Property&amp;rdquo;. I&amp;rsquo;ve been a long-time fan of the wonderful demotivational posters offered by &lt;a href=&#34;http://www.despair.com&#34;&gt;despair.com&lt;/a&gt;. From time to time, I point people to them, e.g. by tweeting about it. In the past, when there was no Twitter (yes, that time existed), I used this blog to do so &amp;ndash; on one occasion not only using a plain &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt;, but an &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt; element as well, embedding one of their images on this site (&lt;a href=&#34;https://www.innoq.com/blog/st/blog/st/2006/01/demotivation.html&#34;&gt;this&lt;/a&gt; is the post minus the image). After all, why not send a little traffic to these fine folks?&lt;/p&gt;
+
+&lt;p&gt;But obviously Despair uses stock photos &amp;ndash; a perfect use case if there ever was one &amp;ndash;, and the rights to the particularly cheesy ones apparently belong to Getty images. Now I&amp;rsquo;ve received a letter, first from their internal legal department, and &amp;ndash; after explaining the misunderstanding on their part &amp;ndash; now from their lawyer. In both cases, they insist that we need to license the image to use it.&lt;/p&gt;
+
+&lt;p&gt;As I didn&amp;rsquo;t copy the image of the poster, but only link to it, this seems entirely absurd to me &amp;ndash; particularly if Despair properly licensed the image, which I&amp;rsquo;m quite sure of. (If at all, Despair might have more reason, but I can&amp;rsquo;t believe they&amp;rsquo;d be that unreasonable, purely out of their own interest.) But my guess is the legal trolls at Getty believe it won&amp;rsquo;t be worth the hassle to me. They&amp;rsquo;re wrong &amp;ndash; I don&amp;rsquo;t believe they deserve a single cent of my (or the company&amp;rsquo;s) money. If you have any advice, or want to share some of your own experience with these people, please leave a comment.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Keyboard Optimization</title>
+      <link>https://www.innoq.com/blog/st/2013/06/keyboard-optimization/</link>
+      <pubDate>Sun, 30 Jun 2013 21:19:00 +0100</pubDate>
+      
+      <guid>https://www.innoq.com/blog/st/2013/06/keyboard-optimization/</guid>
+      <description>&lt;p&gt;For the last few months, I&amp;rsquo;ve been continuously tweaking my laptop
+settings to optimize my typing speed and efficiency. Here are some of
+the things I&amp;rsquo;ve learned, and some of the tools and approaches I&amp;rsquo;m
+currently using.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;I finally took up &amp;ldquo;real&amp;rdquo; touch typing, i.e. using 10 fingers and a
+classical system. For years I&amp;rsquo;d been quite satisfied, even a little
+proud, of my awesome typing skillz, only to be shot down when I took
+the first real speed typing test and found myself scoring a ridiculous 30-40
+words per minute, the reason being mostly mistakes and the
+&amp;ldquo;occasional&amp;rdquo; peeking if some not-so-common character came along. There
+are a ton of tools for learning touch typing. The one I spent the most
+time with is the excellent (and free) &lt;a href=&#39;http://www.tipp10.com/en/index/&#39;&gt;Tipp10&lt;/a&gt;, which is available in
+both offline and online versions. There&amp;rsquo;s also the very nicely done
+&lt;a href=&#39;https://itunes.apple.com/en/app/keys/id526394170?mt=12&#39;&gt;Keys&lt;/a&gt; if you&amp;rsquo;re on a Mac and have a US keyboard. If you like to have
+some social interaction, both &lt;a href=&#39;http://10fastfingers.com/&#39;&gt;10 Fast Fingers&lt;/a&gt; and &lt;a href=&#39;http://play.typeracer.com/&#39;&gt;Typeracer&lt;/a&gt; are also
+quite nice. Finally, for a programmer, &lt;a href=&#39;http://typing.io/&#39;&gt;typing.io&lt;/a&gt; is a fantastic resource.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;I switched to a US keyboard layout a while ago. I don&amp;rsquo;t know why
+I&amp;rsquo;d put this off for so long; while I originally started out using a
+German keyboard layout (QWERTZ instead of QWERTY), I easily write half
+of what I produce in English, so it wouldn&amp;rsquo;t have hurt to do this
+earlier. The most important benefits are that almost all of the
+characters required in programming languages are far easier to type
+using a US keyboard and all of the keyboard shortcuts, particularly in
+editors such as my favorite, Emacs, suddenly make a lot more
+sense. Because I still type a lot of German texts and hated the
+default input method for umlauts and the German &amp;ldquo;&amp;szlig;&amp;rdquo;, I installed &lt;a
+href=&#39;http://hci.rwth-aachen.de/USGermanKeyboard&#39;&gt;the great &amp;ldquo;USGerman&amp;rdquo; keyboard layout&lt;/a&gt;, which allows me to use Option+a, u, o and s to
+get the appropriate characters with a single combination. This has
+turned out to be a very workable solution.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;It also made me use Cmd for Meta in Emacs, which is both good and bad:
+It&amp;rsquo;s good because when you use Emacs, you use Meta a lot; it&amp;rsquo;s bad,
+because some of the keyboard shortcuts for moving around now need to
+be done with Cmd (in Emacs) and Option (everywhere else), which can be
+a bit annoying. Also, I ordered my new laptop with a German keyboard
+layout by accident, which ended up being great because it means I now
+have no chance to actually look at the keyboard for those special
+characters anymore. (It also allowed me to turn the keyboard lighting
+all the way down.)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Speaking of Emacs, I wanted to make sure I have the Emacs short
+cuts available everywhere. This is actually the case to a large degree
+by default on a Mac, but I wanted to be able to rely on combinations
+such as Ctrl-M, Ctrl-H, Ctrl-I, etc. Enter the slightly ugly, stupidly
+named, but incredibly powerful &lt;a href=&#39;https://pqrs.org/macosx/keyremap4macbook/index.html.en&#39;&gt;KeyRemap4MacBook&lt;/a&gt;, which allowed me to
+ensure Emacs keys work everywhere. (I hear this is possible for vi
+users, too.)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Now I find myself not taking my fingers off home row very much, and I&amp;rsquo;m
+comfortably moving along at 60-80 wpm. There&amp;rsquo;s a weird satisfaction in
+this &amp;ndash; I noticed that in a recent company-internal discussion, many
+of my co-workers did not seem to see much of a point in taking up
+touch-typing because they don&amp;rsquo;t see typing speed as the limiting
+factor. One reason I might see this differenly is because I (sadly) don&amp;rsquo;t
+program much these days, but produce a lot of prose instead. And there, at
+least, I&amp;rsquo;m absolutely confident that not having your typing get in the
+way is a huge asset.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Why I like Schemaless Data Structures</title>
+      <link>https://www.innoq.com/blog/st/2013/01/why-i-like-schemaless-data-structures/</link>
+      <pubDate>Mon, 07 Jan 2013 23:00:00 +0100</pubDate>
+      
+      <guid>https://www.innoq.com/blog/st/2013/01/why-i-like-schemaless-data-structures/</guid>
+      <description>&lt;p&gt;Martin Fowler has written an infodeck (which is actually a nice format for these kinds of things) &lt;a href=&#39;http://martinfowler.com/articles/schemaless/&#39;&gt;on schemaless databases and in-memory structures&lt;/a&gt;. I agree with most of it, at least as far as database design is concerned. But I believe there are two important concerns missing, and that&amp;rsquo;s the reason why I don&amp;rsquo;t agree with the conclusion. Note that my concern is not really with the database part, but with the extrapolation to in-memory data structures, so you should read the following with this in mind:&lt;/p&gt;
+
+&lt;p&gt;First, a major effect of using &amp;ldquo;schemaless&amp;rdquo;, simple data structures is loose&amp;reg; coupling between pieces of logic (functions) operating on them. If I pass a map to a piece of code, that code will extract what it&amp;rsquo;s interested in, possibly transforming the data in the process (ideally into a new data structure using efficient copy strategies). It will thus only depend on what it actually uses. Take the following Clojure code as an example (this would be doable similarly in Python, Ruby, Perl, Scala and even Java, although with way more boilerplate in it).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;;; &amp;quot;projects&amp;quot; is a Clojure set containing three maps
+(def projects #{
+                {:id &amp;quot;1&amp;quot;,
+                 :kind :time-material,
+                 :description &amp;quot;Consulting for BigCo&amp;quot;,
+                 :budget 25000,
+                 :team [:joe, :chuck, :james]}
+                {:id &amp;quot;2&amp;quot;,
+                 :kind :fixed-price,
+                 :description &amp;quot;Development for Startup&amp;quot;,
+                 :budget 100000,
+                 :team [:john, :chuck, :james, :bill]}
+                {:id &amp;quot;3&amp;quot;,
+                 :kind :fixed-price,
+                 :description &amp;quot;Clojure Training&amp;quot;,
+                 :budget 3000,
+                 :team [:joe, :john]}})
+
+;; all-members returns all team members in all projects
+(defn all-members
+  [projects]
+  (reduce conj #{} (flatten (map :team projects))))
+
+;; yields #{:chuck :joe :james :john :bill}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The code and the data structure are coupled just by one map key (&lt;code&gt;:team&lt;/code&gt; in the example); I can add other data elements without problems as long as I maintain that contract. In languages such as Clojure, a huge library of useful functions to manipulate data rely on this fact (&lt;code&gt;conj&lt;/code&gt;, &lt;code&gt;flatten&lt;/code&gt;, &lt;code&gt;map&lt;/code&gt; and &lt;code&gt;reduce&lt;/code&gt; in this case.)&lt;/p&gt;
+
+&lt;p&gt;More importantly, it&amp;rsquo;s possible (and actually quite common) to use generic data structures at boundaries, such as between modules/namespaces. At their interfaces, these modules accept simple data structures, not complex object graphs. In fact this makes it a lot easier to evolve a single-process program into a distributed one: The kinds of interfaces you use internally resemble what you&amp;rsquo;d be using remotely (in fact there&amp;rsquo;s a very nice mapping between a nested Clojure, Ruby or Python data structure and e.g. JSON.)&lt;/p&gt;
+
+&lt;p&gt;Some languages, such as Clojure, take this to an extreme: Almost everywhere you&amp;rsquo;d create a new class in an OO language, you&amp;rsquo;d just use a simple data structure, such as map, a vector, set or list. In a statically typed limited OO language such as Java, you will almost always end up creating new classes. Of course you can use Map in Java, too, but it would not be idiomatic (and the reverse is true for Clojure as well, which enables you to create &amp;ldquo;normal&amp;rdquo; Java classes, too.) Some languages are somewhere in the middle, as shown by the Ruby code in Martin&amp;rsquo;s example. But I find it not very useful to favor one style over the other by default, unless you consider the language you&amp;rsquo;re using.&lt;/p&gt;
+
+&lt;p&gt;Secondly, the use of custom-built data structures &amp;ndash; and that&amp;rsquo;s what a schema boils down to if viewed from a programming language standpoint &amp;ndash; always means additional code. You might consider this irrelevant, but it&amp;rsquo;s nicely shown in interfaces such as those of WSGI, Rack or Ring when you compare them to their equivalent in Java: A simple map containing a method or response code, headers and a body vs. different concrete classes for requests with tons of specific attributes (and bonus getters and setters). Restricting the use of schemaless design to the cases where you actually need dynamic variability misses this advantage.&lt;/p&gt;
+
+&lt;p&gt;In summary, I think of Martin&amp;rsquo;s points are valid, and he definitely spent more time on articulating his conclusion than I did in writing this comment. But I think those two aspects &amp;ndash; coupling and verbosity &amp;ndash; are worth considering when you need to decide which approach to use.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>New languages</title>
+      <link>https://www.innoq.com/blog/st/2012/12/new-languages/</link>
+      <pubDate>Sat, 22 Dec 2012 15:00:00 +0100</pubDate>
+      
+      <guid>https://www.innoq.com/blog/st/2012/12/new-languages/</guid>
+      <description>&lt;p&gt;Being a programming language geek, I typically try to use the
+Christmas vacation to learn (or rather, play with) a programming
+language I don&amp;rsquo;t know. This year, I find this very hard, as there are
+so many interesting languages one could spend time with. Some I have
+considered are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Go: I was thoroughly unimpressed with this language when it came
+out, and I still fail to see a lot of interesting stuff in it. But
+I&amp;rsquo;ve heard many people I respect say only good things about their
+experience with it, so maybe I should reconsider.&lt;/li&gt;
+&lt;li&gt;Rust: At first glance, this seems to be a very nicely designed
+language (and it has a really excellent tutorial). Even though its
+language features are very advanced, it seems to be intended for
+low-level use cases (that I mostly don&amp;rsquo;t have).&lt;/li&gt;
+&lt;li&gt;Fantom: Seems to be  interesting, too; I remember I looked at it
+a long time ago, but never in depth.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;What do you think? What else is worth a look?&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

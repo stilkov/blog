@@ -1,0 +1,35 @@
+---
+layout: post
+title: "WS-REST"
+date: "2005-03-02T09:09:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://www.pacificspirit.com/blog/2005/03/01/wsrest_continued_do_we_need_an_http_transfer_soap_binding_and_simplified_wsdl">This proposal by Dave Orchard</a> seems to make an awful lot of sense to me. I can&#8217;t help but wondering whether the Web services world is not coming full circle to something that was available 5 years ago, though &#8230;</p>
+
+<section class="comments">
+
+<div class="comment" id="comment-477">
+On <a href="#comment-477" title="Permalink to this comment">March  2, 2005  5:39 PM</a>, <a href="http://creativekarma.com" title="http://creativekarma.com" rel="nofollow">Doug</a>
+said:
+<p>Hmm, I have to admit that I don&#8217;t &#8220;get&#8221; it. On the surface at least, it sounds like he&#8217;s frantically trying to preserve something - anything - from SOAP by trying to twist REST around and cram it into a SOAP framework.</p>
+
+<p>I don&#8217;t understand what advantage the resulting chimera has when compared with straight REST.</p>
+
+
+<div class="comment" id="comment-478">
+On <a href="#comment-478" title="Permalink to this comment">March  2, 2005  5:58 PM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>I agree to a large degree, that&#8217;s what I meant with the full-circle part. There&#8217;s two advantages that can be gained IMO:</p>
+
+<ol>
+<li>Getting the WS-Folks to adopt REST without losing face</li>
+<li>Getting the REST folks to adopt what&#8217;s good in WS-* without losing face </li>
+</ol>
+
+<p>:-)</p>
+
+
+</section>
+

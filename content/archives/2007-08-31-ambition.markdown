@@ -1,0 +1,15 @@
+---
+layout: post
+title: "Ambition"
+date: "2007-08-31T14:44:00+01:00"
+comments: false
+categories: 
+---
+
+<blockquote>
+<p>This idea has been kicked around a whole lot, I know. In IRC. Dark alleyways. Sweaty dance halls. Courts of law. It&#8217;s this: instead of writing SQL, write Ruby. Generate the SQL behind the curtain.</p>
+</blockquote>
+
+<p>The result is called <a href="http://errtheblog.com/post/10722">Ambition</a>. Very cool; sort of <a href="http://msdn2.microsoft.com/en-us/library/bb425822.aspx">LINQ</a> for Ruby.</p>
+
+

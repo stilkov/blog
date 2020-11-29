@@ -1,0 +1,11 @@
+---
+layout: post
+title: "RSS2"
+date: "2003-04-25T19:35:00+01:00"
+comments: false
+categories: 
+---
+
+<p>Thanks to a pointer by <a href="http://www.superluminal.com/dave/weblog/archives/000344.html" title="Settling in">Dave Seidel</a>, I now have an <a href="/blog/st/index-rss2.xml">RSS2 feed</a>. I simply added a new template to MT and pasted <a href="http://diveintomark.org/public/rss2.tmpl">Mark Pilgrim's RSS2 template for MT</a> into it. Works perfectly!<br />
+Although I'm probably the only one using it right now ... seems like a sort of masturbation to subscribe to your own newsfeed, but what the heck - perhaps I'll someday be surprised by the new items I post myself ;-)</p>
+

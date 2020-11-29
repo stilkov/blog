@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2003/08/fast-web-services/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>Fast Web Services [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>Fast Web Services</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">Aug 15, 2003</time></small><p>
+	</header>
+	<section>
+	  <p><a href="http://www.docuverse.com/blog/donpark/2003/08/15.html#a814" title="Don Park's Daily Habit">Don Park</a> points to an <a href="http://developer.java.sun.com/developer/technicalArticles/WebServices/fastWS/index.html">article at Sun's java website</a> that describes how a 4-10 times performance improvement was achieved by using a binary protocol instead of XML (using a mapping from XML Schema to ASN.1). </p>
+<p>Given that they used the Java Web Services Development Pack, which includes Axis as its SOAP stack, this doesn't impress me much. After all, there are implementations out <a href="http://www.systinet.com">there</a> that run a lot faster than that.</p>
+<p>With <a href="http://www.omg.org/technology/documents/spec_catalog.htm" title="Catalog of OMG Specifications">IIOP and CDR</a> (if I remember correctly), if both parties in a communication used the same byte order, the ORB implementation could essentially simply map the bytes from the network interface to memory; using a C struct, you could then address this memory area directly, arguably yielding the best performance theoretically possible.
+With languages like Java (or C# or other higher level, VM-based languages), that is no longer possible. After the bytes have been read from the net, they still need to somehow be mapped to the programming languages implementation; the same is true for the response.</p>
+<p>Using a binary data representation instead of XML optimizes just one (minor) step in the end-to-end message processing chain, with the downside of losing all human readability. </p>
+<p>I don't think this is worth it.</p>
+<section class="comments">
+
+<div class="comment" id="comment-70">
+On <a href="#comment-70" title="Permalink to this comment">February  9, 2004  5:24 PM</a>, <a href="http://www.tagtraum.com/" title="http://www.tagtraum.com/" rel="nofollow">Hendrik Schreiber</a>
+said:
+<p>&#8230; unless of course you are developing for a MIDP device with very limited bandwidth and almost no memory or computing power. Then a binary representation can come in very handy. Actually, I believe it is currently a necessity, until mobile devices get more powerful and G3 networks are up, running, and affordable.</p>
+
+<p>Just my 2 cents.</p>
+
+<p><div class="comment" id="comment-71">
+On <a href="#comment-71" title="Permalink to this comment">February  9, 2004  5:34 PM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>True. Although I&#8217;d question whether XML, in any form - even binary -, makes sense on such devices &#8230;
+Then again, I don&#8217;t believe in the usefulness of all that MIDP stuff anyway ;-)</p></p>
+
+<p><div class="comment" id="comment-72">
+On <a href="#comment-72" title="Permalink to this comment">February 11, 2004  2:46 AM</a>, <a href="http://www.tagtraum.com/" title="http://www.tagtraum.com/" rel="nofollow">Hendrik Schreiber</a>
+said:
+<p>Well, you asked for it&#8230; ;-)</p></p>
+
+<p>With WebServices becoming ubiquitous, many people think that one should talk to them (weird, I know) - even from MIDP. My personal opinion is that you should use a proxy and some proprietary lightweight protocol to invoke WebServices from MIDP, but then again, nobody ever listens to me anyway ;-)</p>
+
+<p>But seriously, MIDP is not so bad after all. What&#8217;s missing is phones that implement enough optional libraries, which are not included in the core MIDP support. Also those optional libraries have to finally be finished. JCP is taking forever&#8230;</p>
+
+<p>Two libraries I&#8217;d like to see on phones real soon are:
+JSR-82 (Bluetooth) hardly available on any phone
+JSR-75 (PDA/PIM-Support) not a spec yet</p>
+
+<p>JSR-75 would finally allow MIDlets to access the native contact database on your cellphone. Something that can&#8217;t be done in pure Java at the moment. And I always thought that would be one of the key applications of MIDP&#8230; but what did they do? They added a game API for MIDP 2.0&#8230; kids rule the world.</p>
+
+<p>On top of this vendors like Nokia still manufacture phones with an artificial 64kb application size limit. Sigh.</p>
+
+<p>BTW, while looking up the JSR numbers, I found JSR-80 (USB). It was accepted as JSR in 9/2000! Wow. Hard to believe that it takes more than three years to come up with a USB API&#8230; Wonder what takes them so long&#8230;</p>
+
+<p><div class="comment" id="comment-73">
+On <a href="#comment-73" title="Permalink to this comment">February 12, 2004  7:07 AM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>So you fell for the flame bait ;-)</p></p>
+
+<p>Seriously, I have next to zero knowledge and no experience with MIDP, so I&#8217;m not qualified at all to judge this. Purely from an end-user perspective, I now fail to see the value in all those little gadgets - nerdy, fun to play with, but not really that useful.</p>
+
+<p></section></p>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

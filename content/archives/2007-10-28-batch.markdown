@@ -1,0 +1,47 @@
+---
+layout: post
+title: "Batch!"
+date: "2007-10-28T22:03:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://www.snellspace.com/wp/?p=788">James Snell</a> shows an example of GData batch updates and writes:</p>
+
+<blockquote>
+<p>If the mere sight of this doesn&#8217;t give you shivers and shakes, let me give you a few reasons why it should.</p>
+</blockquote>
+
+<p>Shivering and shaking, I note that in addition to his (very valid) reasons, XML fragments like</p>
+
+<pre><code>&lt;batch:operation type="insert"/&gt;
+</code></pre>
+
+<p>should make it obvious: Anytime you find yourself adding words like &#8220;operation&#8221; to your representation, you&#8217;ve violated one of the core RESTful HTTP principles, which is that the intent should be communicated using the HTTP verb.</p>
+
+<section class="comments">
+
+
+
+<div class="comment" id="comment-1498">
+On <a href="#comment-1498" title="Permalink to this comment">October 29, 2007  2:22 PM</a>, <a href="http://www.dehora.net/journal" title="http://www.dehora.net/journal" rel="nofollow">Bill de hOra</a>
+said:
+<p>I hope this helps make it clear why some of us in the Atompub WG argued batch out of the spec. There are other essential problems with batch over HTTP; I&#8217;m not sure it can be done cleanly.</p>
+
+<p>Incidentally, I don&#8217;t see how gdata batch is any worse than the features draft or requests to use Atompub to upload binary+atom in one shot for media resource handling.</p>
+
+
+<div class="comment" id="comment-1499">
+On <a href="#comment-1499" title="Permalink to this comment">October 30, 2007  1:26 AM</a>, <a href="http://appside.blogspot.com" title="http://appside.blogspot.com" rel="nofollow">Erik</a>
+said:
+<p>I started a comment but it got too long, so I put it here: <a href="http://appside.blogspot.com/2007/10/poking-at-roa.html" rel="nofollow" /><a href="http://appside.blogspot.com/2007/10/poking-at-roa.html" rel="nofollow">http://appside.blogspot.com/2007/10/poking-at-roa.html</a></p>
+
+
+<div class="comment" id="comment-1500">
+On <a href="#comment-1500" title="Permalink to this comment">October 30, 2007  5:14 AM</a>, <a href="http://www.snellspace.com" title="http://www.snellspace.com" rel="nofollow">James Snell</a>
+said:
+<p>Bill, I can understand the reference to compound posts, but I&#8217;m not sure why you&#8217;re drawing a comparison to the features draft.</p>
+
+
+</section>
+

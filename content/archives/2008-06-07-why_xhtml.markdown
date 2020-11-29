@@ -1,0 +1,34 @@
+---
+layout: post
+title: "Why (X)HTML"
+date: "2008-06-07T20:59:00+01:00"
+comments: false
+categories: 
+---
+
+<p>Wise words from <a href="http://feeds.feedburner.com/~r/untonet/~3/306875682/">DeWitt Clinton</a>:</p>
+
+<blockquote>
+<p>My conclusion is that if you can produce valid xhtml, go for it. But in the end it doesn’t make much of a difference. In fact, I’m pretty certain that the web itself wouldn’t have succeeded if xhtml was required from the beginning, because a web that renders and displays documents is a much better web than one that throws validation errors all over the place.</p>
+</blockquote>
+
+<section class="comments">
+
+
+
+<div class="comment" id="comment-1728">
+On <a href="#comment-1728" title="Permalink to this comment">June  7, 2008  9:20 PM</a>, <a href="http://unto.net/" title="http://unto.net/" rel="nofollow">DeWitt Clinton</a>
+said:
+<p>Thanks, Stefan!  See that quoted here reminds me that I should learn to proofread&#8230;   s/product/produce/.  : )</p>
+
+
+<div class="comment" id="comment-1729">
+On <a href="#comment-1729" title="Permalink to this comment">June  8, 2008  9:27 PM</a>, <a href="/blog/st/">Stefan Tilkov</a>
+
+<a href="/blog/st/" class="commenter-profile"><img src="/mt4/mt-static/images/comment/mt_logo.png" height="16" alt="Author Profile Page" width="16" /></a>
+said:
+<p>No problem; fixed :-)</p>
+
+
+</section>
+

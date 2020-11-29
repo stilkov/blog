@@ -1,0 +1,11 @@
+---
+layout: post
+title: "HTTPLR"
+date: "2005-02-27T23:10:00+01:00"
+comments: false
+categories: 
+---
+
+<p>Bill de h&#211;ra has published <a href="http://www.dehora.net/doc/httplr/draft-httplr-00.html">HTTPLR</a>, a protocol for reliable message delivery over HTTP, as an IETF pre-draft.</p>
+
+

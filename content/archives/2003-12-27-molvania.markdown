@@ -1,0 +1,20 @@
+---
+layout: post
+title: "Molvania"
+date: "2003-12-27T18:47:00+01:00"
+comments: false
+categories: 
+---
+
+<p>Thanks to a <a href="http://www.mnot.net/blog/2003/12/27/next_trip_molvania">pointer</a> by <http://www.mnot.net/">Mark Nottingham, I finally know the location for my next vacation &mdash; <a href="http://www.molvania.com" title="About Molvania">Molvania</a>, <em>a land untouched by modern dentistry</em>.</p>
+
+<section class="comments">
+
+<div class="comment" id="comment-130">
+On <a href="#comment-130" title="Permalink to this comment">July 25, 2005 10:25 PM</a>, mariam
+said:
+<p>It&#8217;s a great book, really, thoroughly amusing, I read some parts and it is really good bits!!!!</p>
+
+
+</section>
+

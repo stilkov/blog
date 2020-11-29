@@ -1,0 +1,110 @@
+---
+layout: post
+title: "How To Piss Off People and Kill All Reasonable Opportunities for Discussion"
+date: "2008-04-22T12:18:00+01:00"
+comments: false
+categories: 
+---
+
+<p>My esteemed InfoQ colleague <a href="http://www.ebpml.org/blog/75.htm">JJ Dubray once again provides a great example</a> of how to avoid ever learning anything and piss off people in the process.</p>
+
+<section class="comments">
+
+
+
+<div class="comment" id="comment-1690">
+On <a href="#comment-1690" title="Permalink to this comment">April 22, 2008 11:54 PM</a>, <a href="http://www.ebpml.org" title="http://www.ebpml.org" rel="nofollow">Jean-Jacques Dubray</a>
+said:
+<p>Stefan:</p>
+
+<p>what discussion? you mean that there is a possible reasonable discussion that can happen? If there was a single chance of a real discussion, I would never write this kind of thing.</p>
+
+<p>How can someone in 2008 (with the kind of background and responsibilities that Jim has) express that &#8220;one service implements one process&#8221; and the &#8220;once your are done with your first process&#8221; &#8230; &#8220;you go to the next&#8221;?</p>
+
+<p>How can someone like Jim tell you, if you don&#8217;t see what I mean, just go look at &#8220;MVC&#8221;? Because MVC is a SOA pattern?</p>
+
+<p>I can just as easily return the argument, am I really the one who can&#8217;t learn? Some people keep insulting principles and concepts that seem to escape them entirely and refuse any challenging question in the process.</p>
+
+<p>Again, if I had any alternative, I would never do that.</p>
+
+
+<div class="comment" id="comment-1691">
+On <a href="#comment-1691" title="Permalink to this comment">April 23, 2008  7:14 PM</a>, <a href="/blog/st/">Stefan Tilkov</a>
+
+<a href="/blog/st/" class="commenter-profile"><img src="/mt4/mt-static/images/comment/mt_logo.png" height="16" alt="Author Profile Page" width="16" /></a>
+said:
+<p>JJ, I know that there&#8217;s no chance I can convince you. You might start wondering, though, why you&#8217;re surrounded by total idiots, and why there are more and more of them &#8212; even if they&#8217;ve been respected members of the distributed computing community for a long time. </p>
+
+<p>Maybe, just maybe, the problem is on that side of the discussion where you (and pretty much only you) don&#8217;t expect it to be.  </p>
+
+
+<div class="comment" id="comment-1692">
+On <a href="#comment-1692" title="Permalink to this comment">April 23, 2008 10:20 PM</a>, <a href="http://www.ebpml.org" title="http://www.ebpml.org" rel="nofollow">Jean-Jacques Dubray</a>
+said:
+<p>It is always easy (I would say cheap) to bring the discussion to these grounds rather than returning to the technical questions. And frankly I am not surprised though always disappointed. </p>
+
+<p>Now, I am not sure I am the only one to argue about the emergence of an Inter-Action Oriented Asynchronous Peer-to-Peer programming model. Pretty much everybody that gives me an hour or two gets it when I explain how I would build a Service Oriented Architecture, how would I manage Governance, Service and Composition Solution delivery, how business processes fit in the picture&#8230; . What I am often arguing about is well supported by commercial products and open source frameworks such as Tuscany and Fabric3. There is also this researcher at IBM Zurich, Ksenia Ryndina, who is actively researching the kind of programming model I advocate for (http://www.zurich.ibm.com/~ryn/). There is also an entire open source methodology that is based on these principles: <a href="http://www.praxeme.org." rel="nofollow">http://www.praxeme.org.</a> I may well be the most vocal of all these people, but I am certainly not alone&#8230; on this side of the discussion. I am certain most of them have given up a long time ago arguing with the other side. </p>
+
+<p>Amusingly, the large distributed computing power house (IBM, Sun, Oracle/BEA, SAP) have all a composite application strategy, and I don&#8217;t think I would be in the position to teach them anything on the topic. At best, I could point out that I have been saying this kind of thing for a long time. </p>
+
+<p>Now, it is true that there are a few -sometimes well known- people in our industry that lost faith in Web Services and SOA around 2002 (often for good reasons, because they tried and it did not work). Unfortunately they kept their rant going, ignoring advances in the field. There is also a few people that love to use their position -as analyst or expert for instance- to FUD around. I have noticed the tendency of these people to reject discussion, they would actually do anything to avoid the discussion because any healthy discussion will immediately make their arguments irrelevant.  </p>
+
+<p>I definitely challenge Jim or anyone else to explain:
+- how an assembly of services (components in SCA terms) can exhibit a high degree of cohesion (a solution is typically composed of many assemblies, and assemblies are also a unit of composition -composite in SCA terms)
+- how likely it is to have &#8220;one service&#8221; implement &#8220;one process&#8221;
++ bonus point if you can demonstrate that there is such a thing as a &#8220;process cohesion&#8221;
++ bonus point if you can articulate how cohesive is an enterprise information model (and hence the set of services that manage information entities)
+- detail how MVC applies to designing process-centric service
+- poll the community to see whether or not it is a dumb idea to ask business people to become IT architect</p>
+
+<p>(I actually lived that recently in a project, I can assure you that it is not pretty at all).</p>
+
+<p>Then and only then, I will look at my side of the discussion for a possible problem area.</p>
+
+<p>I won&#8217;t hold my breath on waiting for the answers, but who knows, people like challenges sometimes.</p>
+
+
+<div class="comment" id="comment-1694">
+On <a href="#comment-1694" title="Permalink to this comment">April 24, 2008  7:09 PM</a>, <a href="/blog/st/">Stefan Tilkov</a>
+
+<a href="/blog/st/" class="commenter-profile"><img src="/mt4/mt-static/images/comment/mt_logo.png" height="16" alt="Author Profile Page" width="16" /></a>
+said:
+<p>The problem is that you consider your view of SOA as the only valid one. But not everybody believes SOA is about composite application development. You measure everything against this model &#8212; any view, any technology that doesn&#8217;t support this is just plain useless from your point of view. </p>
+
+<p>Even worse, you seem believe that anybody who doesn&#8217;t see the composite app model as the end goal, and considers SOA to be about something else, is an idiot. That&#8217;s the most arrogant behavior you can expose.</p>
+
+<p>People don&#8217;t accept your challenges because they are part of a vision they don&#8217;t buy into. Your personal insults do nothing to convince them, on the contrary; people don&#8217;t stop talking to you because they&#8217;re unable to answer your challenges, but simply because you piss them off.</p>
+
+
+<div class="comment" id="comment-1695">
+On <a href="#comment-1695" title="Permalink to this comment">April 24, 2008 11:29 PM</a>, <a href="http://www.ebpml.org" title="http://www.ebpml.org" rel="nofollow">Jean-Jacques Dubray</a>
+said:
+<p>Stefan:</p>
+
+<p>just to be clear on the source of all these discussions, for your readers: there is a (small) community of people who spend a lot of time criticizing good (not perfect) technologies. </p>
+
+<p>The way they criticize if is by saying SOA = foo and keep arguing: &#8220;look I can do &#8216;foo&#8217; in a much better way with XYST technology&#8221;. I am simply trying to have a discussion with this community and ask them to change their assumption. Let&#8217;s assume that SOA = &#8216;bar&#8217;, could you let me know what you say now? </p>
+
+<p>Strangely enough this community of people absolutely refuses to consider any &#8216;bar&#8217; arguments. Note that I never said that doing &#8216;foo&#8217; was not valid. I simply asked this community to consider &#8216;bar&#8217;. So, IMHO, you are very cleverly inverting the roles here.</p>
+
+<p>Now, again, you can take it on the personal level, you can say to anyone that I am an egomaniac trantrumistic whatever, but at the end of the day, I am simply asking to consider &#8216;bar&#8217; and nothing else. For instance, I know very well Amazon&#8217;s SOA architecture. I repeatedly said this is the best SOA I know and it is not based on SCA, BPEL,&#8230; I have no problem with that. Does it apply to my IT organization? partially, it is incomplete, I need more. I don&#8217;t know about Amazon&#8217;s back-office SOA, but I can imagine it is really good too, maybe this one is more applicable to my IT organization.</p>
+
+<p>The real problem I have with the XYST community is that they are precisely promoting XYST as the only way to do SOA making fun of any other way. So at this point, I really don&#8217;t know who should be pissed at who. I am certainly not pissed, just patient.</p>
+
+
+<div class="comment" id="comment-1696">
+On <a href="#comment-1696" title="Permalink to this comment">April 25, 2008  8:00 AM</a>, <a href="/blog/st/">Stefan Tilkov</a>
+
+<a href="/blog/st/" class="commenter-profile"><img src="/mt4/mt-static/images/comment/mt_logo.png" height="16" alt="Author Profile Page" width="16" /></a>
+said:
+<p>I&#8217;ll note you haven&#8217;t really addressed the points from my comment. I can&#8217;t see Jim&#8217;s post having anything to do with the &#8220;XYST&#8221; community. But in any case, let&#8217;s just leave it at this &#8212; our respective readers will make up their own minds (if they care one bit about this whole issue in the first place).</p>
+
+
+<div class="comment" id="comment-1697">
+On <a href="#comment-1697" title="Permalink to this comment">April 25, 2008  5:11 PM</a>, <a href="http://www.anon.org" title="http://www.anon.org" rel="nofollow">Foo Anonymous</a>
+said:
+<p>Guys - please move on.</p>
+
+
+</section>
+

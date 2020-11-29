@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Netvibes"
+date: "2005-09-20T21:48:00+01:00"
+comments: false
+categories: 
+---
+
+<p>Very cool: <a href="http://www.netvibes.com/">Netvibes</a>, an AJAX-based (I hate that acronym) Web 2.0 (I hate that moniker even more) virtual home page &#8212; neat (via <a href="http://www.markbaker.ca/2002/09/Blog/2005/09/18#deliciousdistobj.Netvibes...vibes">Mark</a>).</p>
+
+

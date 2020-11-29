@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Hpricot"
+date: "2006-08-14T08:35:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://code.whytheluckystiff.net/hpricot/wiki/">Hpricot</a> is &#8220;a Fast, Enjoyable HTML Parser for Ruby&#8221; by <a href="http://whytheluckystiff.net/">why the lucky stiff</a>.</p>
+
+

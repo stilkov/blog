@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2008/06/jens-kraumlmer-experience-with-jruby-on-rails/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>Jens Kr&amp;auml;mer: Experience with JRuby on Rails [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>Jens Kr&amp;auml;mer: Experience with JRuby on Rails</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">Jun 10, 2008</time></small><p>
+	</header>
+	<section>
+	  <p>These are my live notes from <a href="http://www.jkraemer.net/">Jens Krämer</a>'s talk on JRuby on Rails at <a href="http://www.rails-konferenz.de/">Rails-Konferenz 2008</a>.</p>
+
+<ul>
+<li>Not talking about ferret and full text search for a change :-)</li>
+<li>Germany's 1st JRuby on Rails project, started in Dec 2007</li>
+<li>JRuby 1.8.6 compatible – no problems w/ incompatibilities in his project</li>
+<li>Recommendation: Cherry as a wrapper for Swing if one is serious about GUI development</li>
+<li>Differences in JRuby: native threads, GC, Unicode, JIT</li>
+<li>JRuby benefits: runs everywhere, politics, performance</li>
+<li>It <em>is</em> possible to deploy a Rails app as a .war, even in practice</li>
+<li>Performance of Rails on Ruby and JRuby almost identical based on his experience</li>
+<li>Development done with JRuby and Webrick </li>
+<li>Test and production on JBoss</li>
+<li>JNDI Datasources as a benefit for admin/deployment</li>
+<li>Mongrel/Java considered exotic – why do JRuby when not deploying to a Java web server?</li>
+<li>JRuby-Rack bridges between servlet engine and Ruby and can run both Merb and Rails apps</li>
+<li>Project context: Medienservice Sachsen </li>
+<li>Media/PR handling for the German state of Saxonia</li>
+<li>External performance and load testing</li>
+<li>Live since April 08</li>
+<li>Features</li>
+<li>Historical correctness</li>
+<li>Scheduled publication</li>
+<li>Emailing to journalists (PDF, plain text, html, xml)</li>
+<li>Personalisation</li>
+<li>Asynchronous background process to handle mail delivery (including early releases of time-embargoed news)</li>
+<li>Main problem: migration</li>
+<li>Old application: WebObjects/Java</li>
+<li>4 WO applications, Oracle backend w/ lots of views and stored procedures</li>
+<li>Goal: centralization to eGovernment Platform, based on JBoss and Apache, Oracle RAC</li>
+<li>DB Schema had to be kept, including Latin-1 data</li>
+<li>Functional equivalence</li>
+<li>Having tests performed by external company was an excellent experience</li>
+<li>Initial phase: Grails considered. Didn't work out; reasons: Grails is very different from Rails, relies on Hibernate, had many bugs (Autumn 2007)</li>
+<li>Using Hibernate meant having to write lots of XML config to match the existing database schema – learning curve way too high (no previous Hibernate experience)</li>
+<li>Didn't like GSP (Groovy Server Pages)</li>
+<li>Might have changed now</li>
+<li>Decision to use Rails</li>
+<li>Three separate applications: frontend, backend, mail handling</li>
+<li>ActiveRecord was easily flexible enough to handle the existing schema – configuration possible</li>
+<li>Specific models for existing views</li>
+<li>Models for more than one table/view (in case of filters)</li>
+<li>Many plugins</li>
+<li>Scheduling: handled via Cron in original version; BackgrounDrb was not an option</li>
+<li>Usage of Quartz scheduler (Rails plugin at https://projects.jkraemer.net/svdn/plugins/jruby/quartz_rails) [very cool!]</li>
+<li>Logging: log file handling didn't work because of concurrent access from multiple threads</li>
+<li>Log4J integration for Rails: https://projects.jkraemer.net/svdn/plugins/jruby/log4j_logger</li>
+<li>ServletContextListener changes default logger</li>
+<li>Oracle-specific stuff: transparent app failover only works with OCI</li>
+<li>Blob handling via JDBC streaming (manual JRuby coding)</li>
+<li>Nice pattern: high-level Ruby to script low-level Java libs</li>
+<li>Java Advanced Imaging API for thumbnails</li>
+<li>Apache FOP for XSLT</li>
+<li>Java-based clustered caching was considered, but not used: filesystem-based fragment caching</li>
+<li><code>to_java_bytes</code> and <code>from_java_bytes</code> as conversion for usage of e.g. ByteArrayInputStreams </li>
+<li>mod_jk problems (not related to Rails)</li>
+<li>Requirements: 60 parallel users (with real, not artificially high load), no page returned in more than 3s</li>
+<li>50-60 requests per second in a VM on a quad core box</li>
+<li>Summary
+<ul>
+<li>no problems with inaccessible target production environment - benefit of mature Java platform</li>
+<li>local development w/ Webrick and local JBoss</li>
+<li>JRuby and Rails absolutely production-ready</li>
+<li>Customer was "tricked" into JRuby, but is happy - now asking for ways to more, even without JBoss :-)</li>
+<li>Tests take too long because of JRuby startup time</li>
+<li>No attempt to do development/test with CRuby/MRI because of Java dependencies</li>
+</ul></li>
+</ul>
+
+<p>Q&amp;A: </p>
+
+<ul>
+<li>Effort: 4 months, mostly one person (him).</li>
+<li>Reason for whole project: eGovernment initiative/centralization on JBoss/Apache</li>
+<li>Is JRuby an option for people w/o Java background: absolutely yes, although some choices might end up differently</li>
+</ul>
+
+<p><em>Great talk!</em></p>
+
+<section class="comments">
+
+
+
+<div class="comment" id="comment-1733">
+On <a href="#comment-1733" title="Permalink to this comment">June 10, 2008 12:23 PM</a>, <a href="http://jmettraux.wordpress.com" title="http://jmettraux.wordpress.com" rel="nofollow">John</a>
+said:
+<p>links :</p>
+
+<p><a href="http://projects.jkraemer.net/svn/plugins/jruby/log4j_logger" rel="nofollow">http://projects.jkraemer.net/svn/plugins/jruby/log4j_logger</a></p>
+
+<p><a href="http://projects.jkraemer.net/svn/plugins/jruby/quartz_rails" rel="nofollow">http://projects.jkraemer.net/svn/plugins/jruby/quartz_rails</a></p>
+
+<p>cheers.</p>
+
+
+<div class="comment" id="comment-1734">
+On <a href="#comment-1734" title="Permalink to this comment">June 10, 2008  3:12 PM</a>, <a href="http://twitter.com/penguintux" title="http://twitter.com/penguintux" rel="nofollow">Lars Fischer</a>
+said:
+<p>So what is the point of Grails when us still need to learn Hibernate?</p>
+
+
+<div class="comment" id="comment-1735">
+On <a href="#comment-1735" title="Permalink to this comment">June 10, 2008 10:33 PM</a>, <a href="http://blogs.sun.com/arungupta/tags/rubyonrails">Arun Gupta</a>
+
+<a href="http://blogs.sun.com/arungupta/tags/rubyonrails" class="commenter-profile"><img src="/mt4/mt-static/images/comment/mt_logo.png" height="16" alt="Author Profile Page" width="16" /></a>
+said:
+<p>You can also consider using GlassFish for deploying Rails applications - natively or WAR-based. See more details at:</p>
+
+<p><a href="http://blogs.sun.com/arungupta/tags/rubyonrails">http://blogs.sun.com/arungupta/tags/rubyonrails</a></p>
+
+
+<div class="comment" id="comment-1736">
+On <a href="#comment-1736" title="Permalink to this comment">June 10, 2008 10:37 PM</a>, <a href="/blog/st/">Stefan Tilkov</a>
+
+<a href="/blog/st/" class="commenter-profile"><img src="/mt4/mt-static/images/comment/mt_logo.png" height="16" alt="Author Profile Page" width="16" /></a>
+said:
+<p>@Lars: This was interesting to me, too – I often heard the claim that having Hibernate at your disposal is great if you have a legacy DB scheme. In Jens&#8217;s experience, using ActiveRecord was even easier (although he quickly pointed out he was new to Hibernate).</p>
+
+
+<div class="comment" id="comment-1737">
+On <a href="#comment-1737" title="Permalink to this comment">June 10, 2008 11:00 PM</a>, <a href="/blog/st/">Stefan Tilkov</a>
+
+<a href="/blog/st/" class="commenter-profile"><img src="/mt4/mt-static/images/comment/mt_logo.png" height="16" alt="Author Profile Page" width="16" /></a>
+said:
+<p>@Arun: Good point. In addition to Glassfish and JBoss, we&#8217;ve also deployed JRuby apps to Tomcat and Jetty without any problems.</p>
+
+
+<div class="comment" id="comment-1741">
+On <a href="#comment-1741" title="Permalink to this comment">June 12, 2008 11:10 AM</a>, Leif
+said:
+<p>So, what is this Cherry that is being mentioned as a Swing wrapper? I can&#8217;t find anything on it. </p>
+
+
+<div class="comment" id="comment-1742">
+On <a href="#comment-1742" title="Permalink to this comment">June 12, 2008 11:20 AM</a>, <a href="/blog/st/">Stefan Tilkov</a>
+
+<a href="/blog/st/" class="commenter-profile"><img src="/mt4/mt-static/images/comment/mt_logo.png" height="16" alt="Author Profile Page" width="16" /></a>
+said:
+<p>I took notes while he was presenting, that&#8217;s why I misspelled it: It&#8217;s actually &#8220;Cheri&#8221;, more at <a href="http://cheri.rubyforge.org/" /><a href="http://cheri.rubyforge.org/">http://cheri.rubyforge.org/</a></p>
+
+
+<div class="comment" id="comment-1744">
+On <a href="#comment-1744" title="Permalink to this comment">June 16, 2008  2:22 PM</a>, Leif
+said:
+<p>Thanks! :)</p>
+
+
+<div class="comment" id="comment-1917">
+On <a href="#comment-1917" title="Permalink to this comment">January 15, 2009  8:09 AM</a>, <a href="http://manmays.googlepages.com" title="http://manmays.googlepages.com" rel="nofollow">manmay</a>
+said:
+<p>hello,
+I am trying to create a Jruby on rails app. with hibernate as back-end and rails as front-end.
+But i m not able to have hibernate configured for my app .
+can u please tell me how did u implement hibernate into u&#8217;r app.
+where to have jars,servlet.xml, web.xml, pojos, controllers , models, etc .. i m not able to understand the dir structure of the app&#8230;.. help me out ..</p>
+
+<p>thanks,
+manmay
+manmays@gmail.com
+manmays@hotmail.com</p>
+
+
+</section>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

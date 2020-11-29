@@ -1,0 +1,67 @@
+---
+layout: post
+title: "WS-* Usage"
+date: "2007-05-22T08:47:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://blogs.msdn.com/mikechampion/archive/2007/05/21/ws-and-the-hype-cycle.aspx">Mike Champion</a> defends WS-*, using WS-Management as one example:</p>
+
+<blockquote>
+<p>On closer examination,&#160;WS-Management is widely used today in&#160;situations where the web-scale alternatives&#160;really don&#8217;t fit, such as&#160;deep within operating systems or in the firmware of chips.</p>
+</blockquote>
+
+<p>Sorry, unconvincing. I plainly refuse to believe that something capable of processing WS-Transfer, WS-Management, SOAP, XML (all over TCP, as the bare minimum) doesn&#8217;t have enough power to run HTTP.</p>
+
+<section class="comments">
+
+
+
+<div class="comment" id="comment-1312">
+On <a href="#comment-1312" title="Permalink to this comment">May 22, 2007 11:34 AM</a>, <a href="http://www.briggs.net.nz/log" title="http://www.briggs.net.nz/log" rel="nofollow">Jason R Briggs</a>
+said:
+<p>Likewise, I don&#8217;t believe the term &#8220;pragmatic ubiquity&#8221; belongs anywhere near a WS -* spec.</p>
+
+
+<div class="comment" id="comment-1313">
+On <a href="#comment-1313" title="Permalink to this comment">May 22, 2007  4:57 PM</a>, <a href="http://blogs.msdn.com/mikechampion" title="http://blogs.msdn.com/mikechampion" rel="nofollow">Mike Champion</a>
+said:
+<p>OK, let&#8217;s assume that chip firmware could run an HTTP server just as easily.  Then what?  What else would be neede to provide the actual functionality that the device management ecosystem needs?  When all that is added in, what have you gained over WS-Management? How would you persuade one of HP&#8217;s competitors that doing that would give them an edge over the WS-Lemmings?</p>
+
+<p>There&#8217;s no doubt that the WS-* stack could be replaced by something &#8220;better&#8221;, given what we know in hindsight.  So could XML, HTTP, TCP, etc. (e.g. to make spamming and phishing harder). The trouble is, the network effect of all that &#8220;good enough&#8221; stuff greatly outweighs the benefit of the &#8220;better&#8221;. For example, your hypothetical REST-Management device manufacturer would not only have to figure out a better way to expose a management interface using HTTP rather than WS-Transfer, but would have to get the systems management vendors to support it.  Sheesh, one of them already thinks that WS-Management is way too simple; check out WS-DistributedManagement, lots of luck persuading them that the world needs something even simpler than WS-Management.</p>
+
+
+<div class="comment" id="comment-1314">
+On <a href="#comment-1314" title="Permalink to this comment">May 22, 2007  9:05 PM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>Mike, </p>
+
+<p>I believe there are two ways to approach this discussion.</p>
+
+<p>The first one is this: Whatever the respective merits of WS-* vs. REST/HTTP are, WS-Management and friends is already implemented in some environments, e.g. Microsoft&#8217;s, and to change it to something else &#8212; even something better &#8212; would be prohibitively expensive. Except for the cost, which I cannot estimate, I can live with this reasoning: it basically says: we were wrong, sorry, but now we have to live with it. But that was not how this discussion started, I believe.</p>
+
+<p>The other approach is based only on the relative technical merits. And I see absolutely nothing that WS-Transfer adds over HTTP &#8212; and HTTP was there first, for a very long time, so WS-Transfer is not improved upon by HTTP; rather it offered a new, untested and pretty bad solution to a problem that was solved a long time ago.</p>
+
+<p>Regarding WSDM (which I don&#8217;t like at all), I believe it did not intend to improve on WS-Management since IIRC it was there first. Nevermind, though. </p>
+
+<p>Regarding WS-Management, I believe a standard with equivalent functionality would be rather trivial based on plain HTTP; I know that at the moment, there is no willingness to do so, but let&#8217;s check again in a couple of years.</p>
+
+<p>Basically, it seems to me you&#8217;re asking me to defend the idea that HTTP is an improvement over WS-<em>, while I&#8217;m only asking you to acknowledge that it was the WS-</em> proponents that claimed their architecture was an improvement over HTTP (which, in the end, more and more people acknowledge it isn&#8217;t).</p>
+
+
+<div class="comment" id="comment-1315">
+On <a href="#comment-1315" title="Permalink to this comment">May 23, 2007 12:09 AM</a>, <a href="http://blogs.msdn.com/mikechampion" title="http://blogs.msdn.com/mikechampion" rel="nofollow">Mike Champion</a>
+said:
+<p>I&#8217;m not following.  &#8220;we were wrong, sorry&#8221; &#8212; who was wrong, and why? <br />
+As for the technical merits, WS-Transfer is indpendent of underlying protocol, and HTTP is dependent (IIRC) on TCP, and the PUT and DELETE verbs are not widely supported.  That, and the basic idea that a SOAP message should be self-contained and binding-neutral, I think are the only reasons the WS-Transfer exists.  Debatable, definitely, but &#8220;bad&#8221;?  </p>
+
+<p>The way I understand the history, WSDM came first; Microsoft declined to participate because it seemed like overkill for the immediate problems at hand, and with a different set of partners created WS-Management.  Whatever the technical merits and market share of each, I don&#8217;t buy the notion that the first standard to plant the flag in some domain owns it forever.  </p>
+
+<p>&#8220;I’m only asking you to acknowledge that it was the WS- proponents that claimed their architecture was an improvement over HTTP&#8221;.  I&#8217;m not sure if &#8220;improvement&#8221; is the right word, but I basically agree: Once HTTP was used extensively to POST commands to server-side software that did real business transactions, some of HTTP&#8217;s limitations became problematic, e.g. the lack of an end-to-end reliability model, the lack of an identity system, the hand-coded RPC code behind early websites, etc. I don&#8217;t know how much the early WS work was driven by these concerns with HTTP.  The way I understood it at the time, Microsoft owned the desktop and needed to get to the enterprise infrastructure because that is where the real money is; IBM owned the infrastructure but needed to get to the desktop, because that&#8217;s where the actual users are; HTTP was the means to get between the desktop and the mid-tier, and below that is all sorts of stuff that can&#8217;t be changed but will outlive us all.  So, WS was a modus vivendi among MS, IBM, and the mid-tier vendors; the idea that it was somehow in opposition to HTTP emerged later (late 2001-early 2002).</p>
+
+<p>IMHO the question of whether HTTP is an improvement on WS-* or vice versa has a simple but unsatisfying answer: &#8220;mu&#8221; <a href="http://en.wikipedia.org/wiki/Mu_%28negative%29" rel="nofollow" /><a href="http://en.wikipedia.org/wiki/Mu_%28negative%29" rel="nofollow">http://en.wikipedia.org/wiki/Mu_%28negative%29</a> .  Improvement with respect to what?  Richness or reachiness?  Accessibility or security?  Browser-friendliness or IT infrastructure-friendliness?  We could spend eternity meditating on whether WS-* has Web-nature &#8230; or we could just build stuff with what appears to be the right tool for the job, and learn from the results.</p>
+
+
+</section>
+

@@ -1,0 +1,1 @@
+rsync -avze 'ssh -p 22' public/ www@www.innoq.com:~/other/blog/st/

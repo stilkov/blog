@@ -1,0 +1,13 @@
+---
+layout: post
+title: "Stage 2"
+date: "2003-11-03T11:48:00+01:00"
+comments: false
+categories: 
+---
+
+<br />
+<br />
+<p style="float: left; margin-right: 10px"><img src="/blog/st/archives/statusicons02active.gif" border="0" height="100" alt="statusicons02active.gif" width="100" /></p>
+<p>It's going to take some time, but at least there is progress ... I made a mistake when I ordered the <a href="/blog/st/archives/000381.html">system</a>: I specified ELV (the so-called "Lastschriftverfahren") as the method of payment; this means that Apple directly transfers money from my bank account to theirs. What I didn't know is that they then wait for 5 days (!) to make sure I don't cancel the transfer &mdash; so if you want to get something fast from them (and I very much do), you're better of using a credit card for your purchase. Unfortunately, the only way to change the method of payment was to place a second order and cancel the first one. Anyway, I hope it's worth the wait ;-)</p>
+

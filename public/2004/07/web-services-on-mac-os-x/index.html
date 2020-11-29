@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2004/07/web-services-on-mac-os-x/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>Web Services on Mac OS X [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>Web Services on Mac OS X</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">Jul 2, 2004</time></small><p>
+	</header>
+	<section>
+	  <p>There are only very few toolkits supporting development of Web services in C++, since most of the world is focused on Java or .NET these days. I had previously used <a href="http://www.systinet.com/products/wasp_cserver/overview">Systinet&#8217;s Server for C++</a> on Linux and Windows, so I thought I might give it a try on Mac OS X. Systinet, unfortunately, does not provide a binary version for OS X (which is very sad, both for geek users as well as their developers, who don&#8217;t get to play with shiny new Macs. It would be such a great excuse for their <a href="http://www.radovanjanecek.net/blog/">VP of Engineering</a> to get his hands on such a beast (hint, hint). But I digress), but you can get access to the source code under NDA. It comes with the typical automake/configure stuff, and a single change (adding <code>#define WASP_PLATFORM_FREEBSD 1</code> to the config.h file) allowed me to do a clean compile. After playing around with it for a few days, I can confirm that it runs very smoothly and without any problems &#8212; so now I&#8217;m able to build SOAP-based, interoperable Web services in Xcode, which is simply a great development environment.</p>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

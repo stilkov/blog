@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Apple iWork '06"
+date: "2006-02-02T08:31:00+01:00"
+comments: false
+categories: 
+---
+
+<p>I&#8217;m currently playing with <a href="http://www.apple.com/iwork/">Apple&#8217;s iWork &#8216;06</a>, and while I don&#8217;t care that much for the new features in Keynote, I thought I&#8217;d give Pages another try. It&#8217;s actually a pretty nice application &#8212; it has a very clean and simple UI with none of the bloat of Word. While my main reason for using Word in the first place &#8212; interoperability and support for tracking changes &#8212; will remain, some features in Pages are really cool: after some googling around, I found out about <a href="http://www.macosxhints.com/article.php?story=20050206093713234">the way</a> to change a document&#8217;s language, and one of the available settings is &#8220;multilingual&#8221;, which allows you to write a typical non-English technical document with its weird language mix without getting every technical term underlined. I&#8217;m going to give it a try for some private writing.</p>
+
+

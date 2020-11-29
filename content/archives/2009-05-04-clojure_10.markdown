@@ -1,0 +1,19 @@
+---
+layout: post
+title: "Clojure 1.0"
+date: "2009-05-04T15:58:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://groups.google.com/group/clojure/browse_thread/thread/1e661d16bd910ddd?hl=en">Rich Hickey</a>:</p>
+
+<blockquote>
+<p>After a sustained period of API stability and minimal bugs reports,
+I'm happy to announce the release of Clojure 1.0! <br />
+<a href="http://clojure.googlecode.com/files/clojure_1.0.0.zip">http://clojure.googlecode.com/files/clojure_1.0.0.zip</a> </p>
+</blockquote>
+
+<p>Clojure is a Lisp for the JVM, with an excellent set of core concepts, great support for concurrent programming, and superb Java integration. In my very humble opinion, it's the first time Lisp has a chance to become at least somewhat mainstream. </p>
+
+

@@ -1,0 +1,11 @@
+---
+layout: post
+title: "JibxSoap"
+date: "2004-12-19T17:17:00+01:00"
+comments: false
+categories: 
+---
+
+<p>I only just came across this interesting Web services framework, <a href="http://jibx.sourceforge.net/jibxsoap/">JibxSoap</a> &#8212; with a very promising attitude towards RPC and documents on the author&#8217;s side, as evidenced by this <a href="http://www.sosnoski.com/presents/cleansoap/index.html">very good presentation</a> on the current state of SOAP affairs. Note to certain partners of mine: Declining benchmarking options for your product is an unequivocally dumb idea. [Found via <a href="http://www.tbray.org/ongoing/When/200x/2004/12/16/Javapolis">Tim Bray</a>]</p>
+
+

@@ -1,0 +1,16 @@
+---
+layout: post
+title: "RiP"
+date: "2003-08-25T21:52:00+01:00"
+comments: false
+categories: 
+---
+
+<p>Found via the <a href="http://www.bileblog.com">BlieBlog</a>: A story about the next wave in software development processes at <a href="http://www.softwarereality.com/rumours/story021.jsp" title="Software Reality: The Rumour Mill">Software Reality: The Rumour Mill</a>:</p>
+<blockquote>
+So if the customer says they want an e-procurement system?
+
+"Give them an on-line drinks dispenser instead! They'll thank you for it. No one really knows (or cares) what an e-procurement system is anyway. Least of all the customer."
+</blockquote>
+<p>Just hilarious.</p>
+

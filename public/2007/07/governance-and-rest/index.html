@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2007/07/governance-and-rest/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>Governance and REST [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>Governance and REST</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">Jul 26, 2007</time></small><p>
+	</header>
+	<section>
+	  <p>So, a potential candidate for <a href="/">our</a> SOA consulting team (although we don&#8217;t really have anyone who does SOA exclusively) posed an interesting question after finding out that I keep talking about both SOA Governance and REST, but rarely about both of them together: how does the idea of having enforceable, formal contracts (interfaces and policies) that are &#8220;governed&#8221; within the enterprise fit RESTful HTTP concepts?</p>
+
+<p>A very good question indeed. Here are some thoughts.</p>
+
+<p>First of all, while a RESTful HTTP approach is clearly very different from a &#8220;classic&#8221; Web services/SOAP-based approach, there is one thing both of them share: they handle data in some format, in many, if not most cases, XML. Of course RESTful HTTP lends itself much easier to using non-XML representations, which is actually great since it means you don&#8217;t have to worry about stuffing everything into an XML envelope, even when there&#8217;s no point (such as e.g. when you request a PDF or send a JPG, or when a .CSV or .XLS file is exactly what you need). But if you use XML, both variants share exactly the same problem domain &#8212; you need to either select standard schemas and formats or define your own, and this requires some sort of governance process.</p>
+
+<p>One of the nice things is that RESTful HTTP is a perfect match for the tools that support this governance &#8212; if you make sure that e.g. a namespace name is a resolvable HTTP URI, you get the immediate benefit of having a single source of truth without having to establish a centralized repository if you don&#8217;t want to. And even public schemas are integrated very nicely. (In fact, sneaking RESTful HTTP in via the governance tool channel has helped my quite a few times to make client ask &#8220;remind me again why we don&#8217;t do this for more cases?&#8221;).</p>
+
+<p>Although I admit to not having done this in large-scale projects yet, it&#8217;s also a very good idea to actually establish a governed and company-wide registry for MIME types, i.e. instead of labeling everything as <code>application/xml</code>, make sure that it&#8217;s <code>application/mycompany.order+xml</code> or whatever specific format it is you&#8217;re labeling, and store this centrally.</p>
+
+<p>(Update: As Aristotle points out in a comment below: one should stick to the vendor or vanity tree (*/vnd.* and */prs.*, respectively), which means it should be <code>application/vnd.mycompany.order+xml</code>)</p>
+
+<p>So how do you handle the registration of services? In a WS/SOAP architecture, you&#8217;d store a whole bunch of XSDs, WSDL files, policies, etc. in a centralized registry. You can do the same in a REST scenario by simply storing the &#8220;entry points&#8221; (for want of a better term) as links in (X)HTML documents. You have the choice of either using HTML documents (for human users) that link to XML documents (for machine usage), or you can merge the two by using XHTML. To an application, the most common API &#8212; UDDI &#8212; offers no benefits at all above a plain HTTP interface; in fact, I think it far worse (see <a href="http://www.xml.com/pub/a/ws/2002/02/06/rest.html?page=2" title="webservices.xml.com: Second Generation Web Services">this article</a>, authored in by Paul Prescod, for a more detailed discussion).</p>
+
+<p>What do I mean by entry point? One of the key ideas of REST is hypermedia &#8212; which leads to the idea of having the possible things you can do with a resource expressed <em>in the representations of this resource</em>, as opposed to out of band. In other words: you don&#8217;t actually <em>want</em> to have a description of what a RESTful service (let&#8217;s use that as a term for a number of linked resource) does beyond the single link that gets you started; instead, you introduce late binding to whatever you receive included within the representations. Of course nothing at all stops a resource to respond to a specific content type request, e.g. a <code>GET</code> with an <code>Accept</code> header of <code>application/metadata+xml</code>, which might either provide a description or point to something via a link (quite possibly to a document contained in your HTTP-based registry).</p>
+
+<p>I&#8217;m not aware of any product specifically tailored to governance of RESTful system. But I don&#8217;t believe this to be a severe restriction &#8212; after all, the real issues with governance in the WS/SOAP space are not related to tools anyway.</p>
+
+<section class="comments">
+
+
+
+<div class="comment" id="comment-1394">
+On <a href="#comment-1394" title="Permalink to this comment">July 26, 2007 10:51 PM</a>, <a href="http://plasmasturm.org/" title="http://plasmasturm.org/" rel="nofollow">Aristotle Pagaltzis</a>
+said:
+<p>A minor nit:</p>
+
+<blockquote>
+<p>make sure that it’s application/mycompany.order+xml</p>
+</blockquote>
+
+<p>One should stick to the vendor or vanity tree (*/vnd.* and */prs.*, respectively) in those circumstances – so in your example, probably application/vnd.mycompany.order+xml.</p>
+
+<p>Otherwise, right on.</p>
+
+
+<div class="comment" id="comment-1395">
+On <a href="#comment-1395" title="Permalink to this comment">July 26, 2007 10:56 PM</a>, <a href="http://plasmasturm.org/" title="http://plasmasturm.org/" rel="nofollow">Aristotle Pagaltzis</a>
+said:
+<p>PS.: citation: <a href="http://tools.ietf.org/html/rfc2048" rel="nofollow">RFC&#160;2048</a>.</p>
+
+
+<div class="comment" id="comment-1396">
+On <a href="#comment-1396" title="Permalink to this comment">July 26, 2007 11:20 PM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>Thanks, updated.</p>
+
+
+</section>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

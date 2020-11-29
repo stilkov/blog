@@ -1,0 +1,10 @@
+---
+layout: post
+title: "Below"
+date: "2003-04-22T23:37:00+01:00"
+comments: false
+categories: 
+---
+
+<p>I just went to see the movie <a href="http://www.belowthemovie.com">Below</a>, not really expecting very much. I was pleasantly surprised - it's actually pretty good. A medium-strong recommendation.</p>
+

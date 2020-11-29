@@ -1,0 +1,17 @@
+---
+layout: post
+title: "UML 2.0"
+date: "2004-05-18T23:43:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://thebootstrap.blogspot.com/2004/05/uml2-gripes.html">Jim Steel</a> on UML 2.0: </p>
+
+<blockquote>
+<p>I pity any UML tool vendor who takes it upon themselves to implement UML 2. I have read more coherent binaries than the UML 2 specification, which seems to have been inspired by the &#8220;Choose Your Own Adventure&#8221; books that I read as a child, but 10 times as long, and split across multiple books. It was cool when I was 7, but now its just a bloody nuisance.</p>
+</blockquote>
+
+<p>I couldn&#8217;t agree more. When <a href="/blog/pg">Phillip</a> explained the <code>&lt;&lt;combine&gt;&gt;</code> concept to me, I wasn&#8217;t sure whether my problem was that I was simply too dumb to grasp it, or too wary to be bothered with something like that. I don&#8217;t claim to understand UML inside and out, as I have not wasted years of my life wrestling with its internal structure; but given that convincing people about MDA is one of the things I do for a living, I believe I know more about it than the average user. If I don&#8217;t get this, how can the authors expect somebody who just wants to use UML, but whose core competence is in some business aspect, to be able to use it?</p>
+
+

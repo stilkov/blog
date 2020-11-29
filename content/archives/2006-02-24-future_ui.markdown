@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Future UI"
+date: "2006-02-24T22:46:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://www.youtube.com/watch?v=zp-y3ZNaCqs&amp;search=input">An amazingly cool demo</a> of what a future human-machine interface might look like [via <a href="http://cvetko.blogs.com/casa_cvetko/2006/02/langsam_nhern_w.html">Kristijan</a>]</p>
+
+

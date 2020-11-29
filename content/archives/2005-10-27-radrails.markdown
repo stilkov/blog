@@ -1,0 +1,15 @@
+---
+layout: post
+title: "radrails"
+date: "2005-10-27T08:21:00+01:00"
+comments: false
+categories: 
+---
+
+<blockquote>
+<p><a href="http://www.radrails.org">RadRails</a> is an integrated development environment for the Ruby on Rails framework. The goal of this project is to provide Rails developers with everything they need to develop, manage, test and deploy their applications. Features include source control, debugging, WEBrick servers, generator wizards, syntax highlighting, data tools and much much more.</p>
+</blockquote>
+
+<p>In related news, I hope someone starts building a <code>bash</code> script editing environment based on Eclipse soon.</p>
+
+

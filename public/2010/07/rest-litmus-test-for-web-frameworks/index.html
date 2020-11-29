@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2010/07/rest-litmus-test-for-web-frameworks/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>REST Litmus Test for Web Frameworks [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>REST Litmus Test for Web Frameworks</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">Jul 4, 2010</time></small><p>
+	</header>
+	<section>
+	  <p>I recently thought about what to expect in a web framework that claims to have "REST support", and came up with a list of questions that one should ask to see whether such a claim is justified:</p>
+
+<ul>
+<li>Does the framework respect that an HTTP message does not only consist of a URI? I.e., is dispatch done at least based on the HTTP verb, the URI, the Content-type and Accept headers?</li>
+<li>Can I easily use the same business logic while returning different content types in the response? </li>
+<li>Is there support for checking for conditional requests?</li>
+<li>Are ETags calculated automatically if none are set by the backend logic?</li>
+<li>Can I (as a framework user) easily read all HTTP request headers?</li>
+<li>Can I easily set all HTTP response headers?</li>
+<li>Can I use custom HTTP verbs?</li>
+<li>Is it obvious and easy how to return correct status codes with responses, and does the framework use them correctly (if it does so at all)?</li>
+</ul>
+
+<p><em>Update:</em> Two aspects added due to feedback by <a href="http://mogsie.com/me/">Erik Mogensen</a> and <a href="http://www.amundsen.com/blog/archives/1066">Mike Amundsen</a>:</p>
+
+<ul>
+<li>Is there an easy way to produce links that "point back" resources identified by whatever means the framework exposes (such as some form of routing)?</li>
+<li>Are resources identified and requests dispatched to code by the full URI, or is there an artificial distinction between the path and query parameters?</li>
+</ul>
+
+<p>Along the same lines, here are some questions where a "Yes" indicates that a framework doesn't do things the way they're supposed to be done:</p>
+
+<ul>
+<li>Are GET, POST and other requests to the same URI dispatched to the same business logic by default?</li>
+<li>Am I required to use "extensions" (e.g. ".xml", ".json") to get different representations of the same resource? (Supporting this optionally is OK.)</li>
+<li>Are there method names in the URI?</li>
+</ul>
+
+<p>Finally, I wonder whether there's any justification for a web framework to support "REST services" as an addition instead of the default, but I'm reluctant to put this into the second list.</p>
+
+<p>Suggestions for extending the list are welcome.</p>
+
+<section class="comments">
+
+
+
+<div class="comment" id="comment-2133">
+On <a href="#comment-2133" title="Permalink to this comment">July  4, 2010 10:24 PM</a>, Mike
+
+<a href="http://profile.typekey.com/6p01348533d48c970c" class="commenter-profile"><img src="/mt4/mt-static/images/comment/typekey_logo.png" height="16" alt="Author Profile Page" width="16" /></a>
+said:
+<p>For the &#8220;you are doing it wrong&#8221; item of requiring &#8216;extensions&#8217; for content negotiations, there is a dependency on using Content-Type response headers in caching clients and proxies that can make using the same URI for different media types fragile. It&#8217;s easy for clients and proxies to do caching wrong and this would silently fail so I normally avoid relying solely on Accept headers for content negotiation.</p>
+
+
+<div class="comment" id="comment-2134">
+On <a href="#comment-2134" title="Permalink to this comment">July  4, 2010 11:31 PM</a>, Anonymous
+said:
+<p>Are we guaranteed to enter the REST paradise and have 70 custom verbs to play with if we follow this list? </p>
+
+
+<div class="comment" id="comment-2135">
+On <a href="#comment-2135" title="Permalink to this comment">July  4, 2010 11:35 PM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>@Anonymous, I have a certain feeling I know who you are, and I think I usually don&#8217;t discuss anything with you anymore. But to address the point: Obviously no, and I can&#8217;t see where I suggested anything like that. The fact that verbs are restricted to a set that&#8217;s shared by <em>all</em> resources is part of the architecture. That doesn&#8217;t mean it shouldn&#8217;t be possible to add something that becomes standardized, either in a closed group or publicly (such as PATCH recently did).</p>
+
+
+<div class="comment" id="comment-2136">
+On <a href="#comment-2136" title="Permalink to this comment">July  4, 2010 11:50 PM</a>, <a href="http://mogsie.com/me/" title="http://mogsie.com/me/" rel="nofollow">mogsie</a>
+
+<a href="http://mogsie.com/me/" class="commenter-profile"><img src="/mt4/mt-static/images/comment/typekey_logo.png" height="16" alt="Author Profile Page" width="16" /></a>
+said:
+<p>Stefan, it seems you left out hypermedia.  How about calling this a litmus test of HTTP support in a framework.  Adding a rule like <em>Does the framework make it easy to map URIs to resources and back, to allow clients do discover resources through embedded links</em> would fit nicely in your list.</p>
+
+
+<div class="comment" id="comment-2137">
+On <a href="#comment-2137" title="Permalink to this comment">July  4, 2010 11:57 PM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>Excellent suggestion, I&#8217;ll incorporate it. </p>
+
+
+<div class="comment" id="comment-2138">
+On <a href="#comment-2138" title="Permalink to this comment">July  5, 2010 12:00 AM</a>, Anonymous
+said:
+<p>Stefan, that was just a joke (a bad one obviously, since I have to explain) about how, to my taste, religious this whole REST thing has become. I intended no offense at all, really sorry if I caused any.</p>
+
+
+<div class="comment" id="comment-2139">
+On <a href="#comment-2139" title="Permalink to this comment">July  5, 2010  7:38 AM</a>, <a href="http://blogs.law.harvard.edu/pkeane" title="http://blogs.law.harvard.edu/pkeane" rel="nofollow">Peter Keane</a>
+
+<a href="http://blogs.law.harvard.edu/pkeane" class="commenter-profile"><img src="/mt4/mt-static/images/comment/typekey_logo.png" height="16" alt="Author Profile Page" width="16" /></a>
+said:
+<p>This looks to me like a very good list. Having looked for a good RESTful framework w/o much luck, I&#8217;ve ended up using a small PHP framework (really just a dispacher + orm that I use in conjunction w/ Smarty Templates).  I do think the framework space is converging somewhat, with the trend being towards a more RESTful approach.  I&#8217;ve come to think that a successful approach needs the following two characteristics:
+</p><p>
+1. URL mapping should point towards a &#8220;resource&#8221; NOT a representation
+2. Controller logic (either a function or a method on a controller object) should be easy to write based on three pieces of information: HTTP Method, resource, and Format (I&#8217;d leave open the possibility to look at extension in conjunction w/ Accept-headers due to poor browser Accept-header implementations).
+</p><p>
+So a mapping would look like { &#8220;items&#8221;:&#8221;items&#8221;,&#8221;item/{id}&#8221;:&#8221;item&#8221; } for which we might have these methods: getItemsHtml,getItemsJson,getItemsAtom,postToItemsAtom,getItemHtml,getItemJson,putItemAtom,deleteItem, etc.
+</p><p>
+&#8212;peter keane</p>
+
+
+<div class="comment" id="comment-2140">
+On <a href="#comment-2140" title="Permalink to this comment">July  5, 2010  8:41 AM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>@Peter, agreed, with one minor addition: I prefer frameworks that can separate logic from format a little more. In your example, the methods would then be getItems, postToItems, putItem, deleteItem with some sort of separate reader/renderer framework for the formats.</p>
+
+
+<div class="comment" id="comment-2141">
+On <a href="#comment-2141" title="Permalink to this comment">July  5, 2010  8:41 AM</a>, <a href="http://blog.fakod.eu" title="http://blog.fakod.eu" rel="nofollow">Christopher Schmidt</a>
+said:
+<p>Looks a bit minimalistic to me&#8230; But REST is minimalistic which is its strength.
+So I would think that this test defines what is REST, but it does not define a good framework. Maybe something for a next Litmus Test?</p>
+
+<p>Christopher</p>
+
+
+<div class="comment" id="comment-2142">
+On <a href="#comment-2142" title="Permalink to this comment">July  5, 2010  8:44 AM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>@Christopher: I agree it&#8217;s minimalistic; the intent was to come up with a list of what a framework <em>must</em> offer. Good idea regarding a next post.</p>
+
+
+<div class="comment" id="comment-2143">
+On <a href="#comment-2143" title="Permalink to this comment">July  5, 2010  9:25 AM</a>, Till
+said:
+<p>@Mike: good point. I&#8217;m not quite sure if I really want to compensate lacks of functionality or configuration in intermediaries by bending my application design. I&#8217;ve seen this in the &#8220;linked data&#8221; world (http://www4.wiwiss.fu-berlin.de/bizer/pub/LinkedDataTutorial/#Terminology) and I&#8217;m still not sure if I like that or not (because this is a strict instruction and I can&#8217;t decide this for myself).
+I would suggest to add the point &#8220;Support for the &#8216;vary&#8217; header&#8221; (http://www.subbu.org/blog/2007/12/vary-header-for-restful-applications) to the list.
+IMO the &#8220;vary&#8221;, &#8220;accepts&#8221;, &#8230; usage depends on my system traffic. Not only because of clients / proxies doing it wrong but also because of the inefficiency of considering the &#8220;vary: accept&#8221; or &#8220;vary: *&#8221; header correctly, I would always try to limit the usage of this in heavy load scenarios. But on smaller applications this is a really nice feature which I don&#8217;t want to miss. </p>
+
+
+<div class="comment" id="comment-2144">
+On <a href="#comment-2144" title="Permalink to this comment">July  5, 2010 11:06 AM</a>, Alex
+said:
+<p>I would even broaden Peter&#8217;s additional point &#8220;1. URL mapping should point towards a “resource” NOT a representation&#8221; and state that it is essential for such a REST framework that at its heart it is built around the concept of resources.</p>
+
+<p>This isn&#8217;t only important for the dispatching, but also for the backend storage to directly support the hierarchical nature of web URLs. A counter-productive example are &#8220;typical&#8221; systems that map URLs onto Objects that map via OCM frameworks onto relational models, unnecessarily complicating things for the REST developer. A native hierarchical storage model is quite helpful here, for most cases.</p>
+
+
+<div class="comment" id="comment-2145">
+On <a href="#comment-2145" title="Permalink to this comment">July  5, 2010 11:11 AM</a>, 
+<a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>@Alex, while I prefer frameworks that work the way you describe, I don&#8217;t think it&#8217;s fair to say that&#8217;s an essential aspect. As long as the framework doesn&#8217;t actively push you into violating REST, I consider it perfectly fine to provide a low-level mechanism to dispatch based on the request message&lt;.</p>
+
+<p>As an aside, I don&#8217;t consider the &#8220;hierarchical nature&#8221; as a key aspect of RESTful HTTP.</p>
+
+
+<div class="comment" id="comment-2146">
+On <a href="#comment-2146" title="Permalink to this comment">July  5, 2010  6:52 PM</a>, Alex
+said:
+<p>@Stefan: Right, if you just look at the API side of the RESTful server, the implementation can be completely open.</p>
+
+<p>Regarding hierarchy: I agree that if you design a different RESTful system, the identifiers could be built on some other structure, but for an HTTP/HTML based system, URLs as we know them are naturally following a hierarchical structure. When mapping domain models onto REST APIs, you come up with hierarchical resources, so why not support it directly? It&#8217;s not required in theory, but in practice it makes a huge difference. Because if you require some other mapping, the necessary conceptual thinking is more difficult for developers and it makes it &#8220;easier&#8221; for them to build interfaces that are not RESTful in my experience.</p>
+
+
+<div class="comment" id="comment-2147">
+On <a href="#comment-2147" title="Permalink to this comment">July  5, 2010  6:54 PM</a>, 
+<a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>We agree in terms of what&#8217;s actually useful and should be supported, I just wanted to focus on the stuff that&#8217;s more or less rooted in the core REST theory.</p>
+
+
+<div class="comment" id="comment-2149">
+On <a href="#comment-2149" title="Permalink to this comment">July  6, 2010 10:59 AM</a>, dret
+
+<a href="http://profile.typekey.com/dret" class="commenter-profile"><img src="/mt4/mt-static/images/comment/typekey_logo.png" height="16" alt="Author Profile Page" width="16" /></a>
+said:
+<p>i was thinking about the same thing a while ago and posted my thoughts about &#8220;REST Programming Toolbox Requirements&#8221; at <a href="http://dret.typepad.com/dretblog/2009/05/rest-programming-toolbox-requirements.html" rel="nofollow">http://dret.typepad.com/dretblog/2009/05/rest-programming-toolbox-requirements.html</a> ; my thoughts were a little broader and did not include some of the details you have listed. maybe at some point it would be nice to combine/consolidate these requirements and come up with a more detailed list of what should be supported and how, and what&#8217;s required for server-side frameworks and what for client-side (and whether this distinction in itself is not a good idea because ideally, RESTful clients should expose their service anyway).</p>
+
+
+<div class="comment" id="comment-2150">
+On <a href="#comment-2150" title="Permalink to this comment">July  6, 2010 11:02 AM</a>, 
+<a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>Hi Erik, I knew about your (excellent) post but it&#8217;s more of a wishlist of what libraries <em>should</em> support as opposed to what they <em>have to</em> (which doesn&#8217;t make it any less useful though). Whether things such as support for Atom and AtomPub have to be part of the core library is a design choice IMO.</p>
+
+
+<div class="comment" id="comment-2151">
+On <a href="#comment-2151" title="Permalink to this comment">July  6, 2010  4:26 PM</a>, <a href="http://blog.caelumobjects.com" title="http://blog.caelumobjects.com" rel="nofollow">Guilherme Silveira</a>
+
+<a href="http://blog.caelumobjects.com" class="commenter-profile"><img src="/mt4/mt-static/images/comment/typekey_logo.png" height="16" alt="Author Profile Page" width="16" /></a>
+said:
+<p>Hello Stefan!</p>
+
+<p>I think thats great guideline&#8230; I tried answering those questions regarding Restfulie, and I just suffer with the custom http verbs. Unfortunately (ruby version) Rails depends on Rack or its own list of supported methods. So we need to add a little monkey patch to allow it support custom verbs.</p>
+
+<p>I really liked the &#8220;are there method names in the URI?&#8221; question. It easily describes most of the typical service mindset that we bring to rest when start trying to create an architecture based on it.</p>
+
+<p>I prefer giving access to the response body instead of trying to unmarshal representations by default, what do you think about that?</p>
+
+<p>Regards</p>
+
+
+<div class="comment" id="comment-2152">
+On <a href="#comment-2152" title="Permalink to this comment">July  6, 2010  4:29 PM</a>, 
+<a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>Hi Guilherme, good points. Raw access to the body, as well as support for streaming, chunked and range requests should probably be a mandatory aspect, too. </p>
+
+
+<div class="comment" id="comment-2153">
+On <a href="#comment-2153" title="Permalink to this comment">July  6, 2010  5:43 PM</a>, <a href="http://restx.mulesoft.org" title="http://restx.mulesoft.org" rel="nofollow">Juergen Brendel</a>
+said:
+<p>This is a good list. However, I wonder whether two of those points on the second list are really as negative as you make them sound.</p>
+
+<ol>
+<li><p>Routing GET, POST and other requests to the same logic. If you move outside of the &#8216;nice to have&#8217; REST world into the real world you end up dealing with clients that sometimes only have limited capabilities. Browsers, client libraries that cannot generate PUT messages, etc. In that case, you may consider a design where for example POST or PUT of a single entity to a collection resource URI need to be interpreted as creation of a new entity, while POST or PUT of a single entity to a single entity URI need to be interpreted as update of that entity. In <a href="http://restx.mulesoft.org" rel="nofollow">RESTx</a> we explicitly deal with those clients. Furthermore, consider that there may be more than one way to express routing of specific methods to particular parts of the logic. In the end, you as the developer need to set this up. Whether you set this up with some annotation before the function name, with a routing configuration file, or whether you deal with it explicitly in code. So, the routing may be done before you reach a specific function, or the routing may be done explicitly by you after you reach a handling function, in the end it is still handled and dealt with differently. </p></li>
+<li><p>Method names in the URI. Sure, I get that. &#8216;calculateAverage&#8217; would be bad. However, in <a href="http://restx.mulesoft.org" rel="nofollow">RESTx</a> we use methods to specify sub-resources we deal with, not particular pieces of &#8216;do this&#8217; functionality. For example, if you set up a RESTful resource to proxy a Twitter account then &#8216;status&#8217; is one sub-resource of the &#8216;MyTwitterAccount&#8217; resource. You can GET the status, or you can POST an update to it. But &#8216;timeline&#8217; is also a sub-resource. In RESTx, &#8216;status&#8217; and &#8216;timeline&#8217; are actual method names, which do whatever is necessary to produce and/or deal with this sub-resource. But again: They denote sub-resources, not actions. I believe that this is ok and RESTful, while method names that denote actions are not. Not all resource have this natural idea of sub-resources, but most of them actually do. And in that case, expressing those with explicit functions tends to be a very natural and straight forward way to deal with them.</p></li>
+</ol>
+
+
+<div class="comment" id="comment-2154">
+On <a href="#comment-2154" title="Permalink to this comment">July  6, 2010 11:50 PM</a>, <a href="http://mogsie.com/me/" title="http://mogsie.com/me/" rel="nofollow">mogsie</a>
+
+<a href="http://mogsie.com/me/" class="commenter-profile"><img src="/mt4/mt-static/images/comment/typekey_logo.png" height="16" alt="Author Profile Page" width="16" /></a>
+said:
+<p>Another thing that occurred to me is that both client and server side need to be able to handle and expose all variants of absolute and relative URIs.</p>
+
+<p>In other words, if a client wants to link together two resources, it would embed a link to another resource.  It should be possible to do so using absolute or relative URIs: it should be able to use &#8220;../../foo/widget&#8221; or &#8220;/bar/foo/widget&#8221; or &#8220;http://www.example.org/bar/foo/widget&#8221; to achieve the same results using the RFC for URIs.  The same could be said for the server side emitting links; some media formats may prefer absoluteness (e.g. a PDF representation) (for portability), while some server admins may prefer <em>as relative as possible</em> links (e.g. a HTML representation) (also for portability).</p>
+
+<p>The code emitting links should in any case be coded to emit links to a <em>resource</em> and the representation in question should then use some preference on the relative—absolute scale</p>
+
+
+<div class="comment" id="comment-2155">
+On <a href="#comment-2155" title="Permalink to this comment">July  7, 2010  9:36 AM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>@mogsie, that&#8217;s an excellent point which has caused me quite a bit of pain in the past – and I&#8217;m not aware of any framework that does a good job of this. </p>
+
+
+<div class="comment" id="comment-2156">
+On <a href="#comment-2156" title="Permalink to this comment">July  7, 2010 12:28 PM</a>, Alex
+said:
+<p>@mogsie @Stefan: <a href="http://sling.apache.org" rel="nofollow">Apache Sling</a> provides a <a href="http://sling.apache.org/apidocs/sling5/org/apache/sling/api/resource/ResourceResolver.html#map(java.lang.String)" rel="nofollow">map() method</a> that maps internal resource paths back to public URLs. The <a href="http://sling.apache.org/site/mappings-for-resource-resolution.html" rel="nofollow">configuration</a> used is the same as for internal redirects, aliases etc. that allow the mapping of incoming request URLs to internal resources. This mapping config is open for the admin.</p>
+
+
+<div class="comment" id="comment-2157">
+On <a href="#comment-2157" title="Permalink to this comment">July  9, 2010  7:13 PM</a>, Dilip Krishnan
+
+<a href="http://profile.typekey.com/6p01310f37b83c970c" class="commenter-profile"><img src="/mt4/mt-static/images/comment/typekey_logo.png" height="16" alt="Author Profile Page" width="16" /></a>
+said:
+<p>Great list Stefan! I&#8217;m planning to put together a news item on this @ infoQ, that way more people can weigh in on the criteria. Its a very concise yet interesting post so with your permission, i&#8217;d like to lift quite some chunks from your post.</p>
+
+<p>One thing however, I find the criteria can get very inclusive; in terms of opinion. To be useful for an IT person/decision maker to check-off a list for an RFP, it might be a good idea to categorize the criteria into </p>
+
+<ul>
+<li>essential (everyone agrees these must be supported), </li>
+<li>nice to haves (everyone agrees but we can do without these features) and </li>
+<li>debatable (where everyone doesn&#8217;t agree on a particular REST characteristic).</li>
+</ul>
+
+
+<div class="comment" id="comment-2158">
+On <a href="#comment-2158" title="Permalink to this comment">July 12, 2010 12:51 PM</a>, <a href="http://nosql.mypopescu.com" title="http://nosql.mypopescu.com" rel="nofollow">Alex Popescu</a>
+said:
+<p>Awesome list Stefan! Now the only other awesome thing missing is a short list of frameworks that pass this test. Based only on my memory (which is really bad) I couldn&#8217;t list more than a couple.</p>
+
+
+<div class="comment" id="comment-2159">
+On <a href="#comment-2159" title="Permalink to this comment">July 12, 2010  6:31 PM</a>, Daniel Reverri
+said:
+<p>The best REST framework I&#8217;ve found is Webmachine:
+<a href="http://webmachine.basho.com/" rel="nofollow">http://webmachine.basho.com/</a></p>
+
+
+<div class="comment" id="comment-2160">
+On <a href="#comment-2160" title="Permalink to this comment">July 13, 2010 10:22 AM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>I agree it&#8217;s very good (although maybe you should disclose you&#8217;re one of Basho&#8217;s employees ;-) )</p>
+
+
+<div class="comment" id="comment-2264">
+On <a href="#comment-2264" title="Permalink to this comment">August 25, 2010  9:43 AM</a>, Mohan Radhakrishnan
+said:
+<p>Is there a REST discussion forum somewhere ? I am trying to wrap my head around metadata initiatives like Dublin Core etc. and how they relate to REST.</p>
+
+
+<div class="comment" id="comment-2265">
+On <a href="#comment-2265" title="Permalink to this comment">August 25, 2010  9:55 AM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>Hi Mohan, the best discussion group I&#8217;m aware of is the Yahoo! rest-discuss list.</p>
+
+
+<div class="comment" id="comment-2266">
+On <a href="#comment-2266" title="Permalink to this comment">August 28, 2010  5:41 AM</a>, <a href="http://soundadvice.id.au/blog/" title="http://soundadvice.id.au/blog/" rel="nofollow">Benjamin Carlyle</a>
+
+<a href="http://soundadvice.id.au/blog/" class="commenter-profile"><img src="/mt4/mt-static/images/comment/typekey_logo.png" height="16" alt="Author Profile Page" width="16" /></a>
+said:
+<p>My features list would include:</p>
+
+<ol>
+<li>Clients are able to use an interactions pattern layer that deals
+with things like retry, redirection, etc on behalf of the application
+software</li>
+<li>Clients and servers are able to define layers of proxy and gateway
+processing logic that all requests pass through, and which can modify
+and reply to requests on their behalf</li>
+<li>Clients and servers have access to good tools to translate between
+network representations and internal data structures, including the
+ability to transparently map data that could be encoded in a number of
+different ways and to support content negotiation</li>
+<li>A good caching mechanism is available for both clients and servers,
+either directly or through easy-to-integrate intermediaries - ideally
+this caching mechanism will be able to store representations in
+already-parsed data structures to reduce overhead</li>
+<li>Common authentication mechanisms are integrated and are easy to
+deal with for both client and server</li>
+<li>Other common interaction patterns (including conditional requests
+and content negotiation) are easy to support on the server side</li>
+<li>Simple tools for working with URIs are included</li>
+<li>Servers are able to rely on a clear &#8220;routing&#8221; layer that directs
+incoming requests to the right logic in the server code based on
+declarative directives</li>
+<li>Caching directives (including etags) are easy to support and
+control from the server side, and automatically include correct Vary
+header and any other relevant information</li>
+<li>It should be easy to include a http server within the client for
+more complex interactions</li>
+<li>The set of available interactions on the client side (such as
+fetch, store, optimistic locking store, etc) can be extended easily</li>
+<li>The declarative routing layer should be able to output a &#8220;service
+contract&#8221; document in at least html format, that lets human users
+click around the resources available from a particular server to test,
+debug, or to see what the semantics of particular requests on these
+resources would be</li>
+</ol>
+
+
+</section>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2007/06/patch-method-for-http/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>PATCH Method for HTTP [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>PATCH Method for HTTP</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">Jun 25, 2007</time></small><p>
+	</header>
+	<section>
+	  <p><a href="http://www.ietf.org/internet-drafts/draft-dusseault-http-patch-07.txt">James Snell</a>:</p>
+
+<blockquote>
+<p>This specification defines a new HTTP 1.1 [1] method PATCH that is<br />   used to apply partial modifications to a HTTP resource.  A new method<br />   is necessary to improve interoperability and prevent errors.  The PUT<br />   method is already defined to overwrite a resource with a complete new<br />   body, and MUST NOT be reused to do partial changes.  Otherwise,<br />   proxies and caches and even clients and servers may get confused as<br />   to the result of the operation.</p>
+</blockquote>
+
+<p>This is a revival of an expired Internet Draft RFC; it will be very interesting to see how much support this gets. Personally, I&#8217;m still undecided; I understand the theoretical value, but I wonder whether the cost of introducing a new verb isn&#8217;t prohibitive (which means that PUT or POST would have to be used).</p>
+
+<section class="comments">
+
+
+
+<div class="comment" id="comment-1374">
+On <a href="#comment-1374" title="Permalink to this comment">June 25, 2007 11:44 PM</a>, <a href="http://www.snellspace.com" title="http://www.snellspace.com" rel="nofollow">James Snell</a>
+said:
+<p>Note that the way this is refactored in this draft, it would actually be very simple to use POST as a fallback alternative.  It&#8217;s not ideal, but it&#8217;s definitely possible.</p>
+
+
+<div class="comment" id="comment-1375">
+On <a href="#comment-1375" title="Permalink to this comment">June 26, 2007  9:58 AM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>Seems like a good compromise - this would allow the &#8221;market&#8221; to decide which strategy is more appropriate.</p>
+
+
+<div class="comment" id="comment-1376">
+On <a href="#comment-1376" title="Permalink to this comment">June 26, 2007 10:02 AM</a>, <a href="http://asbjornu.myopenid.com/" title="http://asbjornu.myopenid.com/" rel="nofollow">quark</a>
+said:
+<p>POST will always be a viable (and in many circumstances; required) fallback method for PUT, DELETE and other non-idempotent HTTP methods. I still think PATCH has a real value on an read-write web (with emphasis on write), though.</p>
+
+<p>When the payloads get large enough and the client&#8217;s changes only involve a minor spelling correction or something similar, a PATCH fits very neatly. What&#8217;s exciting is the amounts of cool MIME types you can stuff into a PATCH request, depending on the type of content you&#8217;re manipulating. For XML documents, &#8220;application/xquery&#8221; is a nice match. For plain text documents, &#8220;text/x-regex&#8221; is a good alternative. For JSON data, application/ecmascript might be a good fit. Et cetera.</p>
+
+
+<div class="comment" id="comment-1377">
+On <a href="#comment-1377" title="Permalink to this comment">June 28, 2007  5:30 AM</a>, <a href="http://appside.blogspot.com" title="http://appside.blogspot.com" rel="nofollow">Erik Johnson</a>
+said:
+<p>Right up there with “never get involved in a land war in Asia” in the list of classic blunders is (or at least should be) “never build a mass market framework around a single notion of &#8216;entity&#8217;”.  I feel like extending HTTP before dealing with the coming REST bandwagon is ill-advised.  Out of the dust, just maybe, one or two new ideas about what a resource (or a subordinate) <em>is</em> &#8212; especially relative to a URL - might affect the future of HTTP.  If the need for PATCH is murky now, maybe we should float it after we know the upcoming needs.</p>
+
+
+</section>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

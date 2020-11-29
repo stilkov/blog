@@ -1,0 +1,10 @@
+---
+layout: post
+title: "Geronimo"
+date: "2003-08-11T10:53:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://www.docuverse.com/blog/donpark/2003/08/10.html#a806" title="Don Park's Daily Habit">Don Park</a> has the info that <a href="http://incubator.apache.org/projects/geronimo.html">Apache Geronimo</a> is being started using a JBoss fork called <a href="http://sourceforge.net/projects/elba">Elba</a>. Marc Fleury must be pissed as hell. That's going to be fun ;-)</p>
+

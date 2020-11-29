@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2007/03/deprecating-post-or-maybe-not/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>Deprecating POST, or Maybe Not [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>Deprecating POST, or Maybe Not</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">Mar 20, 2007</time></small><p>
+	</header>
+	<section>
+	  <p>Benjamin Carlyle makes the case for <a href="http://soundadvice.id.au/blog/2007/03/18#deprecatingPOST">deprecating post</a>. In <a href="http://pezra.barelyenough.org/blog/2007/03/deprecating-post/">a follow-up post</a>, Peter Williams points out the major reason (which is not immediately obvious if you read Ben&#8217;s piece without context):</p>
+
+<blockquote>
+<p>POST&#8217;s lack of idempotence has some nasty side effects particularly for what is probably the most common use of POST today, new resource creation. Consider the following scenario, you POST a request to create a new resource but you don&#8217;t get a response. It is impossible to automatically recover from this scenario. You cannot resend the request because the new resource may have been created and you just did not get the response and you cannot check to see if the resource was created because you don&#8217;t know the URI it would have been assigned if it had, in fact, been created.</p>
+</blockquote>
+
+<p>Benjamin suggests using PUT to a client-generated URI (based on a GUID) instead, which makes resource creation idempotent (at the cost of a little ugliness in the URI). (The solution suggested by Peter is somewhat strange though: He suggests using a PUT to a &#8220;new resource&#8221; URI which will return a server-generated URI to which the client PUTs again &#8230; I fail to see any improvement over POST).</p>
+
+<section class="comments">
+
+<div class="comment" id="comment-1207">
+On <a href="#comment-1207" title="Permalink to this comment">March 21, 2007  4:10 PM</a>, <a href="http://pezra.barelyenough.org" title="http://pezra.barelyenough.org" rel="nofollow">Peter Williams</a>
+said:
+<p>The primary improvement is that with the redirected PUT request you
+never get stuck in a situation from which you cannot automatically
+recover.  If you don&#8217;t get a response to the initial put
+&#8220;new resource&#8221; URI you can just repeat the request until you do.  Once
+you have that response you know the real URI for the new resource and
+you can PUT to that URI until you get a response.</p>
+
+
+<div class="comment" id="comment-1208">
+On <a href="#comment-1208" title="Permalink to this comment">March 21, 2007  4:20 PM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>But how is that different from a POST that returns the URI of a newly created resource in a Location: header? If I don&#8217;t get the response, I simply issue the POST again and get a new URI. As you say: &#8220;Once you have that response you know the real URI for the new resource and you can PUT to that URI until you get a response.&#8221; (with the difference that I&#8217;d need to do the PUT only if I change something).</p>
+
+
+<div class="comment" id="comment-1209">
+On <a href="#comment-1209" title="Permalink to this comment">March 21, 2007  6:36 PM</a>, <a href="http://pezra.barelyenough.org" title="http://pezra.barelyenough.org" rel="nofollow">Peter Williams</a>
+said:
+<p>On the assumption that you are not the only person to whom my post was unclear I wrote an follow up, at <a href="http://pezra.barelyenough.org/blog/2007/03/better-resource-creation/" rel="nofollow" /><a href="http://pezra.barelyenough.org/blog/2007/03/better-resource-creation/" rel="nofollow">http://pezra.barelyenough.org/blog/2007/03/better-resource-creation/</a> , in which I attempt to clarify my position.</p>
+
+
+<div class="comment" id="comment-1210">
+On <a href="#comment-1210" title="Permalink to this comment">March 21, 2007  6:44 PM</a>, <a href="http://pezra.barelyenough.org" title="http://pezra.barelyenough.org" rel="nofollow">Peter Williams</a>
+said:
+<p>You certainly do a POST request to a new URI service, followed by a PUT to the new URL.  The effect would be the same.  If feels a little strange to be, though.  Perhaps because it is an explicit two step process.  In the process I propose it is the second step is implicit and based on normal HTTP redirection semantics.</p>
+
+
+<div class="comment" id="comment-1211">
+On <a href="#comment-1211" title="Permalink to this comment">March 22, 2007 11:59 AM</a>, Asbjørn Ulsberg
+said:
+<p>The problem with POST today is that there is no unique and stable identifier minted by the client and sent to the server, so the server can&#8217;t in any way know if two consecutive POSTs are infact the same POST done twice, or two completely unrelated POSTs. If POST 1 and POST 2 are the same request done twice by a client (because &#8220;submit&#8221; was pressed twice or because the response on the first POST timed out), then two identical resources will be created.</p>
+
+<p>If, instead, the client PUTs to a unique URI, each PUT to the same URI will create and/or update the same resource, no matter how many times it&#8217;s done. That&#8217;s not the case with POST. What we could do is introduce a request header on POST that could uniquely identify each POST request and in the cases where two or more requests are just a repetition of the same request, the unique identity would be the same and thus only performed once.</p>
+
+<p>What about using &#8220;ETag&#8221; for POST requests? It&#8217;s pretty easy for the client to hash the content into an ETag and then stuffing that into an header before it&#8217;s POSTed to the server. Consecutive POSTs of the same content would lead to the same ETag and the server could thus identify them as the same and not create two resources.</p>
+
+
+</section>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

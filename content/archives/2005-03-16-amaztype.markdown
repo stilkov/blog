@@ -1,0 +1,21 @@
+---
+layout: post
+title: "AmazType"
+date: "2005-03-16T21:45:00+01:00"
+comments: false
+categories: 
+---
+
+<p>Try one of these and tell me whether or not this is the coolest thing you&#8217;ve seen in a long time:</p>
+
+<ul>
+<li><a href="http://amaztype.tha.jp/US/Books/Title?q=CORBA">CORBA</a></li>
+<li><a href="http://amaztype.tha.jp/US/Books/Title?q=REST">REST</a></li>
+<li><a href="http://amaztype.tha.jp/US/Books/Title?q=SOA">SOA</a></li>
+</ul>
+
+<p>Be sure to click through for a while &#8230;</p>
+
+<p>[via <a href="http://patricklogan.blogspot.com/2005/03/amazonian-art.html">Patrick Logan</a>]</p>
+
+

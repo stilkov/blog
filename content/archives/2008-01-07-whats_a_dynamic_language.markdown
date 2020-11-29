@@ -1,0 +1,142 @@
+---
+layout: post
+title: "What's a Dynamic Language?"
+date: "2008-01-07T21:15:00+01:00"
+comments: false
+categories: 
+---
+
+<p>An interesting question arose in a discussion with <a href="http://www.stal.de/">Michael Stal</a> today, as a side effect of both of us being part of the jury for <a href="http://www.sigs-datacom.de/sd/kongresse/oop_2008/index.php?cat=dls_competition">OOP 2008&#8217;s Dynamic Language Shootout</a> (German only): What, exactly, is a dynamic language?</p>
+
+<p>Obviously, this is not really a meaningful question since the term is very much marketing, very little substance. But if anything, I would claim that the key factor for a language to qualify as &#8220;dynamic&#8221; is the ability to define new code at runtime as part of the core language (e.g. something like eval, define_method or similar).</p>
+
+<p><em>Update:</em> <a href="http://en.wikipedia.org/wiki/Dynamic_programming_language">Wikipedia</a> seems to agree (note to self: check before writing):</p>
+
+<blockquote>
+<p>Dynamic programming language is a term used broadly in computer science to describe a class of high level programming languages that execute at runtime many common behaviors that other languages might perform during compilation, if at all. These behaviors could include extension of the program, by adding new code, by extending objects and definitions, or by modifying the type system, all during program execution. These behaviors can be emulated in nearly any language of sufficient complexity, but dynamic languages provide direct tools to make use of them.</p>
+</blockquote>
+
+<p>What&#8217;s your definition of a &#8220;dynamic language&#8221;?</p>
+
+<section class="comments">
+
+
+
+<div class="comment" id="comment-1573">
+On <a href="#comment-1573" title="Permalink to this comment">January  7, 2008  9:42 PM</a>, <a href="http://www.brics.dk/~krukow" title="http://www.brics.dk/~krukow" rel="nofollow">Karl Krukow</a>
+said:
+<p>I was making slides for a talk about JavaScript when I started thinking about what it really means for a language to be dynamic. I realized that while one knows roughly at an intuitive level, it is not obvious how to define it precisely. Just as you, I followed wikipedia (don&#8217;t tell anyone), but then I noticed the paper by Meijer and Drayton (which was probably more authoritative than wikipedia) at the bottom <a href="http://pico.vub.ac.be/~wdmeuter/RDL04/papers/Meijer.pdf" rel="nofollow">http://pico.vub.ac.be/~wdmeuter/RDL04/papers/Meijer.pdf</a></p>
+
+<p>I thought it was really interesting what they say in section 2.8.</p>
+
+<p>&lt;&lt; Many people believe that the ability to dynamically eval strings
+as programs is what sets dynamic languages apart from static
+languages. This is simply not true; any language that can dynamically
+load code in some form or another, either via DLLs
+or shared libraries or dynamic class loading, has the ability to
+do eval. The real question is whether your really need runtime
+code generation, and if so, what is the best way to achieve this.</p>
+
+<p>In many cases we think that people use eval as a poor man’s
+substitute for higher-order functions. Instead of passing around
+a function and call it, they pass around a string and eval it.
+Often this is unnecessary, but it is always dangerous especially
+if parts of the string come from an untrusted source. This is
+the classical script-code injection threat. >></p>
+
+<p>It goes on, </p>
+
+<p>&lt;&lt; A final use of eval that we want to mention is for partial evaluation,
+multi-stage programming, or meta programming. We
+argue that in that case strings are not really the most optimal
+structure to represent programs and it is much better to
+use programs to represent programs, i.e. C++-style templates,
+quasiquote/unquote as in Lisp, or code literals as in the various
+multi-stage programming languages [20].>></p>
+
+<p>I think this is really interesting to think about ;-)</p>
+
+<p>&#8212; Karl</p>
+
+
+<div class="comment" id="comment-1574">
+On <a href="#comment-1574" title="Permalink to this comment">January  7, 2008  9:48 PM</a>, <a href="/blog/st/">Stefan Tilkov</a>
+
+<a href="/blog/st/" class="commenter-profile"><img src="/mt4/mt-static/images/comment/mt_logo.png" height="16" alt="Author Profile Page" width="16" /></a>
+said:
+<p>Thanks Karl, I followed that paper (just as you did). I would agree that being able to evaluate a string is not essential at all, and in Ruby, I much prefer module<em>eval and instance</em>eval to plain eval. For the language to qualify as dynamic, it must be part of the language itself IMO &#8212; this distinction doesn&#8217;t really make much sense for languages like VB.NET as one can&#8217;t distinguish between platform and language, but it does for most other languages. And I really, really would have a hard time calling C++ a dynamic language.</p>
+
+
+<div class="comment" id="comment-1575">
+On <a href="#comment-1575" title="Permalink to this comment">January  7, 2008 11:29 PM</a>, <a href="http://sebstein.hpfsc.de/" title="http://sebstein.hpfsc.de/" rel="nofollow">Sebastian Stein</a>
+said:
+<p>For me, a key characteristic is that you don&#8217;t have type safety, because you don&#8217;t compile the code upfront. This is both positive and negative, depending on the use case.</p>
+
+
+<div class="comment" id="comment-1576">
+On <a href="#comment-1576" title="Permalink to this comment">January  7, 2008 11:31 PM</a>, <a href="http://memojo.com/~sgala/blog/index.html" title="http://memojo.com/~sgala/blog/index.html" rel="nofollow">Santiago Gala</a>
+
+<a href="http://memojo.com/~sgala/blog/index.html" class="commenter-profile"></a>
+said:
+<p>I think having functions (code) as first class objects (and maybe having classes and metaclasses as regular objects) are the key features.</p>
+
+<p>It makes sense that, once there are kinds of &#8220;data&#8221; that represent &#8220;code&#8221; (lambda, blocks, etc.), it makes sense to have  the four kinds of operations on code (constructors, producers, observers and mutators), and so being able to <em>construct</em> or to <em>mutate</em> code is a side effect of it being equal to other data types or objects.</p>
+
+<p>The ease with which code can be created or manipulated varies a lot between languages, but I think it is the essential feature of <em>dynamic</em> languages.</p>
+
+
+<div class="comment" id="comment-1577">
+On <a href="#comment-1577" title="Permalink to this comment">January  7, 2008 11:41 PM</a>, <a href="/blog/st/">Stefan Tilkov</a>
+
+<a href="/blog/st/" class="commenter-profile"><img src="/mt4/mt-static/images/comment/mt_logo.png" height="16" alt="Author Profile Page" width="16" /></a>
+said:
+<p>@Sebastian: This is a notion that&#8217;s often mentioned, but I wonder what&#8217;s so dynamic or static about it?</p>
+
+
+<div class="comment" id="comment-1578">
+On <a href="#comment-1578" title="Permalink to this comment">January  8, 2008 12:49 AM</a>, <a href="http://patricklogan.blogspot.com" title="http://patricklogan.blogspot.com" rel="nofollow">Patrick Logan</a>
+said:
+<p>Oh, dear.</p>
+
+<p>I should learn by now to stay away from these dynamic vs. static things! They are kind of like &#8220;what is object-oriented&#8221;.</p>
+
+<p>&#8220;For me, a key characteristic is that you don’t have type safety&#8230;&#8221;</p>
+
+<p>Except when you do. </p>
+
+<p>For example, is C dynamic? It does not have very good &#8220;type safety&#8221; although it does have some &#8220;compile-time type checking&#8221;.</p>
+
+<p>Another example, is Smalltalk dynamic? It does have very good &#8220;type safety&#8221; in the sense that at runtime the presence of methods is detected and message sends that do not have corresponding method definitions result in exceptions.</p>
+
+<p>There are no easy definitions that I am aware of. There are ranges of choices that form a multi-dimensional space of language design.</p>
+
+
+<div class="comment" id="comment-1579">
+On <a href="#comment-1579" title="Permalink to this comment">January  8, 2008  8:46 AM</a>, pik
+said:
+<p>I won&#8217;t tell you what I know about dynamic languages, I will anyway tell you what I know about dynamic fonts: fonts that resize when someone select a bigger text size on IE. Dynamic fonts are missing from this web site and I am going up and down from my rssreader to mozilla to see something. ;-)</p>
+
+
+<div class="comment" id="comment-1580">
+On <a href="#comment-1580" title="Permalink to this comment">January  8, 2008  9:32 AM</a>, <a href="http://sebstein.hpfsc.de/" title="http://sebstein.hpfsc.de/" rel="nofollow">Sebastian Stein</a>
+said:
+<p>Stefan wrote:</p>
+
+<blockquote>
+<p>@Sebastian: This is a notion that’s often mentioned, but I
+wonder what’s so dynamic or static about it?</p>
+</blockquote>
+
+<p>Well, as long as you have not used the variable in any way, it is still open to be of any type you want. Of course this is just one criteria of a dynamic language and you will probably need a list of criteria. </p>
+
+
+<div class="comment" id="comment-1581">
+On <a href="#comment-1581" title="Permalink to this comment">January  8, 2008  3:06 PM</a>, <a href="/blog/st/">Stefan Tilkov</a>
+
+<a href="/blog/st/" class="commenter-profile"><img src="/mt4/mt-static/images/comment/mt_logo.png" height="16" alt="Author Profile Page" width="16" /></a>
+said:
+<p>@pik: Sorry about that, I can resize using Safari on a Mac without problems :-) But I know I should switch to using em units.</p>
+
+
+</section>
+

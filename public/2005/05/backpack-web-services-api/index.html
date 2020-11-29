@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2005/05/backpack-web-services-api/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>Backpack &#34;Web Services&#34; API [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>Backpack &#34;Web Services&#34; API</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">May 18, 2005</time></small><p>
+	</header>
+	<section>
+	  <p><a href="http://www.backpackit.com">Backpack</a> gets what they call a <a href="http://www.backpackit.com/api/">Web services API</a> &#8230; I don&#8217;t have the slightest idea what this is supposed to be. It&#8217;s neither Web services nor RESTful nor anything else I&#8217;ve seen &#8212; it looks like bad re-invention of SOAP to me.</p>
+
+<p><em>Update</em>: Be sure to check out the <a href="/blog/st/2005/05/18/backpack_web_services_api.html#comments">comments</a>.</p>
+
+<section class="comments">
+
+<div class="comment" id="comment-531">
+On <a href="#comment-531" title="Permalink to this comment">May 18, 2005  4:31 PM</a>, <a href="http://www.loudthinking.com" title="http://www.loudthinking.com" rel="nofollow">David Heinemeier Hansson</a>
+said:
+<p>It&#8217;s just XML over HTTP. We didn&#8217;t see a need for wrapping that in further complexity. Just like the &#8220;REST&#8221; API for Flickr. Or 43things. Or even Amazon. Lots of examples of people just doing XML over HTTP without having any aspirations to do a Web Services thing when they&#8217;re happy just doing web services. We can get by without capitalization ;)</p>
+
+
+<div class="comment" id="comment-532">
+On <a href="#comment-532" title="Permalink to this comment">May 18, 2005  4:42 PM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>David, I&#8217;m not suggesting you should switch to WS-*, SOAP etc. In fact for your use case that would probably the worst thing you could do. But there&#8217;s lots of benefits in following REST principles when designing an XML over HTTP API, and maybe you should consider doing so.</p>
+
+
+<div class="comment" id="comment-533">
+On <a href="#comment-533" title="Permalink to this comment">May 18, 2005  4:55 PM</a>, <a href="http://www.loudthinking.com" title="http://www.loudthinking.com" rel="nofollow">David Heinemeier Hansson</a>
+said:
+<p>Sure. I&#8217;m just saying that we&#8217;re hardly without predence. You&#8217;re not finding PUT or DELETE verbs being in use by neither flickr, 43things, amazon, or many others just doing XML over HTTP. So there&#8217;s varying degrees of RESTful compliance. In some aspects, Backpack is a lot closer than others mentioned by using distinct URIs, like /ws/page/123 and /ws/page/123/items/list. Instead of just /rest?query=X.</p>
+
+<p>Backpack isn&#8217;t more RESTful because we didn&#8217;t spend a whole lot of time on it. All the methods exposed through the API are just the regular ones we use for the web too. Slightly modified in some cases for the return format (xml instead of just html).</p>
+
+<p>REST is a nice ideal. People should definitely strive for it. We are. But labeling anything but complete compliance as a &#8220;bad re-invention of SOAP&#8221; seems to both miss the point (we&#8217;re a bad implementation of REST, if anything) and be a turn off in general.</p>
+
+
+<div class="comment" id="comment-534">
+On <a href="#comment-534" title="Permalink to this comment">May 18, 2005  5:10 PM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>My reason for the SOAP comparison is that it&#8217;s similar to SOAP 1.1 in sending everything, even retrieval ops, through POST. Other aspects I don&#8217;t like are the usage a a developer token (what&#8217;s wrong with basic or digest auth) and the use of a non-standard header to get a different representation (instead of using the HTTP Accept header with MIME types). </p>
+
+<p>As for the turn-off thing: please do note that I&#8217;m actually a big, big fan of your RoR work; that leads me to expect and accept nothing but the best from a Dutch mastermind :-)</p>
+
+
+<div class="comment" id="comment-535">
+On <a href="#comment-535" title="Permalink to this comment">May 18, 2005  5:26 PM</a>, <a href="http://www.loudthinking.com" title="http://www.loudthinking.com" rel="nofollow">David Heinemeier Hansson</a>
+said:
+<p>Actually, you can use GET for things that are natural GETs. So GET /ws/page/123?token=xyz will actually work. The header thing is likely going to be replaced by just using content-type. We&#8217;re also looking into the X-WSSE approach to authentication, but quick won over perfect.</p>
+
+
+<div class="comment" id="comment-536">
+On <a href="#comment-536" title="Permalink to this comment">May 18, 2005  5:31 PM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>Sounds good &#8212; looking forward to future versions, then.</p>
+
+
+<div class="comment" id="comment-537">
+On <a href="#comment-537" title="Permalink to this comment">May 18, 2005  7:31 PM</a>, <a href="http://asynchronous.org/jsled" title="http://asynchronous.org/jsled" rel="nofollow">jsled</a>
+said:
+<p>I&#8217;ve tried to call these non-REST, non-SOAP RPC interfaces SHAREd services: Simple HTTP API of RPC and Encoded data.</p>
+
+<p>WRT the RESTfulness of the Backpack API&#8230; re-inventing Content-Type as &#8216;X-POST-DATA-FORMAT&#8217; is just silly.  Why doesn&#8217;t anyone just read the HTTP spec, it&#8217;s easily digestable?  And while the resources seem to have distinct URIs, they&#8217;re nowhere in the data returned from API requests, which is weird.</p>
+
+<p>Open APIs rock; Backpack should be commended.</p>
+
+
+</section>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

@@ -1,0 +1,17 @@
+---
+layout: post
+title: "XOM 1.1"
+date: "2005-12-02T18:32:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://www.cafeconleche.org/#news2005December1">ERH has released XOM 1.1</a>: </p>
+
+<blockquote>
+<p>Version 1.1 maintains backwards compatibility with XOM 1.0 while adding a number of important new features including XPath queries, document subset canonicalization, exclusive XML canonicalization, external XSLT parameters, and xml:id support. It also fixes a number of bugs that were present in XOM 1.0, uses less memory, and is two to four times faster for many common operations.</p>
+</blockquote>
+
+<p>In case you don&#8217;t know XOM, it&#8217;s an XML API alternative to JDOM or dom4j and very much worth a closer look.</p>
+
+

@@ -1,0 +1,15 @@
+---
+layout: post
+title: "XJ"
+date: "2006-08-21T22:29:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://www.cafeconleche.org/#August_21_2006_34869">Elliotte Rusty Harold</a> on IBM&#8217;s <a href="http://www.alphaworks.ibm.com/tech/xj">XJ</a>, a Java derivativethat builds in native support for XML:</p>
+
+<blockquote>
+<p>It sounds interesting, but the tight coupling to schemas is a serious mistake. I want my XPaths and XML literals to work regardless of what the schema says. Indeed the schema agnosticity of both XML and XPath is one of their strengths. It&#8217;s disturbing how many people keep trying to force the schemaless genie back into the bottle.</p>
+</blockquote>
+
+

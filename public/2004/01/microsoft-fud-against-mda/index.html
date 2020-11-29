@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2004/01/microsoft-fud-against-mda/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>Microsoft FUD against MDA [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>Microsoft FUD against MDA</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">Jan 20, 2004</time></small><p>
+	</header>
+	<section>
+	  <p><a href="http://erp4it.typepad.com/erp4it/">Charles Betz</a> has <a href="http://erp4it.typepad.com/erp4it/2004/01/microsoft_takes.html">linked</a> to <a href="http://www.bptrends.com/publicationfiles/01-04%20COL%20Dom%20Spec%20Modeling%20Frankel-Cook.pdf">an article by Microsoft&#8217;s Steve Cook on MDA</a>. Read it, the come back.
+The article contains an important lesson: how to create FUD(Fear, Uncertainty, Doubt) in the most sophisticated way. These two paragraphs are a good example:</p>
+
+<blockquote>Nevertheless, an approach like MDA can indeed be helpful for some application areas. Some vendors have shown that building a Web application to run within the J2EE (Java 2 Platform, Enterprise Edition) environment can be simplified by building UML models of the data entities and components involved, and mapping these models into the various J2EE artifacts.  However, as we mentioned earlier, for developers to adopt such an approach it is vital for the overall process to be agile and to not introduce unnecessary transitions and barriers such as irreversible code-generation and debugging problems.</blockquote>
+
+<p>Building J2EE apps with an MDA approach is not something &#8220;some vendors have shown&#8221;, it&#8217;s very quickly becoming the standard way of building sophisticated enterprise applications. Trying to create some sort of lock-in between MDA and J2EE is totally misleading. <a href="/">We</a> have used our <a href="/iqgen">own</a> and other MDA products, as have our competitors, to aid customers in building applications based on a wide range of platforms, which of course include, but are not limited, to J2EE - ranging from CORBA to COBOL. It&#8217;s definitely true, though, that J2EE is the most important platform to be targeted by MDA tool vendors, the reason for that being, in my experience, that most enterprise applications today are built on J2EE.
+Also, pretty cleverly hidden between the lines, is the notion that somehow current MDA tools (you know, those that are tied to J2EE, hah) suffer from what the author calls the &#8220;agility problem&#8221;. This is also very misleading &mdash; no MDA tool worth the label has this problem. FUD, pure and simple.</p>
+
+<blockquote>Extending the reach of MDA into other areas will be difficult.  The OMG&#8217;s definition of &#8220;platform&#8221; is vague, and the only real example is J2EE.  Using models to assist with creation of J2EE applications is a valid pragmatic step on the road towards using models successfully in software development.  In fact, there are very few standardized mappings between platform-independent and platformspecific models; the only ones that exist target the Java platform, although there are non-standard commercial implementations that claim to be MDA compliant and target other platforms. </blockquote>
+
+<p>First of all, it seems illogical for the author to make a case for domain-specific modeling languages, and then demand that there should be more standardized mappings (and following from that, standardized domain languages) inside MDA. To target other platforms, i.e. those for which no standardized mapping exists (which is essentially everything, since nobody uses the low-level EJB profiles because they are useless), is absolutely within the standards. This is another good example of twisting the truth &mdash; somehow doing things that are not standardized at all becomes doing non-standard (with every casual reader will read as violating some existing standard).
+(As an aside, the section&#8217;s summary does not summarize what is claimed in the previous paragraphs; while I agree that the name &#8220;MDA&#8221; itself is rather dumb, the rest seems to be just a bit of mud thrown around).
+Next, the author starts to beat up the UML:</p>
+
+<blockquote>UMLAsBlueprint raises the bar for UML.  Here the objective is to integrate one or more UML models as first-class artifacts within a software development process. [&#8230;] When we try to do this, we immediately find problems with UML, because it does not translate very directly into the technologies that we use.  For example, a UML class cannot be used directly to depict a C# class because a UML class does not support the notion of properties while a C# class does. Similarly, a UML interface cannot be used directly to depict a Java interface becauinterface does not contain static fields while a Java interface does.  </blockquote>
+
+<p>It is astoundingly trivial to add support for properties or static fields in Java interfaces to UML models by using stereotypes and/or tagged values appropriately. In case there is any doubt, I could easily draw up a valid UML model and use it to generate C# including properties or Java interfaces with static fields. IMO, though, platform-specific details like these don&#8217;t have any value in MDA/UML models anyway &#8230; but that is another story.</p>
+
+<blockquote>The technology of &#8220;UML profiles&#8221; is intended to offer flexibility in the blueprinting world by permitting a limited level of extensibility to the language, but practice has found that the very limited level of extensibility provided by profiles does not permit a seamless mapping from UML into popular target technologies.</blockquote>
+
+<p>That is an outrageous and unfounded claim, as lots of successful MDA project that have done just that clearly demonstrate.
+In the next section, the author explains that Microsoft will add its own, proprietary views to the UML. Worried about standards? No need, just read this:</p>
+
+<blockquote>Although the diagrams are not legal UML by the letter of the standard, the meaning of the diagrams is readily apparent to anybody that understands the UML conventions. </blockquote>
+
+<p>Oh, great, so it&#8217;s obvious to a human who looks at the diagrams. It&#8217;s also obvious that these non-standard extensions will kill any desired interoperability.
+While I like MOF and XMI conceptually, I dislike the implementation of those concepts, which I deem to be too complex and rather academic in many places. I disagree that being able to store model information in a standardized way is not important, though; I think that a sound model for representing the information is a lot more important than a nice UI on top of it. Then again, I can understand why a company like Microsoft would view this differently. Concerning XMI interoperability, there definitely are problems; still, we were able to build a product that can import XMI written by half a dozen different CASE tools.
+Whether, conceptually, it&#8217;s better to have domain-specific exchange formats that a single format like XMI reminds me of the XML/RDF debates; there are valid arguments for both views.
+To summarize my personal view on this: Unless follow-up articles provide more value, this is a lot less than what one would have expected from somebody as Steve Cook.</p>
+
+<section class="comments">
+
+<div class="comment" id="comment-190">
+On <a href="#comment-190" title="Permalink to this comment">January 21, 2004 12:00 AM</a>, Cedric
+said:
+<p>Maybe they are spreading FUD, but so are you with unsubstantiated claims such as:</p>
+
+<p>MDA is very quickly becoming the standard way of building sophisticated enterprise applications</p>
+
+<p>You voice your opinion, they voice theirs.  Just don&#8217;t call it FUD because you happen to disagree with it.</p>
+
+
+<div class="comment" id="comment-191">
+On <a href="#comment-191" title="Permalink to this comment">January 21, 2004  7:15 AM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>You are right that in this case, I voice a personal opinion without backing it up with hard numbers - AFAIK, they are not available (and I don&#8217;t believe in quoting Gartner and the like, anyway). Still, this is what I perceive in the projects I&#8217;m involved in.
+But more importantly: In which way is this FUD? Am I trying to introduce doubts, or fear, or uncertainty about an existing technology, and hype some vaporware instead?
+It&#8217;s one thing to voice an opinion. It&#8217;s another to misrepresent facts to arrive at the convenient conclusion.</p>
+
+
+</section>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

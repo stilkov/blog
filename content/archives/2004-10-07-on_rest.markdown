@@ -1,0 +1,32 @@
+---
+layout: post
+title: "On REST"
+date: "2004-10-07T23:11:00+01:00"
+comments: false
+categories: 
+---
+
+<p>Some random thoughts &#8212; in a new post, since I found it strange to argue for <a href="http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm">REST</a> in one <a href="/blog/st/2004/09/28/web_services_needs_transfer_protocols_and_specific_protocols.html">comment thread</a> and against it in <a href="/blog/st/2004/09/29/rest_popularity.html">another one</a> :-)</p>
+
+<p>Whatever you think about REST, there&#8217;s one thing you&#8217;ll have to give to the REST folks: They know what they are talking about, and they have very clear guidelines about what is RESTful and what is not. Even if you assume that there are far more SOAP advocates then RESTafarians (an assumption that&#8217;s not at all obvious), this doesn&#8217;t explain the difference in the number of disagreements <em>within</em> the respective communities. RESTafarians usually pretty quickly come to the same conclusions when they&#8217;re asked to assess the RESTfulness of some example. </p>
+
+<p>The situation is totally different within the so-called SOA community. With the lack of a clear definition, it&#8217;s very easy to call <em>anything</em> &#8220;SOA&#8221; just to ride the wave. Some say that <a href="http://groups.yahoo.com/group/service-orientated-architecture/message/1386">CORBA, DCOM and DCE-RPC are all instances of an SOA</a>; <a href="http://radovanjanecek.net/blog/archives/000144.html">some believe</a> a registry is a central component, others don&#8217;t seem <a href="http://schneider.blogspot.com/archives/2004_04_11_schneider_archive.html">too sure</a> (at least not if it&#8217;s based on UDDI). </p>
+
+<p>So where do I stand? I truly like REST. I don&#8217;t buy some of the arguments, like e.g. the additional scalability you are supposed to get from sticking to a uniform interface. (I like a uniform interface, BTW, and I disagree, at least in some respects, with the <a href="http://jim.webber.name/2004/09/20/16be8a55-dc6b-4854-a962-8f6b97d66525.aspx">ProcessMessage approach</a> &#8212; I think you should at least distinguish between operations with side-effects and those without.) I&#8217;m also not a big fan of HTTP &#8212; the most important instance of REST &#8212; e.g. because of the ugly GET syntax. Still, you cannot argue that it simply works (something the SOA stuff still has to prove). I&#8217;m also a big fan of SOAP, hate XML-RPC, believe that documents/messages should be the central element and the starting point in an SOA design, think that metadata is hugely important and UDDI basically sucks, and somehow can&#8217;t help believing that we&#8217;ll end up with something resembling REST, but built on top of SOAP/WS-* and with mappings to different transport/transfer protocols.</p>
+
+<section class="comments">
+
+<div class="comment" id="comment-373">
+On <a href="#comment-373" title="Permalink to this comment">October  8, 2004  3:59 PM</a>, <a href="http://www.markbaker.ca" title="http://www.markbaker.ca" rel="nofollow">Mark Baker</a>
+said:
+<p>Nice point about &#8220;usually pretty quickly come to the same conclusions&#8221;; I hadn&#8217;t considered that.  The reason why that&#8217;s (mostly) so is simple; its architectural constraints are well documented and provide a (more or less) straight-forward test.  Also, when there&#8217;s disagreements about what&#8217;s RESTful and what&#8217;s not, it&#8217;s very easy to locate exactly &#8220;where&#8221; (i.e. what aspect of which constraint) the disagreement focuses on.  Software architecture the way it was meant to be &#8230;</p>
+
+
+<div class="comment" id="comment-374">
+On <a href="#comment-374" title="Permalink to this comment">October  8, 2004  9:18 PM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>I agree &#8212; and I wish other architectures would be verifiable just as easily. Then again, REST is, after all, not that complicated, but still most of the Web as it is violates REST constraints &#8230;</p>
+
+
+</section>
+

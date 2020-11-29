@@ -1,0 +1,12 @@
+---
+layout: post
+title: "Encoding"
+date: "2005-03-18T20:16:00+01:00"
+comments: false
+categories: 
+---
+
+<p>Bill de h&#211;ra finds <a href="http://www.dehora.net/journal/2005/03/new_slide_for_sam_ruby.html">a new slide for Sam</a>. The way his name is written in my <a href="http://ranchero.com/netnewswire/whatsnew/netnewswire20.php">newsreader</a> seems like another one:
+<img src="/blog/st/images/hO%CC%81ra.jpg" border="0" vspace="4" hspace="4" alt="h&#211;ra" /></p>
+
+

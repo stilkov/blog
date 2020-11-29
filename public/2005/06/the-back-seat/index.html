@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2005/06/the-back-seat/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>The Back Seat [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>The Back Seat</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">Jun 10, 2005</time></small><p>
+	</header>
+	<section>
+	  <p>Tim Ewald:</p>
+
+<blockquote>
+<p>Of course Indigo also offers XML messaging, but it is hidden behind RPC-style invocations and object marshaling layers. When I talk to members of the Indigo team about this, they&#8217;re always quick to point out that the system is layered such that I could strip away the object layer and deal with XML messages if I want to (but who would want to?). Somehow, I always leave those discussions feeling like an angle-bracket loving freak. Yes, I can get to what I want if I&#8217;m willing to do&#160;a bunch of extra work. In short I&#8217;m using Indigo in a supported, but non-standard way. Welcome on board, your seat is at the back.</p>
+</blockquote>
+
+<p>The situation Tim describes is remarkably similar to what the viewpoint expressed <a href="http://radio.javaranch.com/val/2005/06/08/1118236863771.html">in this post</a> suggests, namely that the XML-centric additional APIs in JAX-WS (n&#233;e JAX-RPC 2.0) provide a solution to the problems described in the <a href="http://www.hpl.hp.com/techreports/2005/HPL-2005-83.html">Alpine paper</a>. They do, but you still pay for what you don&#8217;t need, especially since every JAX-WS implementation is <em>required</em> to implement the object-centric APIs as well.</p>
+
+<p>(The side note in that post, which argues that XML is a bad choice as a programming language syntax, manages to miss the point by a remarkably wide margin.)</p>
+
+<section class="comments">
+
+<div class="comment" id="comment-572">
+On <a href="#comment-572" title="Permalink to this comment">June 12, 2005  6:00 AM</a>, <a href="http://radio.javaranch.com/val" title="http://radio.javaranch.com/val" rel="nofollow">Val</a>
+said:
+<p>Could you elaborate a little bit on your last sentence, please?</p>
+
+
+<div class="comment" id="comment-573">
+On <a href="#comment-573" title="Permalink to this comment">June 12, 2005  8:47 AM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>O/X mapping not only creates a lot of subtle and not-so-subtle problems, it also fails to exploit the potential benefits of XML. </p>
+
+<p>The point is that XML <em>as a programming language</em> is a dumb idea is absolutely valid. But it&#8217;s got nothing to do with the O/X discussion.</p>
+
+
+</section>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

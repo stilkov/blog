@@ -1,0 +1,10 @@
+---
+layout: post
+title: "Enten"
+date: "2003-04-01T22:29:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://www.heise.de/newsticker/data/anw-01.04.03-008/" title="Heise News-Ticker: Freigang für Enten">Heise News-Ticker: Freigang für Enten</a></p>
+

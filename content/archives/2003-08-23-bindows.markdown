@@ -1,0 +1,19 @@
+---
+layout: post
+title: "Bindows"
+date: "2003-08-23T00:38:00+01:00"
+comments: false
+categories: 
+---
+
+<p>Found via <a href="http://www.docuverse.com/blog/donpark/2003/08/22.html#a832">Don Park</a>: <a href="http://www.i-see.net/bindows/" title="Bindows%u2122 Home">Bindows</a>, a DHTML toolkit that emulates the Windows L&amp;F for Web UIs. Didn't work in Firebird, but looks interesting in IE.</p>
+<section class="comments">
+
+<div class="comment" id="comment-78">
+On <a href="#comment-78" title="Permalink to this comment">November  5, 2003 11:28 PM</a>, <a href="http://www.asdfsdf.com" title="http://www.asdfsdf.com" rel="nofollow">asdf asdf asdf</a>
+said:
+<p>asdfsdf</p>
+
+
+</section>
+

@@ -1,0 +1,26 @@
+---
+layout: post
+title: "Re-Invent"
+date: "2005-04-28T20:29:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://www.windley.com/archives/2005/04/wsmetadataexcha.shtml">Phil Windley</a>  doesn&#8217;t get <a href="http://msdn.microsoft.com/library/en-us/dnglobspec/html/ws-metadataexchange.pdf">WS-MetadataExchange</a>:</p>
+
+<blockquote>
+<p>I&#8217;m just not clear on why a simple URL isn&#8217;t good enough. Why do we need to invent new RPC-style request/response pairs?</p>
+</blockquote>
+
+<p>The reason is simple: It&#8217;s because of a conscious decision <em>not</em> to depend on HTTP. And I&#8217;m becoming more and more convinced that this is the wrong path. The more I read and think about it, the more convinced I become that ignoring what HTTP and REST offer leads to re-inventing the same functionality on another layer.</p>
+
+<section class="comments">
+
+<div class="comment" id="comment-520">
+On <a href="#comment-520" title="Permalink to this comment">July 15, 2005  6:04 PM</a>, <a href="http://www.dan-olsen.org/weblog" title="http://www.dan-olsen.org/weblog" rel="nofollow">Dan Olsen</a>
+said:
+<p>Using HTTP and REST is some research I am working on with Dr. Windley. We are trying to see if we can use WS-* standards with HTTP instead of a new layer. It is still in the early research stages but you can see some of the stuff by going to <a href="http://www.dan-olsen.org/research/index.php/Web_Services" rel="nofollow" /><a href="http://www.dan-olsen.org/research/index.php/Web_Services" rel="nofollow">http://www.dan-olsen.org/research/index.php/Web_Services</a> and any input from individuals would be appreciated as the project progresses.</p>
+
+
+</section>
+

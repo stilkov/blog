@@ -1,0 +1,38 @@
+---
+layout: post
+title: "Emacs.Net?"
+date: "2007-12-27T15:30:00+01:00"
+comments: false
+categories: 
+---
+
+<p>Microsoft&#8217;s <a href="http://www.douglasp.com/blog/2007/12/27/EmacsNet.aspx">Doug Purdy</a> is looking for new co-workers:</p>
+
+<blockquote>
+<p>We are looking for developers/testers to build a tool that I will roughly describe as &#8220;Emacs.Net&#8221;.</p>
+</blockquote>
+
+<section class="comments">
+
+
+
+<div class="comment" id="comment-1549">
+On <a href="#comment-1549" title="Permalink to this comment">December 27, 2007  4:21 PM</a>, Brandon Corfman
+said:
+<p>I&#8217;m baffled: why the heck would you need another text editor on Windows, and what purpose would it serve?</p>
+
+
+<div class="comment" id="comment-1550">
+On <a href="#comment-1550" title="Permalink to this comment">December 27, 2007  4:37 PM</a>, <a href="/blog/st/">Stefan Tilkov</a>
+
+<a href="/blog/st/" class="commenter-profile"><img src="/mt4/mt-static/images/comment/mt_logo.png" height="16" alt="Author Profile Page" width="16" /></a>
+said:
+<p>This is of course all wild speculation, but my guess would be that what they&#8217;re aiming for is more something like Eclipse than just another text editor. </p>
+
+<p>You know the saying about Emacs: It&#8217;s a great operating system, it&#8217;s just that the editor sucks :-)</p>
+
+<p>(Which I don&#8217;t believe, BTW; I&#8217;ve happily used Emacs for close to 15 years.)</p>
+
+
+</section>
+

@@ -1,0 +1,20 @@
+---
+layout: post
+title: "Lisp OODB"
+date: "2003-10-06T09:57:00+01:00"
+comments: false
+categories: 
+---
+
+<p>For a few weeks now, I have again been totally fascinated by Lisp and its dialects, have been reading up on it (e.g. with <a href="http://www.paulgraham.com">Paul Graham</a>'s excellent books), and have played around with different implementations. I'm still trying to find the time to write about my thoughts on this ... in the meantime, please admire <a href="http://patricklogan.blogspot.com">Patrick Logan</a>'s brilliant <a href="http://patricklogan.blogspot.com/archives/2003_10_05_patricklogan_archive.html#106520442014053453">example</a> of using <a href="http://kogs-www.informatik.uni-hamburg.de/~moeller/symbolics-info/statice.html">Statice</a> to access a database in Lisp:
+</p>
+<pre><code>
+(defun transfer-between-accounts (from-name to-name amount)
+(with-database (db *bank-pathname*)
+(with-transaction ()
+(decf (account-balance (account-named from-name)) amount)
+(incf (account-balance (account-named to-name)) amount)
+(when (minusp (account-balance (account-named from-name)))
+(error "Insufficient funds in ~A's account" from-name)))))
+</code></pre>
+

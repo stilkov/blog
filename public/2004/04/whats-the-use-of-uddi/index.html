@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2004/04/whats-the-use-of-uddi/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>What&#39;s the Use of UDDI [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>What&#39;s the Use of UDDI</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">Apr 20, 2004</time></small><p>
+	</header>
+	<section>
+	  <p><a href="http://schneider.blogspot.com/2004_04_18_schneider_archive.html#108230245410098039">Jeff says</a>:</p>
+
+<blockquote>I&#8217;d love to see someone try to explain to me why UDDI isn&#8217;t a complete piece of shit. Justify it - I&#8217;m listening.</blockquote>
+
+<p>I believe when you consider setting up the registry part of an SOA &mdash; something I believe you&#8217;ll do sooner or later, at the latest when you have developed the first bunch of services &mdash; you need to decide which approach you want to take:</p>
+
+<h1>Chaotic, self-organizing using concepts such as full text search, more peer-to-peer than centrally organized</h1>
+
+<h1>Highly structured, planned in advance, with explicit metadata relationships, based on categorization schemas designed up front</h1>
+
+<p>UDDI clearly is not a good match for option 1. If you want to do this, you&#8217;re clearly better off maybe using some XML database that supports REST-based XQuery/XPath interaction and maybe a full-text search. I&#8217;m not aware of any standard in this area yet. With option 2, you would be looking for something that defines how data is organized, how to associate metadata, how to define the structure of said metadata. I&#8217;m only aware of one standard specifically targeted at doing this in an SOA context, and that is UDDI. Surely you can build something of your own, and as usual it will likely match your requirements perfectly (if you are doing perfect requirements engineering and software development, that is). Of course you&#8217;d also lose all of the advantages associated with a standard - like available documentation, people skills, tools, existing definitions, different implementations to chose from, etc.</p>
+
+<p>Still, I believe both options are fine given the appropriate circumstances. In an Internet scenario, I believe UDDI is not a good idea at all. The same is true for highly innovative, independent peers. You will probably go with the second option if you are trying to find a solution for a large organization such as a Fortune 500 company; and while I have a lot of things to criticize about UDDI as it is, I still believe it&#8217;s the best strategy for this option currently available.</p>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

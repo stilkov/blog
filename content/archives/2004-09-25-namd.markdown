@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Namd!"
+date: "2004-09-25T00:08:00+01:00"
+comments: false
+categories: 
+---
+
+<p>Wirklich sch&#246;n: <a href="http://woodshed.de/dialog-robot.html">Der Suchmaschinen-Robot und der Webdesigner</a> [via <a href="http://vowe.net/archives/004994.html">vowe</a>]</p>
+
+

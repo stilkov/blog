@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Dune"
+date: "2006-07-23T14:17:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://www.douglasp.com/blog/2006/07/23/StarWarsVsDune.aspx">Doug Purdy</a> points to <a href="http://www.jitterbug.com/origins/dune.html">this rather long article</a> which starts with a ridiculous comparison &#8212;  Star Wars and Dune. Pure heresy, IMO, like comparing Britney Spears to Beethoven. Anyway: the rest of the article is very interesting; one thing I didn&#8217;t know: <a href="http://tim.oreilly.com/herbert/">Tim O&#8217;Reilly&#8217;s first book</a> was about <a href="http://en.wikipedia.org/wiki/Frank_Herbert">Frank Herbert</a>!</p>
+
+

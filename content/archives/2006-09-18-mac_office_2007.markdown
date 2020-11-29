@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Mac Office 2007"
+date: "2006-09-18T21:13:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://www.apcstart.com/site/dflynn/2006/09/1511/exclusive-first-details-of-office-2007-for-mac-all-new-ui">Interesting information</a> about the Office 2007 update for OS X, due to be released in Q3 2007.</p>
+
+

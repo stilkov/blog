@@ -1,0 +1,20 @@
+---
+layout: post
+title: "GNU JAXP 1.3"
+date: "2005-01-11T22:18:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://www.cafeconleche.org/#news2005January11">EHR</a> points to <a href="http://www.gnu.org/software/classpathx/jaxp/">GNU JAXP 1.3</a>, a <a href="http://java.sun.com/xml/jaxp/index.jsp">JAXP</a> implementation that &#8212; among a lot of other features &#8212; uses JNI to wrap <a href="http://www.xmlsoft.org/">libxml2</a> and <a href="http://www.xmlsoft.org/XSLT/">libxslt</a>. Given that these are considered <a href="http://xmlbench.sourceforge.net/results/benchmark200402/index.html">the fastest XML parsing and transformation implementations in existence</a>, it might be interesting to try them out where a 100% pure Java implementation is not mandatory.</p>
+
+<section class="comments">
+
+<div class="comment" id="comment-434">
+On <a href="#comment-434" title="Permalink to this comment">January 13, 2005  9:36 PM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>Only a test because I got complaints the response times are too long.</p>
+
+
+</section>
+

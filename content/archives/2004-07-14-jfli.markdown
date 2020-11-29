@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Jfli"
+date: "2004-07-14T15:46:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://jfli.sourceforge.net/">Jfli</a> &#8212; a Java Foreign Language Interface for Common Lisp</p>
+
+

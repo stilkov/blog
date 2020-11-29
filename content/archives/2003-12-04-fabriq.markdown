@@ -1,0 +1,13 @@
+---
+layout: post
+title: "FABRIQ"
+date: "2003-12-04T20:20:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://staff.newtelligence.net/clemensv/">Clemens Vasters</a> has provided some interesting <a href="http://staff.newtelligence.net/clemensv/PermaLink.aspx?guid=b1d34986-f53b-49c1-a56b-81c5fc042f32">background</a> on a project he is currently working on. </p>
+
+<p>I believe that what can easily be seen is that the overall architectural patterns, let&#8217;s say: the meta-architecture, really doesn&#8217;t differ that much &mdash; whether you are using C, C++ and CORBA, combinded with the Event or Notification service, J2EE/JMS, MSMQ, or any other bunch of technologies.</p>
+
+

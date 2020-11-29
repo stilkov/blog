@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2011/11/google-vs.-web-architecture/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>Google vs. Web Architecture [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>Google vs. Web Architecture</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">Nov 2, 2011</time></small><p>
+	</header>
+	<section>
+	  <p>I&#8217;m really sad to see that Google continues its approach of tolerating &#8212; and thus, in my view, encouraging
+&#8212; when people build sites that break the Web&#8217;s architecture. First, we had this hashbang mess (tl;dr version: Ajax/JS-only sites suck, long version <a href="http://www.jenitennison.com/blog/node/154">here</a>), now <a href="http://googlewebmastercentral.blogspot.com/2011/11/get-post-and-safely-surfacing-more-of.html">the Google crawler will issue POST requests</a> (no kidding).</p>
+
+<p>Sure, there are worse things happening in the world, but from a REST perspective this is so utterly, totally wrong that it makes me really mad. A GET request is the only thing a crawler should ever issue if it intends to conform to the architecture of the Web, as these requests are safe. Issuing POSTs just because so many people don&#8217;t understand the distinction between GET and POST (or use crappy web frameworks that don&#8217;t) just means that even more people will do so. In the end, everyone will have to use heuristics to find out what can be called safely, and what can&#8217;t &#8212; effectively trading specified behavior for the typical kind of crap that you usually only get when something evolves without any architectural vision.</p>
+
+<p>Google&#8217;s very core business was enabled by the Web&#8217;s architecture, now they&#8217;re slowly helping to ruin it. </p>
+
+<p>&#8220;Do no evil&#8221; my ass.</p>
+
+<section class="comments">
+
+
+
+<div class="comment" id="comment-2370">
+On <a href="#comment-2370" title="Permalink to this comment">November  2, 2011  6:58 PM</a>, <a href="http://dongnotes.blogspot.com/" title="http://dongnotes.blogspot.com/" rel="nofollow">Dong Liu</a>
+said:
+<p>&#8220;The Web is more a social creation than a technical one.&#8221; </p>
+
+<p>This robot POST abuse might force more people to read the specification and make their server conform to the standard and security requirements. Google robot offers a free test not only for GETs but also for POSTs now. </p>
+
+
+<div class="comment" id="comment-2378">
+On <a href="#comment-2378" title="Permalink to this comment">November  2, 2011  7:27 PM</a>, <a href="http://brendel.com/consulting" title="http://brendel.com/consulting" rel="nofollow">BrendelConsult</a>
+
+<a href="http://brendel.com/consulting" class="commenter-profile"><img src="/mt4/mt-static/images/comment/typekey_logo.png" height="16" alt="Author Profile Page" width="16" /></a>
+said:
+<p>I agree with Dong that a properly implemented API only allows POST requests by authorized users. However, Stefan&#8217;s point is valid: Even more people will now be inclined to use POST requests for the wrong reasons. &#8220;Not accessible to search engines&#8221; was at least one additional incentive for people to design their sites correctly. By removing this incentive, we will be stuck with badly designed sites/APIs for longer.</p>
+
+<p>Or - even more likely - less people will be aware that there actually is a difference between GET and POST. There are enough people already who think that GET is just a &#8216;restricted version of POST&#8217;: An HTTP request that doesn&#8217;t allow you to send a message body. &#8220;Hey, POST is more flexible, since I can stuff in the URI as well as the message!&#8221; they think. &#8220;Let me just standardize on POST for everything and things will be easy!&#8221; they think. This sort of ignorance is now further promoted by Google&#8217;s official endorsement of this type of usage for POST.</p>
+
+
+<div class="comment" id="comment-2392">
+On <a href="#comment-2392" title="Permalink to this comment">November  2, 2011  8:22 PM</a>, <a href="http://shishkin.org" title="http://shishkin.org" rel="nofollow">Sergey Shishkin</a>
+said:
+<p>Not to mention Google&#8217;s SPDY stateful protocol.</p>
+
+
+<div class="comment" id="comment-2431">
+On <a href="#comment-2431" title="Permalink to this comment">November  3, 2011  1:20 AM</a>, <a href="http://switchb.org/kpreid/" title="http://switchb.org/kpreid/" rel="nofollow">Kevin Reid</a>
+said:
+<p>Note that this is <em>not</em> submitting POST forms, or following &#8220;links&#8221; built with POST — those will still not work with the Googlebot, or at least the article does not say it will.</p>
+
+<p>This is doing POSTs that, if the page were opened in an actual browser, would be done <em>unconditionally on page load without any user input</em>. It seems a reasonable position to me that those pages have effectively published a machine-readable statement that those POSTs have &#8220;safe&#8221; semantics.</p>
+
+<p><i>(Disclosure: I have been a Google employee (but not working on search).)</i></p>
+
+
+<div class="comment" id="comment-2453">
+On <a href="#comment-2453" title="Permalink to this comment">November  3, 2011  4:42 AM</a>, Viswanath Durbha
+
+<a href="http://profile.typekey.com/6p0162fc1a9ad8970d" class="commenter-profile"><img src="/mt4/mt-static/images/comment/typekey_logo.png" height="16" alt="Author Profile Page" width="16" /></a>
+said:
+<p>I agree that we should encourage web developers to follow the RESTful architecture constraints for a better web. But these constraints are unfortunately self-imposed and cannot be forced upon. It reminds me of this paragraph from Roy Fielding in his blog.</p>
+
+<p>&#8220;REST constraints do not constrain Web architecture — they constrain RESTful architectures (including those found within the Web architecture) that voluntarily wish to be so constrained. HTTP/1.1 was designed to enable and improve RESTful architectures, just as REST was designed to reflect and explain all of the best things about Web architecture. That does not mean that HTTP/1.1 is constrained to a single style; it means those other styles are not part of the design (i.e., we don’t care if future changes to HTTP will cause them to break). Only some of the architectures found on the Web are RESTful, but that doesn’t change the fact that RESTful architectures do work better on the Web than any other known styles. They work better because REST induces the architectural properties that the Web needs most — reusability, anarchic scalability, evolvability, and synergistic growth — and thus the Web architecture has been updated over time to promote RESTful styles over all others, by design.&#8221;</p>
+
+<p>The blog I&#8217;m referring to is titled &#8220;On software architecture&#8221; ( <a href="http://roy.gbiv.com/untangled/2008/on-software-architecture" rel="nofollow">http://roy.gbiv.com/untangled/2008/on-software-architecture</a> )</p>
+
+<p>I don&#8217;t think Google is doing the right thing here. But the real problem needs to be addressed at the web development side. I&#8217;m not too sure if the technical merits of following REST constraints alone would encourage developers to adopt them. If not, then I&#8217;m not really sure how it can be communicated effectively.</p>
+
+
+</section>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

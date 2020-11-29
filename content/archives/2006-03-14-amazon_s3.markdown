@@ -1,0 +1,15 @@
+---
+layout: post
+title: "Amazon S3"
+date: "2006-03-14T18:03:00+01:00"
+comments: false
+categories: 
+---
+
+<blockquote>
+<p><a href="http://www.amazon.com/gp/browse.html/ref=sc_fe_l_2/102-1634764-6552153?%5Fencoding=UTF8&amp;node=16427261&amp;no=3435361&amp;me=A36L942TSJ2AJA">Amazon S3</a> provides a simple web services interface that can be used to store and retrieve any amount of data, at any time, from anywhere on the web. It gives any developer access to the same highly scalable, reliable, fast, inexpensive data storage infrastructure that Amazon uses to run its own global network of web sites. The service aims to maximize benefits of scale and to pass those benefits on to developers.</p>
+</blockquote>
+
+<p>It even has a price, which somehow adds to its credibility.</p>
+
+

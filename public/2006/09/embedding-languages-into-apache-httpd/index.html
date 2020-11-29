@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2006/09/embedding-languages-into-apache-httpd/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>Embedding Languages into Apache HTTPD [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>Embedding Languages into Apache HTTPD</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">Sep 26, 2006</time></small><p>
+	</header>
+	<section>
+	  <p><a href="http://kasparov.skife.org/blog/2006/09/25/">A very interesting post</a> by Brian McCallister on the best possible dynamic language to use in a multi-threaded Apache HTTP environment. The problem, in his own words:</p>
+
+<blockquote>
+<p>The basic problem, in my opinion, is that ruby (and python) both like to be the language. You extend them, you don&#8217;t embed them. You use ruby to drive C, not C to drive ruby. Extending ruby is fun and easy. Extending httpd with ruby is pain. Anything can be worked around, of course, but it feels like just that, work. You are fighting the grain of the problem, and basically using a great general purpose web server and application platform as an HTTP scrubber, cache, and static resource server.</p>
+</blockquote>
+
+<p>He&#8217;s found a few languages that work differently:</p>
+
+<blockquote>
+<p>It is surprising how bad the state of robust, thread-friendly scripting languages is. I found three (and a half) so far that look like they&#8217;ll fit my needs. It is a surprising list until you think about it. They are Lua, JavaScript (SpiderMonkey), and TCL. The half is Ficl. I am not sure it works yet, but it should. It should also give me lots of headaches being Forth based :-)</p>
+</blockquote>
+
+<p>He finally settled for <a href="http://www.lua.org/">Lua</a>. Yet another entry in my ever-growing list of things to take a look at. Sigh.</p>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

@@ -1,0 +1,11 @@
+---
+layout: post
+title: "OOP 2004"
+date: "2004-01-21T10:10:00+01:00"
+comments: false
+categories: 
+---
+
+<p>Mein Kollege <a href="/blog/pg/archives/000530.html">Phillip Ghadir</a> &#8220;blogt&#8221; von der OOP 2004.</p>
+
+

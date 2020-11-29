@@ -1,0 +1,12 @@
+---
+layout: post
+title: "CSS, again"
+date: "2004-01-02T01:22:00+01:00"
+comments: false
+categories: 
+---
+
+<p>I played with the site&#8217;s CSS layout again; once again, the most important lesson learned is that my talent for Web design clearly leaves a lot to be desired. Since we&#8217;re having <a href="/">the company website</a> redesigned professionally in the next few weeks, anyway, I&#8217;ll postpone a major refactoring until then. In the meantime, I&#8217;m almost satisfied with what I have now.
+There&#8217;s just one annoying detail left: The body element has a light grey background. It contains only one element (#container) that contains all of the rest and has a white background and a border. For some reason, though, it seems that CSS is too intelligent for me - the box is not drawn for all of the contents (scroll down to the end of the navigation stuff on the right to see what I mean). I can&#8217;t seem to find out what is causing this, and as both Safari and Firebird show the same behavior, it&#8217;s obviously not a bug &#8230; maybe I have some knowledgeable reader who can suggest a workaround?</p>
+
+

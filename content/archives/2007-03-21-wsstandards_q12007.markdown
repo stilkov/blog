@@ -1,0 +1,17 @@
+---
+layout: post
+title: "WS-Standards, Q1/2007"
+date: "2007-03-21T14:43:00+01:00"
+comments: false
+categories: 
+---
+
+<p>You may or may not have seen the new version of our <a href="/resources/ws-standards-poster/">Web services standards overview poster</a>:</p>
+
+<p><img src="http://www.innoq.com/soa/ws-standards/poster/WS-Standards-2007-02-medium.jpg" alt="WS-Standards Overview" /></p>
+
+<p>We&#8217;ve invested a pretty significant amount of work to capture 67 standards and specifications and 10 profiles, including their title, the organization or group of vendors behind it, status, version, and description, grouped into 10 categories. Whether you use it to get an overview of the landscape or to scare of those who claim WS-* is easy, is up to you &#8212; hopefully it proves useful in either case. (BTW, this is in no way something I did on my own &#8212; the main work was done by my colleagues Antoine and Dominik, who sadly don&#8217;t have a blog I could link to yet.)</p>
+
+<p>When printed out, the poster is huge (DIN A0 format, which is 841 mm by 1189 mm or 33 by 46 inches); we&#8217;ll be happy to send out copies via snail mail for a nominal fee plus the cost of shipping. (Send an email to <a href="mailto:info@innoq.com">info@innoq.com</a> if you&#8217;re interested.) Unfortunately, we still have to find a good way to handle requests from the U.S. and Canada &#8212; if you have any hint, I&#8217;d appreciate it. We haven&#8217;t found an online print shop that could handle this size, and shipping boxes of this size overseas is prohibitively expensive.</p>
+
+

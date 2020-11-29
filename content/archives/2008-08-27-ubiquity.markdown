@@ -1,0 +1,15 @@
+---
+layout: post
+title: "Ubiquity"
+date: "2008-08-27T21:24:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="https://wiki.mozilla.org/Labs/Ubiquity/Ubiquity_0.1_Author_Tutorial">Ubiquity</a> seems pretty neat:</p>
+
+<blockquote>
+<p>The great power of Ubiquity—from a developer standpoint—is how easy it is to create commands. With only a couple of lines of Javascript, Ubiquity enables even casual web developers to drastically enhance the features of the browser. From an 8-line command to insert a contact's email address in any text field, to a 50-line Twitter integration, this tutorial walks you through the process of being generative with Ubiquity.</p>
+</blockquote>
+
+

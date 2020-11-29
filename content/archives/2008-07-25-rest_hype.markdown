@@ -1,0 +1,61 @@
+---
+layout: post
+title: "REST Hype"
+date: "2008-07-25T09:17:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://sanjiva.weerawarana.org/2008/07/its-over-hump-tim-give-it-rest.html">Sanjiva Weerawarana</a> is pretty angry at <a href="http://sanjiva.weerawarana.org/2008/07/its-over-hump-tim-give-it-rest.html">Tim Bray</a>. Read if you're in the mood for a little useless war … </p>
+
+<p>One thing I'd note - Sanjiva writes:</p>
+
+<blockquote>
+<p>REST is now beyond the peak of the hype curve and is sliding down. Waay down.</p>
+</blockquote>
+
+<p>REST is now being <em>seriously</em> hyped, and it will eventually follow <a href="http://en.wikipedia.org/wiki/Hype_cycle">the inevitable curve</a> – no objections (even though I saw things differently <a href="/blog/st/2007/11/restafarian_soa_killers.html">little over half a year ago</a>). But I disagree it's beyond the peak already, on the contrary: it's still going way, way up.</p>
+
+<p>For the record, I don't think the hype has got much to do with actual technical facts, positive or negative.
+Also for the record, I don't think users in general accept REST has won and the SOAP stack is a failure – in fact, most of them still don't know there are any doubts about how great WS-* is. </p>
+
+<p>Still, I can't resist to respond to Sanjiva again:</p>
+
+<blockquote>
+<p>Oh yeah we support both WS-* and RESTful services. However, they won't meet the RESTafarian fanatics like Tim Bray's coolaid drunkenness level of REST ..</p>
+</blockquote>
+
+<p>You mean you don't like people to point out that <a href="/blog/st/2006/11/get_post_operations_and_rest.html">Axis2's "REST support" has got nothing to do with REST</a>? ;-)</p>
+
+<p>Here's a very good summary of the problems when trying to align the WS-* and REST models:</p>
+
+<blockquote>
+<p>IMO the real underlying problem is that as long as programmers expect to write a class and flip a switch to get a service or one or more RESTful resources then we have nothing really but RPC masquerading as something else. Both resource and service advocates would be well-off in trying to move the developer community to get past the “class is all I need” stage. If REST is successful in getting developers to get their hands dirty more power to it.</p>
+</blockquote>
+
+<p><a href="http://www.bloglines.com/blog/sanjiva?id=227">Guess who wrote this</a>?</p>
+
+<section class="comments">
+
+
+
+<div class="comment" id="comment-1772">
+On <a href="#comment-1772" title="Permalink to this comment">July 25, 2008  4:39 PM</a>, <a href="http://www.subbu.org" title="http://www.subbu.org" rel="nofollow">Subbu Allamaraju</a>
+said:
+<p>Was just looking for the same references :)</p>
+
+<p>I have seen a similar post about using JAX-WS for RESTful applications by one of Sun engineers. It was way too complicated to implement, and it also misrepresented HTTP.</p>
+
+<p>Subbu</p>
+
+
+<div class="comment" id="comment-1793">
+On <a href="#comment-1793" title="Permalink to this comment">September 15, 2008  8:15 PM</a>, <a href="http://www.keith-chapman.org">Keith</a>
+
+<a href="http://www.keith-chapman.org" class="commenter-profile"><img src="/mt4/mt-static/images/comment/mt_logo.png" height="16" alt="Author Profile Page" width="16" /></a>
+said:
+<p>I guess you might wanna have a look at <a> how WSDL 2.0 can be used in Axis2 to write RESTfull services</a>. That blog post actually explains how it can be done in the Mashup Server (but its built on Axis2) and using the Mashup Server you can get the benefits of WSDL 2.0 without knowing anything about WSDL. Its all handled under the covers. </p>
+
+
+</section>
+

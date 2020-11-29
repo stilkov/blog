@@ -1,0 +1,13 @@
+---
+layout: post
+title: "Diarise"
+date: "2007-01-30T21:00:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://www.diarised.com/">Neat little Web application</a> to schedule meetings. Looks like something one could build over a weekend &#8212; I wonder: will somebody make millions selling this in a few months?</p>
+
+<p>[via <a href="http://diarised.com/">John Gruber</a>]</p>
+
+

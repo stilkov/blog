@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Sir Tim"
+date: "2004-01-01T13:56:00+01:00"
+comments: false
+categories: 
+---
+
+<p>Tim Berners-Lee gets knighted - full story at <a href="http://news.bbc.co.uk/2/hi/technology/3357073.stm">BBC</a>. Very cool indeed.</p>
+
+

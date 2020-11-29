@@ -1,0 +1,17 @@
+---
+layout: post
+title: "Jottit"
+date: "2007-09-17T08:02:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://www.aaronsw.com/weblog/sweatsmall">Aaron Swartz</a>:</p>
+
+<blockquote>
+<p>So <a href="http://jottit.com/">Jottit</a> has launched, only five months after I suggested to my friend Simon that we create a website that was just a big text box people could type stuff into. And there are two ways I look at it. One is: It took us five months to do that? And the other is: We did that in only five months?</p>
+</blockquote>
+
+<p>Very cool.</p>
+
+

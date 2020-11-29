@@ -1,0 +1,10 @@
+---
+layout: post
+title: "Me no Spam"
+date: "2003-09-13T00:02:00+01:00"
+comments: false
+categories: 
+---
+
+<p>While the volume of SobigF-related emails has gone down somewhat, I now receive about 10-50 emails per day from helpful Mailer-Daemons that want to tell me that the spam I sent to one of their users could not be delivered. So obviously someone is using my mail address - most likely along with millions of others that his software chooses from randomly - as the From: value. This doesn't even serve a purpose for the spammer. So why are they doing it? They really must love being hated.</p>
+

@@ -1,0 +1,11 @@
+---
+layout: post
+title: "CalAtom"
+date: "2006-05-11T20:25:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://robubu.com/?p=6">Rob Yates has posted a proposal</a> to implement a general purpose calendaring API on top of the Atom API.</p>
+
+

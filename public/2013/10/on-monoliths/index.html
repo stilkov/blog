@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2013/10/on-monoliths/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>On Monoliths [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>On Monoliths</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">Oct 22, 2013</time></small><p>
+	</header>
+	<section>
+	  <p>A while ago, I gave a talk at QCon about breaking up monoliths
+(<a href="http://www.infoq.com/presentations/Breaking-the-Monolith" title="Breaking the Monolith">there&rsquo;s a video up on InfoQ</a>), repeated it in a slightly improved version
+at JavaZone (see
+<a href="https://speakerdeck.com/stilkov/breaking-the-monolith-1">slides</a> and
+<a href="http://vimeo.com/74354372">video</a>), and the topic continues to come
+up in almost every consulting engagement and client workshop I&rsquo;ve been
+involved in since then. Like many of the topics I talk about, it&rsquo;s
+somewhat unfair that I get the positive feedback and people assume I
+came up with the ideas all on my own: Most of stuff like this is the
+result of collaboration, with my colleagues at <a href="http://www.innoq.com">innoQ</a> (see for
+example
+<a href="http://www.sigs-datacom.de/fachzeitschriften/objektspektrum/online-themenspecials/artikelansicht.html?tx_mwjournals_pi1%5Bpointer%5D=0&amp;tx_mwjournals_pi1%5Bmode%5D=1&amp;tx_mwjournals_pi1%5BshowUid%5D=7022">an article I wrote with Phillip Ghadir for ObjektSpektrum</a>
+if you read German), as well as customer staff. But wherever it
+originated, I found that it strikes a nerve with many developers and
+architects, not only in big companies that conduct million-Euro
+development projects, but also in smaller e-commerce companies and
+even startups that have started to become successful.</p>
+
+<p>The main idea is this (no surprise for almost everyone, I guess):
+<em>Nobody</em> wants monoliths, i.e. big systems composed of hundreds of
+thousands or millions of lines of code (in a language like Java) or
+tens of thousands (e.g. in Ruby), yet everyone ends up having
+them. And once you have one, you&rsquo;re basically stuck with them: They&rsquo;re
+incredibly hard to maintain, extend, and modernize; yet they provide
+value and can&rsquo;t simply be replaced (something that many organizations
+attempt but fail at, because it&rsquo;s awfully hard to create something new
+that is not only great in terms of architecture, but also can actually
+function as a full replacement for all of the old system&rsquo;s features.</p>
+
+<p>So what&rsquo;s the proposed remedy? To talk about that, we need to take a
+step back and find out how we actually end up systems that are too big
+in the first place. My theory is that the number one reason is <em>project
+scope</em>.</p>
+
+<p>When a project is started, there is an assumption that it&rsquo;s the goal
+of a project to create a single system. This typically goes
+unquestioned, even though the people or person coming up with the
+project boundaries often don&rsquo;t decide this consciously. This is most
+obvious if they&rsquo;re non-technical people who make decisions on a budget
+basis.</p>
+
+<p>So the very first thing we should be doing as architects (or lead
+developers if you don&rsquo;t like the term) is to find out what it actually
+is we should be building. Is it really a single system? If our task is
+to replace an existing system with a new one, it&rsquo;s very tempting to
+just accept existing boundaries and go with them. If we&rsquo;re
+consolidating two systems, it&rsquo;s equally tempting to view our scope as
+the union of the predecessor systems&rsquo; scope. In the rare cases where
+our task is to actually modularize something existing, it&rsquo;s because of
+business reasons (such as deregulation). Again, while it might seem
+like a good idea to just accept the boundaries being suggested to us,
+it&rsquo;s not at all clear why this should be a good idea. After all,
+if whoever came up with those boundaries is not an architect or
+developer, what makes us think they made a good choice?</p>
+
+<p>In my view, the most important thing to do, then, is to find out how
+many systems we should be building in the first place. It may be a
+single one, but it may also be two, five or a dozen (though probably
+not more) &ndash; clearly, the decision should be made very consciously,
+because whatever system boundaries you pick, you will likely be stuck
+with them for a very long time.</p>
+
+<p>As &ldquo;system&rdquo; is a term that can mean almost anything, I need to define
+what I mean by it in this context. A system is an independent unit
+that is developed according to its own rules, and only connected to
+other systems in an unobstrusive fashion. A system, according to this
+model, has its own database, business logic, and user interface; it&rsquo;s
+deployed separately. It&rsquo;s likely developed by a different team than
+other systems. It has its own life cycle, in terms of development as
+well as deployment. It&rsquo;s operated autonomously. It has its own test
+suite. In basically every regard, it&rsquo;s as different from all the other
+systems as a piece of commercial off-the-shelf software would be. (In
+fact, one of the systems may end up being a piece of standard
+software.) Is that the same as the &ldquo;Micro Services&rdquo; idea? If you watch
+James Lewis&rsquo;s great talk
+(<a href="http://vimeo.com/74452550">here&rsquo;s a recording</a>, also done at
+JavaZone; in fact his was scheduled directly after mine), you&rsquo;ll find
+a lot of similarities, but the major difference is probably the size
+of each individual unit. But to me, seeing similar concepts appear in
+different contexts is a very good sign.</p>
+
+<p>It doesn&rsquo;t really matter that much whether you get the number and
+distribution right with the first attempt &ndash; in fact, you can
+reasonably consider that to be highly improbable. But it&rsquo;s one thing
+to find out you should have built six or eight systems instead of seven,
+i.e. get it wrong in one or two places, and a completely different one
+to notice it should have been seven instead of one.</p>
+
+<p>I&rsquo;ve rambled on for long enough for a single post, so here&rsquo;s a
+preliminary conclusion: How many systems you build should be a very
+conscious decision. It will affect the life of those tasked with
+evolving and maintaining it for years to come.</p>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

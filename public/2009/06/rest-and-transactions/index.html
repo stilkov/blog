@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2009/06/rest-and-transactions/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>REST and Transactions [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>REST and Transactions</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">Jun 17, 2009</time></small><p>
+	</header>
+	<section>
+	  <p><a href="http://www.rgoarchitects.com/nblog/2009/06/15/TransactionsAreBadForREST.aspx">Arnon Rotem-Gal-Oz</a> has a nice blog entry on <a href="/blog/st/2009/06/restful_transactions_with_retr.html">RETRO</a> (the whole <a href="http://tech.groups.yahoo.com/group/rest-discuss/message/12727">rest-discuss thread</a> is also neatly <a href="http://www.infoq.com/news/2009/06/rest-ts">summarized by Mark Little for InfoQ</a>):</p>
+
+<blockquote>
+<p>On the good side, I have to say, it is one of the best RESTful models I’ve seen thus far. The authors took special care to satisfy the different REST constraints, unlike many “RESTful” services (e.g. twitter that returns identifier and not URIs). </p>
+</blockquote>
+
+<p>I agree, this is a very well-though out solution.</p>
+
+<blockquote>
+<p>On the downside is I think a distributed transaction model is bad for REST or in other words I don’t see a reason for going through this effort and jumping through all these hoops.</p>
+</blockquote>
+
+<p>I tend to agree — I'm not at all sure we need standardization here.</p>
+
+<blockquote>
+<p>Since using hypermedia as the engine of state change means that the hypermedia actually  describes the protocol, we clutter the business representations (the representations of real business entities like customer, order etc.) with transactional nitty-gritty.</p>
+</blockquote>
+
+<p>Now this is something I don't agree with — if it's done, this is the way to do it; not hiding the details somewhere else.</p>
+
+<blockquote>
+<p>It seems to me that RETRO is a good mental exercise to show transactions can be RESTful. I think, however that it is an overkill for RESTful implementations.</p>
+</blockquote>
+
+<p>I agree again. In my opinion, transactions in REST should be a pattern, not an implementation (see <a href="/blog/st/2006/02/22/hiding_complexity.html">this entry</a> for some motivation for this).</p>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

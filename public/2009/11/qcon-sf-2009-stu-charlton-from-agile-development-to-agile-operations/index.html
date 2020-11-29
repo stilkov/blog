@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2009/11/qcon-sf-2009-stu-charlton-from-agile-development-to-agile-operations/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>QCon SF 2009: Stu Charlton, From Agile Development to Agile Operations [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>QCon SF 2009: Stu Charlton, From Agile Development to Agile Operations</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">Nov 20, 2009</time></small><p>
+	</header>
+	<section>
+	  <p>These are my unedited notes from Stu Charlton's talk about From Agile Development to Agile Operations at QCon SF 2009</p>
+
+<ul>
+<li>Cloud computing changing the game between development and operations</li>
+<li>Suggested design goals for cloud computing</li>
+<li>Integrated approach to application design, development and operations</li>
+<li>Tennis match going on between the dev and ops side</li>
+<li>Performance, scale and availability of design and operational decisions</li>
+<li>You usually can't just tell the platform to scale your app</li>
+<li>The offerings of commercial companies are mostly the result of buying companies that cover either operations or development</li>
+<li>How can agile practices be applied to operations? </li>
+<li>(Nice quote "Mimicking the illusion of working software by building a lot of documents")</li>
+<li>Development values what is built; operations values what does not happen</li>
+<li>Automated build, test, integration - what's the test environment in operations?</li>
+<li>Not really test, rather planning and rehearsal  </li>
+<li>Autonomous teams – in operations, there's always a lot of legacy dependencies, need for situational awareness</li>
+<li>Continuous integration - in operations, what's the source code?</li>
+<li>Examples: Why can't two servers communicate? security, server configuration, network configuration, firewall …</li>
+<li>Example: What do I need to scale out? Easy, simply start up more machines … no, not really: impacts on other systems, e.g. security systems, load balancers, monitoring, CMDB, service desk. Architectural issues: stateful or stateless nodes, repartitioning; limiting the scale out</li>
+<li>Example: What is the authorative reality? What's the different between the current state and the one I want</li>
+<li>In operations, transitional states matter a lot more than in development</li>
+<li>What we have now: on demand provisioning of commodity infrastructure and constrained applications</li>
+<li>What we still need to consider: configuration as data and as code; collaboration on design, development and operations</li>
+<li>What funds a project is usually very different form what funds operations</li>
+<li>IT complexity is overwhelming - not sure whether this is accidental or inherent complexity</li>
+<li>Little tooling for collaboration in operations</li>
+<li>Integrated view of operations and design: Different planes – management plane, cloud control plane, application plane</li>
+<li>All of the vendors are working on building a platform for controlling cloud resources</li>
+<li>Key question: what's the source code? </li>
+<li>Bottom-up approach (based on scripts, recipes, runbooks)</li>
+<li>Chef: DSL for describing infrastructure </li>
+<li>Puppet used by Google to standardize all OS X desktops </li>
+<li>Trying to use Maven in operations </li>
+<li>Top-down (modeled viewpoints, enterprise architecture, configuration models)</li>
+<li>UML profiles, MS uses Oslo to describe different viewpoint models</li>
+<li>Configuration models: W3C SML - now it's been standardized, nobody's using it</li>
+<li>Model-driven Collaborative Application Design </li>
+<li>"All modeling is programming, all programming is debugging" (Neil Gunther)</li>
+<li>Chef is very popular because it's easy; Puppet is declarative, which makes it hard to debug</li>
+<li>Analogy: SQL query plan; tools could derive a plan from a declaratively specified model</li>
+<li>Accounting barriers to Agile operations</li>
+<li>Capex vs. Opex is only partially addressed in reality, as HW is only part of the cost</li>
+<li>Promising approach: Time-driven activity-based costing; activity-based costing is an approach used to make consultants rich in the 80s, but in combination with time-driven seems useful</li>
+<li>How to arrive at an integrated approach: </li>
+<li>distributed, autonomous descriptions of the complete configuration</li>
+<li>document-based description as the basis for collaboration</li>
+<li>The way to enable collaboration of autonomous owners is to link configuration pieces via hyperlinks [he is a REST guy, after all]</li>
+<li>Model-driven approach because something is needed that's both data and code</li>
+<li>Problem with data: hard to debug</li>
+<li>Problem with code: hard to see what's in it</li>
+<li>Mentions Lisp as data is code/code is data example – it's been done before</li>
+<li><p>Elastra approach: "Elastic Modeling Languages" (Open Source licensing): EMML, ECML, EDML - doesn't expect these to become standards, but part of the debate</p></li>
+<li><p>Q. Applicable to private clouds? A. Very much so.</p></li>
+<li>Q. There's a trend of expanding Continuous Integration to Continous Deployment. Does this apply? A. Modeling is not a conflict to an agile approach, small changes could be in production, no need to do things in a monolithic way. Both exist and need to co-exist. </li>
+<li>Q. (rather a comment) one can start with a DSL, validate it, check dependencies etc. – bottom up is not a conflict A. A textual DSL is just a model.</li>
+<li>Q. Would "structure" be a better term than model? A. That would only part of it. "Model" has many connotations people don't like, which is why people start using DSL </li>
+<li>Q. Connection of OSS/Telco experience? A. One example is Erlang and Mnesia showing up as a technology in the Cloud space.</li>
+<li>Q. Are there new technologies in the security space? A. Federated ID technologies getting some tractions, e.g. Azure using WS-Federation, SAML and OAuth are both growing. Directories still primary way.</li>
+<li>Q. Is there a directory in the cloud? A. Concept of "virtual identity" instead, e.g. OpenID. SAML can be used with some Google apps, some Salesforce.com apps</li>
+<li>Q. As an alternative to complex tooling, can co-locating/integrating developers and operations people help? A. Two approaches: Let's not do ops, let's just have developers do operations. Not good, usually a different value system. Second: Co-locate them and create autonomous teams. Good approach, larger Web shops do this - still a shared service team. Classic scaling problem: lots of interdependencies between teams. Tooling can help. Sometimes you even have to separate teams due to regulatory reasons.</li>
+</ul>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

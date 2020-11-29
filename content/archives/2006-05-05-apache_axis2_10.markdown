@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Apache Axis2 1.0"
+date: "2006-05-05T21:33:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://ws.apache.org/axis2">Axis2</a>, a complete rewrite of the Apache Axis SOAP stack, has been released. <a href="http://www.bloglines.com/blog/sanjiva?id=128" title="Apache Axis2 1.0 released!">Sanjiva Weerawarana</a> has a great description about its genesis.</p>
+
+

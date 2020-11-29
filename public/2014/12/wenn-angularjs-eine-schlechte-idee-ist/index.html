@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2014/12/wenn-angularjs-eine-schlechte-idee-ist/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>Wenn AngularJS eine schlechte Idee ist [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>Wenn AngularJS eine schlechte Idee ist</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">Dec 4, 2014</time></small><p>
+	</header>
+	<section>
+	  <p><em>Mein Kollege Sebastian Janzen, seines Zeichens bekennender
+AngularJS-Fan, hat den folgenden Text in seinem internen Blog
+gepostet – und ich konnte es mir nicht verkneifen, ihn zu fragen, ob
+ich ihn als Gast-Post hier veröffentlichen darf. Hier also seine
+(weisen) Worte …</em></p>
+
+<p>Ich habe nun mehrmals zwei Phänomene beobachtet: Ein Entscheider - je
+größer die Firma desto eher zutreffend - hat keine Lust mehr, in die
+gelangweilten, von Prozess-Narben geprägten Gesichter seiner
+Entwickler zu schauen. Er möchte das Team positiv überraschen und überträgt
+für das nächste Projekt AngularJS von einer Buzzword- in die
+Requirements-Liste, denn Entwickler möchten endlich mal was Cooles
+machen. In einem Meeting für eine neue Webseite packt er stolz den
+heiligen SPA-Gral AngularJS aus. Alle Probleme sind gelöst, die
+Entwickler sind happy, das kommt in die Requirements.</p>
+
+<p>Und nun wird noch jemand von innoQ dazu geholt und hinterfragt
+kritisch das Entwickler-Glück. &ldquo;AngularJS? Sie wissen schon, dass dies
+an der Stelle nicht so ganz zu Ihrem Problem passt?&rdquo;</p>
+
+<p>So sehr ich Angular mag und es im ein oder anderen Bereich für richtig
+halte eine SPA zu bauen, so fatal kann es auch laufen, wenn man damit
+versucht Probleme zu erschlagen, die gegensätzlicher nicht sein
+könnten. Beispiele:</p>
+
+<ul>
+<li><p><em>Meine Anwendung soll rasend schnell sein!</em> <br/> Ja, das kann sie als SPA
+sein, jedoch nicht, wenn man zwischen dieser und anderen Seiten
+ständig hin und her wechselt. Ein OpenID-Provider liefert in der Regel
+zwei Seiten aus: Login und Success + Redirect. Die Aufenthaltsdauer
+muss eine SPA rechtfertigen! Und für den Besucher ist es egal, ob es
+eine technisch perfekte Seite ist. Das wird seine Aufenthaltszeit
+nicht verlängern, sondern verkürzen.</p></li>
+
+<li><p><em>Die coolen Seitenübergänge gehen nur in Angular!</em> <br/>  Nein, die sind
+mit CSS erzeugt oder im Fallback mit jQuery.animate. Genau dieser
+Technik bedient sich Angular auch, denn es ist in JavaScript
+geschrieben - nicht mehr und nicht weniger. Es hat weder Zugriff auf
+Hardware, noch kann es den IE 8 zu einem coolen Browser machen.</p></li>
+
+<li><p><em>Bei Angular muss ich mich nicht mehr um den DOM kümmern</em> <br/>  Uiuiui,
+als ich das mal gehört habe hat sich bei mir alles rumgedreht. Ich
+glaube ich habe in meiner Angular-Zeit noch nie so viel über die
+Verzahnung zwischen DOM und JS gelernt - einfach aus der Not heraus,
+Bugs zu finden. Manch einer erschlägt diese Bugs mit genügend
+Timeouts. Und viele Plugin-Entwickler machen das auch so, aber das ist
+ziemlich weit weg von geil. Und vom eigentlichen
+Performance-Ziel. Grundkonzepte wie Asynchronität in einem Browser
+müssen verstanden werden, nicht hintergangen! Aus meiner Sicht geht
+Angular mit diesem Umstand hervorragend um, es muss nur genutzt
+werden.</p></li>
+
+<li><p><em>Wir haben viel Angular-Erfahrung im Team</em> <br/>  Sicher? Unterhaltet Euch
+vorher mit dem Team, stellt Fragen, was die do&rsquo;s und don&rsquo;ts sind. Wenn
+da nichts kommt oder die Frage &ldquo;Wofür setzt man Angular nicht ein?&rdquo;
+unbeantwortet bleibt, dann haben diese Menschen nicht viel damit
+gemacht. Da ist eine Lernphase von teilweise mehreren Wochen
+einzuplanen und viel Debugging-Zeit. Eine schöne Frage ist auch &ldquo;Was
+sind Promises?&rdquo;</p></li>
+
+<li><p><em>Dieses Angular ist nur Frontend, dafür plane ich als Senior
+Consultant mal zwei Stunden ein</em> <br/>  Das wird scheitern. Angular ist ein
+Framework, mit dem man tatsächlich eine Frontend-Architektur, die
+diesem Namen auch gerecht wird, aufsetzen und planen kann. Es gibt
+mehr als nur Data-Binding und Routen!</p></li>
+</ul>
+
+<p>Performante SPAs, die in allen modernen Browsern und im IE &gt;= 8 laufen
+sind das Werk von Menschen, die sich durch und durch mit der Materie
+beschäftigt haben und sehr viel Arbeit dort hinein gesteckt haben. Das
+muss in den Zeitschätzungen berücksichtigt werden, wenn man mal wieder
+&ldquo;Die beste Seite aller Zeiten&rdquo; bauen will.</p>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

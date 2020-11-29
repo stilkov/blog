@@ -1,0 +1,12 @@
+---
+layout: post
+title: "iBox"
+date: "2004-01-01T20:54:00+01:00"
+comments: false
+categories: 
+---
+
+<p>If this article at <a href="http://www.macosx.com/content/article.php?cid=53" title="MACOSX•COM">MACOSX.COM</a>, found via <a href="http://www.industrial-technology-and-witchcraft.de/index.php?id=P4260">it&amp;w</a>, is true, Apple plans a set-top DVR/DVD device called the iBox.
+I would buy one without thinking about it for longer than 3 seconds &mdash; this seems to be exactly what I have been looking for since about a year.</p>
+
+

@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Jackpot"
+date: "2003-06-16T11:05:00+01:00"
+comments: false
+categories: 
+---
+
+<blockquote>James Gosling talks with Bill Venners about his current research project, code-named Jackpot, which builds annotated parse trees for programs and can help you analyze, visualize, and refactor your program.</blockquote>
+<a href="http://www.artima.com/intv/jackpot.html">Very interesting.</a>
+

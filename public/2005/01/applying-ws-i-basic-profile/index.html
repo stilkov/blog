@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2005/01/applying-ws-i-basic-profile/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>Applying WS-I Basic Profile [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>Applying WS-I Basic Profile</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">Jan 13, 2005</time></small><p>
+	</header>
+	<section>
+	  <p>I&#8217;m currently working on trying to define the best way to apply the <a href="http://www.ws-i.org/">WS-I</a>&#8217;s <a href="http://www.ws-i.org/Profiles/BasicProfile-1.1.html">Basic Profile</a> specification in a complex SOA scenario. In this particular project, we are building a set of tools, libraries, and technical services that together form a rich infrastructure platform for a very large, global company. One of the project&#8217;s decisions was to stick to standards wherever possible, adopt public specifications and best practices as wherever useful, and build whatever remains in a proprietary way as an intermediary solution (and move to standards as they become available and mature).</p>
+
+<p>One of the goals, of course, is to enable the best possible interoperability without reducing our ambitious functional objectives. Thus, we are considering adopting the WS-I Basic Profile, and have come up with a set of pragmatic rules that I&#8217;d like to put here to gather some feedback:</p>
+
+<ol>
+<li><p>We&#8217;ll use WSDL 1.1 for describing service contracts, and validate our descriptions using the WS-I&#8217;s own <a href="http://www.ws-i.org/deliverables/workinggroup.aspx?wg=testingtools">testing tools</a>. As we&#8217;ll have other transport protocols than HTTP (which is a transfer protocol, but never mind), only some of our endpoints are going to be profile compliant; that doesn&#8217;t seem to be a problem, though, as long as we&#8217;re claiming conformance only for those that actually are conforming. For this, we are going to use the <a href="http://www.ws-i.org/Profiles/ConformanceClaims-1.0.html">compliance claim attachment mechanism</a>. We&#8217;ll apply that, as well as the UDDI v3 <a href="http://www.oasis-open.org/committees/uddi-spec/doc/tns.htm#WSDLTNV2">WSDL-to-UDDI mapping best practice</a> (which is actually a technical note), to publish our descriptions to our UDDI-based service registry. A profile-conforming WSDL will also be used as the input for our various code generation tools. This way, we&#8217;ll ensure that the largest possible number of tools and toolkits in the market will be able to accept our service descriptions as input. </p></li>
+<li><p>For all of infrastructure (technical) services (or rather, ports) that are part of the platform, we&#8217;ll introduce SOAP/HTTP bindings (possibly in addition to others), claim conformance, and ensure it using appropriate test cases and the WS-I testing tools. This way, we&#8217;ll make sure that independently developed services will be able to access our infrastructure components.</p></li>
+<li><p>All of our functional extensions &#8212; e.g. transactions (which will likely not include but I&#8217;ll use as an example anyway) &#8212; will be implemented using SOAP and WSDL extension mechanisms. This means that there may be custom SOAP headers, e.g. to propagate a transaction context, as well as meta-data, e.g. in the form of elements from other namespaces within our WSDLs.</p></li>
+</ol>
+
+<p>It&#8217;s the last point that I&#8217;m not 100% percent sure about yet. I believe the Basic Profile does not restrict the usage of extensions such as SOAP headers or additional WSDL elements &#8212; while they&#8217;ll obviously impact interoperability with simple and out-of-the-box service consumers and providers, it would be perfectly possible to interact with services that use these extensions if the toolkit or implementation technology of outside or 3rd parties support access to those extension elements. In other words: A service that expects certain specific SOAP headers to be set, or a WSDL that includes custom extensions, could still be profile compliant.</p>
+
+<p>My plan is to follow up on this entry as I gather more information and become more familiar with WS-I&#8217;s work. And of course I have that strange feeling I might have more than a couple of readers who&#8217;d actually be more than qualified to help me go into the right direction ;-)</p>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

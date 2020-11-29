@@ -1,0 +1,19 @@
+---
+layout: post
+title: "Typing"
+date: "2003-08-22T11:54:00+01:00"
+comments: false
+categories: 
+---
+
+<p>A nice discussion of <a href="http://www.osteele.com/archives/2003/08/test_versus_type.html" title="Test versus Type">Test versus Type</a>, found via <a href="http://www.sauria.com/blog/2003/08/21#501">Ted Leung</a>.</p>
+<section class="comments">
+
+<div class="comment" id="comment-77">
+On <a href="#comment-77" title="Permalink to this comment">February 20, 2004  2:26 PM</a>, Meban
+said:
+<p>Innouncement!!!</p>
+
+
+</section>
+

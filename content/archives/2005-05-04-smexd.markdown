@@ -1,0 +1,17 @@
+---
+layout: post
+title: "SMEX-D"
+date: "2005-05-04T08:29:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://www.tbray.org/ongoing/When/200x/2005/05/03/Replacing-WSDL">Tim Bray</a> proposes <a href="http://www.tbray.org/ongoing/When/200x/2005/05/03/SMEX-D">SMEX-D</a>, yet another alternative to WSDL.</p>
+
+<p>Two things I immediately don&#8217;t like:
+* The insistence on request/response &#8212; while this is the most popular MEP, it is by no means the only one.
+* Describing SOAP header schemas together with the &#8220;business&#8221; message - this should composable, orthogonal concepts.</p>
+
+<p>And of course, Tim should take a look at the <a href="http://www.ssdl.org/">SSDL</a> work.</p>
+
+

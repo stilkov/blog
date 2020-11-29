@@ -1,0 +1,13 @@
+---
+layout: post
+title: "69 Percent"
+date: "2009-02-27T08:04:00+01:00"
+comments: false
+categories: 
+---
+
+<p>That doesn't seem too bad …</p>
+
+<p><a href="http://www.oneplusyou.com/bb/apple_addiction" style="color: #80A9DD; text-decoration: none; display: block; width: 286px; height: 128px; padding-top: 50px; padding-left: 17px; background: url(http://www.oneplusyou.com/q/img/bb_badges/apple_addiction.jpg) no-repeat; font-family: Times New Roman, sans-serif; font-size: 30px;">69%<span style="display: none;">How Addicted to Apple Are You?</span></a></p><p></p>
+
+

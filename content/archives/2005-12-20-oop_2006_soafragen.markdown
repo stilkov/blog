@@ -1,0 +1,11 @@
+---
+layout: post
+title: "OOP 2006 - SOA-Fragen"
+date: "2005-12-20T23:27:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://www.gernotstarke.de/">Gernot Starke</a>, <a href="http://www.koschel-edv.de/">Arne Koschel</a> und ich werden in unserem <a href="http://www.sigs-datacom.de/sd/kongresse/oop_2006/program.php?cat=session&amp;ID=98">Vortrag</a> auf der OOP 2006 versuchen, auf die wichtigsten Fragen zum Thema SOA einzugehen. Dazu haben wir <a href="http://www.soa-faq.de/start/index">eine Website</a> eingerichtet, auf der Sie die von uns ausgew&#228;hlten Fragen bewerten und eigene vorschlagen k&#246;nnen.</p>
+
+

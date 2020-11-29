@@ -1,0 +1,48 @@
+---
+layout: post
+title: "Bullshit"
+date: "2007-02-03T21:56:00+01:00"
+comments: false
+categories: 
+---
+
+<p>I call <a href="http://searchwebservices.techtarget.com/originalContent/0,289142,sid26_gci1241798,00.html?track=sy80">bullshit</a>:</p>
+
+<blockquote>
+<p>Jeff Walker went to this week&#8217;s Open Group Enterprise Architects Practitioners Conference in San Diego looking to blow a few minds with the notion that service-oriented architecture really can be achieved with a minimum of coding.</p>
+</blockquote>
+
+<p>Claims about business users who model their requirements and have them turned into code automagically flip the <a href="http://en.wikipedia.org/wiki/Bozo_bit">bozo bit</a> for me.</p>
+
+<section class="comments">
+
+<div class="comment" id="comment-1181">
+On <a href="#comment-1181" title="Permalink to this comment">February  4, 2007  3:10 AM</a>, <a href="http://tomayko.com" title="http://tomayko.com" rel="nofollow">Ryan Tomayko</a>
+said:
+<p>I worked on a graphical business process modeling tool for almost three years and can say that it is one of the worst concepts I&#8217;ve been exposed to. The promise was basically that you could fire all your hackers and let &#8220;business analysts&#8221; drag and drop your inventory and sales systems together. It&#8217;s insane. Huge development team spent five years on this thing and when it was done everyone just wanted Perl back. Seeing this all play out was an awesome experience, though :)</p>
+
+
+<div class="comment" id="comment-1182">
+On <a href="#comment-1182" title="Permalink to this comment">February  4, 2007  4:00 AM</a>, <a href="http://www.goldb.org/goldblog" title="http://www.goldb.org/goldblog" rel="nofollow">Corey</a>
+said:
+<p>Automagic code generation geared towards non-programmers again.. hmm.. fantastic if all you want to do is generate unmaintainable garbage.</p>
+
+
+<div class="comment" id="comment-1183">
+On <a href="#comment-1183" title="Permalink to this comment">February 11, 2007 11:47 AM</a>, <a href="http://www.objectarchitects.de" title="http://www.objectarchitects.de" rel="nofollow">Wolfgang Keller</a>
+said:
+<p>if you want to bolster your point with something a bit decent, try a quote by Jerry Weinberg - which says about the same</p>
+
+<p>1973 –1998 (25 years)
+Gerald M. Weinberg –The Psychology of Computer Programming, Silver Anniversary Edition </p>
+
+<p>1998: the only thing that has changed here in twenty five years is the fact that the funds dedicated by executives to eliminating programmers from
+their payrolls have become far more staggering than I imagined back then. And, now I finally recognize in this executive desire a pattern so strong, so
+strong so emotional, that it has blinded these executives in twofacts1. None of these schemes has succeeded in elimination programmers.
+We have now at least 10 times as many as we did then.2. Every one of these schemes has been concocted
+by the programmers themselves, the very people the executivespassionately want to eliminate.
+1973: over the years, executives have backed their desire to eliminate programmers with staggering funds. (p. 4)</p>
+
+
+</section>
+

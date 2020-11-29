@@ -1,0 +1,13 @@
+---
+layout: post
+title: "PYX"
+date: "2004-05-13T09:04:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://seanmcgrath.blogspot.com/archives/2004_05_09_seanmcgrath_archive.html#108438037543616144">Sean McGrath</a> points to an older article of his about <a href="http://www.xml.com/pub/a/2000/03/15/feature/">PYX</a> -- I had never heard about this notation before, but the examples in his article like this one:
+xmln fig1.xml | grep "^-" | awk "{print substr($0,2)}" | wc -w
+are much to my liking. <code>awk</code> for processing XML, how cool is that?</p>
+
+

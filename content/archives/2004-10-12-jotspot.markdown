@@ -1,0 +1,22 @@
+---
+layout: post
+title: "JotSpot"
+date: "2004-10-12T22:47:00+01:00"
+comments: false
+categories: 
+---
+
+<p>The folks from <a href="http://www.jot.com/">JotSpot</a> demoed their application to Jon Udell in a WebEx session, and he has put <a href="http://weblog.infoworld.com/udell/gems/jot2.swf">the demo</a> online. This is really cool - not only do I like the software idea (sort of like a crossover of Wiki and Lotus Notes with some RSS and Web services thrown in for good measure), but also the presentation: this is is a great way to find out what a piece of software does &#8212; someone demoing it, with someone else asking questions that very often resemble what I would have asked myself.</p>
+
+<section class="comments">
+
+<div class="comment" id="comment-377">
+On <a href="#comment-377" title="Permalink to this comment">October 13, 2004 11:19 PM</a>, <a href="http://schmidetzki.net" title="http://schmidetzki.net" rel="nofollow">Schmidetzki</a>
+said:
+<p>crossover of Wiki and Lotus Notes?
+This is far away from Lotus Notes in my opinion.
+However: yes, they implemented some realy nice ideas to improve intranets.</p>
+
+
+</section>
+

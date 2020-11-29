@@ -1,0 +1,11 @@
+---
+layout: post
+title: "280Slides"
+date: "2008-06-08T19:47:00+01:00"
+comments: false
+categories: 
+---
+
+<p>Check out <a href="http://280slides.com/">this online presentation service</a> – Keynote for the Web. Very impressive.</p>
+
+

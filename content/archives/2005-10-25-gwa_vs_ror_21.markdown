@@ -1,0 +1,11 @@
+---
+layout: post
+title: "GWA vs. RoR: 2:1"
+date: "2005-10-25T08:37:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://37signals.com/svn/archives2/the_google_web_accelerator_is_back_with_a_vengeance.php">David Heinemeier Hansson</a>, creator of <a href="http://www.rubyonrails.org/">Ruby on Rails</a>, complains about the return of Google&#8217;s Web Accelerator &#8212; <a href="http://www.dehora.net/journal/2005/10/hey_im_back.html/">Bill de h&#211;ra</a>, <a href="http://www.intertwingly.net/blog/2005/10/24/Theyre-baaaaaaack">Sam Ruby</a> and <a href="http://bitworking.org/news/Five_months_later_and_web_standards_still_matter">Joe Gregorio</a> explain why he&#8217;s wrong.</p>
+
+

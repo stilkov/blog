@@ -1,0 +1,10 @@
+---
+layout: post
+title: "Tim Bray"
+date: "2003-04-22T23:20:00+01:00"
+comments: false
+categories: 
+---
+
+<p>While my own weblog clearly leaves a lot to be decided, I can take the opportunity to comment on Tim Bray's <a href="http://www.tbray.org/ongoing/" title="ongoing">ongoing</a>, the very clear winner in my own personal contest for Best Weblog of the Month. Tim's thoughts do not always concern topics that I'm interested in, and I don't really like the design ... but what clearly differentiates his from most other blogs is that his style of writing is just great, and that there is not a single posting that does not immediately show how much care he took in writing it. So if you regularly read blogs, make sure to include <a href="http://www.tbray.org/ongoing/ongoing.rss">his RSS feed</a>.</p>
+

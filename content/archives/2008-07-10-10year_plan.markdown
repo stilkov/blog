@@ -1,0 +1,15 @@
+---
+layout: post
+title: "10-Year Plan "
+date: "2008-07-10T23:10:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://www.infoq.com/articles/rest-anti-patterns#view_28732">Great comment</a> from <a href="http://soundadvice.id.au/blog/">Benjamin Carlyle</a>:</p>
+
+<blockquote>
+<p>In REST, I want the client or the server I deployed literally 10 years ago to work with whatever I am putting out today. I also want whatever I'm putting out today to work with every bit of code written since that time, and every bit of code that will be written in the next 10 years. Getting more specific than necessary is a sub-optimal approach in this environment. There is no compiler to lean on to ensure consistency, and there is no way you could "fix" the old deployed code to work with your latest and greatest. Instead, we lean less on checking and more on uniformity. You don't want to call out thirty or forty versions of an interface that you adapted as your needs changed, and provide explicit support for each. You want something generic, stable and slightly sloppy.</p>
+</blockquote>
+
+

@@ -1,0 +1,15 @@
+---
+layout: post
+title: "Jabber"
+date: "2003-08-09T23:52:00+01:00"
+comments: false
+categories: 
+---
+
+<p>Via <a href="http://www.russellbeattie.com/notebook/1003800.html">Russel</a>: A very nice <a href="http://www.jabber.com/download.php?dl=The_Present_Value_of_Presence.pdf">paper</a> on <a href="http://www.jabber.org/">Jabber</a>. <br />
+A very nice, not really Jabber-specific quote from the paper:</p><p>
+</p><blockquote>
+Both the transport and presence portions of XMPP are very easy to understand, explain, and program against, like the most successful Internet protocols such as HTTP, SMTP, and POP3.
+</blockquote>
+<p>Now why does this quote, when thinking about <a href="http://www.w3.org/TR/soap12-part1/">SOAP</a>, make me sad?</p>
+

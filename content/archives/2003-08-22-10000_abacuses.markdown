@@ -1,0 +1,10 @@
+---
+layout: post
+title: "10000 Abacuses"
+date: "2003-08-22T11:34:00+01:00"
+comments: false
+categories: 
+---
+
+<p>Via <a href="http://www.looselycoupled.com/blog/2003_08_17_lc.htm#106146286544567885" title="Loosely Coupled weblog - on-demand web services">Loosely Coupled</a>: A very interesting <a href="http://news.com.com/2008-1082_3-5065859.html">interview with Sterling Ball</a>, CEO of guitar-string producer Ernie Ball, about life after Microsoft. A nice read.</p>
+

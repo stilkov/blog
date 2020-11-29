@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2006/08/whats-a-service-contract/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>What&#39;s a Service Contract? [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>What&#39;s a Service Contract?</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">Aug 21, 2006</time></small><p>
+	</header>
+	<section>
+	  <p>It&#8217;s once again time for me to create another SOA glossary &#8212; mapping a customer&#8217;s existing terminology to the way specific terms are used in the SOA community. Always fun. We (once again) have two competing definitions for &#8220;contract&#8221;, though:</p>
+
+<ol>
+<li>A contract is service interface + policy (+ address)</li>
+<li>A contract is the mutual agreement between two parties (usually a <em>specific</em> consumer and provider)</li>
+</ol>
+
+<p>I lean towards the second definition (it&#8217;s the one e.g. used by <a href="http://www.zapthink.com/report.html?id=ZAPFLASH-2005824">ZapThink</a> and in the <a href="http://www.oasis-open.org/committees/download.php/19361/soa-rm-cs.pdf">OASIS SOA Reference Model</a>), but I wonder how widespread this understanding is? (The only occurrence of the first one I can find right now is, in fact, in a comment by <a href="http://www.bowlight.net/">Anne Thomas Manes</a> <a href="/blog/st/2005/11/04/10_statements_about_soa.html#c005633">here on this very blog</a>; IIRC, it&#8217;s also the one used in her book). </p>
+
+<p>What do you think?</p>
+
+<section class="comments">
+
+<div class="comment" id="comment-1019">
+On <a href="#comment-1019" title="Permalink to this comment">August 21, 2006  9:43 PM</a>, Oliver Wolf
+said:
+<p>The first definition is by far the most widely used one in software engineering, but in my opinion it is based on the ill-chosen usage of the term by Bertrand Meyer when he introduced &#8220;Design by Contract&#8221;. A contract in that context is formed by obligations and benefits, but since the third important property of a legal contract &#8212; the mutual agreement &#8212; is missing, I&#8217;d consider this a weak analogy that can be pretty misleading. So to answer your question: While the first definition is common, I support your opinion that the second one is more appropriate, especially in a large distributed system like an SOA without fixed associations between specific consumers and providers.</p>
+
+
+<div class="comment" id="comment-1020">
+On <a href="#comment-1020" title="Permalink to this comment">August 22, 2006  9:43 AM</a>, Hartmut Wilms
+said:
+<p>Although the second definition sounds very appealing, it&#8217;s vagueness and vision may be far from reality. There are several kinds of contracts in our real world, which are as strict and don&#8217;t offer any room for mutual agreements as specified in the first definition.</p>
+
+<p>If you want to send a parcel via your local postal service office, you are are not able to negatiate the contract. You are only able to accept it or decline the offer. Period.</p>
+
+<p>The only alternative, which I can think of is, that two partners offer several altenative assertions within their policies and may match their policies at runtime. Finally they may come to a mutual agreement, if some or any of their alternatives are compatible.</p>
+
+<p>This is a perfect match of the first definition. The interface is carved in stone, the <em>defined</em> policies give room for variations, which offer some kind of &#8220;mutual agreement&#8221; at runtime. Thus I cannot see the difference between the definitions within the boundaries I just mentioned. Am I missing something? How can these boundaries be broken?</p>
+
+
+<div class="comment" id="comment-1021">
+On <a href="#comment-1021" title="Permalink to this comment">August 24, 2006  1:41 PM</a>, <a href="http://jacek.cz/blog/" title="http://jacek.cz/blog/" rel="nofollow">Jacek</a>
+said:
+<p>I fully agree with the second definition, but it&#8217;s general enough not to be practically useful. As said by Hartmut, often there&#8217;s very little flexibility in contracts presented by services, so the client just has the option to accept the contract, and the advertisement by the service means that as soon as the client accepts the contract, the service does as well, and that&#8217;s the two parties in mutual agreement, so from this POV, &#8220;design by contract&#8221; is not lacking anything. Sometimes contracting will need negotiation, and policies are trying to solve part of that.</p>
+
+<p>So, in short, I see definition 1 as currently practiced subset of definition 2.</p>
+
+
+<div class="comment" id="comment-1022">
+On <a href="#comment-1022" title="Permalink to this comment">August 24, 2006  6:36 PM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>Somehow this seems to echo real life: When you&#8217;re going to your post office, you&#8217;re not in a position to negotiate the contractual terms. When you&#8217;re CEO of a Fortune 500 company, you may well be able to get a very special deal. </p>
+
+<p>Maybe the difference is that the first one is really only a special case of the second one? I.e. a contract is between two parties, but there&#8217;s also a default contract between the provider and the anonymous default consumer.</p>
+
+
+<div class="comment" id="comment-1023">
+On <a href="#comment-1023" title="Permalink to this comment">August 25, 2006  8:03 PM</a>, <a href="http://atmanes.blogspot.com" title="http://atmanes.blogspot.com" rel="nofollow">Anne Thomas Manes</a>
+said:
+<p>As I said in my previous comment on this topic:</p>
+
+<blockquote>
+<p>IMO a contract defines much more than just the service’s interface.
+A contract comprises all aspects of agreement between a service
+consumer and a service provider, and it includes, for example,
+the definition of the interface, the agreed-to intersection of the
+constraints and capabilities of both the consumer and the provider,
+any service level agreements in place between the consumer and the
+provider, etc.</p>
+</blockquote>
+
+<p>I&#8217;ll add to the stuff listed above:
+- remuneration agreement
+- support agreement
+- enhancement agreement</p>
+
+<p>As with policies, I think you can create generic contracts, which you can then customize and attach to a specific consumer/provider combination. </p>
+
+<p>You should manage and maintain contracts as first class artifacts. Folks like Systinet and Infravio provide contract management systems for just this purpose. </p>
+
+<p>In response to Stefan last comment:</p>
+
+<blockquote>
+<p>When you’re going to your post office, you’re not in a position to
+negotiate the contractual terms.</p>
+</blockquote>
+
+<p>That&#8217;s not true. You can definitely negotiate terms (at least here in the States, but I imagine most countries have similar options):
+- class of mail (express, priority, first class, third class, etc)
+- acknowledgement semantics (certified, registered, return receipt, etc)
+- insurance </p>
+
+<p>People typically opt for the standard contract most of the time, but you do have the option of selecting special services.</p>
+
+
+<div class="comment" id="comment-1024">
+On <a href="#comment-1024" title="Permalink to this comment">August 25, 2006 10:01 PM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>Thanks for the comment, Anne. Of course you are right that it&#8217;s possible to negotiate terms in the sense that you can select from the available options; but that&#8217;s different from making up terms on the fly.</p>
+
+<p>It&#8217;s also good to see that I misread (or rather, mis-remembered) your original comment, thanks for clearing this up.</p>
+
+
+</section>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

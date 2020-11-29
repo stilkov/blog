@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Freedom 09"
+date: "2007-05-04T21:19:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://www.freedom-to-tinker.com/?p=1154">An excellent explanation</a> of the issues behind a certain 128bit number (via <a href="http://www.docuverse.com/blog/donpark/2007/05/03/i-dont-digg-09ers">Don Park</a>, who couldn&#8217;t disagree more).</p>
+
+

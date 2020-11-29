@@ -1,0 +1,19 @@
+---
+layout: post
+title: "CSS Woes"
+date: "2006-07-09T10:26:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://jooto.com/blog/index.php/2006/07/09/brittle-technology/">Alex Bunardzic</a>:</p>
+
+<blockquote>The most scary part related to css happened to me recently, when I was trying to (finally) master it. I&#8217;ve stumbled upon this scary sentence in one of the countless css tutorials I&#8217;ve tried out:
+
+<blockquote>Remember, even one small mistake will degrade or even break the layout, so be very careful!</blockquote>
+To me, brittleness and smart technology do not go hand in hand. Something is terribly wrong with this picture, if I have to walk on egg shells when developing web sites.
+</blockquote>
+
+<p>I totally agree. CSS, conceptually, may be great; but the only way I&#8217;ve found so far to work with it is pure trial and error, Experimental Computer Science &#8230;</p>
+
+

@@ -1,0 +1,77 @@
+---
+layout: post
+title: "Parleys"
+date: "2006-12-13T08:23:00+01:00"
+comments: false
+categories: 
+---
+
+<p>The folks from <a href="http://www.bejug.org/">BeJUG</a>, the Belgian Java User Group, have launched a <a href="http://Parleys.com/">Parleys.com</a>, a portal that includes content from various events, such as JavaPolis, SpringOne and the <a href="/blog/st/2006/10/25/bejug_enterprise_soa_conference.html">SOA Event from October</a>. Very cool interface &#8212; slides and audio are presented in sync. My presentation on REST, including audio, <a href="http://www.bejug.org/confluenceBeJUG/display/PARLEYS/REST+-+The+Better+Web+Services+Model">is online as well</a>.</p>
+
+<section class="comments">
+
+<div class="comment" id="comment-1138">
+On <a href="#comment-1138" title="Permalink to this comment">December 14, 2006 10:34 PM</a>, jens
+said:
+<p>Hi Stefan, </p>
+
+<p>I just listened to your presentation.  I found it very helpful; I feel that I now have a much better understanding of the benefits of REST and the shortcomings of the WS-approach.</p>
+
+<p>I would encourage you to consider summarizing the content of your presentation in an article for infoq.</p>
+
+<p>By the way, Tim Bray just wrote something nice about you and infoq on his blog:
+<a href="http://www.tbray.org/ongoing/When/200x/2006/12/13/Tilkov" rel="nofollow" /><a href="http://www.tbray.org/ongoing/When/200x/2006/12/13/Tilkov" rel="nofollow">http://www.tbray.org/ongoing/When/200x/2006/12/13/Tilkov</a></p>
+
+
+<div class="comment" id="comment-1139">
+On <a href="#comment-1139" title="Permalink to this comment">December 14, 2006 10:47 PM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>Thanks, I noticed the Tim Bray post but just didn&#8217;t dare linking to it &#8230;</p>
+
+<p>Doing a REST article for InfoQ is definitely on my to-do list, although it&#8217;s probably going to take some time &#8212; I don&#8217;t want the InfoQ SOA community to become a REST-only club since we&#8217;re still the minority :-)</p>
+
+
+<div class="comment" id="comment-1140">
+On <a href="#comment-1140" title="Permalink to this comment">December 17, 2006  1:09 PM</a>, jens
+said:
+<p>Hi Stefan,</p>
+
+<p>when you write a REST article for InfoQ it would be great if you could discuss in as much detail as possible what a RESTful approach to real life B2B integration challenges might look like.  </p>
+
+<p>There is more and more material available on the principles of REST, but most practical examples of the application of these principles tend to cover only relatively basic scenarious.  </p>
+
+<p>It would be great if you could write about how to address common challanges in scenarious where real money may be involved - based on your extensive experience in the field of enterprise architecture and application integration.</p>
+
+<p>Of course this is a topic worthy of a book, but there is a serious lack of such information at this moment and a well written article on InfoQ on this subject is almost guaranteed to have a big impact.  </p>
+
+<p>Currently, many people may have the impression that the typical requirements of big enterprises are showstoppers for the use of REST - that REST is at best good enough for EBay and Amazon.  </p>
+
+<p>For example, I recently attended a SOA-presentation by a consultancy specializing in Oracle technology.  They used the example of a bank that has to decide whether a company is creditworthy (according to Basel II or some other regulation) and checks the ratings of this company provided by several rating agencies.  </p>
+
+<p>At first glance, this is a task ideally suited for a RESTful approach to integration - the rating agencies could expose the ratings of this company as resources, and the bank would consume them in the form of GET agency<em>domain/rating/company</em>id.  The agencies would be largely free to evolve their service without breaking the code of their clients.  </p>
+
+<p>However, how do you restrict access to such a service to paying customers?  There may be an obvious answer to this question (such as using public-key-based authentication and authorization) but I don&#8217;t have enough experience to assess the validity and practicability of the various options that may come to mind.</p>
+
+<p>jens</p>
+
+
+<div class="comment" id="comment-1141">
+On <a href="#comment-1141" title="Permalink to this comment">December 17, 2006  1:23 PM</a>, jens
+said:
+<p>typo: scenarios</p>
+
+
+<div class="comment" id="comment-1142">
+On <a href="#comment-1142" title="Permalink to this comment">December 18, 2006  8:15 AM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>Jens, I&#8217;ll have something to announce in this regard within the next few weeks &#8230;</p>
+
+
+<div class="comment" id="comment-1143">
+On <a href="#comment-1143" title="Permalink to this comment">December 18, 2006  9:38 PM</a>, jens
+said:
+<p>Great, I&#8217;m looking forward to it!</p>
+
+
+</section>
+

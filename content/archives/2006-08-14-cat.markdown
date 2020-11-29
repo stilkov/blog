@@ -1,0 +1,20 @@
+---
+layout: post
+title: "Cat"
+date: "2006-08-14T12:18:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://www.artima.com/weblogs/viewpost.jsp?thread=171479">Apparently</a>, Christopher Diggins presented <a href="http://www.cdiggins.com/cat/cat.pdf">these 107 slides</a> in 30 minutes. I wonder how many heads exploded in the audience?</p>
+
+<section class="comments">
+
+<div class="comment" id="comment-1008">
+On <a href="#comment-1008" title="Permalink to this comment">August 17, 2006 12:02 AM</a>, Olli
+said:
+<p>Less than 20 seconds per slide&#8230; a new kind of pressure fueling. He obviously don&#8217;t know the difference between a presentation and a 3-day training session - sigh.</p>
+
+
+</section>
+

@@ -1,0 +1,22 @@
+---
+layout: post
+title: "Animusic 2"
+date: "2006-03-29T21:02:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://digitalmedia.oreilly.com/examples/oreilly/digitalmedia/2006/03/animusic-gyro-drums.mov"><img src="/blog/st/drums.png" border="0" vspace="4" height="212" hspace="4" width="385" /></a><br /> (click to play)</p>
+
+<p>I <a href="/blog/st/2004/07/02/animusic.html">linked to Animusic</a> before &#8212; totally amazing. <a href="http://digitalmedia.oreilly.com/pub/a/oreilly/digitalmedia/2006/03/22/animusic-computer-music-videos.html">O&#8217;Reilly</a> has a long article about the creation of this stuff [via <a href="http://www.industrial-technology-and-witchcraft.de/index.php/ITW/17088/">it&#38;w</a>]</p>
+
+<section class="comments">
+
+<div class="comment" id="comment-850">
+On <a href="#comment-850" title="Permalink to this comment">April  4, 2006  6:01 PM</a>, Martin Papproth
+said:
+<p>Oh yes, this is really cool stuff. I already ordered a copy&#8230;</p>
+
+
+</section>
+

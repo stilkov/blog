@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Meta on Stefan Tilkov’s Blog</title>
+    <link>https://www.innoq.com/blog/st/categories/meta/index.xml</link>
+    <description>Recent content in Meta on Stefan Tilkov’s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.innoq.com/blog/st/categories/meta/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>A Fresh Start ... Again</title>
+      <link>https://www.innoq.com/blog/st/2011/12/a-fresh-start-...-again/</link>
+      <pubDate>Fri, 02 Dec 2011 18:54:00 +0100</pubDate>
+      
+      <guid>https://www.innoq.com/blog/st/2011/12/a-fresh-start-...-again/</guid>
+      <description>&lt;p&gt;Google Reader&amp;rsquo;s extremely weird behavior after a first attempt to move
+&lt;a href=&#39;https://www.innoq.com/blog/st/blog/st/&#39;&gt;my blog&lt;/a&gt; to a new location has made me try
+yet another different blog setup. This time, there should be
+nothing at all left from the old installation, no redirects, different
+URIs for everything, a new blog system &amp;ndash; clearly, there&amp;rsquo;s no way for
+Google Reader to mess things up this time. Let that be the last thing
+said about this mess; even though it&amp;rsquo;s very sad to see all of those
+blog followers go who only occasionally drop by whenever something new
+appears in their Google Reader subscription, many of them may not have
+been following anymore, anyway. Who knows. It&amp;rsquo;s been a long time since
+I spent some serious time blogging.&lt;/p&gt;
+
+&lt;p&gt;Which doesn&amp;rsquo;t mean one can&amp;rsquo;t restart, right? We&amp;rsquo;ll see. For now, this
+is the one and only blog I&amp;rsquo;ll maintain. It has zero moving parts,
+i.e. it&amp;rsquo;s a static site, (currently) generated using
+&lt;a href=&#34;http://octopress.org/&#34;&gt;Octopress&lt;/a&gt;. If everything works as expected,
+you&amp;rsquo;ll be able to subcribe to the
+&lt;a href=&#34;http://www.innoq.com/blog/stilkov/atom.xml&#34;&gt;an Atom&lt;/a&gt; feed that should
+actually be working for a change.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m somewhat undecided with regards to comments and the Twitter
+integration (both in the sidebar as well as in the bottom of each
+post). I&amp;rsquo;ve toyed with the idea of doing away with comments
+altogether, but I have to say that &lt;a href=&#34;http://disqus.com/&#34;&gt;Disqus&lt;/a&gt; seems
+quite smart.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,22 @@
+---
+layout: post
+title: "Celtix M1"
+date: "2005-09-20T21:34:00+01:00"
+comments: false
+categories: 
+---
+
+<p>There&#8217;s <a href="http://www.objectweb.org/phorum/read.php?f=29&amp;i=10590&amp;t=10590">a first milestone of Celtix</a>, IONA&#8217;s open source JBI container, <a href="http://forge.objectweb.org/project/showfiles.php?group_id=192">available for download</a>. From a cursory glance, it seems to heavily depend on JAX-WS, which is too bad in itself &#8212; but more interestingly, makes Celtix require Java 5/JDK 1.5.</p>
+
+<p><em>Update</em>: In addition (because I know I have at least one reader who cares): at least the current snapshot does not seem to have any connection to JBI whatsoever.</p>
+
+<section class="comments">
+
+<div class="comment" id="comment-643">
+On <a href="#comment-643" title="Permalink to this comment">September 21, 2005 12:36 PM</a>, Oliver Wolf
+said:
+<p>Interestingly enough, I don&#8217;t see any mention of JBI  anymore, neither in the overview section on <a href="http://celtix.objectweb.org/" rel="nofollow" /><a href="http://celtix.objectweb.org/" rel="nofollow">http://celtix.objectweb.org/</a> nor in the latest interview with IONA&#8217;s Eric Newcomer on <a href="http://www.itindepth.com/artix2.htm." rel="nofollow" /><a href="http://www.itindepth.com/artix2.htm." rel="nofollow">http://www.itindepth.com/artix2.htm.</a> Maybe they did a reality check on their current options &#8212; and failed?</p>
+
+
+</section>
+

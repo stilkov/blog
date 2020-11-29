@@ -1,0 +1,73 @@
+---
+layout: post
+title: "Ease of development: REST vs RPC"
+date: "2007-08-21T07:19:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://netzooid.com/blog/2007/08/19/ease-of-development-rest-vs-rpc/">Dan Diephouse</a>:</p>
+
+<blockquote>
+<p>While OO in theory can map pretty well to REST, it takes a lot of metadata and careful thought to turn those objects into resources. Making an RPC application is much easier. This is one of the killer features of SOAP/WSDL. I can take my business service and build a web service out of it with very little effort (I assert that there are non-evil ways to do this, but thats another story). I can then be interoperating with a .NET application in just a minute or two. Or I can take a WSDL, generate a set of objects, and just write some glue code between my internal objects and the web service objects.<br /><br />Building the RESTful equivalent isn&#8217;t nearly as easy IMO. (At least for Java).</p>
+</blockquote>
+
+<p>Dan is right: weirdly enough, building your own protocol using Web services is a lot easier than understanding and using HTTP correctly. REST and RESTful HTTP are <em>not</em> easy, especially not for most enterprise developers who are used to remoting objects (including myself). But of course the home-grown protocol exposes none of the benefits of HTTP &#8212; which IMO means that investing the time and effort to learn and apply RESTful HTTP is an investment that pays off very quickly.</p>
+
+<section class="comments">
+
+
+
+<div class="comment" id="comment-1418">
+On <a href="#comment-1418" title="Permalink to this comment">August 21, 2007  3:57 PM</a>, <a href="http://muellerware.org" title="http://muellerware.org" rel="nofollow">Patrick Mueller</a>
+said:
+<p>The question you gotta ask yourself is: &#8220;What are the benefits of HTTP?&#8221;.  And if you make sure your home-grown protocol actually takes advantage of the benefits of HTTP, then I think you&#8217;ve done the right thing.  I don&#8217;t care what you call the architecture.</p>
+
+
+<div class="comment" id="comment-1419">
+On <a href="#comment-1419" title="Permalink to this comment">August 21, 2007  8:44 PM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>But most of the time people are not even aware that they&#8217;re building their own protocols &#8230;</p>
+
+
+<div class="comment" id="comment-1420">
+On <a href="#comment-1420" title="Permalink to this comment">August 22, 2007  2:49 PM</a>, <a href="http://www.dulciana.com" title="http://www.dulciana.com" rel="nofollow">Mike Glendinning</a>
+said:
+<p>Eh?</p>
+
+<p>How exactly are you &#8220;building your own protocol&#8221; with web services?</p>
+
+<p>How is this any different to the the &#8220;rules governing the syntax, semantics and synchronization of communication&#8221; [1] that you need to deliver effective program-to-program interactions using HTTP?  For example, where do I start, what media types do I receive when I do a GET, how do I interpret the response, what actions can I then take to achieve some useful real-world effect, and so on?</p>
+
+<p>And why is APP [2], the RESTafarians poster child, called the Atom Publishing <em>Protocol</em>?  Did they make a mistake and inadvertently define a protocol without realising it :-?  Oops&#8230;</p>
+
+<p>-Mike Glendinning.</p>
+
+<p>[1] <a href="http://en.wikipedia.org/wiki/Protocol_(computing)" rel="nofollow" /><a href="http://en.wikipedia.org/wiki/Protocol_(computing)" rel="nofollow">http://en.wikipedia.org/wiki/Protocol_(computing)</a>
+[2] <a href="http://www.ietf.org/internet-drafts/draft-ietf-atompub-protocol-17.txt" rel="nofollow" /><a href="http://www.ietf.org/internet-drafts/draft-ietf-atompub-protocol-17.txt" rel="nofollow">http://www.ietf.org/internet-drafts/draft-ietf-atompub-protocol-17.txt</a></p>
+
+
+<div class="comment" id="comment-1421">
+On <a href="#comment-1421" title="Permalink to this comment">September  1, 2007  4:03 AM</a>, <a href="http://soundadvice.id.au/blog/" title="http://soundadvice.id.au/blog/" rel="nofollow">Benjamin Carlyle</a>
+said:
+<p>Each new WSDL is usually a new protocol. I say that because existing applications can&#8217;t interact with a new app built with the new WSDL. You can play tricks like inheriting the new WSDL from an old one, but what you are really doing is now offering two protocols. Each new derived WSDL is another protocol you are simultaneously offering from your service.</p>
+
+<p>Contrast this with the REST approach. Most changes to REST protocol are a transition from one version of a document type to the next. This is not a protocol change, because all of the old clients and servers can still talk to the new clients and servers. The new content type allows new information to be added, but doesn&#8217;t take information away. For example, HTML 3 clients can read HTML 4. They just don&#8217;t understand the new features.</p>
+
+<p>The second most common change is when one content type is superseded by another. This is similar to the WSDL case in the sense that old clients don&#8217;t understand the modified protocol unless the server provides superseded and new versions of the protocol. However, the methods are not altered and this too can be handled in-protocol.</p>
+
+<p>The third most common change is the addition of a completely new content type. You don&#8217;t do this if the existing content types are meaningful. You don&#8217;t do this if it is meaningful for old clients to talk to new servers. Therefore, it isn&#8217;t meaningful to worry about compatibility in this case. You are just extending things.</p>
+
+<p>The least common change in a REST architecture is to change the set of methods. Why? Because it&#8217;s hard to know what to do when faced with a method you don&#8217;t understand. You can deal with this to some extent by returning a response to indicate that you didn&#8217;t understand, or only partially understood. The client may be able to refashion the request to take into account the protocol mismatch. However, method changes require special and individual attention. There are few hard and fast rules as to what strategy will work. This is one of the reasons why methods in REST architecture tend to be so heavily restricted: Every one must pull its weight, as reinventing or altering the set makes it difficult to continue moving an architecture forward.</p>
+
+<p>The other set of common changes is a restructure in server URI-spaces. However, this is not a protocol change. The clients still work. They just need to be reconfigured to point to the new URLs. Note that this can be done in-protocol via redirection response codes.</p>
+
+<p>In short, I think that SOA is fine and a proven technology when it is possible to upgrade your whole architecture in one go to the new protocols. I think that REST is the only proven technology when only a tiny fraction of the overall architecture can be upgraded in a single sitting. You can&#8217;t upgrade the whole Web. REST accommodates this.</p>
+
+<p>Note that if you don&#8217;t have a definitive list of all content types and all methods in use across your architecture, you aren&#8217;t doing REST yet. REST uses standard methods and standard media types. It is still up to your architecture to define the sets, but they must be defined and controlled. Not only that, but they need to be defined and controlled separately so that the set of methods and the set of media types can evolve independently.</p>
+
+<p>Benjamin.</p>
+
+
+</section>
+

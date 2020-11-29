@@ -1,0 +1,12 @@
+---
+layout: post
+title: "(Re-)Design"
+date: "2003-07-07T11:35:00+01:00"
+comments: false
+categories: 
+---
+
+<p>I spent a lot of time redoing the <a href="http://www.movabletype.org">MovableType</a> templates and the CSS for this site, as well as setting up <a href="http://www.maddogsandmore.org/blog/mt">a weblog for my wife</a>. The latter experiment led to some good and bad revelations about weblogging in general and MT in particular: I thought some time about how to create thumbnails for my wife's sketches, only to find out that MT can do it on-the-fly when you upload the images files - very nice. The bad news is that I find it next to impossible to explain to the wife how to use her weblog, especially for uploading this stuff.<br />
+Consider: She can operate the <a href="http://www.usa.canon.com/html/conCprProductDetail.jsp?modelid=6624&section=10217">scanner</a>, but the steps required to go from there to a posting in her blog are multiple: crop the scanned image to the right size, change the images size, upload it (answering MT's questions correctly), and finally editing this obscure HTML stuff before finally seeing anything.<br />
+This is not going to work - things should be a lot easier. I know there are tools to move pictures from digital cameras directly to a weblog - why doesn't the same thing exist for scanners? Or does it?</p>
+

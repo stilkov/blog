@@ -1,0 +1,167 @@
+---
+layout: post
+title: "QCon SF 2009: Don Box & Amanda Laucher, Codename \"M\": Language, Data, and Modeling, Oh My!"
+date: "2009-11-20T23:34:00+01:00"
+comments: false
+categories: 
+---
+
+<p>These are my unedited notes from Don Box &amp; Amanda Laucher's talk about Codename "M": Language, Data, and Modeling, Oh My!</p>
+
+<ul>
+<li>[Don has promised not to tweet. That's a good start.]</li>
+<li>Interesting similarities btw/ M and MPS</li>
+<li>M is a language for data - one of the most interesting places of data is a sequence of Unicode code points</li>
+<li>Great support for text processing perceived as critical</li>
+<li>Example: extract some data from text - tweets</li>
+<li>Intellipad - default environment for writing grammar files, this is where tool support shows up first, then in Visual Studio</li>
+<li><p>M code for a language definition (a function from text to something else, declaratively specified):</p>
+
+<pre><code>module QCon
+{
+language Simple
+{
+syntax Main = empty;
+}
+}
+</code></pre></li>
+<li><p>Main is the rule that is the entry point</p></li>
+<li>Open file in three-pane (or rather, four-pane) mode</li>
+<li>Show source file, grammar, show output - empty file yields Main []</li>
+<li>Amanda makes a great assistant ;-)</li>
+<li>Non-empty file produces errors</li>
+<li>Change "empty" to "any" - file with a single character works, more than that produces errors; change to any+, validates again</li>
+<li><p>Simple language for interpreting tweets:</p>
+
+<pre><code>module QCon
+{
+language Simple
+{
+syntax Main = Tweet;
+syntax Tweet = Content*;
+syntax Content
+= RawText
+| Handle
+| HashTag;
+token RawText = (any - ("#"|"@"))+
+token Handle = "@" Name;
+token HashTag = "#" Name;
+token Name = (any - ("@|"#"|" ""))+;
+}
+}
+</code></pre></li>
+<li><p>regular expressions at the token layer, context-free grammar at the syntax level</p></li>
+<li>Amanda: "Only crap languages make you define something before you have to use it"</li>
+<li>Discussion betwen Josh, Amanda, Don about whether or not the grammar is correct</li>
+<li>Good point about interactive grammar development using the three-pane editor</li>
+<li>Pattern names used to display data in a structured way</li>
+<li>Adding @Classification["Keyword"] syntax-colors the source</li>
+<li>M is structurally typed</li>
+<li>M consists of lists and records</li>
+<li>Generating the right-hand side:</li>
+<li>Intellipad crashes! [Boom!] :-)</li>
+<li>The spec for M is licensed under the Microsoft OSP (which makes people as happy as they can be working with Microsoft)</li>
+<li>Javascript-based implementation of parts of the language; subset of the three-pane mode</li>
+<li>Toolchain is written in C#, parser written in M, more and more compilers written in M</li>
+<li><p>Intellipad crashes! Again! [Boom!] :-)</p>
+
+<pre><code>module QCon
+{
+language Simple
+{
+syntax Main = v:Tweet =&gt; v;
+syntax Tweet = v:Content* =&gt; v;
+syntax Content
+= v:RawText =&gt; v
+| v:Handle =&gt; v
+| v:HashTag =&gt; v;
+token RawText = (any - ("#"|"@"))+
+token Handle = "@" v:Name =&gt; v;
+token HashTag = "#" v:Name =&gt; v;
+token Name = (any - ("@|"#"|" ""))+;
+}
+}
+</code></pre></li>
+<li><p>bubbles up the actual content, result is just a list of the strings extracted</p>
+
+<pre><code>module QCon
+{
+language Simple
+{
+syntax Main = v:Tweet =&gt; v;
+syntax Tweet = v:Content* =&gt; v;
+syntax Content
+= v:RawText =&gt; v
+| v:Handle =&gt; v
+| v:HashTag =&gt; v;
+token RawText = v:(any - ("#"|"@"))+ =&gt; { Kind =&gt; "RawText", Text =&gt; v }
+token Handle = "@" v:Name =&gt; { Kind =&gt; "Handle", Name =&gt; v };
+token HashTag = "#" v:Name =&gt; { Kind =&gt; "HashTag", Topic =&gt; v };
+token Name = (any - ("@|"#"|" ""))+;
+}
+}
+</code></pre></li>
+<li><p>Question from Josh: Isn't this mixing lexing and production rules? Don: Goal is to have no difference, but it can be pulled out</p></li>
+<li>Next: Consuming stuff</li>
+<li>Using TDD to Don's tweets</li>
+<li>VS project includes language grammar defined earlier</li>
+<li>Amanda: Can one debug a grammar? Don: Answered later</li>
+<li>M runtime can be hosted inside a C# program</li>
+<li>Recently stopped internally to use .NET 3.5/VS 2008, now exclusively on .NET 4 and VS 2010</li>
+<li>Language defintion is included in the program binary </li>
+<li><p>Showing off some </p>
+
+<pre><code>var language = Language.load(/* MImage */ typeof(Program).Assembly, "QCon", "Simple"); // yields runtime that can parse a program
+dynamic result = language.ParseString(input);
+bool hasHashTag = false;
+foreach (var content in result)
+{
+hasHashTag = content.Kind == "HashTag";
+if (hasHashTag)
+break;
+}
+AssertEqual(true, hashHashTag);
+</code></pre></li>
+<li><p>Demo is actually working</p></li>
+<li>Change AssertEqual to Assert.IsTrue to get around exception thrown</li>
+<li>Question from Ian Robinson: Q. Can LINQ be used to walk the result? A. Not yet, as dyamic and LINQ don't mix yet</li>
+<li>Not going to write any more C# types, has written all that are in him ;-)</li>
+<li><p>"This will fail!"</p>
+
+<pre><code>var language = Language.load(/* MImage */ typeof(Program).Assembly, "QCon", "Simple"); // yields runtime that can parse a program
+dynamic result = language.ParseString(input);
+var query = (from content in ((IEnumerable)result).OfType&lt;dynamic&gt;()
+where content.Kind == "HashTag"
+select content).Any();
+Assert.IsTrue(query);
+</code></pre></li>
+<li><p>It failed indeed.</p></li>
+<li>"This talk is not about integration of two features I don't work on"</li>
+<li>M is optionally typed, structurally typed</li>
+<li>optional typing: <code>syntax Bob = any* : Integer32 =&gt; 42;</code></li>
+<li>only partially plumbed in the current version</li>
+<li><p>Example for structural typing (not really working yet):</p>
+
+<pre><code>module Ola
+{
+type HashTagRec =
+{
+Kind : Text where value == "HashTag";
+Topic : Text;
+}
+}
+</code></pre></li>
+<li><p>Rudimentary grammar debugging: set breakpoints in input source text; 4th pane shows up, shows matching stack</p></li>
+<li>Syntactical and semantical editing support</li>
+<li>Semantics relies on hooks that are not there yet</li>
+<li>M is built using an M Grammar</li>
+<li>Language completion for M is built using C#</li>
+<li>Ambiguators for GLR need to be written in C#</li>
+<li>One of the metrics used to evaluate the language: XML. There is a grammar for XML, briefly demoed.</li>
+<li>MPS guys have a different religion – Microsoft believes people have a text editor they love</li>
+<li><code>&lt;?magnum PI?&gt;</code> :-)</li>
+<li>Comment from Martin Fowler: Main difference to classic tools such as ANTLR is the dynamic - no code generation needed</li>
+<li>Comment from Ola Bini: Didn't see the type-checking and debugging before – now he's impressed</li>
+</ul>
+
+

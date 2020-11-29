@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2004/06/loosely-coupled-zapflash/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>Loosely Coupled ZapFlash [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>Loosely Coupled ZapFlash</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">Jun 6, 2004</time></small><p>
+	</header>
+	<section>
+	  <p>Another nice paper from ZapThink: <a href="http://www.zapthink.com/report.html?id=ZAPFLASH-05282004">How to Think Loosely Coupled</a>. Certainly not exhaustive, and also a bit too high-level for my taste (and I&#8217;m not sure I agree with the one-WSDL-many-components issue), but the ZapThink folks clearly are a lot more knowledgeable than most of the other &#8220;analysts&#8221; that talk about SOA.</p>
+
+<section class="comments">
+
+<div class="comment" id="comment-301">
+On <a href="#comment-301" title="Permalink to this comment">June  7, 2004  3:27 PM</a>, Hartmut Wilms
+said:
+<p>Hi Stefan!</p>
+
+<p>In my opinion the &#8220;many-to-many&#8221; relationship between WSDL and &#8220;components&#8221; makes perfect sense.</p>
+
+<p>I like to think of Web Services as a UI (Use case Interface) for server components that implement the business logic. Maybe the ZapThink Folks had a similiar &#8220;Web Service Facade&#8221; thing in mind, when speaking of this &#8220;many-to-many&#8221; relationship. In this scheme WSDL is the common vocabulary for publishing these UIs.</p>
+
+<p>To sum up, one interface maybe implemented by several components and one component maybe accessed via several interfaces, which provide a client specific approach to the business logic requested: WSDL-Component-Many-To-Many relationship.</p>
+
+<p>Am I missing something?</p>
+
+
+<div class="comment" id="comment-302">
+On <a href="#comment-302" title="Permalink to this comment">June  7, 2004  4:07 PM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>Hartmut, actually I agree - I just don&#8217;t think that this has much to do with loose coupling. Loose coupling, IMO, is achieved by decoupling consumers and providers by means of indirection, asynchronous messaging, document-based communication as opposed to common type systems, and many other aspects.</p>
+
+
+<div class="comment" id="comment-303">
+On <a href="#comment-303" title="Permalink to this comment">June  7, 2004  4:45 PM</a>, Hartmut Wilms
+said:
+<p>I like to distinguish between logical and physical coupling. &#8221; &#8230; indirection, asynchronous messaging, document-based communication &#8221; are physical aspects, which allow for loose coupling of systems. </p>
+
+<p>Separating client access to a (service) component by providing indirection via multiple facades is IMO a &#8220;logical&#8221; loose coupling.</p>
+
+<p>So loose coupling is achieved by physical means as well as logical means &#8230; I&#8217;m aware that the logical part is by no means as &#8220;buzzy&#8221; as the physical ;-).</p>
+
+
+</section>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

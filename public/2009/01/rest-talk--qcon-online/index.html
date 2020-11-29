@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2009/01/rest-talk--qcon-online/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>REST Talk @ QCon Online [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>REST Talk @ QCon Online</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">Jan 29, 2009</time></small><p>
+	</header>
+	<section>
+	  <p>The introductory REST talk I gave at QCon London <a href="http://www.infoq.com/presentations/qcon-tilkov-rest-intro">is online</a> (videos and slides). Feedback welcome, either here or there.</p>
+
+<section class="comments">
+
+
+
+<div class="comment" id="comment-1928">
+On <a href="#comment-1928" title="Permalink to this comment">January 29, 2009  6:38 PM</a>, Sean Kennedy
+
+<a href="http://profile.typekey.com/6p010537018564970c" class="commenter-profile"><img src="/mt4/mt-static/images/comment/typekey_logo.png" height="16" alt="Author Profile Page" width="16" /></a>
+said:
+<p>Hi Stefan,
+Very good presentation. Just a few comments/questions:
+1. I am currently reading the RESTful Web Services book and am interested in knowing what you disagree with in it.</p>
+
+<ol>
+<li><p>According to Roy Fieldings dissertation, the Uniform Interface is made up of four sub-constraints namely a) URI b) small set of methods c) self-descriptive messages and
+d) hateoas. When I think of Uniform Interface I cant see beyond (b). Where/how do the others fit in to the Uniform Interface??</p></li>
+<li><p>Am I correct in saying that RESTful systems do not need WSDL because the interface is already decided (GET, PUT etc..) and the data is carried in the URI (which is already decided also). WADL is not necessary then&#8230;?</p></li>
+</ol>
+
+<p>Thanks,
+Sean. </p>
+
+
+<div class="comment" id="comment-1929">
+On <a href="#comment-1929" title="Permalink to this comment">January 29, 2009  9:54 PM</a>, <a href="/blog/st/">Stefan Tilkov</a>
+said:
+<p>Thanks Sean.</p>
+
+<p>Re: my disagreements with the RESTful Web Services book: To be honest, I can&#8217;t remember in detail since it&#8217;s been a while. I plan to give it a re-read soon and will answer then.</p>
+
+<p>The uniform interface is most visible in the fact that there standard methods. But there&#8217;s more that is the same for all resources, such as the fact that you interact with them through representations, and this (as well as the other aspects) is part of the interface. So the &#8220;uniform interface&#8221; really translates (IMO) to the stuff that is the same for every resource you interact with.</p>
+
+<p>And yes, I would claim that WSDL and WADL are not necessary for RESTful systems, but for slightly different reasons: the semantics of the data formats (that make up the message bodies that are POSTed, PUT, and returned for GET, not the URI) are communicated using some out-of-band means, and the rest of the interface is the same for every application.</p>
+
+
+<div class="comment" id="comment-1930">
+On <a href="#comment-1930" title="Permalink to this comment">January 30, 2009  1:23 PM</a>, Sean Kennedy
+
+<a href="http://profile.typekey.com/6p010537018564970c" class="commenter-profile"><img src="/mt4/mt-static/images/comment/typekey_logo.png" height="16" alt="Author Profile Page" width="16" /></a>
+said:
+<p>Thanks for that Stefan. The Uniform Interface sub-constraints are much easier to understand when one keeps &#8220;the stuff that is the same for every resource&#8221; in mind. I take it &#8220;out-of-band&#8221; means a web page, email or even word of mouth?</p>
+
+<p>Sean.</p>
+
+
+<div class="comment" id="comment-1931">
+On <a href="#comment-1931" title="Permalink to this comment">January 30, 2009  1:45 PM</a>, <a href="/blog/st/">Stefan Tilkov</a>
+said:
+<blockquote>
+<p>I take it “out-of-band” means a web page, email or even word of mouth?</p>
+</blockquote>
+
+<p>Yes, although using only standardized and widely adopted formats would be ideal (if rarely achievable).</p>
+
+
+<div class="comment" id="comment-1939">
+On <a href="#comment-1939" title="Permalink to this comment">March 12, 2009  8:39 PM</a>, <a href="http://jacek.cz/blog/" title="http://jacek.cz/blog/" rel="nofollow">Jacek Kopecky</a>
+said:
+<p>Hi Stefan, it&#8217;s a really nice presentation. Especially, it was nice how you explained statelessness by doing the circle from avoiding hitting the database to hitting the database in non-obvious ways anyway.</p>
+
+<p>I probably expected a bit more on the data (standardized media types, JSON, data in URI, analogy between HTML forms and service description). But the time is obviously a limit. Certainly it doesn&#8217;t feel like a hole in your talk - it was very well scoped.</p>
+
+<p>But I kinda disagree about the need for a &#8220;WSDL equivalent&#8221; - while the Web is very self-descriptive, there seems value in an interface contract that&#8217;s in a single document, that would summarize what kinds of resources there are and what operations. WADL may be going a step too far, maybe; for one thing, I personally don&#8217;t have any use for descriptions of the hypermedia structure of the service. WSDL 2.0 doesn&#8217;t seem to be a perfect fit either.</p>
+
+<p>I mentioned operations, and this brings me to what you already wrote about - Keith Chapman&#8217;s WSDL 2.0 description of your RESTful example. As Jonathan Marsh pointed out in <a href="http://auburnmarshes.spaces.live.com/Blog/cns!F985A6952BC07C4!951.entry" rel="nofollow">http://auburnmarshes.spaces.live.com/Blog/cns!F985A6952BC07C4!951.entry</a> , Keith maps a combo of URI template and HTTP method to a WSDL operation, and I very much agree with that mapping (concurrently with Keith, we were writing a similar thing in our paper on hRESTS - a RESTful service description microformat, see <a href="http://jacek.cz/publications/2008-12-wi-hrests.pdf" rel="nofollow">http://jacek.cz/publications/2008-12-wi-hrests.pdf</a> ). Operations have application semantics (well, maybe it&#8217;s only POST that really has space for special semantics, and even there Richardson&amp;Ruby would disagree) and they are the steps that a client takes.</p>
+
+<p>But I digress. Nice talk, thanks for putting it online. Also, too bad we have so little overlap in conferences we attend.</p>
+
+<p>Best regards, Jacek</p>
+
+
+</section>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

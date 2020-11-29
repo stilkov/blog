@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Halt"
+date: "2005-10-03T15:38:00+01:00"
+comments: false
+categories: 
+---
+
+<p>A <a href="http://www.cgl.uwaterloo.ca/~csk/halt/">beautiful explanation</a> of the <a href="http://en.wikipedia.org/wiki/Halting_problem">Halting problem</a> (via <a href="http://www.douglasp.com/blog/PermaLink.aspx?guid=4c2eeb0d-7b13-4af5-b091-e20df6f8b2dc">Doug Purdy</a>)</p>
+
+

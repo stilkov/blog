@@ -1,0 +1,15 @@
+---
+layout: post
+title: "Dynamime"
+date: "2009-03-20T08:14:00+01:00"
+comments: false
+categories: 
+---
+
+<p>My co-worker <a href="http://innoq.com/blog/wvk/2009/03/neue_dynamimeversion.html">Willem van Kerkhof</a> has updated <a href="http://github.com/wvk/dynamime/tree/master">Dynamime</a> to work with Rails 2.3: </p>
+
+<blockquote>
+<p>Rails allows the creation of MIME type aliases to render different versions of HTML templates for different client devices. Dynamime extends this by adding automatic device detection using the client browser’s user agent string (inspired by Brendan Lim’s Mobile Fu plugin) and the possibility to build a use cascading "tree" of device types. If e.g. a subset of mobile devices has special needs regarding some aspects of a view, one can create special views for those devices while using more generic views for other mobile devices.</p>
+</blockquote>
+
+

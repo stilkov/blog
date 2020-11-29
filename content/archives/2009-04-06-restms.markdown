@@ -1,0 +1,15 @@
+---
+layout: post
+title: "RestMS"
+date: "2009-04-06T10:17:00+01:00"
+comments: false
+categories: 
+---
+
+<p>I didn't spend enough time with it yet to have an opinion, but at first glance this looks <a href="http://wiki.amqp.org/spec:7">very interesting</a>:</p>
+
+<blockquote>
+<p>This document describes RestMS, a RESTful Messaging Service that exposes AMQP networks as a set of resources clearly identified by URIs and each supporting the appropriate HTTP methods. RestMS is designed to interoperate with AMQP/0.9.1 and future versions of AMQP.</p>
+</blockquote>
+
+

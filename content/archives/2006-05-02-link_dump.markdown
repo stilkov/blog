@@ -1,0 +1,25 @@
+---
+layout: post
+title: "Link Dump"
+date: "2006-05-02T00:30:00+01:00"
+comments: false
+categories: 
+---
+
+<p>Again, so much stuff not-yet-linked to, nor likely to be within the next few days &#8230; so just a quick dump:</p>
+
+<ul>
+<li><a href="http://www.tbray.org/ongoing/When/200x/2006/04/29/The-Rails-Lesson" title="The Rails Lesson">The Rails Lesson (Tim Bray)</a></li>
+<li><a href="http://scalewithrails.com/downloads/ScaleWithRails-April2006.pdf" title="76 PDF slides">76 slides presentation (PDF)</a> on scaling with Rails</li>
+<li><a href="http://rentzsch.com/notes/virtualizationAsAnAntivirus" title="Virtualization as an Antivirus">Virtualization as an Antivirus (Wolf Rentzsch)</a></li>
+<li><a href="http://kasparov.skife.org/blog/2006/04/18#embracing-javascript" title="Embracing JavaScript">Embracing JavaScript (Brian McCallister)</a></li>
+<li><a href="http://www.windley.com/archives/2006/04/lddi_replaces_u.shtml" title="LDDI Replaces UDDI">LDDI Replaces UDDI (Phil Windley)</a></li>
+<li><a href="http://savas.parastatidis.name/2006/04/25/db009910-500f-4cda-8d08-8ad163f6d86f.aspx" title="The safe/unsafe Web and what's that X-Bender header?">The safe/unsafe Web and what&#8217;s that X-Bender header? (Savas Parastatidis)</a></li>
+<li><a href="http://lambda-the-ultimate.org/node/1429" title="Build your own scripting language for Java">Build your own scripting language for Java (LtU)</a></li>
+<li><a href="http://lambda-the-ultimate.org/node/1432" title="Oberon Script. A Lightweight Compiler and Runtime System for the Web">Oberon Script. A Lightweight Compiler and Runtime System for the Web (LtU)</a></li>
+<li><a href="http://jwz.livejournal.com/632781.html" title="Sun">Sun (jwz)</a></li>
+<li><a href="http://www.themorningnews.org/archives/oped/in_praise_of_loopholes.php" title="The Morning News - In Praise of Loopholes, by Matthew Baldwin">The Morning News - In Praise of Loopholes, by Matthew Baldwin</a></li>
+<li><a href="http://blog.labnotes.org/2006/04/26/soa-integration-with-flickr-and-delicious/" title="Labnotes &#187; Blog Archive &#187; SOA integration with Flickr and del.icio.us">SOA integration with Flickr and del.icio.us</a></li>
+</ul>
+
+

@@ -1,0 +1,21 @@
+---
+layout: post
+title: "SOOA?"
+date: "2005-02-18T21:38:00+01:00"
+comments: false
+categories: 
+---
+
+<p>Hartmut Wilms and Clemens Vasters <a href="/blog/hw/2005/02/18/clemens_vasters_on_my_wrong_post_.html">going back and forth</a> on objects vs. messages &#8230; very interesting. Clemens&#8217;s remark that most surprised me was this one:</p>
+
+<blockquote>
+<p>Message doesn&#8217;t and should not mean &#8220;untyped thing&#8221;. Actually, the contract mandate tells us the contrary. If you have a contract, tooling can use that contract to serialize and deserialize into typed object graphs. Reversely, if you have types, you can create contract. All programs you write that communicate with messages have a certain degree of typing if they shall be useful. If you are speaking against serialization (&#8220;OO typed&#8221;) in general, you are speaking against productivity. The job of the tools is to make sure that the serialization format easily interops, can be properly versioned, etc. That&#8217;s what my demand is from Indigo and any other tool.</p>
+</blockquote>
+
+<p>I am totally puzzled. I&#8217;m not going to argue with Clemens about Indigo; but this seems to be a position totally conflicting with what I perceived as the common vision of the folks in and around Microsoft. In and around everyone who writes about Web services and SOA, in fact.</p>
+
+<p>If the role of SOAP is reduced to an implementation detail somewhere way below my OO API, I don&#8217;t see any benefit and no justification (beyond .NET/Java interop) in using it at all. </p>
+
+<p>There can be no worthwhile Web services or SOA approach that ignores what&#8217;s on the wire.</p>
+
+

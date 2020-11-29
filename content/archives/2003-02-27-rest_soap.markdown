@@ -1,0 +1,10 @@
+---
+layout: post
+title: "REST + SOAP"
+date: "2003-02-27T23:49:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://www.intertwingly.net/stories/2002/07/20/restSoap.html" title="REST   SOAP">REST + SOAP</a></p>
+

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2008/12/everything-becomes-lisp/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>Everything Becomes Lisp [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>Everything Becomes Lisp</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">Dec 12, 2008</time></small><p>
+	</header>
+	<section>
+	  <p><a href="http://patricklogan.blogspot.com/2008/12/everything-becomes-lisp.html">Patrick Logan</a> points to <a href="http://www.ibm.com/developerworks/opensource/library/os-php-5.3new2/index.html?ca=drs-tp5008">an article</a> containing this example:</p>
+
+<pre><code>function quoteWords()
+{
+return array_map('quoteWordsHelper',
+function ($string) {
+return preg_replace('/(\w)/','"$1"',$string);
+});
+}
+</code></pre>
+
+<p>There's little doubt lambda functions and closures have become mainstream if they're in PHP :-)</p>
+
+<section class="comments">
+
+
+
+<div class="comment" id="comment-1895">
+On <a href="#comment-1895" title="Permalink to this comment">December 12, 2008  5:34 PM</a>, <a href="http://twitter.com/lqd" title="http://twitter.com/lqd" rel="nofollow">lqd</a>
+said:
+<p>and c++0x :)</p>
+
+
+<div class="comment" id="comment-1901">
+On <a href="#comment-1901" title="Permalink to this comment">December 14, 2008  9:38 AM</a>, myxomycetes
+said:
+<p>@Iqd  I just read a paper from Hans Böhm
+<a href="http://www.hpl.hp.com/personal/Hans_Boehm/c++mm/threadsintro.html" rel="nofollow">http://www.hpl.hp.com/personal/Hans_Boehm/c++mm/threadsintro.html</a>
+and there&#8217;s the line
+&#8220;&#8230;, in spite of the fact that we do not expect it (C++0x Standard) to be formally adopted as an ISO standard until 2010 or 2011. A Committee Draft of the standard is currently available, and we expect a number of vendors to begin support for parts of it sooner than 2011.&#8221;
+So I really wonder if C++ might have become irrelevant for the definition of &#8220;mainstream&#8221;.</p>
+
+
+</section>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

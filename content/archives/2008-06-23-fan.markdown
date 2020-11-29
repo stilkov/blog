@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Fan"
+date: "2008-06-23T23:48:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://www.tbray.org/ongoing/When/200x/2008/06/23/WF2-Progress">Tim Bray</a> is right: <a href="http://www.fandev.org/">Fan</a> definitely looks like an interesting language.</p>
+
+

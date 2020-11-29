@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Cw"
+date: "2004-07-14T23:47:00+01:00"
+comments: false
+categories: 
+---
+
+<p>Via <a href="http://www.25hoursaday.com/weblog/PermaLink.aspx?guid=e2f977e1-2fa6-4133-8a0b-14bfb657fcf4">Dare Obasanjo</a>: <a href="http://research.microsoft.com/Comega/">Cw</a> (pronounced C-omega) is Microsoft Research&#8217;s successor to X#/Xen, and there&#8217;s even a compiler preview available for <a href="http://www.research.microsoft.com/research/downloads/default.aspx">download</a>.</p>
+
+

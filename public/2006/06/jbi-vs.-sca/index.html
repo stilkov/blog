@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2006/06/jbi-vs.-sca/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>JBI vs. SCA [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>JBI vs. SCA</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">Jun 29, 2006</time></small><p>
+	</header>
+	<section>
+	  <p>While I&#8217;ve put up <a href="http://www.infoq.com/news/JBI-Spec-Lead-Criticizes-SCA">a longer write-up at InfoQ</a> regarding <a href="http://blogs.sun.com/roller/page/rtenhove?entry=what_s_wrong_with_sca">Ron Ten-Hove&#8217;s SCA</a> critique, I try to keep expressions of my personal opinion to a minimum there. But here I can honestly say that I consider both SCA and JBI to be a waste of time.</p>
+
+<p>IBM&#8217;s and BEA&#8217;s comments from the <a href="http://jcp.org/en/jsr/results?id=3226">Approval Ballot</a> are well worth repeating in full:</p>
+
+<p><em>On 2005-06-20 IBM voted Abstain with the following comment:</em></p>
+
+<blockquote>
+<p>IBM abstains because the JBI specification doesn&#8217;t represent a sufficient step forward in terms of what we believe our customers need, and above what they can already do. Many technologies and open specifications are available to the Java programmer today with more compelling interoperability and better mechanisms for component composition. IBM&#8217;s priority is to enable integration with the broadest range of platforms, applications, and existing business assets. This demands a language-neutral approach using today&#8217;s Web Services standards, and simpler programming and application models.</p>
+</blockquote>
+
+<p><em>On 2005-06-20 BEA Systems voted Abstain with the following comment:</em></p>
+
+<blockquote>
+<p>BEA believes that the JBI specification is an incomplete attempt to standardize the interfaces between multi-vendor infrastructure and contributes little to the usefulness of the Java platform for business application integration, one of the real pain point for our customers. It&#8217;s unfortunate that it&#8217;s name alone will result in significant confusion in the marketplace. </p>
+</blockquote>
+
+<p>Regarding SCA, I admittedly haven&#8217;t yet had the time to really dig deep into it, so in that case, my dislike is purely a gut feeling.</p>
+
+<section class="comments">
+
+<div class="comment" id="comment-933">
+On <a href="#comment-933" title="Permalink to this comment">June 29, 2006 11:06 PM</a>, <a href="http://blogs.sun.com/rtenhove" title="http://blogs.sun.com/rtenhove" rel="nofollow">Ron Ten-Hove</a>
+said:
+<p>Interesting that you comment on my piece on SCA with some comments about JBI. That seems quite a non sequitur; JBI &amp; SCA deal with very different areas of SOA.</p>
+
+<p>As for the quotes from IBM &amp; BEA, I think we can all read inbetween the lines well enough. Or at least those of use familiar with the integration software industry.</p>
+
+
+<div class="comment" id="comment-934">
+On <a href="#comment-934" title="Permalink to this comment">June 29, 2006 11:24 PM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>Ah well, Ron, that&#8217;s because it&#8217;s <em>your</em> piece on SCA. Had it been someone else, I probably would not have made the link to JBI &#8230; I guess this just goes with being a spec lead ;-)</p>
+
+
+<div class="comment" id="comment-935">
+On <a href="#comment-935" title="Permalink to this comment">June 30, 2006  4:10 AM</a>, <a href="http://fuzzypanic.blogspot.com/2006/06/advanced-message-queue-protocol.html" title="http://fuzzypanic.blogspot.com/2006/06/advanced-message-queue-protocol.html" rel="nofollow">Mike Herrick</a>
+said:
+<p>I tend to agree. They are both seem fine if you are into clicky tools and like to be tortured.</p>
+
+<p>I wish that all the vendor-pires would just implement AMQ and we could all just shut up and integrate the world.</p>
+
+<p><a href="http://fuzzypanic.blogspot.com/2006/06/advanced-message-queue-protocol.html" rel="nofollow" /><a href="http://fuzzypanic.blogspot.com/2006/06/advanced-message-queue-protocol.html" rel="nofollow">http://fuzzypanic.blogspot.com/2006/06/advanced-message-queue-protocol.html</a></p>
+
+<p>We either need AMQ or need to beef up HTTP.</p>
+
+
+<div class="comment" id="comment-936">
+On <a href="#comment-936" title="Permalink to this comment">June 26, 2007  8:04 PM</a>, <a href="http://weblogs.java.net/blog/boneill42/" title="http://weblogs.java.net/blog/boneill42/" rel="nofollow">Brian O'Neill</a>
+said:
+<p>I originally shared the same opinion, but I honestly believe that JBI fills a tremendous gap.  I tried to capture our experience with it on  my blog.</p>
+
+
+<div class="comment" id="comment-937">
+On <a href="#comment-937" title="Permalink to this comment">June 26, 2007  8:09 PM</a>, <a href="http://weblogs.java.net/blog/boneill42/" title="http://weblogs.java.net/blog/boneill42/" rel="nofollow">Brian O'Neill</a>
+said:
+<p>I guess anchor tags don&#8217;t work.  Here is the link:
+<a href="http://weblogs.java.net/blog/boneill42/archive/2007/06/soa_esb_jbi_sca_1.html" rel="nofollow" /><a href="http://weblogs.java.net/blog/boneill42/archive/2007/06/soa" rel="nofollow">http://weblogs.java.net/blog/boneill42/archive/2007/06/soa</a><em>esb</em>jbi<em>sca</em>1.html</p>
+
+
+</section>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

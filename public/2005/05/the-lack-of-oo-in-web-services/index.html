@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2005/05/the-lack-of-oo-in-web-services/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>The Lack of OO in Web Services [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>The Lack of OO in Web Services</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">May 5, 2005</time></small><p>
+	</header>
+	<section>
+	  <p>In <a href="http://www.zeroc.com/newsletter/issue2.pdf">a ZeroC newsletter</a>, Michi Henning writes:</p>
+
+<blockquote>
+<p>The lack of object-oriented features in WSDL is a serious
+limitation. In effect, web services revert back to the procedural and
+data-centric programming style of the seventies. Claiming such a
+retrograde step as an advantage seems self-serving in the extreme. </p>
+</blockquote>
+
+<p>Together with <a href="http://www.iona.com/hyplan/vinoski/">Steve Vinoski</a> and <a href="http://www.cs.wustl.edu/~schmidt/">Doug Schmidt</a>, Michi is one of my heros from my CORBA days. Strange to see him so utterly miss the point &#8230;  </p>
+
+<p>[via <a href="http://hyperthink.net/blog/PermaLink,guid,e9a5e58c-c158-4db4-947d-47ad5e9ac6d8.aspx">Steve Maine</a>]</p>
+
+<section class="comments">
+
+<div class="comment" id="comment-525">
+On <a href="#comment-525" title="Permalink to this comment">May  6, 2005  1:55 AM</a>, Dilip
+said:
+<p>Your respect will never be misplaced.  Please take a look at Michi&#8217;s response to Steve&#8217;s post.</p>
+
+
+<div class="comment" id="comment-526">
+On <a href="#comment-526" title="Permalink to this comment">May  9, 2005 12:08 PM</a>, <a href="http://www.jroller.com/page/nil" title="http://www.jroller.com/page/nil" rel="nofollow">nil</a>
+said:
+<p>Hi,
+I don&#8217;t see how Michi misses the point.
+Technically I think he&#8217;s correct.
+Of course  the success of project does not only depend on choosing the best technology. This also implies that you can do successful projects based on <br />
+&#8220;bad&#8221; technology.  </p>
+
+<p>~nil~</p>
+
+
+<div class="comment" id="comment-527">
+On <a href="#comment-527" title="Permalink to this comment">May  9, 2005 12:15 PM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>Whatever criticism you might have about Web services &#8212; and I believe there&#8217;s lots of valid reasons &#8212; the lack of OO features strikes me as utterly irrelevant. Every project I&#8217;ve been involved in that used a middleware that supported distributed OO, such as CORBA and EJB, ended up banning its usage.</p>
+
+
+<div class="comment" id="comment-528">
+On <a href="#comment-528" title="Permalink to this comment">May 10, 2005  9:41 PM</a>, <a href="http://www.jroller.com/page/nil" title="http://www.jroller.com/page/nil" rel="nofollow">nil</a>
+said:
+<p>Hi,
+I`ve been using  (interface-) inheritance in Corba projects sucessfully. </p>
+
+<p>I cant see how inheritance of interfaces is &#8220;bad&#8221; in general. </p>
+
+<p>Regards,
+Markus</p>
+
+
+<div class="comment" id="comment-529">
+On <a href="#comment-529" title="Permalink to this comment">May 11, 2005 11:00 AM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>I don&#8217;t object to interface inheritance, more to the statefulness introduced by object references. If you ban those, and force clients to explicitly name objects (instead of making that part of the context), it&#8217;s arguable whether it&#8217;s really &#8220;inheritance&#8221; or simply multiple interfaces &#8230;</p>
+
+
+</section>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

@@ -1,0 +1,11 @@
+---
+layout: post
+title: "innoQ at [OOP 2010]"
+date: "2010-01-05T14:47:00+01:00"
+comments: false
+categories: 
+---
+
+<p>January 26-28 we'll be at OOP in Munich again. I'll do a talk on "<a href="http://www.sigs-datacom.de/konferenz/sessiondetails.html?tx_mwconferences_pi1%5BshowUid%5D=102&amp;tx_mwconferences_pi1%5Bpointer%5D=0&amp;tx_mwconferences_pi1%5Bmode%5D=1&amp;tx_mwconferences_pi1%5Bs%5D=0">REST with Java</a>", and we (<a href="/de">innoQ</a>) will have a booth in the exhibition area, too (more about some of the stuff we'll talk about later). <a href="mailto:stefan.tilkov@innoq.com">Send me an e-mail</a> if you want to schedule a meeting …</p>
+
+

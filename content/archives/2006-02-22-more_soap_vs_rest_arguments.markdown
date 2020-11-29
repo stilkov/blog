@@ -1,0 +1,62 @@
+---
+layout: post
+title: "More SOAP vs. REST Arguments"
+date: "2006-02-22T21:02:00+01:00"
+comments: false
+categories: 
+---
+
+<p>I just noticed an interesting thing in the most recent iteration of the SOAP-vs.-REST debate: this time, nobody seems to have mentioned the benefit &#8212; if you believe that&#8217;s what it is &#8212; of <em>protocol independence</em>. Why is that?</p>
+
+<p>For the record, I personally believe it&#8217;s one of the weakest arguments.</p>
+
+<section class="comments">
+
+<div class="comment" id="comment-793">
+On <a href="#comment-793" title="Permalink to this comment">February 23, 2006 12:20 PM</a>, <a href="http://www.dulciana.com" title="http://www.dulciana.com" rel="nofollow">Mike Glendinning</a>
+said:
+<p>Personally, I find the SOAP versus REST debate frustrating because of the almost complete lack of clear analysis on either side.</p>
+
+<p>It reminds me of those magazine articles (or television programmes) where they perform a series of tests to compare a racing car, a speedboat and a motorbike in order to decide which is &#8220;best&#8221;.  Of course the question &#8220;best for what?&#8221; is unanswered and any rational evaluation criteria are left unstated.  But still a winner is declared to be the &#8220;best&#8221;.  Cor!  Wow!  Whilst this is often entertaining (particularly for teenage boys) it doesn&#8217;t really help to advance the state of engineering or technology for cars, boats or bikes.</p>
+
+<p>Anyway, back to the SOAP versus REST debate.  One of these days I will write a paper on this, but in the meantime here are some interesting contradictions I&#8217;ve noticed in the various arguments over the past couple of years.  Doubtless this will just inflame things even more, but what the heck :-)</p>
+
+<p>1) What is SOAP?</p>
+
+<p>There is a lot of confusion over the meaning of the term &#8220;SOAP&#8221;.  Some people use this to refer to the SOAP messaging framework, others to the complete web services (WS-Everything) stack being defined by a number of vendors.  We need to be clear, I think: SOAP is just SOAP and the other web services specifications are something else.</p>
+
+<p>2) What is REST?</p>
+
+<p>The term &#8220;REST&#8221; also appears to be interpreted in different ways by different people. To Fielding, it is a set of architectural constraints and usage patterns for a distributed hypermedia system.  Some people drop a few of Fielding&#8217;s constraints and concentrate on REST as a conceptual modelling technique that views the world using a fixed set of operations (get, put, delete, post) on a much larger and variable set of data entities (resources). To others, REST is simply used as a synonym for HTTP or the use of HTTP and XML as an inter-application communication mechanism.  </p>
+
+<p>Of course, if you take Fielding&#8217;s definition, it&#8217;s quite easy to build a REST system using SOAP and web services.  The WSDL for four simple operations (get, put, delete, post) on an &#8220;any&#8221; type is quite simple.  Hey presto!  REST using SOAP and web services.  But many REST proponents seem to think that anything using SOAP or web services is bad.  I wonder why?</p>
+
+<p>There is much to be said for the modelling argument, but the approach is not without its limits as the &#8220;right&#8221; way to model something will always depend on what problems you are trying to solve (read something like &#8220;Data and Reality&#8221; by Bill Kent to appreciate this more fully).  We know from research on computability (Turing and so on) that all solvable problems can be handled by very simple machines.  So why do we invent complex programming languages like Java, C# and so on?  Surely, everything can be handled using just simple assembly language like &#8220;loads&#8221; and &#8220;stores&#8221; and a few simple manipulations of uniform data operands.  This sounds very RESTful and one might say to programmers: &#8220;Just&#8221; use assembly language!  Hmnnn, shouldn&#8217;t eschewing complexity like this be the way forward?</p>
+
+<p>Those who argue that REST is merely inter-application communication using HTTP and XML (and I mean POX here) seem to have moved quite a long way from Fielding&#8217;s original concept.  As well as in many cases surreptitiously re-introducing non-uniform operations (using &#8220;query parameters&#8221;, for example), they quietly ignore the difficulty of dealing with many different and non-standard XML formats (or &#8220;representations&#8221;).  Their mantra might be &#8220;Service description?  We don&#8217;t need no stinking service description!&#8221;  But of course they are kidding themselves.  The service description might not be written down, nor machine readable, but it&#8217;s still there as part of the implicit contract between client and server.  So your service returns just XML, does it?  What, you mean absolutely <em>any</em> XML of any kind whatsoever?  How do I write a client to deal with that without making significant assumptions about I need to send/receive and hard-wiring them into my application?  This sounds like an implicit &#8220;service description&#8221; to me!  The World Wide Web and HTTP work with the (original) REST approach because both the browser and origin server are actually intermediaries and not communication endpoints.  These intermediaries perform no (or limited) semantic interpretation of resource representations.  In the case of the browser, for example the human actually performs the final interpretation by viewing glyphs rendered on the screen.  With our &#8220;dumb&#8221; computers and applications as endpoints, this is not yet possible, so we have to embed all of the semantic information required in our application logic.  With even a small number of varying XML representations this becomes very complex, difficult and expensive to do.  And any changes/additions in this environment will require a complex modification of the application.  This is not too dissimilar to the problems of the SOAP and web services approach highlighted by the the proponents of this form of REST.  The way to solve this is to introduce some level of uniformity to the resource representations, for example a simple structuring mechanism to separate out important items from those that are not essential: a SOAP envelope, perhaps?!  Regardless, there is clearly much to be said for separating the problems of communication and understanding in designing distributed systems.  In the real world, our postal systems do this quite effectively.  But one must not ignore the fact that to do something useful with information requires it to be semantically understood and this remains quite difficult for computers.</p>
+
+<p>3) REST and the &#8220;evils&#8221; of RPC?</p>
+
+<p>Clearly, REST is based on a synchronous RPC paradigm.  This is stated by Fielding as well as being obvious from the HTTP specification.  The way I state this is that REST is RPC with four &#8220;P&#8221;s.  The four procedures follow the CRUD pattern: create/insert (put), read/select (get), update (post) and delete.  But RPC is deemed to be a &#8220;bad thing&#8221; by many, although the same people seem to argue that REST is &#8220;good&#8221;.  Go figure, as the Americans would say!</p>
+
+<p>4) Which is more complex, HTTP or SOAP?</p>
+
+<p>It is commonly stated that HTTP is much simpler than SOAP.  I have never believed this to be the case.  HTTP is an incredibly complex protocol, particularly with all of the interactions between the various header fields, content negotiation, cacheing and so on.  For example, the current HTTP 1.1 specification is about 114 pages long, whilst the SOAP 1.2 specification is about 45 pages.</p>
+
+<p>As far as I&#8217;m aware (certainly for Java) the industry doesn&#8217;t yet have a comprehensive and widely available implementation of the HTTP specification.  And by this I mean one that has a clean programming abstraction yet deals properly with content negotiation (including preference values, for example), connection handling (&#8220;keep alives&#8221;) and so on.  The standard Sun/Java classes are very poor in many such respects.  Given the ubiquity and importance of HTTP, I find this both surprising and disappointing.</p>
+
+<p>The basic premise of the SOAP &#8220;envelope&#8221; is quite simple, on the other hand, although we do lack good standard implementations here also. Of course, the many additional web services specifications contribute much more complexity, but that as I said is a different issue.</p>
+
+
+<div class="comment" id="comment-794">
+On <a href="#comment-794" title="Permalink to this comment">February 23, 2006  5:00 PM</a>, <a href="http://franklinmint.fm" title="http://franklinmint.fm" rel="nofollow">Robert Sayre</a>
+said:
+<p>&#8220;It is commonly stated that HTTP is much simpler than SOAP. I have never believed this to be the case.&#8221;</p>
+
+<p>Well, the thing is, SOAP doesn&#8217;t <em>do</em> anything. It&#8217;s for protocol construction. Once you design a protocol from scratch, you end up with an unproven new design that you have to deploy over HTTP anyway. So, you get HTTP+SOAP+YOUR_PROTOCOL. </p>
+
+<p>The Sun/Java classes are pretty terrible, but the Jakarta ones aren&#8217;t.</p>
+
+
+</section>
+

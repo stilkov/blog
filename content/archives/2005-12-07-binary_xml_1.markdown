@@ -1,0 +1,13 @@
+---
+layout: post
+title: "Binary XML"
+date: "2005-12-07T21:57:00+01:00"
+comments: false
+categories: 
+---
+
+<p>Can someone please explain the concept of &#8216;irony&#8217; to <a href="http://blogs.msdn.com/richardt/archive/2005/12/07/501211.aspx">Rich Turner</a>?</p>
+
+<p>In any case, criticizing the Binary XML effort does not equal considering a binary encoding something bad &#8212; it&#8217;s just not XML.</p>
+
+

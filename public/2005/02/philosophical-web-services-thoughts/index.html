@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2005/02/philosophical-web-services-thoughts/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>Philosophical Web Services Thoughts [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>Philosophical Web Services Thoughts</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">Feb 11, 2005</time></small><p>
+	</header>
+	<section>
+	  <p>A <a href="http://hyperthink.net/blog/CommentView,guid,46c804f0-1384-4752-9519-182d407f9253.aspx">truly excellent post</a> from Steve Maine. I agree to a large degree; the local programming model used on either side of a Web services communication is (or at least should be) totally irrelevant to the wire messages and the contract. Still, I believe there is one noticeable difference, and that is essentially the one (if not only) benefit of using a message-oriented instead of a distributed objects-like programming paradigm: the provider&#8217;s and consumer&#8217;s dependency on the contract.</p>
+
+<p>Being able to use a mapping of the contract to the programming language&#8217;s type system requires the presence of stubs and/or skeletons; these are usually generated based on the contract. Doing this introduces a technical dependency to the exact version of the contract &#8212; the runtime will simply fail to instantiate the appropriate objects if e.g. some attributes change, <em>even if the business logic doesn&#8217;t use them at all</em>. </p>
+
+<p>Of course one might envision a method by which only some part of the contract/schema are mapped to programming language proxies, e.g. by instrumenting code generation with some XPath expressions that define what the dependencies are. In fact, this could be nicely combined with approaches such as that of <a href="http://www.schematron.com/">Schematron</a>. This a pure speculation, though; I have not tried nor even played with this idea. </p>
+
+<p>I agree, though, that while there are definitely benefits to taking the XML approach, working on a DOM or SAX level plainly sucks. That is why I believe that we&#8217;ll see a shift to other programming languages and approaches (more dynamic, XML-aware etc.)</p>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

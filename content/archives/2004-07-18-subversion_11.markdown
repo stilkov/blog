@@ -1,0 +1,15 @@
+---
+layout: post
+title: "Subversion 1.1"
+date: "2004-07-18T12:02:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://subversion.tigris.org/svn_1.1_releasenotes.html">Subversion 1.1</a>, a new version of the designated successor to CVS, has been released:</p>
+
+<blockquote>
+<p>Subversion 1.1 can best be summarized as: (1) a new non-database repository back-end, and (2) a whole slew of client-side improvements.</p>
+</blockquote>
+
+

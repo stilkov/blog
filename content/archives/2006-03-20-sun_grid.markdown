@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Sun Grid"
+date: "2006-03-20T11:20:00+01:00"
+comments: false
+categories: 
+---
+
+<p>I usually don&#8217;t give a damn what Sun does or doesn&#8217;t do, but <a href="http://www.network.com/">this</a> is truly revolutionary. Read more in <a href="http://blogs.sun.com/roller/page/jonathan?entry=the_network_is_the_computer">Jonathan Schwarz&#8217;s Weblog</a>.</p>
+
+

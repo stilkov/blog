@@ -1,0 +1,10 @@
+---
+layout: post
+title: "Just do it"
+date: "2014-11-10T20:20:00+01:00"
+comments: true
+categories: 
+---
+Three posts in quick succession: <a href="http://scribbling.net/2014/10/16/short-form-blogging/">This one</a> by Gina Trapani, <a
+href="http://sixcolors.com/post/2014/10/bigger-than-a-tweet/">this one</a> by Jason Snell, and <a
+href="http://www.marco.org/2014/11/01/short-form-blogging">this one</a> from Marco Arment, all make the same point: There should be more blogging, and maybe one way to get this into real, live, actual posts is to reduce the amount of rules you as a writer subject yourself to. In this spirit, I’ll try to get this thing restarted.  

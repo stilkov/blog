@@ -1,0 +1,12 @@
+---
+layout: post
+title: "Shipped"
+date: "2003-11-16T19:53:00+01:00"
+comments: false
+categories: 
+---
+
+<p><img src="/blog/st/archives/statusicons04active.gif" border="0" height="100" alt="statusicons04active.gif" width="100" />
+Finally! In the meantime (i.e., until the shipped <a href="/blog/st/archives/000381.html">stuff</a> finally arrives), I can continue to torture myself for hours with <a href="http://www.apple.com/powerbook/gallery/powerbook15top.html">this</a>.</p>
+
+

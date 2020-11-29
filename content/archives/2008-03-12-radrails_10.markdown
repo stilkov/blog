@@ -1,0 +1,31 @@
+---
+layout: post
+title: "RadRails 1.0"
+date: "2008-03-12T14:23:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://www.aptana.com/view/blog_front_page#/node/320">RadRails 1.0 has been released</a>:</p>
+
+<blockquote>
+<p>I'm happy to announce that RadRails 1.0 has been released today. This release has been a long time coming and includes a lot of new features and polish. We're especially proud of the progress we've made here at Aptana since we took over the project. RadRails 0.7.2 users will definitely want to check out this new release - it offers a more stable environment, full Rails 2.0 support, support for JRuby, and a boatload of new features. For those who want the comprehensive list of changes since the 0.9.3 release, you can find the changelist in ASAP.</p>
+</blockquote>
+
+<section class="comments">
+
+
+
+<div class="comment" id="comment-1647">
+On <a href="#comment-1647" title="Permalink to this comment">March 13, 2008 12:45 AM</a>, Stefan Botzenhart
+said:
+<p>Hi Stefan,</p>
+
+<p>I made great experiences with Netbeans 6. It provides everything I need. Before I choose Netbeans I tried lots of rails IDEs and editors, but nothing was as good as Netbeans.</p>
+
+<p>Greetings,
+Stefan</p>
+
+
+</section>
+

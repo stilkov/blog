@@ -1,0 +1,62 @@
+---
+layout: post
+title: "Bigtop"
+date: "2005-01-01T18:47:00+01:00"
+comments: false
+categories: 
+---
+
+<p>Via <a href="http://patricklogan.blogspot.com/2004/12/more-positive-outlook.html">Patrick Logan</a>: I bet this is going to spread through the blogosphere like the influenza virus that has been plaguing everyone around me and now finally reached me: <a href="http://www.microsoft-watch.com/article2/0,1995,1746291,00.asp?kc=MWRSS02129TX1K0000535">Microsoft&#8217;s &#8220;Bigtop&#8221;</a>, which definitely sounds interesting:</p>
+
+<blockquote>
+<ul>
+<li>Highwire: Highwire is a technology designed to automate the development of highly parallel applications that distribute work over distributed resources, the aforementioned sources said. Highwire is a programming language/model that will aim to make the testing and compiling of such parallel programs much simpler and more reliable.</li>
+
+<li>Bigparts: Bigparts is code designed to turn inexpensive PC devices into special-purpose servers, according to the sources. Bigparts will enable real-time, device-specific software to be moved off a PC, and instead be managed centrally via some Web-services-like model.</li>
+
+<li>Bigwin: According to sources close to Microsoft, Bigwin sounds like the ultimate manifestation of Microsoft&#8217;s &#8220;software as a service&#8221; mantra. In a Bigwin world, applications are just collections of OS services that adhere to certain &#8220;behavioral contracts.&#8221; These OS services can be provided directly by the core OS or even obtained from libraries outside of the core OS.</li>
+</ul>
+</blockquote>
+
+<p>Unfortunately, this paragraph sort of reduces expectations a little:</p>
+
+<blockquote>
+<p>Sources said Microsoft will likely make some sort of preview version of the Bigtop code available to the company&#8217;s software-development partners by 2006. If and when the final version debuts, it won&#8217;t be much before the end of the decade, sources added.</p>
+</blockquote>
+
+<p>In other words: nothing that is to be taken too seriously &#8212; right now, at least.</p>
+
+<section class="comments">
+
+<div class="comment" id="comment-423">
+On <a href="#comment-423" title="Permalink to this comment">January  2, 2005  3:43 AM</a>, Michel
+said:
+<p>stop to take that kind of buzz seriously !!!</p>
+
+<p>it&#8217;s just some description of cluster/grid computing services and nice names.</p>
+
+<p>and what about &#8220;software as service&#8221; mantra ?!!  it has nothing specific in microsoft software , and it&#8217;s the saying of ibm and sun too (and it&#8217;s always just old good plain software )</p>
+
+<p>about  &#8220;These OS services can be provided directly by the core OS or even obtained from libraries outside of the core OS.&#8221;</p>
+
+<p>it&#8217;s just the SAME crap than for &#8220;CAIRO&#8221; (in mid 90&#8217;s the new windows will be a &#8220;revolutionnary object os&#8221;, its project name was &#8220;cairo&#8221;,  of course it was just marketing lies.  it was just experimental office with a new ole version )  , </p>
+
+<p>they said the EXACT same thing !   gah, it really pisses me off !</p>
+
+<p>in 90s object was the whole marketing fuss,  now, it&#8217;s contract based development (a &#8220;new&#8221; paradigm in development, not something amazing , it&#8217;s just a model, like MVC or object or others stuff)</p>
+
+<p>please please please never take seriously ANY marketing speech (and by all means, never believe microsoft, they did that every 5 years !!!! from 20 years)</p>
+
+<p>only believes REAL products, REAL code source in YOUR hand, you can very USE and say &#8220;wow, it&#8217;s really useful and good&#8221;.</p>
+
+<p>thanks.</p>
+
+
+<div class="comment" id="comment-424">
+On <a href="#comment-424" title="Permalink to this comment">January  3, 2005 12:07 PM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>What makes you think I took it seriously? :-)</p>
+
+
+</section>
+

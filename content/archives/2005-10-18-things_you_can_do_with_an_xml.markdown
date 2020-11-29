@@ -1,0 +1,107 @@
+---
+layout: post
+title: "Things you can do with an XML message"
+date: "2005-10-18T21:57:00+01:00"
+comments: false
+categories: 
+---
+
+<p>In a very interesting comment thread over at <a href="http://www.iona.com/blogs/vinoski/archives/000214.html">Steve Vinoski&#8217;s</a>, Michi Henning writes (with regards to XML messaging):</p>
+
+<blockquote>
+<p>So, as far as I can see, the difference is one of syntax. With IIOP, we encode the data as binary, so it&#8217;s not possible for me to interpret the data without a priori knowledge of its encoding. With XML, we encode the data in a universal syntax, but it is <em>also</em> not possible for me to interpret the data without a priori knowledge; not of its encoding, but of its semantics. What I am getting at here is that the ability to get an XML message off the wire without type-specific knowledge doesn&#8217;t fundamentally alter the core issue, namely, that the receiver must have knowledge of the <em>semantics</em> of the data in order to do something useful with it; whether the data is encoded as binary or XML seems to be a second-order issue. In other words, the agreement you mention goes way beyond mere syntax.</p>
+</blockquote>
+
+<p>I disagree. Here&#8217;s just a few things I can think of that you can do with the XML, but not with the IIOP</p>
+
+<ol>
+<li>look at and read it</li>
+<li>store it</li>
+<li>hand it over to any of the gazillion XML-processing tools</li>
+<li>check it for well-formedness</li>
+<li>run an XSLT transform on it</li>
+<li>perform XPath expressions on it</li>
+<li>validate it against one or more schema</li>
+<li>run XQuery on it</li>
+<li>select parts of at that you <em>do</em> understand (e.g. via XPath) and process them</li>
+<li>encrypt or decrypt it, partially or completely</li>
+<li>sign or check the signature on parts of it</li>
+</ol>
+
+<p>I can do all of this without knowing any of the message&#8217;s business semantics. (Some of the examples like the XSL transform will usually have to know something about the message, but that does not mean my message handler has to.)</p>
+
+<p>Sure you can do all of this using CORBA. All you have to do is standardize on some variant of a tree/key-value structure and create an ecosystem around it :-)</p>
+
+<section class="comments">
+
+<div class="comment" id="comment-673">
+On <a href="#comment-673" title="Permalink to this comment">October 19, 2005 12:54 AM</a>, <a href="http://neuromancer.dif.um.es/blog" title="http://neuromancer.dif.um.es/blog" rel="nofollow">diego sevilla</a>
+said:
+<p>Interesting post, Stefan. However, take into account that you&#8217;re considering XML for message exchange in the context of an application. In this context, what does all the points you introduce have interest? Why, for example, process using XSLT a message exchanged between two parties? I could go number by number, but, for example, you can store the IIOP message the same you can store the XML message. It&#8217;s just a blob of data. As for processing it using other tools like XQuery and such, take into account that the purpose of XML messages (as IIOP ones) is to ask an application for something.</p>
+
+<p>From your response I can see in which contexts XML is good: all the processing you&#8217;re mentioning is really nice in other contexts. But in the context of message exchange (call it RPC, MOM, SOM), XQuerying it or being able to search it is of no value.</p>
+
+<p>Note that I am talking about the message itself, not the payload. If you want to send structured information, you can send XML, of course. But you can include text messages including XML bits into IIOP too!! :)</p>
+
+<p>Best regards,
+diego.</p>
+
+
+<div class="comment" id="comment-674">
+On <a href="#comment-674" title="Permalink to this comment">October 19, 2005  6:53 PM</a>, grumpY!
+said:
+<p>IIOP??? haha yes i have a great setup. i have some lisp-machines talking to each other via IIOP over an OSI-compliant frame-relay network. if i concentrate hard enough i hope to get everyone to go back to 1997 with me.</p>
+
+
+<div class="comment" id="comment-675">
+On <a href="#comment-675" title="Permalink to this comment">October 19, 2005  8:53 PM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>@Diego &#8212; I think you have hit the nail on the head without even noticing :-)</p>
+
+<p>If none of the things I mentioned are useful for you, you shouldn&#8217;t be using XML messaging in the first place. You may be better off using CORBA. </p>
+
+<p>I do, of course, believe that these things make sense when you do message exchange between applications. You can XSLT for message transformation, e.g. adapting a new format to an older application or vice versa. You can do XPath to build change-resilient processing nodes, or introduce intermediaries that perform some processing using XQuery. You can do content-based routing by applying configurable XPath expressions to the content. </p>
+
+<p>Again, my point is: There&#8217;s lots of things you can do with XML that you can&#8217;t do when you use IIOP. If you use XML as CORBA with angle brackets, you&#8217;re obviously going to be disappointed. If you decide to use XML, do so for a reason and don&#8217;t treat it as an implementation detail.</p>
+
+<p>@grumpY!: Don&#8217;t be so &#8230; grumpy ;-)</p>
+
+
+<div class="comment" id="comment-676">
+On <a href="#comment-676" title="Permalink to this comment">October 21, 2005 12:05 PM</a>, Lou
+said:
+<blockquote>
+<blockquote>
+<blockquote>
+<p>I can do all of this without knowing any of the message&#8217;s business semantics.</p>
+</blockquote>
+
+<p></p></blockquote>
+
+<p></p></blockquote>
+
+<p>And achieve what purpose ? Credit to an account when it is to be debited from ?</p>
+
+<blockquote>
+<blockquote>
+<blockquote>
+<p>select parts of at that you do understand (e.g. via XPath) and process them</p>
+</blockquote>
+
+<p></p></blockquote>
+
+<p></p></blockquote>
+
+<p>This is a meritless <em>achievement</em>. How could you possibly conclude that the pieces you can understand are completely independent of that part of the context you don&#8217;t understand ?</p>
+
+
+<div class="comment" id="comment-677">
+On <a href="#comment-677" title="Permalink to this comment">October 21, 2005  3:14 PM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>The real world works based on partial understanding. Work is distributed based on address information or a glance at a topic; while one &#8220;processing node&#8221; takes care about the business details, another will manage the technical aspects. Ignoring this, and demanding complete understanding for everyone involved &#8212; even if they don&#8217;t use and don&#8217;t care about large parts &#8212; is what creates tightly and inflexibily coupled systems.</p>
+
+<p>As an example of a useful intermediary that I can built without understanding the message&#8217;s semantics (or even knowing them before-hand) is content-based routing: an engine runs (externally configured) XPath expressions against the messages and dispatches according to (externally configured) destinations.</p>
+
+
+</section>
+

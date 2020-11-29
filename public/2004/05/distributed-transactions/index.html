@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2004/05/distributed-transactions/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>Distributed Transactions [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>Distributed Transactions</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">May 8, 2004</time></small><p>
+	</header>
+	<section>
+	  <p><a href="http://seanmcgrath.blogspot.com">Sean McGrath</a> on <a href="http://seanmcgrath.blogspot.com/archives/2004_05_02_seanmcgrath_archive.html#108391726581259860">transactions</a>: A big +1 from me. </p>
+
+<p>I have been involved in quite a few projects where some technology or other was being evaluated, and distributed transactions (2PC style) always were deemed to be a critical component.</p>
+
+<p>Not one of these projects ended up actually using them. </p>
+
+<p>Although distributed transactions are deemed the holy grail of enterprise computing by some, I think they are used rarely, and if they are used, it&#8217;s absolutely <em>never</em> in a scenario where the resource managers being coordinated are not very tightly related.</p>
+
+<p>Some time ago, I talked to somebody who was involved in a project where 2PC semantics were (successfully!) implemented to sync transactions between an RDBMS running on Unix and an IMS running on OS/390, with a BEA Weblogic Enterprise server acting as the coordinator. When it was run for the first time, and the OS/390 operators actually noticed what all those geeks had been up to, and that they dared to lock a whole IMS segment for the duration of one of their crappy transactions, they were only barely able to avoid a collective heart attack. Needless to say, the whole idea was dropped immediately.</p>
+
+<p>Distributed 2PC transactions and the idea of loosely-coupled systems simply don&#8217;t match. In fact, I believe that in any loosely-coupled system, transactions can&#8217;t be pushed into the supporting framework or infrastructure at all &#8212; you need to implement the logic for handling failed commits with at least the same effort as your success cases.</p>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

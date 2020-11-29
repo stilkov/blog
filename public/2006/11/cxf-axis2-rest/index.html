@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2006/11/cxf-axis2-rest/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>CXF, Axis2, REST [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>CXF, Axis2, REST</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">Nov 26, 2006</time></small><p>
+	</header>
+	<section>
+	  <p><a href="http://www.bloglines.com/blog/sanjiva?id=166">Sanjiva Weerawarana believes I&#8217;m wrong</a> in <a href="/blog/st/2006/10/27/rest_and_celtixfire.html">considering CeltixFire&#8217;s REST support</a> superior to Axis2&#8217;s:</p>
+
+<blockquote>
+<p>The only addition is some Java5 annotations for indicating whether the operation should have a GET binding or a POST binding etc.. Definitely a nice way to do it but does that make a class into a resource? I think not.</p>
+</blockquote>
+
+<p>Of course that doesn&#8217;t turn a class into a resource, but it&#8217;s a significant addition nonetheless. If you take a look at <a href="http://fisheye3.cenqua.com/browse/celtixfire/trunk/rt/bindings/http/src/test/java/org/apache/cxf/binding/http/bare/CustomerService.java?r=467368">this example</a> &#8212; always assuming I&#8217;m understanding it correctly &#8212;, what you get is meaningful resource URIs with mappings to methods according to HTTP verbs. While I&#8217;m not at all sure that something like CXF is needed to implement a RESTful solution, at least the external interface seems to look like <a href="/blog/st/2006/06/30/rest_vs_soap_oh_no_not_again.html">what you&#8217;d end up with</a> if you just used servlets.</p>
+
+<p>If, for some unfathomable reason, you are still interested in this endless debate, a huge thread has emerged in the SOA discussion group over the weekend (<a href="http://tech.groups.yahoo.com/group/service-orientated-architecture/message/6423">here</a> and <a href="http://tech.groups.yahoo.com/group/service-orientated-architecture/message/6438">here</a>).</p>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

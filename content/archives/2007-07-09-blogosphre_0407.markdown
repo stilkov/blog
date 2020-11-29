@@ -1,0 +1,13 @@
+---
+layout: post
+title: "Blogosph&#228;re 04/07"
+date: "2007-07-09T22:37:00+01:00"
+comments: false
+categories: 
+---
+
+<p><em>Dieses Mal f&#252;hrt uns die Tour durch die Blogs dieser Welt &#252;ber die mehr oder weniger vertrauten Pfade verschiedener Programmiersprachen zu alternativen Client-Technologien und der Suche nach der endg&#252;ltig richtigen Technologie f&#252;r die Realisierung verteilter Anwendungen &#8211; und wie immer ist f&#252;r jede Meinung die passende Unterst&#252;tzung vorhanden.</em></p>
+
+<p>Mit anderen Worten: meine aktuelle Blogosph&#228;re (ich schaudere immer noch bei dem Titel) aus dem neu erscheinenden JavaSPEKTRUM 04/07 <a href="http://www.sigs.de/blog/js/?p=29">ist online</a>. Kommentare willkommen!</p>
+
+

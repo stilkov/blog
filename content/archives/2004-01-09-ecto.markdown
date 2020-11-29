@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Ecto"
+date: "2004-01-09T12:39:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://www.kung-foo.tv/ecto/index.php">ecto</a> beta version 0.1.6 is now <a href="http://www.kung-foo.tv/ecto/index.php#3">available for download</a>. This is the successor to the Mac OS X weblog client Kung-Log, and apart from the butt-ugly metal look and feel (which will be switchable in later versions), it seems very promising.</p>
+
+

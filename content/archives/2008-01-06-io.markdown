@@ -1,0 +1,23 @@
+---
+layout: post
+title: "Io"
+date: "2008-01-06T20:13:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://iolanguage.com/scm/git/checkout/Io/docs/guide.html#TOC35887">Io, the language</a>:</p>
+
+<blockquote>
+<p>Io is a dynamic prototype-based programming language. The ideas in Io are mostly inspired by Smalltalk[1] (all values are objects), Self (prototype-based), NewtonScript (differential inheritance), Act1 (actors and futures for concurrency), Lisp (code is a runtime inspectable / modifiable tree) and Lua (small, embeddable).</p>
+</blockquote>
+
+<p><a href="http://hackety.org/2008/01/05/ioHasAVeryCleanMirror.html">According to Why the lucky stiff</a>,</p>
+
+<blockquote>
+<p>Io is just an incredibly hushed secret. (Perhaps because it is impossible to Google stuff about it.) Did you know that Io’s introspection and meta tricks put Ruby to serious shame? Where Ruby once schooled Java, Io has now pogoed. </p>
+</blockquote>
+
+<p>This sounds like fun.</p>
+
+

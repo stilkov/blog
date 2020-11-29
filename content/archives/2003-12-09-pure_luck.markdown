@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Pure Luck"
+date: "2003-12-09T14:23:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://www.intertwingly.net/blog/1666.html" title="Sam Ruby: I'm feeling lucky">Sam Ruby is feeling lucky</a>. <a href="http://www.google.com/search?q=tilkov&amp;btnI=I'm+Feeling+Lucky">Me too</a>. Not that hard with a last name like mine, though &#8230;</p>
+
+

@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Groovy 1.0 Beta 3"
+date: "2004-01-23T19:49:00+01:00"
+comments: false
+categories: 
+---
+
+<p>Quicklink: <a href="http://radio.weblogs.com/0112098/2004/01/23.html#a449">groovy 1.0 beta 3 released with new user guide and groovy jdk documentation</a>. Get it <a href="http://groovy.codehaus.org/download.html">here</a> or <a href="http://groovy.codehaus.org/guide.html">browse the user guide</a>.</p>
+
+

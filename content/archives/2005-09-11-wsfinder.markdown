@@ -1,0 +1,11 @@
+---
+layout: post
+title: "WSFinder"
+date: "2005-09-11T18:13:00+01:00"
+comments: false
+categories: 
+---
+
+<p>The <a href="http://www.wsfinder.com/main">WSFinder Wiki</a> is a community effort to create a list of all APIs and web services that are publicly available for people to play with.</p>
+
+

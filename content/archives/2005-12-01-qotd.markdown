@@ -1,0 +1,32 @@
+---
+layout: post
+title: "QotD"
+date: "2005-12-01T11:19:00+01:00"
+comments: false
+categories: 
+---
+
+<p>I like this one from <a href="http://loekb.blogspot.com/2005/12/enterprise-architecture-governance.html">Loek Bakker</a>:</p>
+
+<blockquote>
+<p>Governance is to Enterprise Architecture, as a Contract is to a Service.</p>
+</blockquote>
+
+<section class="comments">
+
+<div class="comment" id="comment-726">
+On <a href="#comment-726" title="Permalink to this comment">December  1, 2005  1:56 PM</a>, <a href="http://stefan.samaflost.de/blog/" title="http://stefan.samaflost.de/blog/" rel="nofollow">Stefan Bodewig</a>
+said:
+<p>The URL is wrong (it&#8217;s December already ;-)</p>
+
+<p><a href="http://loekb.blogspot.com/2005/12/enterprise-architecture-governance.html" rel="nofollow" /><a href="http://loekb.blogspot.com/2005/12/enterprise-architecture-governance.html" rel="nofollow">http://loekb.blogspot.com/2005/12/enterprise-architecture-governance.html</a></p>
+
+
+<div class="comment" id="comment-727">
+On <a href="#comment-727" title="Permalink to this comment">December  1, 2005  7:55 PM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>Thanks - fixed.</p>
+
+
+</section>
+

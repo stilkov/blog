@@ -1,0 +1,19 @@
+---
+layout: post
+title: "KungLog"
+date: "2003-07-15T00:12:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://www.webentourage.com/blogapp.php" title="Mac OS Scripting Solutions by Tim Conner">BlogApp</a> refused to connect to the blog, with some strange, unidentifiable numeric error. Probably just a simple configuration issue, but while looking for an answer, I came across <a href="http://www.kung-foo.tv/kunglog.php">KungLog</a>, which seems to be a pretty cool solution. Let's see whether this post comes through as planned ...</p>
+<section class="comments">
+
+<div class="comment" id="comment-44">
+On <a href="#comment-44" title="Permalink to this comment">July 15, 2003 12:15 AM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>Indeed it did. Very cool.</p>
+
+
+</section>
+

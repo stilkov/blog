@@ -1,0 +1,7 @@
+---
+baseurl: "https://www.innoq.com/blog/st/"
+languageCode: "en-us"
+title: "Stefan Tilkov’s Blog"
+permalinks: 
+  archives: /:year/:month/:title/
+---

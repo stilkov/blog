@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2005/09/rest-vs.-soap/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>REST vs. SOAP [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>REST vs. SOAP</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">Sep 18, 2005</time></small><p>
+	</header>
+	<section>
+	  <p>A <a href="http://atmanes.blogspot.com/2005/09/rest-and-soap-and-document-oriented.html">long and thoughtful post</a> from <a href="http://atmanes.blogspot.com/">Anne Thomas Manes</a> on REST vs. SOAP. Anne is usually right, but I have to question this statement:</p>
+
+<blockquote>
+<p>Per the SOAP specification, the SOAP node determines what method to invoke based on the qualified name (QName) of the child element of the SOAP Body element.</p>
+</blockquote>
+
+<p>While this may be <a href="http://atmanes.blogspot.com/2005/03/wrapped-documentliteral-convention.html">a convention</a>, I cannot find any mention of &#8220;invoking a method&#8221; in the <a href="http://www.w3.org/TR/soap12-part1/">spec</a>. The SOAP spec does neither mandate nor suggest any relationship between a message and a method, which is a good thing.</p>
+
+<p>I also find it very hard to agree with this assertion:</p>
+
+<blockquote>
+<p>SOAP is also an application protocol, with its own set of application protocol semantics.  </p>
+</blockquote>
+
+<p>In my view, it may be valid to describe SOAP as a toolkit for <em>constructing</em> application protocols (if you are so inclined). But an application protocol in itself? I don&#8217;t think so.</p>
+
+<section class="comments">
+
+<div class="comment" id="comment-627">
+On <a href="#comment-627" title="Permalink to this comment">September 18, 2005  5:03 PM</a>, <a href="http://dehora.net/journal" title="http://dehora.net/journal" rel="nofollow">Bill de hÓra</a>
+said:
+<p>I have to agree. </p>
+
+<p>On method mapping: there&#8217;s no default. In terms of the &#8220;Semantics&#8221; word, even agreeing with that claim that there is a mapping won&#8217;t be sufficient; you have to describe how the SOAP message is going to be evaluated. Mapping just begs the question of what will happen.</p>
+
+<p>On SOAP as an app protocol: I always saw SOAP as being closer to BEEP than any of the current Internet app protcools. And calling SOAP an app protocol is like calling XML a vocabulary.</p>
+
+
+<div class="comment" id="comment-628">
+On <a href="#comment-628" title="Permalink to this comment">September 19, 2005  2:02 AM</a>, <a href="http://www.markbaker.ca" title="http://www.markbaker.ca" rel="nofollow">Mark Baker</a>
+said:
+<p>SOAP is split-brained, both by specification and common practice.  It is usable - as you point out - as a toolkit for constructing application protocols.  But it&#8217;s also usable as an application protocol extension protocol (yes, that&#8217;s the word &#8220;protocol&#8221; twice - look up &#8220;PEP&#8221; at w3.org); that is, a protocol which <em>extends</em> (rather than layers-on-top-of) the underlying application protocol.  Henrik and I made sure that SOAP 1.2 was usable in this fashion, though it appears that the ImmediateDestination issue (recently brought to light in the context of WS-Addressing) was an oversight.</p>
+
+
+<div class="comment" id="comment-629">
+On <a href="#comment-629" title="Permalink to this comment">September 19, 2005 11:43 PM</a>, <a href="http://atmanes.blogspot.com/" title="http://atmanes.blogspot.com/" rel="nofollow">Anne Thomas Manes</a>
+said:
+<p>My mistake, Stefan. The SOAP spec does not specify the processing model for mapping a request to a method. </p>
+
+<p>The WS-I Basic Profile does:</p>
+
+<p>4.7.6 Operation Signatures</p>
+
+<p>Definition: operation signature</p>
+
+<p>The profile defines the &#8220;operation signature&#8221; to be the fully qualified name of the child element of SOAP body of the SOAP input message described by an operation in a WSDL binding.</p>
+
+<p>In the case of rpc-literal binding, the operation name is used as a wrapper for the part accessors. In the document-literal case, since a wrapper with the operation name is not present, the message signatures must be correctly designed so that they meet this requirement.</p>
+
+<p>An endpoint that supports multiple operations must unambiguously identify the operation being invoked based on the input message that it receives. This is only possible if all the operations specified in the wsdl:binding associated with an endpoint have a unique operation signature.</p>
+
+<p>R2710 The operations in a wsdl:binding in a DESCRIPTION MUST result in operation signatures that are different from one another.</p>
+
+
+<div class="comment" id="comment-630">
+On <a href="#comment-630" title="Permalink to this comment">September 21, 2005  3:55 AM</a>, <a href="http://www.parand.com/say/" title="http://www.parand.com/say/" rel="nofollow">Parand Tony Darugar</a>
+said:
+<p>Stefan,</p>
+
+<blockquote>
+<p>While this may be a convention, I cannot find any mention of “invoking a method” in the spec. The SOAP spec does neither mandate nor suggest any relationship between a message and a method, which is a good thing.</p>
+</blockquote>
+
+<p>Help me out with this one. I&#8217;ve seen a lot of practical problems because of the lack of an explicit relationship between the message and a method, primarily around toolkit interoperability (a message from one toolkit could not be digested by another toolkit). </p>
+
+<p>The situation could be more accurately described as the receiver of the message not knowing what method or handler to invoke for that message. I don&#8217;t think there is an alternate place to specify this within SOAP, short of using something like ws-addressing. </p>
+
+<p>So are you saying it&#8217;s not necessary or even bad to specify the method within the message, that it should go somewhere else, that it&#8217;s the job of the underlying protocol to get the message to the appropriate method listener, or something else all together?</p>
+
+
+<div class="comment" id="comment-631">
+On <a href="#comment-631" title="Permalink to this comment">September 21, 2005  8:37 AM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>Assuming SOAP is used in a non-restful way, I agree the message is the only place information about the &#8220;intent&#8221; can be stored. This may be in a wsa:Action header, or it may be the QName of the message body&#8217;s root element. My point is, though, that any connection to a method or operation is something that is outside the scope of the SOAP spec, and in fact the SOAP processing model: whether it&#8217;s a single handler whose handleMessage gets invoked for all messages, or one per message type, or one per wsa:Action header, or some combination, is a decision completely localized within the toolkit used on one side of the communication. </p>
+
+<p>I am aware that most toolkits, including .NET and JAX-RPC/JAX-WS, do things differently and indeed create a tight association between a message type and a method. That doesn&#8217;t necessarily mean they&#8217;re right, though :-) If you are following this path, I suggest you follow Annes advice (see the link above) &#8212; this is probably your best bet for the moment with regards to interop.</p>
+
+
+<div class="comment" id="comment-632">
+On <a href="#comment-632" title="Permalink to this comment">September 21, 2005  9:10 PM</a>, <a href="http://www.parand.com/say/" title="http://www.parand.com/say/" rel="nofollow">Parand Tony Darugar</a>
+said:
+<blockquote>
+<p>My point is, though, that any connection to a method or operation is something that is outside the scope of the SOAP spec, and in fact the SOAP processing model:</p>
+</blockquote>
+
+<p>That&#8217;s the part I&#8217;m trying to understand better. Let&#8217;s forget for the moment which method or operation the message is handled by. The question can also be asked as, how does the receiving party identify what type of message it&#8217;s receiving? </p>
+
+<p>As mentioned, in REST the handler or the type of message is identified by the URL it&#8217;s sent to. In SOAP that&#8217;s not the case. Let&#8217;s take the position that we want the receiving party to handle this as it chooses. How can it make the determination? It has to have a way of identifying the type of the message. Even if all requests are handled by the same receiver, that receiver has to be able to discern what type of message it just got in order to handle it in the appropriate way.</p>
+
+<p>Which is my way of asking, what&#8217;s the identifier that determines the type of the message? What&#8217;s SOAP&#8217;s equivalent to REST&#8217;s URL? Perhaps it&#8217;s the full signature of the XML document being sent? But that doesn&#8217;t work well, because you can have two identical documents express different intent based on state or context. WS-I and convention tell us the identifier is the QName of the child element of the SOAP Body element, but I&#8217;m not a big fan of that, so I&#8217;m wondering if there&#8217;s a better way.</p>
+
+
+<div class="comment" id="comment-633">
+On <a href="#comment-633" title="Permalink to this comment">September 21, 2005 10:36 PM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>I think you have answered your own question already &#8212; either you depend on the message body element&#8217;s QName, or you have to find something alternative. In case of SOAP/WS-*, the analogy to the REST URL would be the wsa:Action header.</p>
+
+<p>In my view, though, that&#8217;s not really superior &#8212; I like having distinct types of messages (as identified by the the root element name) better (if you don&#8217;t want to go down the REST route in the first place).</p>
+
+<p>If there&#8217;s another way, I&#8217;m not aware of it.</p>
+
+
+</section>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

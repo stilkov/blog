@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rest Roca on Stefan Tilkov’s Blog</title>
+    <link>https://www.innoq.com/blog/st/categories/rest-roca/index.xml</link>
+    <description>Recent content in Rest Roca on Stefan Tilkov’s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.innoq.com/blog/st/categories/rest-roca/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Announcing &#34;ROCA&#34;</title>
+      <link>https://www.innoq.com/blog/st/2012/03/announcing-roca/</link>
+      <pubDate>Tue, 06 Mar 2012 19:46:00 +0100</pubDate>
+      
+      <guid>https://www.innoq.com/blog/st/2012/03/announcing-roca/</guid>
+      <description>&lt;p&gt;In the past few days, we finally managed to write down a few ideas on
+Web frontend design, basically a set of rules to apply if the goal is
+to come up with a Web app that is actually &lt;em&gt;on&lt;/em&gt; the Web as opposed to
+be &lt;em&gt;tunnelled through&lt;/em&gt; the Web. We tried to come up with a catchy
+name, and finally arrived at &amp;ldquo;&lt;a href=&#39;http://roca-style.org&#39;&gt;ROCA&lt;/a&gt;&amp;rdquo;, a
+conveniently pronouncable acronym for &amp;ldquo;Resource-oriented
+client architecture&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;I am aware that for many folks, specifically those who are interested
+in REST and thus likely to read this, a common reaction might be
+&amp;ldquo;Duh&amp;rdquo;. And one of the main things I&amp;rsquo;d like to stress is that we have
+not invented a single thing, but rather collected a certain set of
+rules that we found many people liked, but couldn&amp;rsquo;t name.&lt;/p&gt;
+
+&lt;p&gt;Since we started discussing this, we&amp;rsquo;ve found strong support, as well
+as violent opposition. Which is exactly what we were looking for,
+because in only very very few cases, people didn&amp;rsquo;t understand what we
+described, and that&amp;rsquo;s the whole point of the effort: Give a name to a
+certain cohesive set of practices so that they may used as a reference
+both when you agree with them, want to build a system that adheres to
+them or criticize them because you disagree.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m looking forward to comments over at the &lt;a
+href=&#39;http://roca-style.org/discussion.html&#39;&gt;discussion page&lt;/a&gt;. If
+you believe we should make changes, please &lt;a
+href=&#39;https://github.com/innoq/ROCA&#39;&gt;fork the GitHub repo&lt;/a&gt; and
+create a pull request.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

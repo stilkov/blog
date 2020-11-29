@@ -1,0 +1,175 @@
+---
+layout: post
+title: "Backslash on Mac OS X"
+date: "2003-12-23T23:05:00+01:00"
+comments: false
+categories: 
+---
+
+<p>I don&#8217;t know what imbecile at Apple created the German keymap for a PowerBook running Mac OS X, but after just having wasted about half an hour of my life with trying to find a way to enter a backslash (&#8216;&#39;) on this damn thing, I found out that it&#8217;s Shift-Alt-7. Should&#8217;ve been obvious? Right.</p>
+
+<section class="comments">
+
+<div class="comment" id="comment-109">
+On <a href="#comment-109" title="Permalink to this comment">December 23, 2003 11:18 PM</a>, <a href="http://vowe.net" title="http://vowe.net" rel="nofollow">Volker Weber</a>
+said:
+<p>The character map is fine. Not printing it on the keys is not.</p>
+
+<p>Alt-7 is pipe, so Shift-Alt-7 may even make sense. :-)</p>
+
+
+<div class="comment" id="comment-110">
+On <a href="#comment-110" title="Permalink to this comment">December 23, 2003 11:32 PM</a>, <a href="http://vowe.net" title="http://vowe.net" rel="nofollow">Volker Weber</a>
+said:
+<p>Do you happen to know Keyboard Viewer? > <a href="http://vowe.net/archives/003958.html" rel="nofollow" /><a href="http://vowe.net/archives/003958.html" rel="nofollow">http://vowe.net/archives/003958.html</a></p>
+
+
+<div class="comment" id="comment-111">
+On <a href="#comment-111" title="Permalink to this comment">December 24, 2003 12:30 AM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>Thank you <em>so</em> much - no, I didn&#8217;t know about this.
+And I managed to find out how to activate it in less than three minutes ;-)</p>
+
+
+<div class="comment" id="comment-112">
+On <a href="#comment-112" title="Permalink to this comment">December 24, 2003 12:43 AM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>BTW, thinking about it some more I guess that whoever decided to require a key combination like that for a character like backslash never considered that somebody might use these babies for programming tasks &#8230;</p>
+
+
+<div class="comment" id="comment-113">
+On <a href="#comment-113" title="Permalink to this comment">December 24, 2003  6:22 AM</a>, brad
+said:
+<p>well duh, its an apple. they gotta do everything different, which usually means the hard way</p>
+
+
+<div class="comment" id="comment-114">
+On <a href="#comment-114" title="Permalink to this comment">December 24, 2003  1:04 PM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>If this remains the most annoying &#8216;problem&#8217; I have with this machine, it compares pretty well to all the Wintel boxes I&#8217;ve use before ;-)</p>
+
+
+<div class="comment" id="comment-115">
+On <a href="#comment-115" title="Permalink to this comment">July 20, 2005 11:19 PM</a>, <a href="http://chucker.mystfans.com" title="http://chucker.mystfans.com" rel="nofollow">chucker</a>
+said:
+<p>As someone pointed out, the reason backslash is on option-shift-7 is that all three vertical line symbols are on the 7 &#8212; slash on shift-7, pipe on option-7, and backslash (a combination of the two, so to speak) on option-shift-7.</p>
+
+<p>As for programming, the German layout &#8212; be it the Mac variant or the typical IBM PC one &#8212; has never been efficient for that. Use a US English keyboard, it has the tilde, backslash, semicolon and whatnot much more accessible. On a Mac, the US English keyboard also makes it somewhat easy to access umlauts &#8212; option-U+(a|o|u) &#8212; , the sz &#8212; option-S &#8212; , etc.</p>
+
+
+<div class="comment" id="comment-116">
+On <a href="#comment-116" title="Permalink to this comment">October 29, 2005  2:29 PM</a>, Chris F.
+said:
+<p>Thanks you very much for the back slash tip. Yes, desing is ok, but with the Keyboard, Apple went to far.</p>
+
+<p>I was lucky to find your article. I would have never found out.</p>
+
+<p>Thanks man.</p>
+
+
+<div class="comment" id="comment-117">
+On <a href="#comment-117" title="Permalink to this comment">June 27, 2006  9:45 PM</a>, Mikko
+said:
+<p>Thanks a lot! Works also with the Finnish keymap. Still needed two and a half years after posting the entry :D</p>
+
+
+<div class="comment" id="comment-118">
+On <a href="#comment-118" title="Permalink to this comment">July  8, 2006 10:37 PM</a>, <a href="http://X111.com" title="http://X111.com" rel="nofollow">XIII</a>
+said:
+<p>Thank god for search engines, that saved me a lot grey hairs. Thanks!</p>
+
+
+<div class="comment" id="comment-119">
+On <a href="#comment-119" title="Permalink to this comment">August 22, 2006  3:39 PM</a>, Michael Lund
+said:
+<p>Tak!</p>
+
+
+<div class="comment" id="comment-120">
+On <a href="#comment-120" title="Permalink to this comment">October  8, 2006  1:31 PM</a>, Sekander Rao Gasca
+said:
+<p>Muchas gracias, took me also quite some time to find your solution to the &#92;&#92;&#92;&#92;\</p>
+
+
+<div class="comment" id="comment-121">
+On <a href="#comment-121" title="Permalink to this comment">November 22, 2006  3:19 PM</a>, Alex Finck
+said:
+<p>Thanks. This is 1000x better than changing the input mehtod&#8230; I knew and used the keyboard viewer to try to find out where the backslash could be but could not think about alt shift&#8230;</p>
+
+
+<div class="comment" id="comment-122">
+On <a href="#comment-122" title="Permalink to this comment">January 12, 2007  9:25 PM</a>, yvonney
+said:
+<p>ohhh yes,damm &#46; glad that I got to the point and searched in the internet for.
+glad I am not the only one. After having used my knowledge in vain, I started to test different combination by chance. with the result that I  broke down my beloved ibook twice&#8230;</p>
+
+
+<div class="comment" id="comment-123">
+On <a href="#comment-123" title="Permalink to this comment">January 18, 2007  9:56 PM</a>, Marc M
+said:
+<p>aaaaaah thank you .. damn i hate that layout&#8230; but the rest hmmm niiice
+thnx man</p>
+
+
+<div class="comment" id="comment-124">
+On <a href="#comment-124" title="Permalink to this comment">February 25, 2007 10:03 PM</a>, <a href="http://www.kleinen-online.de" title="http://www.kleinen-online.de" rel="nofollow">Markus Kleinen</a>
+said:
+<p>Schön zu sehen, dass ich hier auch ein paar Tips für meine anfänglichen Mac-Probleme finde. Dachte schon, es gäbe gar keine Möglichkeit Sonderzeichen zu entwerten :-)</p>
+
+<p>Danke!</p>
+
+<p>PS: Der USB-Stick im Freitags-Ruby-Kurs auf der OOP 2007 war wohl doch USB 2.0 - die Post hat bei den SOA-Days doch nicht am falschen Ende gespart. InstantRails ht einfach zu viele kleine Dateien&#8230;</p>
+
+
+<div class="comment" id="comment-1787">
+On <a href="#comment-1787" title="Permalink to this comment">September  2, 2008  4:02 PM</a>, David Auerbach
+said:
+<p>Thank you!!!</p>
+
+
+<div class="comment" id="comment-1835">
+On <a href="#comment-1835" title="Permalink to this comment">October 31, 2008  1:46 PM</a>, Satu
+said:
+<p>Thanks, this saved my day!</p>
+
+
+<div class="comment" id="comment-1886">
+On <a href="#comment-1886" title="Permalink to this comment">December  9, 2008 10:15 PM</a>, Christian
+said:
+<p>Thank god for search engines. Just got my first macbook (switched from linux) and tried to find backslash.</p>
+
+<p>Thanx!</p>
+
+
+<div class="comment" id="comment-2002">
+On <a href="#comment-2002" title="Permalink to this comment">June 12, 2009  8:32 PM</a>, <a href="http://typo3-programmierer.ch" title="http://typo3-programmierer.ch" rel="nofollow">TYPO3 Programmierer</a>
+said:
+<p>Thanks !</p>
+
+<p>i was searching a long time too!</p>
+
+<p>it takes time to get used to the keyboard of my new mac book pro!</p>
+
+
+<div class="comment" id="comment-2036">
+On <a href="#comment-2036" title="Permalink to this comment">September 17, 2009 10:11 PM</a>, Stefan
+said:
+<p>Thanks.</p>
+
+<p>Seems obvious in hindsight. Your post was the top google result. Thanks :)</p>
+
+
+<div class="comment" id="comment-2069">
+On <a href="#comment-2069" title="Permalink to this comment">November 10, 2009  3:36 PM</a>, <a href="http://ritchief.sebijk.net" title="http://ritchief.sebijk.net" rel="nofollow">Ritchie Flick</a>
+said:
+<p>Thank god! I also just had this problem, thank you very much for this blog post!</p>
+
+
+<div class="comment" id="comment-2105">
+On <a href="#comment-2105" title="Permalink to this comment">March 15, 2010  2:42 PM</a>, Fred
+said:
+<p>Thanks, I was searching for this too!</p>
+
+
+</section>
+

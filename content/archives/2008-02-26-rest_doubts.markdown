@@ -1,0 +1,181 @@
+---
+layout: post
+title: "REST Doubts"
+date: "2008-02-26T13:05:00+01:00"
+comments: false
+categories: 
+---
+
+<p>What are the most common criticisms/doubts people have about using RESTful HTTP?</p>
+
+<p>Here is an initial list I&#8217;ve come up with (please note that I&#8217;m <em>not</em> conceding any of them are justified ;-) :</p>
+
+<ul>
+<li>REST may be usable for CRUD, but not for &#8220;real&#8221; business logic</li>
+<li>Who would actually <em>want</em> to expose so much of their application?</li>
+<li>Resources are too low-level, i.e. an implementation detail one should not expose</li>
+<li>There is no formal contract/no description language</li>
+<li>REST works with HTTP only, it&#8217;s not transport protocol independent (I shuddered when I wrote this)  </li>
+<li>No transactions</li>
+<li>No reliability</li>
+<li>No (message-based) security</li>
+<li>No vendor/tool support</li>
+<li>No asynchronous interactions</li>
+<li>No pub/sub support</li>
+</ul>
+
+<p>Did I miss any?</p>
+
+<section class="comments">
+
+
+
+<div class="comment" id="comment-1626">
+On <a href="#comment-1626" title="Permalink to this comment">February 26, 2008  1:40 PM</a>, <a href="http://fishdujour.typepad.com" title="http://fishdujour.typepad.com" rel="nofollow">Gavin Terrill</a>
+said:
+<p>Maybe not specifically REST, but implied:</p>
+
+<ol>
+<li>Partial updates</li>
+<li>Dealing with hierarchies</li>
+<li>Batch processing</li>
+</ol>
+
+
+<div class="comment" id="comment-1627">
+On <a href="#comment-1627" title="Permalink to this comment">February 26, 2008  1:47 PM</a>, <a href="/blog/st/">Stefan Tilkov</a>
+
+<a href="/blog/st/" class="commenter-profile"><img src="/mt4/mt-static/images/comment/mt_logo.png" height="16" alt="Author Profile Page" width="16" /></a>
+said:
+<p>Thanks Gavin. I think these are much more uncommon and - coincidentally - much more justified :-)</p>
+
+
+<div class="comment" id="comment-1628">
+On <a href="#comment-1628" title="Permalink to this comment">February 26, 2008  1:52 PM</a>, <a href="http://www.tbray.org/ongoing/" title="http://www.tbray.org/ongoing/" rel="nofollow">Tim</a>
+said:
+<p>Not object-oriented.  [hysterical cackles]</p>
+
+
+<div class="comment" id="comment-1629">
+On <a href="#comment-1629" title="Permalink to this comment">February 26, 2008  3:04 PM</a>, <a href="/blog/st/">Stefan Tilkov</a>
+
+<a href="/blog/st/" class="commenter-profile"><img src="/mt4/mt-static/images/comment/mt_logo.png" height="16" alt="Author Profile Page" width="16" /></a>
+said:
+<p>Thanks Tim :-) I think it&#8217;s been a long time since someone actually advocated pure object-oriented concepts for remote-orientation &#8230; Michi Henning excepted, of course. OTOH, Mark Baker has been fond of arguing that he kept his &#8220;distobj&#8221; email address because HTTP has more OO heritage than Web services &#8230;</p>
+
+
+<div class="comment" id="comment-1630">
+On <a href="#comment-1630" title="Permalink to this comment">February 26, 2008  4:34 PM</a>, <a href="http://www.ebpml.org/ebpml_radio.htm" title="http://www.ebpml.org/ebpml_radio.htm" rel="nofollow">Jean-Jacques Dubray</a>
+said:
+<ul>
+<li>bi-directional inter-actions</li>
+<li>hence no orchestration/choreography capability</li>
+<li>lack of assembly model for resource inter-actions</li>
+<li>no policies</li>
+<li>events (real ones)</li>
+<li>implementation versioning (the Identity/Access Key is tied to the latest &#8220;implementation&#8221; of the resource)</li>
+</ul>
+
+
+<div class="comment" id="comment-1631">
+On <a href="#comment-1631" title="Permalink to this comment">February 26, 2008  4:41 PM</a>, <a href="/blog/st/">Stefan Tilkov</a>
+
+<a href="/blog/st/" class="commenter-profile"><img src="/mt4/mt-static/images/comment/mt_logo.png" height="16" alt="Author Profile Page" width="16" /></a>
+said:
+<p>Thanks JJ. I wouldn&#8217;t exactly call these common &#8212; with the exception of the policy and event aspects, I consider them rather &#8220;JJ-specific&#8221;. Do you see a difference between the &#8220;events&#8221; and the &#8220;pub/sub&#8221; doubt?</p>
+
+
+<div class="comment" id="comment-1633">
+On <a href="#comment-1633" title="Permalink to this comment">February 26, 2008 10:18 PM</a>, pwb
+said:
+<p>REST&#8217;s biggest problem, <b><i>BY FAR</i></b>, is that there is no practical, clear &amp; consistent guidance on how to design it.</p>
+
+
+<div class="comment" id="comment-1634">
+On <a href="#comment-1634" title="Permalink to this comment">February 26, 2008 10:37 PM</a>, <a href="/blog/st/">Stefan Tilkov</a>
+
+<a href="/blog/st/" class="commenter-profile"><img src="/mt4/mt-static/images/comment/mt_logo.png" height="16" alt="Author Profile Page" width="16" /></a>
+said:
+<p>Thanks! I couldn&#8217;t disagree more, but you are right that this comes up often.</p>
+
+
+<div class="comment" id="comment-1635">
+On <a href="#comment-1635" title="Permalink to this comment">February 26, 2008 11:34 PM</a>, Hartmut Wilms
+said:
+<p>I&#8217;ve got to agree with JJ on the versioning issue. Came up two times in a row, while I was giving talks on Service Design and RESTful Web Services.</p>
+
+<p>I would also like to add &#8220;No Support for Concurreny&#8221; (he, he, one of my favorites!)</p>
+
+
+<div class="comment" id="comment-1636">
+On <a href="#comment-1636" title="Permalink to this comment">February 27, 2008 12:06 AM</a>, Anonymous
+said:
+<p>SOA is soooooooooo popular and I have never heard of REST.</p>
+
+<p>[I actually hear this in my office  :-(  ]</p>
+
+
+<div class="comment" id="comment-1637">
+On <a href="#comment-1637" title="Permalink to this comment">February 27, 2008  1:59 AM</a>, <a href="http://wanderingbarque.com/nonintersecting" title="http://wanderingbarque.com/nonintersecting" rel="nofollow">Pete Lacey</a>
+said:
+<p>You left off all the business level objections:</p>
+
+<ul>
+<li>No tooling support.</li>
+<li>Does not fit in with my chosen vendor&#8217;s go forward strategy.</li>
+<li>Does not align IT with business</li>
+<li>Does not play nice with my BPM solution</li>
+<li>Does not play nice with my ESB</li>
+<li>Does not have management buy in</li>
+</ul>
+
+
+<div class="comment" id="comment-1638">
+On <a href="#comment-1638" title="Permalink to this comment">February 27, 2008  6:55 PM</a>, pwb
+said:
+<p>&#8220;I couldn’t disagree more&#8221;</p>
+
+<p>Then can you point to any practical, clear &amp; consistent design guidance?</p>
+
+<p>Why does every supposedly RESTful API set vary so much, if there even is general agreement that they are RESTful in the first place?</p>
+
+
+<div class="comment" id="comment-1639">
+On <a href="#comment-1639" title="Permalink to this comment">February 27, 2008  8:19 PM</a>, <a href="/blog/st/">Stefan Tilkov</a>
+
+<a href="/blog/st/" class="commenter-profile"><img src="/mt4/mt-static/images/comment/mt_logo.png" height="16" alt="Author Profile Page" width="16" /></a>
+said:
+<p>I would argue that advice like this</p>
+
+<p><a href="http://www.xml.com/pub/a/2004/12/01/restful-web.html">http://www.xml.com/pub/a/2004/12/01/restful-web.html</a></p>
+
+<p>is much more than you get anywhere in the WS world. </p>
+
+<p>But I plan to write more about these doubts in an article &#8212; I&#8217;ll let all of you know once it&#8217;s online. </p>
+
+
+<div class="comment" id="comment-1646">
+On <a href="#comment-1646" title="Permalink to this comment">March 11, 2008  3:22 PM</a>, <a href="http://home.badc.rl.ac.uk/lawrence/blog" title="http://home.badc.rl.ac.uk/lawrence/blog" rel="nofollow">Bryan</a>
+said:
+<p><a href="http://home.badc.rl.ac.uk/lawrence/blog/2008/01/22/whither_service_descriptions" rel="nofollow">All verbs, no nouns!</a>
+What is that resource then? (And don&#8217;t tell me that mime-types are enough).</p>
+
+
+<div class="comment" id="comment-1652">
+On <a href="#comment-1652" title="Permalink to this comment">March 18, 2008 10:37 PM</a>, <a href="http://www.marcdegraauw.com" title="http://www.marcdegraauw.com" rel="nofollow">Marc de Graauw</a>
+said:
+<p>Obviously you forgot #3 by a well-known authority in the field :-)</p>
+
+<p><a href="/blog/st/2007/06/11/ws_advantages.html" rel="nofollow">/blog/st/2007/06/11/ws_advantages.html</a></p>
+
+
+<div class="comment" id="comment-1653">
+On <a href="#comment-1653" title="Permalink to this comment">March 18, 2008 11:01 PM</a>, <a href="/blog/st/">Stefan Tilkov</a>
+
+<a href="/blog/st/" class="commenter-profile"><img src="/mt4/mt-static/images/comment/mt_logo.png" height="16" alt="Author Profile Page" width="16" /></a>
+said:
+<p>Thanks for the reminder :-) Let me take on those that I consider unfounded first. This is one of the few that I believe has merit.</p>
+
+
+</section>
+

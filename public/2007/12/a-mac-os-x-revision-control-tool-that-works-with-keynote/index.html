@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2007/12/a-mac-os-x-revision-control-tool-that-works-with-keynote/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>A Mac OS X Revision Control Tool that Works with Keynote? [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>A Mac OS X Revision Control Tool that Works with Keynote?</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">Dec 30, 2007</time></small><p>
+	</header>
+	<section>
+	  <p>The title says it all: I&#8217;m still trying to find a Mac OS X-compatible version control tool that can handle the file format of e.g. Keynote and other Mac apps (such as Pages, OmniGraffle, etc.). What these have in common is that they don&#8217;t store their content as files, but as directories (packages, in Mac OS X speak). They appear as single documents in the Mac finder, but they are directories &#8212; and they get overwritten each time you do a File->Save (which means all those nice little .svn subdirectories are lost).</p>
+
+<p>It seems that CVS, Subversion, and Mercurial all use this file-based approach. Any pointer to alternatives would be greatly appreciated &#8230; </p>
+
+<section class="comments">
+
+
+
+<div class="comment" id="comment-1553">
+On <a href="#comment-1553" title="Permalink to this comment">December 30, 2007  9:47 PM</a>, Steven Parkes
+said:
+<p>Mercurial uses a .hg directory, but only in the root. So if you create a mercurial repository (directory), you can then store directories underneath it and it won&#8217;t matter that the entire directory gets rewritten every time. Same is true for bzr.</p>
+
+
+<div class="comment" id="comment-1554">
+On <a href="#comment-1554" title="Permalink to this comment">December 30, 2007 10:36 PM</a>, <a href="/blog/st/">Stefan Tilkov</a>
+
+<a href="/blog/st/" class="commenter-profile"><img src="/mt4/mt-static/images/comment/mt_logo.png" height="16" alt="Author Profile Page" width="16" /></a>
+said:
+<p>Excellent - thanks! I&#8217;ll try Mercurial, then.</p>
+
+
+<div class="comment" id="comment-1555">
+On <a href="#comment-1555" title="Permalink to this comment">December 31, 2007  1:10 AM</a>, <a href="http://plasmasturm.org/" title="http://plasmasturm.org/" rel="nofollow">Aristotle Pagaltzis</a>
+
+<a href="http://plasmasturm.org/" class="commenter-profile"></a>
+said:
+<p>Git works the same way.</p>
+
+
+<div class="comment" id="comment-1559">
+On <a href="#comment-1559" title="Permalink to this comment">January  2, 2008  9:56 PM</a>, <a href="http://somethingsimilar.com" title="http://somethingsimilar.com" rel="nofollow">Jeff Hodges</a>
+said:
+<p>Bazaar (which just went 1.0) also uses a .bzr in the root directory.</p>
+
+
+</section>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

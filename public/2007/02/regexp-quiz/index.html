@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2007/02/regexp-quiz/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>Regexp Quiz [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>Regexp Quiz</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">Feb 19, 2007</time></small><p>
+	</header>
+	<section>
+	  <p>Quick, what&#8217;s this:</p>
+
+<p><code>^[-!#$%&amp;mp;'*+/0-9=?A-Z^_a-z{|}~](\.?[-!#$%&amp;mp;'*+/0-9=?A-Z^_a-z{|}~])*@[a-zA-Z](-?[a-zA-Z0-9])*(\.[a-zA-Z](-?[a-zA-Z0-9])*)+$</code></p>
+
+<p>Reply in the comments if you know what this regexp matches. Bonus point if you catch an omission.</p>
+
+<section class="comments">
+
+<div class="comment" id="comment-1188">
+On <a href="#comment-1188" title="Permalink to this comment">February 19, 2007  5:39 PM</a>, <a href="http://www.bofh.org.uk/" title="http://www.bofh.org.uk/" rel="nofollow">Piers Cawley</a>
+said:
+<p>It looks, at first glance, like a simple minded email address matcher. A fully compliant RFC822 format matcher runs to something like a page in length.</p>
+
+<p>Even if it isn&#8217;t, I have the feeling you should be backwhacking your &#8216;.&#8217;s, and I doubt you really want &amp;amp; in your character ranges.</p>
+
+
+<div class="comment" id="comment-1189">
+On <a href="#comment-1189" title="Permalink to this comment">February 21, 2007  4:09 AM</a>, <a href="http://jtauber.com/" title="http://jtauber.com/" rel="nofollow">James Tauber</a>
+said:
+<p>At first I thought email address too but the portion before the @ seems too permissive and the portion after the @ too restrictive. The portion after the @ might follow RFC1035, but it would exclude things like 37signals.com as domain names.</p>
+
+
+<div class="comment" id="comment-1190">
+On <a href="#comment-1190" title="Permalink to this comment">February 21, 2007  7:49 AM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>It is, in fact a simple-minded email regexp &#8212; I just found it funny that even at this length, it&#8217;s only a tiny portion of the real one:</p>
+
+<p><a href="http://www.ex-parrot.com/~pdw/Mail-RFC822-Address.html" rel="nofollow" /><a href="http://www.ex-parrot.com/~pdw/Mail-RFC822-Address.html" rel="nofollow">http://www.ex-parrot.com/~pdw/Mail-RFC822-Address.html</a></p>
+
+
+</section>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

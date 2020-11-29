@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2007/05/does-rest-need-a-service-description-language/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>Does REST Need a Service Description Language? [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>Does REST Need a Service Description Language?</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">May 28, 2007</time></small><p>
+	</header>
+	<section>
+	  <p><a href="http://plasmasturm.org/log/460/">Aristotle Pagaltzis</a>:</p>
+
+<blockquote>
+<p>I think describing a RESTful service with a WSDL-like language is a contradiction in terms.</p>
+</blockquote>
+
+<p>In principle, I agree; for pragmatic reasons, I believe efforts like <a href="https://wadl.dev.java.net/">WADL</a>  make sense, if only to have an answer to one of the most obvious questions for new REST converts :-)</p>
+
+<section class="comments">
+
+
+
+<div class="comment" id="comment-1317">
+On <a href="#comment-1317" title="Permalink to this comment">May 29, 2007  9:11 AM</a>, Peter
+said:
+<p>I&#8217;m not a fan of WSDL, how it looks like and its complexity. But I&#8217;m still a fan of generating client stubs and server skeletons out of a service description. If you have hundreds of services, you don&#8217;t want to implement them manually, do you? At least not the xml binding. Sometimes it&#8217;s hard to find a tool in the WSDL world which works and fits your needs, but I found one (at least for my needs).
+In a corporate SOA world it&#8217;s crucial to have service descriptions.
+And I believe even with REST it&#8217;s usefull to know which &#8220;Resources&#8221; are available, what verbs they &#8220;understand&#8221; and what data (xml-schemas or mime-types, &#8230;) they expect and return.
+Maybe I should have a look into WADL and the Atom Publishing Protocol.</p>
+
+
+<div class="comment" id="comment-1318">
+On <a href="#comment-1318" title="Permalink to this comment">May 29, 2007  1:27 PM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>Due to the tight coupling usually created by stub and skeleton generation, I do not advocate this at all. But if you are a fan of this, at least the XML binding side is independent from WSDL, as it only relies on XML Schema. In other words: you can use e.g. JAXB with a RESTful service that consumes or produces XML, without WSDL, WADL, or any other alternatives.</p>
+
+
+<div class="comment" id="comment-1319">
+On <a href="#comment-1319" title="Permalink to this comment">May 29, 2007  1:59 PM</a>, Peter
+said:
+<p>Yes, that&#8217;s what makes finding a suitable framework hard to find: Loose Coupling</p>
+
+
+<div class="comment" id="comment-1320">
+On <a href="#comment-1320" title="Permalink to this comment">May 29, 2007  4:13 PM</a>, <a href="http://service-architecture.blogspot.com" title="http://service-architecture.blogspot.com" rel="nofollow">Steve Jones</a>
+said:
+<p>Contracts are a good thing, a proven good thing, I&#8217;m still confused as to why REST people don&#8217;t like them.  Its almost a theory and practice thing, in THEORY they aren&#8217;t required, in practice they are.</p>
+
+
+<div class="comment" id="comment-1321">
+On <a href="#comment-1321" title="Permalink to this comment">May 29, 2007  6:16 PM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>The question is not about a contract as documentation, but rather about a contract in machine-processable form as a source e.g. for code generation. But I believe I&#8217;ll try to address this and more arguments in a follow-up post&#8230;</p>
+
+
+<div class="comment" id="comment-1322">
+On <a href="#comment-1322" title="Permalink to this comment">May 29, 2007  8:15 PM</a>, <a href="http://www.markbaker.ca" title="http://www.markbaker.ca" rel="nofollow">Mark Baker</a>
+said:
+<p>&#8220;if only to have an answer to one of the most obvious questions for new REST converts&#8221;</p>
+
+<p>We already have that answer; HTTP 2616 does a great job at describing the interface to <em>Web</em> services.</p>
+
+
+<div class="comment" id="comment-1323">
+On <a href="#comment-1323" title="Permalink to this comment">May 29, 2007  9:07 PM</a>, <a href="http://appside.blogspot.com" title="http://appside.blogspot.com" rel="nofollow">Erik Johnson</a>
+said:
+<p>Like I happened to mention in a post just today, I&#8217;m worried someone will try and prop up some sort of BPEL + URI handiwork and call it REST 1.0.  It seems to me that people attracted to REST (in whatever form) are rebelling against interface-based programming more than WS-* itself &#8212; at least that&#8217;s my excuse.  The constructs needed to describe REST services are already here.  But making sure your URI strategy is coherent and that callers can query for relevant payload formats out-of-band is still up to you.</p>
+
+
+<div class="comment" id="comment-1324">
+On <a href="#comment-1324" title="Permalink to this comment">May 30, 2007  9:02 AM</a>, Peter
+said:
+<p>I&#8217;m very interested in how a &#8220;typical&#8221; REST development process looks like (if such a thing exists). Up till now I have to stick to WS-* at work.
+How would a cross project interaction work in the REST world? What does the service provider project team give to the service consumer project team? Just a set of URIs? How do they implement the REST service clients? Manually, using CommonsHTTPClient with an XML Mapping framework of choice?
+Do I stress the toolsupport too much?</p>
+
+
+<div class="comment" id="comment-1325">
+On <a href="#comment-1325" title="Permalink to this comment">May 30, 2007 12:22 PM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<blockquote>
+<p>Do I stress the toolsupport too much?</p>
+</blockquote>
+
+<p>Yes, I think you do &#8212; after all, do you hand over a WSDL without any accompanying documentation when you use WS-*? Chances are you provide the other team with some documentation, either inline or separate, that they have to read before using your service. A great way to document your resources is to return HTML when someone does a GET &#8230;</p>
+
+<p>CommonsHttpClient is a good choice. Whether or not you need an XML binding framework is orthogonal.</p>
+
+
+<div class="comment" id="comment-1326">
+On <a href="#comment-1326" title="Permalink to this comment">May 30, 2007  2:11 PM</a>, Peter
+said:
+<p>Yes, you&#8217;re right. WSDL is not enough as documentation for the service consumers.
+Usually we provide the complete client api :) Which was not the intention from the beginning. But most colleagues ask for example code in their preferred language and not an interface description.
+Then we come to the question why we used WSDL in the first place?
+There is one thing were it really works. I use soapUI a lot for testing. Point it to your SOAP Service, append &#8220;?wsdl&#8221; and let it generate a sample request.</p>
+
+
+<div class="comment" id="comment-1327">
+On <a href="#comment-1327" title="Permalink to this comment">May 30, 2007  4:14 PM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>Things are similar around here, except that I don&#8217;t need to append &#8220;?wsdl&#8221; to get an HTML form :-)</p>
+
+
+<div class="comment" id="comment-1328">
+On <a href="#comment-1328" title="Permalink to this comment">May 31, 2007  8:12 AM</a>, Peter
+said:
+<p>But when do you use GET to retrieve the service documentation and when do you use GET (in a REST sense) to just read the resource?
+If the ID is present or not?</p>
+
+
+<div class="comment" id="comment-1329">
+On <a href="#comment-1329" title="Permalink to this comment">May 31, 2007 12:12 PM</a>, <a href="http://www.base4.net/blog.aspx?ID=441" title="http://www.base4.net/blog.aspx?ID=441" rel="nofollow">Alex</a>
+said:
+<p>&#8230;I basically re-iterated Stefan Tilkov’s statement that if for pragmatic reasons only WADL makes sense&#8230;</p>
+
+
+<div class="comment" id="comment-1330">
+On <a href="#comment-1330" title="Permalink to this comment">May 31, 2007 12:57 PM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>Peter, typically an HTML representation of the resource will contain a form to interact with it, and documentation either inline or via links. The HTML is returned when a browser issues a GET (because what the content negotiation typically will lead to). When interacting with the same resource from the command line (using curl or wget) or from some other application, the Accept: header will be set to e.g. application/xml+..., and a different representation will be returned. The idea of links, though, is applicable in both cases.</p>
+
+
+<div class="comment" id="comment-1331">
+On <a href="#comment-1331" title="Permalink to this comment">June  1, 2007  2:07 AM</a>, <a href="http://Stateless-Crime-And-Validation" title="http://Stateless-Crime-And-Validation" rel="nofollow">Rectangle</a>
+said:
+<p>I love the soul that states: &#8220;We already have that answer; HTTP 2616 does a great job at describing the interface to Web services.&#8221;</p>
+
+<p>For one, I wonder how a Chinese guy accesses URIs and thinks in terms of an ASCII character set. Ops, that will change (versioning your REST enemy)</p>
+
+<p>While that Form reference made me laugh (hey it is ASP.NET bloat after all), you have to note that input form does nothing on validation, very little on typing, it is absolute horror on any known infrastructure (including the &#8216;REST invention&#8217; CGI :-), and as such: it strongly disables mental activity. (typing that RESTful shooting)</p>
+
+<p>Furthermore, it leaves the HTML (5 is a disaster, despite attempting to solve the one above) to run scott free with invalid documents and user-agent nightmares, but hey you get some local validation that won&#8217;t matter as you will have to do it yet again on every intermediary (rand()-based safety).</p>
+
+<p>Not to forget, how do you validate that form input today, still parsing strings? Are you confident to put it up on the web for every single repetition you have to do to make sure it is all &#8216;safe&#8217;? Great! (CGI is making a comeback but then why bother with any runtime).</p>
+
+<p>And lastly a question: who on earth is making money from these debates?</p>
+
+<p>Hasn&#8217;t anyone heard of people not bothering with WSDL, REST, HTTP or HTML? They make money, a lot of outfits that avoided the focus on these &#8216;oh-so-critical-problems&#8217;.</p>
+
+<p>My point? None whatsover.</p>
+
+
+<div class="comment" id="comment-1332">
+On <a href="#comment-1332" title="Permalink to this comment">July 29, 2007  9:23 AM</a>, Ben Kloosterman
+said:
+<p>WSDL is not the problem , its not that complex. Have a look at a wsdl file..( which doesnt have the xsd type information). </p>
+
+<p>The complexity resides in :
+1) SOAP itself ( how it gets the WSDL) - have a look at a conversation through a network anaylyser. </p>
+
+<p>2) xsd and the way different tools handle and generate these. </p>
+
+<p>Wadl is pointless you may as well adopt wsdl it is well supported , but unless you fix 2 you will still be in the same boat as SOAP. </p>
+
+<p>Regards, </p>
+
+<p>Ben</p>
+
+
+<div class="comment" id="comment-1333">
+On <a href="#comment-1333" title="Permalink to this comment">July 29, 2007 10:41 AM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>I admit that I don&#8217;t have any idea what you mean by &#8220;how SOAP gets the WSDL&#8221;. Of course you&#8217;re right regarding WSDL&#8217;s small relevance compared to XSD. But that&#8217;s beside the point, as the discussion here was about a description language for REST &#8212; and WSDL doesn&#8217;t qualify.</p>
+
+
+</section>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

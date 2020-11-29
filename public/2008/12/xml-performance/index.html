@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2008/12/xml-performance/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>XML Performance [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>XML Performance</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">Dec 14, 2008</time></small><p>
+	</header>
+	<section>
+	  <p><a href="http://sites.computer.org/debull/A08dec/saxonica.pdf">An excellent paper</a> (PDF? Why?) by <a href="http://saxonica.blogharbor.com/blog/_archives/2008/12/13/4019383.html">Michael Kay</a> about the performance of his Saxon XQuery processor [via <a href="http://blog.jclark.com/2008/12/saxon-performance.html">James Clark</a>]. Favorite excerpt:</p>
+
+<blockquote>
+<ul>
+<li>Investigate every user-supplied performance problem in depth. There is no better raw material for under-
+standing how the code behaves, and without such understanding there can be no improvement. </li>
+<li>Optimize the code that typical users write, whether it is well-written code or not. Try to educate users
+on how to write code that works well on your product, but recognize that you will only reach a small
+minority.</li>
+<li>Never make performance improvements to the code without measuring the impact. If you cannot measure
+a positive impact, revert the change (easily said, but psychologically very difﬁcult when you’ve put a lot
+of effort in). Keep records of what you learnt in the process. </li>
+<li>Avoid performance improvements that rely on user-controlled switches. Most users (including people who
+publish comparative benchmarks) will never discover the switch exists; of the remainder, a good number
+will set the switch sub-optimally. </li>
+<li>Remember that every optimization you make to your code is likely to require a substantial investment in
+new test material, and even then, is likely to result in several new bugs escaping into the ﬁeld. Do not do
+it unless the gain is worth it. </li>
+<li>Maintain a set of performance regression tests to ensure that performance gains made in one release are
+not lost in the next. </li>
+<li>Separately, maintain tests to show that query optimizations are taking place as intended. In Saxon this
+is done by outputting an XML representation of the query execution plan for test queries, and checking
+assertions about these plans expressed as auxiliary queries. </li>
+</ul></blockquote>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

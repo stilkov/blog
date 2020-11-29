@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Rails"
+date: "2005-03-05T22:55:00+01:00"
+comments: false
+categories: 
+---
+
+<p>An <a href="http://www.slash7.com/flashback/2005/01/oreilly_onlamp.html">excellent introduction</a> to development with <a href="http://www.rubyonrails.com/">Ruby on Rails</a>.</p>
+
+

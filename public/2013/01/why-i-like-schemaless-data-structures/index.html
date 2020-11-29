@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2013/01/why-i-like-schemaless-data-structures/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>Why I like Schemaless Data Structures [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>Why I like Schemaless Data Structures</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">Jan 7, 2013</time></small><p>
+	</header>
+	<section>
+	  <p>Martin Fowler has written an infodeck (which is actually a nice format for these kinds of things) <a href='http://martinfowler.com/articles/schemaless/'>on schemaless databases and in-memory structures</a>. I agree with most of it, at least as far as database design is concerned. But I believe there are two important concerns missing, and that&rsquo;s the reason why I don&rsquo;t agree with the conclusion. Note that my concern is not really with the database part, but with the extrapolation to in-memory data structures, so you should read the following with this in mind:</p>
+
+<p>First, a major effect of using &ldquo;schemaless&rdquo;, simple data structures is loose&reg; coupling between pieces of logic (functions) operating on them. If I pass a map to a piece of code, that code will extract what it&rsquo;s interested in, possibly transforming the data in the process (ideally into a new data structure using efficient copy strategies). It will thus only depend on what it actually uses. Take the following Clojure code as an example (this would be doable similarly in Python, Ruby, Perl, Scala and even Java, although with way more boilerplate in it).</p>
+
+<pre><code>;; &quot;projects&quot; is a Clojure set containing three maps
+(def projects #{
+                {:id &quot;1&quot;,
+                 :kind :time-material,
+                 :description &quot;Consulting for BigCo&quot;,
+                 :budget 25000,
+                 :team [:joe, :chuck, :james]}
+                {:id &quot;2&quot;,
+                 :kind :fixed-price,
+                 :description &quot;Development for Startup&quot;,
+                 :budget 100000,
+                 :team [:john, :chuck, :james, :bill]}
+                {:id &quot;3&quot;,
+                 :kind :fixed-price,
+                 :description &quot;Clojure Training&quot;,
+                 :budget 3000,
+                 :team [:joe, :john]}})
+
+;; all-members returns all team members in all projects
+(defn all-members
+  [projects]
+  (reduce conj #{} (flatten (map :team projects))))
+
+;; yields #{:chuck :joe :james :john :bill}
+</code></pre>
+
+<p>The code and the data structure are coupled just by one map key (<code>:team</code> in the example); I can add other data elements without problems as long as I maintain that contract. In languages such as Clojure, a huge library of useful functions to manipulate data rely on this fact (<code>conj</code>, <code>flatten</code>, <code>map</code> and <code>reduce</code> in this case.)</p>
+
+<p>More importantly, it&rsquo;s possible (and actually quite common) to use generic data structures at boundaries, such as between modules/namespaces. At their interfaces, these modules accept simple data structures, not complex object graphs. In fact this makes it a lot easier to evolve a single-process program into a distributed one: The kinds of interfaces you use internally resemble what you&rsquo;d be using remotely (in fact there&rsquo;s a very nice mapping between a nested Clojure, Ruby or Python data structure and e.g. JSON.)</p>
+
+<p>Some languages, such as Clojure, take this to an extreme: Almost everywhere you&rsquo;d create a new class in an OO language, you&rsquo;d just use a simple data structure, such as map, a vector, set or list. In a statically typed limited OO language such as Java, you will almost always end up creating new classes. Of course you can use Map in Java, too, but it would not be idiomatic (and the reverse is true for Clojure as well, which enables you to create &ldquo;normal&rdquo; Java classes, too.) Some languages are somewhere in the middle, as shown by the Ruby code in Martin&rsquo;s example. But I find it not very useful to favor one style over the other by default, unless you consider the language you&rsquo;re using.</p>
+
+<p>Secondly, the use of custom-built data structures &ndash; and that&rsquo;s what a schema boils down to if viewed from a programming language standpoint &ndash; always means additional code. You might consider this irrelevant, but it&rsquo;s nicely shown in interfaces such as those of WSGI, Rack or Ring when you compare them to their equivalent in Java: A simple map containing a method or response code, headers and a body vs. different concrete classes for requests with tons of specific attributes (and bonus getters and setters). Restricting the use of schemaless design to the cases where you actually need dynamic variability misses this advantage.</p>
+
+<p>In summary, I think of Martin&rsquo;s points are valid, and he definitely spent more time on articulating his conclusion than I did in writing this comment. But I think those two aspects &ndash; coupling and verbosity &ndash; are worth considering when you need to decide which approach to use.</p>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

@@ -1,0 +1,24 @@
+---
+layout: post
+title: "X#"
+date: "2003-07-30T11:21:00+01:00"
+comments: false
+categories: 
+---
+
+<p>Via <a href="http://weblogs.cs.cornell.edu/AllThingsDistributed/archives/000098.html" title="All Things Distributed: Day two at MSF">Werner Vogel</a>,
+I came across <a href="http://www.research.microsoft.com/~emeijer/Papers/XS.pdf">this paper about X#</a>,
+a new programming language for the CLR.</p>
+<p>The basic idea is similar to the one in ECMAScript XML extensions: Turn
+XML (as well as, in case of X#, SQL) data into first class citizens in the programming language, like this:</p>
+<blockquote>
+<pre>
+Table t =
+&lt;table&gt;
+&lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;HP&lt;/th&gt;&lt;/tr&gt;
+{pokemon}
+&lt;/table&gt;;
+</pre>
+</blockquote>
+<p>In this case, the literal XML data is even strongly typed (it has type Table), which is an interesting notion.</p>
+

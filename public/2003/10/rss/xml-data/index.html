@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2003/10/rss/xml-data/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>RSS/XML-Data [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>RSS/XML-Data</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">Oct 2, 2003</time></small><p>
+	</header>
+	<section>
+	  <p>There's <a href="http://radio.weblogs.com/0113297/2003/10/01.html#a236" title="Jeremy Allaire's Radio">a proposal</a> from Jeremy Allaire to use RSS in combination with XML-RPC to create a new format.<br />
+Now, I may be (and probably am) missing a lot of subtle issues here, but my understanding is that the goal is to extend RSS (via namespaces) with a way to transport arbitrary typed data. By this I mean that the XML that is sent along doesn't follow a schema specific to the data being sent, but rather a generic (or meta) schema, very similar to the way RDF is built on top of XML, but doesn't really use it. (So the namespace is something like "generic-xml-data-format" instead of "order" or "bookdescription" or what-have-you).<br />
+If this is true, I believe that it's another case of an illusion that seems to be floating around quite a lot - that you can solve the problems of applications communicating with each other by using some sort of generic format, while in reality it only shifts the work one meta level up. So the protocol implementation won't deal with specific types, but instead your application will do it. And this is innovation? I don't think so.</p>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

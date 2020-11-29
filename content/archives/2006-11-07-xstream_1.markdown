@@ -1,0 +1,32 @@
+---
+layout: post
+title: "XStream"
+date: "2006-11-07T10:23:00+01:00"
+comments: false
+categories: 
+---
+
+<p>Via <a href="http://www.cafeconleche.org/#November_6_2006_38102">Elliotte Rusty Harold</a>, I came across XStream:</p>
+
+<blockquote>
+<p>XStream is a simple functional transformation language for XML documents. XML transformations written in XStream are evaluated in streaming: when possible, parts of the output are computed and produced while the input document is still being parsed. Some transformations can thus be applied to huge XML documents which would not even fit in memory.</p>
+</blockquote>
+
+<p>Very nice; I&#8217;ll need to try this out next time I have a bunch of XML files to transform and XSLT seems to heavy.</p>
+
+<section class="comments">
+
+<div class="comment" id="comment-1089">
+On <a href="#comment-1089" title="Permalink to this comment">November  7, 2006 11:30 AM</a>, <a href="http://mernst.org/blog" title="http://mernst.org/blog" rel="nofollow">Matthias</a>
+said:
+<p>For the language-constrained crowd (XStream is an OCAML library), there&#8217;s STX (Streaming Transformations for XML) with an implementation in Java (http://joost.sourceforge.net/). It&#8217;s more of a language (streamable stylesheet alternative to XSL) than a library. I haven&#8217;t used it yet. I do all my transformations in SAX :-)</p>
+
+
+<div class="comment" id="comment-1090">
+On <a href="#comment-1090" title="Permalink to this comment">November  7, 2006  1:56 PM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>Good link, thanks &#8212; although even if you don&#8217;t know how to spell OCaml, you can still use XStream as it&#8217;s just a command line application.</p>
+
+
+</section>
+

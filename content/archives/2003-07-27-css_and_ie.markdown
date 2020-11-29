@@ -1,0 +1,10 @@
+---
+layout: post
+title: "CSS and IE"
+date: "2003-07-27T22:08:00+01:00"
+comments: false
+categories: 
+---
+
+<p>A nice hack to get <a href="http://kalsey.com/2003/07/css_dotted_borders_in_ie/" title="CSS dotted borders in IE :: Kalsey Consulting Group">CSS dotted borders in IE</a>.</p>
+

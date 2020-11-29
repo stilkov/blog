@@ -1,0 +1,15 @@
+---
+layout: post
+title: "iRDF"
+date: "2006-04-01T09:16:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://www.macgeekery.com/opinion/screen_door_on_a_submarine/30th_anniversary_announcement_irdf">Finally</a>: </p>
+
+<blockquote>
+<p>&#8220;Steve was nice enough to give Apple a license to his patented RDF technology &#8211; that&#8217;s &#8216;Reality Distortion Field&#8217; for you newcomers,&#8221; said Apple VP Phil Schiller as he introduced the new iRDF box from Apple at the 30th Anniversary event today. &#8220;But don&#8217;t worry, you won&#8217;t remember a thing about it when you leave here today. You&#8217;ll just feel really exited about it and try your best to buy one before the effect wears off.&#8221;</p>
+</blockquote>
+
+

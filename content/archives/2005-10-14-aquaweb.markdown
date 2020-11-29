@@ -1,0 +1,11 @@
+---
+layout: post
+title: "AquaWeb"
+date: "2005-10-14T21:23:00+01:00"
+comments: false
+categories: 
+---
+
+<p>A Mac OS X UI clone - <a href="http://osx.portraitofakite.com/logon.htm">in your browser</a>! Totally useless, but a nice demo of what you can do in modern browsers (via <a href="http://www.windley.com/archives/2005/10/thin_is_in.shtml">Phil Windley</a>).</p>
+
+

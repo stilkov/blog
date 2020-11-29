@@ -1,0 +1,10 @@
+---
+layout: post
+title: "JGoodies"
+date: "2003-07-27T21:50:00+01:00"
+comments: false
+categories: 
+---
+
+<p>I came across Karsten Lentzsch's <a href="http://www.jgoodies.com/freeware/jdiskreport/index.html">JDiskReport</a> something like a year ago, and was very impressed by the way he made a Java Swing app look great. Now it seems he has founded a company - <a href="http://www.jgoodies.com/index.html" title="JGoodies :: Home">JGoodies</a>. Very nice, and something to watch.</p>
+

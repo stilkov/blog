@@ -1,0 +1,11 @@
+---
+layout: post
+title: "WAIF"
+date: "2005-07-27T22:44:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://iandavis.com/2005/web-description/waif-20050727">WAIF</a> is another very interesting attempt at a RESTful web description language &#8212; from a first glance, the one I like best so far.</p>
+
+

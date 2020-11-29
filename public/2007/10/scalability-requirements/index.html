@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2007/10/scalability-requirements/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>Scalability Requirements [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>Scalability Requirements</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">Oct 8, 2007</time></small><p>
+	</header>
+	<section>
+	  <p>In passing, <a href="http://www.25hoursaday.com/weblog/2007/10/06/ThoughtsOnAmazonsInternalStorageSystemDynamo.aspx">Dare Obasanjo</a> makes a very good point (talking about the inapplicability of RDBMS systems to solve very-large-scale requirements):</p>
+
+<blockquote>
+<p>Luckily, there are only a handful of companies and Web services in the world that need to operate at that scale.</p>
+</blockquote>
+
+<p>While I believe &#8220;a handful&#8221; is a little too restrictive, I&#8217;m pretty sure that for the vast majority of applications, an RDBMS is the right choice (if simple file-based store isn&#8217;t sufficient).</p>
+
+<section class="comments">
+
+
+
+<div class="comment" id="comment-1475">
+On <a href="#comment-1475" title="Permalink to this comment">October 13, 2007 11:18 PM</a>, <a href="http://patricklogan.blogspot.com" title="http://patricklogan.blogspot.com" rel="nofollow">Patrick Logan</a>
+said:
+<p>I think a number of these ideas also apply to maintainability, in particular the ability to evolve components more independently than tends to be the case in the IT data centers I am familiar with (and which seem to be the norm, from comparing notes).</p>
+
+
+<div class="comment" id="comment-1476">
+On <a href="#comment-1476" title="Permalink to this comment">October 14, 2007 12:31 AM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>Agreed &#8212; my point is probably more organizational, or even political, then technical; reasons for choosing something other than an RDBMS would have to be <em>extremely</em> good.</p>
+
+
+</section>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

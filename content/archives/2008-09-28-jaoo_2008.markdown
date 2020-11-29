@@ -1,0 +1,13 @@
+---
+layout: post
+title: "JAOO 2008"
+date: "2008-09-28T20:11:00+01:00"
+comments: false
+categories: 
+---
+
+<p>I'm heading of to <a href="http://jaoo.dk/conference/">JAOO in Århus, Denmark</a>, tomorrow morning – my favorite conference (and I do know quite a few). I'll be part of <a href="http://jaoo.dk/presentation/Cloud+Panel+Discussion">a panel on cloud computing</a> on Monday and host a half-day track on REST on Tuesday, but I'll also make sure to attend lots of other sessions. </p>
+
+<p>The speakers in <a href="http://jaoo.dk/tracks/show_track.jsp?trackOID=206">the REST track</a> are <a href="http://iansrobinson.com/">Ian Robinson</a>, <a href="http://blog.springframework.com/arjen/">Arjen Poutsma</a>, and myself – this time, all of us will try to move beyond the basics and avoid any kind of this-vs.-that debate.</p>
+
+

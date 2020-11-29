@@ -1,0 +1,19 @@
+---
+layout: post
+title: "XPath and XML"
+date: "2012-01-14T17:45:00+01:00"
+comments: true
+categories: General
+---
+
+Aristotle Pagaltzis has written <a
+href='http://plasmasturm.org/log/xpath101/'>a very nice and concise XPath intro</a>.
+ Of all the various standards in the XML ecosystem, I
+like XPath best, most of all because it enables interaction with an
+XML document or message in a way that matches <a
+href='http://en.wikipedia.org/wiki/Robustness_principle'>Postel's law</a>: It's a great way to implement code that doesn't break each
+time a minor change is made to an XML format. In fact I'd say it's one
+the few very good reasons to stick with XML instead of adopting JSON
+-- even though there are things like <a
+href='http://goessner.net/articles/JsonPath/'>JSONPath</a>, they don't
+have the tool support and standardization you get from XPath.

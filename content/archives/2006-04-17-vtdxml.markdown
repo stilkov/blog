@@ -1,0 +1,11 @@
+---
+layout: post
+title: "VTD-XML"
+date: "2006-04-17T09:44:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://vtd-xml.sf.net/">VTD-XML</a> is a library that supports <em>in situ</em> XML parsing, i.e. does not create objects representing the XML in memory, supposedly allowing for very efficient processing of largish XML files (via <a href="http://www.cafeconleche.org/#April_13_2006_24294">Elliotte Rusty Harold</a>, who raises some concerns re its XML-compliance).</p>
+
+

@@ -1,0 +1,11 @@
+---
+layout: post
+title: "JBossWS-1.0.0"
+date: "2006-05-06T09:02:00+01:00"
+comments: false
+categories: 
+---
+
+<p>Even more 1.0 Java web services tools: <a href="http://labs.jboss.com/portal/jbossws" title="JBossWS-1.0.0">JBossWS-1.0.0</a> has been <a href="http://jboss.org/jbossBlog/blog/tdiesler/2006/05/03/JBoss_Web_Services_released.txt">released</a>.</p>
+
+

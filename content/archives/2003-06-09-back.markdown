@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Back"
+date: "2003-06-09T21:01:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://www.tbray.org/ongoing/When/200x/2003/05/31/LizardDung" title="Lizard Excreta">Tim Bray</a> writes: </p><blockquote>See, blogs are better than journalism: you can indulge in childish flames and then retract them right away as required.</blockquote><br />
+And I'm back after a week of being cut off from the Web (mostly, that is), and have been reading his postings immediately after going through my e-mail.
+

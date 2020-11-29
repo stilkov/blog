@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Link Dump"
+date: "2007-05-04T20:21:00+01:00"
+comments: false
+categories: 
+---
+
+<p>Again, I need to get rid of way too much stuff that sits un-blogged-about in my news reader &#8230; I&#8217;ll send these as individual postings for a change instead of collecting them here. Since I&#8217;ll likely not have time to do many more next week, I don&#8217;t want them to accumulate too much &#8230; the reason for my absence next week is that we (<a href="/blog/pg/">Phillip</a> and I) will be giving <a href="/resources/ruby-on-rails-schulung-2007" title="innoQ Resources: Professional Ruby on Rails">a two-day course on Ruby on Rails</a> in Munich (Monday and Tuesday), and we&#8217;ll also be attending an <a href="/blog/st/2007/04/16/innoq_events.html" title="Stefan Tilkov's Random Stuff: innoQ Events">innoQ event</a> Thursday and Friday (in Zurich).</p>
+
+

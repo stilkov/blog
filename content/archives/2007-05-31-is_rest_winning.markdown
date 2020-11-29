@@ -1,0 +1,44 @@
+---
+layout: post
+title: "Is REST Winning?"
+date: "2007-05-31T12:52:00+01:00"
+comments: false
+categories: 
+---
+
+<p><em>I just posted this to <a href="http://www.infoq.com/news/2007/05/is-rest-winning">InfoQ</a>:</em></p>
+
+<p>The topic of <a href="http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm" title="Fielding Dissertation: CHAPTER 5: Representational State Transfer (REST)">REST</a> as an alternative way for Web-based integration &#8212; as opposed to Web services, which are perceived by a small, but vocal community to violate the Web&#8217;s principles &#8212; <a href="http://www.infoq.com/REST" title="All Content on InfoQ about REST">has been debated on InfoQ</a> many times before. </p>
+
+<p>The oldest discussions of SOAP vs. HTTP date back <a href="http://discuss.develop.com/archives/wa.exe?A2=ind0003&amp;L=soap&amp;T=0&amp;F=&amp;S=&amp;P=35306" title="SOAP Archives -- March 2000 (#327)">to the year 2000</a>, where #1 evangelist Mark Baker replied to James Snell. As early as 2002, <a href="http://webservices.xml.com/pub/a/ws/2002/02/06/rest.html" title="webservices.xml.com: Second Generation Web Services">Paul Prescod wrote an article</a> claiming that the principles embodied in the Web&#8217;s architecture make it superior to &#8220;DCOM for the Internet&#8221; (his label for SOAP RPC). Since then, the debate has been going on and on, with a <a href="/blog/st/2006/07/31/rest_vs_ws_statistics.html" title="Stefan Tilkov: REST vs. WS Statistics">noticeable tendency</a> that more and more experts support either both the WS-* and REST camps. Discussions here at InfoQ with <a href="http://www.infoq.com/articles/mark-baker-REST" title="InfoQ:
+Give it a REST: Mark Baker on Web Services">Mark Baker</a>, <a href="http://www.infoq.com/articles/sanjiva-rest-myths" title="InfoQ:
+Interview with Sanjiva Weerawarana: Debunking REST/WS-* Myths">Sanjiva Weerawarana</a>, and <a href="http://www.infoq.com/articles/pete-lacey-ws-criticism" title="InfoQ:
+Interview: Pete Lacey Criticizes Web Services">Pete Lacey</a> have received lots of comments, arguing both for and against the merits of the REST approach.</p>
+
+<p>More and more Web services tools, such as <a href="http://ws.apache.org/axis2/0_94/rest-ws.html" title="Axis 2.0 - RESTful Web Services Support">Apache Axis2</a> and <a href="http://netzooid.com/blog/2006/10/27/cxf-rest-support/" title="CXF REST Support">CXF</a>, have started to offer some support for the REST model. Sun <a href="http://www.infoq.com/news/2007/02/jsr-311-java-rest-api" title="InfoQ:
+New JSR Proposed: Java API for RESTful Web Services">has started JSR 311</a> to standardize support for RESTful web applications on the Java platform. Ruby on Rails has supported REST <a href="http://www.infoq.com/news/2007/01/rails-1_2-launch-rest-unicode" title="InfoQ:
+Ruby on Rails 1.2 deepens support to REST and Unicode">since version 1.2</a>. Most recently, <a href="http://www.infoq.com/news/2007/05/wcf-web-programming-model" title="InfoQ:
+The new WCF Web Programming Model supports REST Design">Microsoft&#8217;s support for REST</a> made the news.</p>
+
+<p>In February, the W3C <a href="http://www.infoq.com/news/2007/01/w3c-ws-workshop">organized a workshop</a> where <a href="http://www.w3.org/2007/01/wos-papers/gall" title="Position Paper For the Workshop on Web of Services for Enterprise
+Computing">one of the submission papers</a> (by Nick Gall, a Gartner VP) contained the following claim:</p>
+
+<blockquote>
+<p>Web Services based on SOAP and WSDL are &#8220;Web&#8221; in name only. In fact, they are a hostile overlay of the Web based on traditional enterprise middleware architectural styles that has fallen far short of expectations over the past decade.</p>
+</blockquote>
+
+<p>Now a <a href="http://searchwebservices.techtarget.com/originalContent/0,289142,sid26_gci1256796,00.html" title="Burton sees the future of SOA and it is REST">significant statement in favor of REST</a> comes from none other than Burton Group analyst <a href="http://atmanes.blogspot.com/" title="The View From The Bow">Anne Thomas Manes</a>, who has been one of the most prominent public figures in the Web services space (and also authored <a href="http://safari.oreilly.com/0321185773" title="O'Reilly - Safari Books Online - 0321185773 - Web Services: A Manager's Guide">a book on the topic</a>): </p>
+
+<blockquote>
+<p>If you&#8217;re ready for REST I suggest you jump on board right away and get ahead of the curve [&#8230;] You&#8217;ll have to train your developers in REST principles. You&#8217;ll probably want to adopt one of the new frameworks or help build one yourself to help your developers implement RESTful applications. You definitely need to provide guidance to your people. What you want to do is work to the point where REST becomes the default for all your distributed applications.                    </p>
+</blockquote>
+
+<p>Taking off my editorial hat for a second, I fully admit that I am clearly biased towards REST, so possibly I am perceiving this wrongly. It&#8217;s also entirely possible that Pete Lacey is right and <a href="http://wanderingbarque.com/nonintersecting/2006/11/29/they-cant-hear-you/" title="Pete Lacey&#8217;s Weblog   ::  They can&#8217;t hear you"><em>they can&#8217;t hear you</em></a>. But it seems obvious that REST is significantly gaining mind share among former SOAP/WS-* proponents, and that finally, the vendors have started to support this.</p>
+
+<p>Is REST &#8220;Web services done right&#8221;, and will the WS-* universe disappear and be replaced by Web technology? Is REST just another technology choice, irrelevant in the larger context? Are Web services based on SOAP, WSDL, and WS-* the obvious, correct and undisputed choice for supporting SOA?</p>
+
+<p>What is <em>your</em> opinion? </p>
+
+<p>Let&#8217;s discuss <a href="http://www.infoq.com/news/2007/05/is-rest-winning">over here</a>.</p>
+
+

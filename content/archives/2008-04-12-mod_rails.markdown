@@ -1,0 +1,36 @@
+---
+layout: post
+title: "mod_rails"
+date: "2008-04-12T15:08:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://modrails.com/index.html">This is more than cool</a>:</p>
+
+<blockquote>
+<p>Phusion Passenger — a.k.a. mod_rails — makes deployment of applications built on the revolutionary Ruby on Rails web framework a breeze.</p>
+</blockquote>
+
+<p>If this works as advertised, I can't imagine how it could <em>not</em> become the default Rails deployment option in a manner of weeks.</p>
+
+<section class="comments">
+
+
+
+<div class="comment" id="comment-1678">
+On <a href="#comment-1678" title="Permalink to this comment">April 13, 2008  7:36 AM</a>, <a href="http://blog.jasonwatkins.net" title="http://blog.jasonwatkins.net" rel="nofollow">Jason Watkins</a>
+said:
+<p>I dunno, a lot of us were pretty happy to leave apache behind.</p>
+
+
+<div class="comment" id="comment-1679">
+On <a href="#comment-1679" title="Permalink to this comment">April 14, 2008  5:43 PM</a>, <a href="http://max.jungeelite.de/" title="http://max.jungeelite.de/" rel="nofollow">namxam.myopenid.com</a>
+
+<a href="http://max.jungeelite.de/" class="commenter-profile"></a>
+said:
+<p>For testing purposes, I moved a couple of small / low traffic rails apps to mod_rails. Until now they perform quite well. Memory consumption dropped significantly. The trade off seems to be a small extra time for spawning an rails instance when there wasn&#8217;t a request in some time. But as soon, as the process is up and running, the sites seem to be faster.</p>
+
+
+</section>
+

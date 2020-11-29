@@ -1,0 +1,17 @@
+---
+layout: post
+title: "XSieve"
+date: "2005-09-04T23:08:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://uucode.com/blog/">Oleg Paraschenko</a> has introduced <a href="http://xsieve.sourceforge.net/index.html">XSieve</a>, an XML transformation language that combines XSLT and Scheme. Be warned, though &#8212; in his announcement on the xml-dev mailing list he writes:</p>
+
+<blockquote>
+<p>Everyone isn&#8217;t the audience of XSieve. To use XSLT, one should be very skilled. To use Scheme, one should be very skilled. Therefore, to use XSieve, one should be very very skilled.</p>
+</blockquote>
+
+<p>;-)</p>
+
+

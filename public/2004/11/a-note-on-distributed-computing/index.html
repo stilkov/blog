@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2004/11/a-note-on-distributed-computing/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>A Note on Distributed Computing [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>A Note on Distributed Computing</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">Nov 18, 2004</time></small><p>
+	</header>
+	<section>
+	  <p>I needed to dig <a href="http://research.sun.com/techrep/1994/smli_tr-94-29.pdf">this classical paper</a> up today, which took some time; so I&#8217;m linking to it here for future reference:</p>
+
+<blockquote>
+<p>We argue that objects that interact in a distributed system need to be dealt with in ways that are intrinsically different from objects that interact in a single address space. These differences are required because distributed systems require that the programmer be aware of latency, have a different model of memory access, and take into account issues of concurrency and partial failure. We look at a number of distributed systems that have attempted to paper over the distinction between local and remote objects, and show that such systems fail to support basic requirements of robustness and reliability. These failures have been masked in the past by the small size of the distributed systems that have been built. In the enterprise-wide distributed systems foreseen in the near future, however, such a masking will be impossible. We conclude by discussing what is required of both systems-level and application-level programmers and designers if one is to take distribution seriously. </p>
+</blockquote>
+
+<p>Written 10 years ago as a critique of the <em>location transparency</em> illusion of distributed objects, and even more true for SOA.</p>
+
+<section class="comments">
+
+<div class="comment" id="comment-416">
+On <a href="#comment-416" title="Permalink to this comment">November 18, 2004 10:31 PM</a>, <a href="http://weblogs.asp.net/cweyer/" title="http://weblogs.asp.net/cweyer/" rel="nofollow">Christian Weyer</a>
+said:
+<p>I read this paper just two weeks ago - there is also  a lot of &#8230; well &#8230; &#8220;nonsense&#8221; in it. But the piece you mention is perfectly good..</p>
+
+
+<div class="comment" id="comment-417">
+On <a href="#comment-417" title="Permalink to this comment">November 19, 2004  7:46 AM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>Nonsense? In Waldo&#8217;s paper? How dare you! Heretic! :-)</p>
+
+<p>Seriously though, it&#8217;s been quite a while since I&#8217;ve read it thoroughly (about 5 years ago); I&#8217;ll re-read it now, trying to find something I can&#8217;t agree with &#8230;</p>
+
+
+</section>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

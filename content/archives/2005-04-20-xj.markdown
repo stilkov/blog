@@ -1,0 +1,15 @@
+---
+layout: post
+title: "XJ"
+date: "2005-04-20T22:01:00+01:00"
+comments: false
+categories: 
+---
+
+<p>From <a href="http://www.alphaworks.ibm.com/tech/xj">IBM Alphaworks</a>:</p>
+
+<blockquote>
+<p>XML Enhancements for Java (XJ) are a set of extensions to Java 1.4 that integrate support for XML, XML Schema and XPath 1.0 into the language.</p>
+</blockquote>
+
+

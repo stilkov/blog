@@ -1,0 +1,138 @@
+---
+layout: post
+title: "Switch ..."
+date: "2003-10-27T21:32:00+01:00"
+comments: false
+categories: 
+---
+
+<p>
+After making up my mind for something like a year or two &mdash; a most unusually long time for me &mdash; I finally did it ...
+</p>
+<table cellspacing="0" border="0" cellpadding="0">
+<tr>
+<td nowrap align="left" valign="top" width="130"></td>
+<td nowrap><img src="http://store.apple.com/OrderStatus/Images/titleorderstatus.gif" border="0" align="middle" vspace="0" height="74" hspace="0" alt="Image" width="374" /></td>
+</tr>
+</table>
+<br />
+<table cellspacing="0" border="0" cellpadding="1">
+<tr>
+<td nowrap width="110"></td>
+<td bgcolor="#000000">
+<table cellspacing="0" border="0" bgcolor="#EDEDED" cellpadding="0">
+<tr>
+<td nowrap height="15" colspan="9"><spacer type="BLOCK" height="1" width="1" /></td>
+</tr>
+<tr>
+<td nowrap width="15"><spacer type="BLOCK" height="1" width="1" /></td>
+<td bgcolor="#FFFFFF"><img src="http://store.apple.com/OrderStatus/Images/statusicons01active.gif" border="0" align="middle" vspace="0" height="100" hspace="0" alt="Image" width="100" />
+</td>
+<td nowrap width="15"><spacer type="BLOCK" height="1" width="1" /></td>
+<td bgcolor="#FFFFFF"><img src="http://store.apple.com/OrderStatus/Images/statusicons02.gif" border="0" align="middle" vspace="0" height="100" hspace="0" alt="Image" width="100" /></td>
+<td nowrap width="15"><spacer type="BLOCK" height="1" width="1" /></td>
+<td bgcolor="#FFFFFF"><img src="http://store.apple.com/OrderStatus/Images/statusicons03.gif" border="0" align="middle" vspace="0" height="100" hspace="0" alt="Image" width="100" /></td>
+<td nowrap width="15"><spacer type="BLOCK" height="1" width="1" /></td>
+<td bgcolor="#FFFFFF"><img src="http://store.apple.com/OrderStatus/Images/statusicons04.gif" border="0" align="middle" vspace="0" height="100" hspace="0" alt="Image" width="100" /></td>
+<td nowrap width="15"><spacer type="BLOCK" height="1" width="1" /></td>
+</tr>
+<tr>
+<td nowrap height="15" colspan="9"><spacer type="BLOCK" height="1" width="1" /></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br />
+<table cellspacing="0" border="0" cellpadding="0">
+<tr>
+<td nowrap width="130"></td>
+<td><img src="http://store.apple.com/OrderStatus/Images/subheadorderinformation.gif" border="0" align="middle" vspace="0" height="20" hspace="0" alt="Image" width="130" />
+</td>
+</tr>
+</table>
+<table cellspacing="0" border="0" width="660" cellpadding="0">
+<tr>
+<td nowrap width="130"></td>
+<td nowrap valign="top" width="205"><font size="1"><b>Item</b></font></td>
+</tr>
+<tr>
+<td></td>
+<td colspan="5">
+<hr noshade size="1" /></td>
+</tr>
+<tr>
+<td></td>
+<td align="left"><font size="2"><b>PowerBook G4 15.2inch
+1.25GHz</b></font></td>
+<td align="left"></td>
+<td align="right"></td>
+<td align="center"></td>
+<td align="right"></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td align="left"><font size="1">1.25GHz PowerPC G4</font></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td></td>
+<td align="left"><font size="1">1GB DDR333 SDRAM - 1
+SO-DIMM</font></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td></td>
+<td align="left"><font size="1">80GB Ultra ATA drive
+(4200rpm)</font></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td></td>
+<td align="left"><font size="1">DVD-R/CD-RW</font></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td></td>
+<td align="left"><font size="1">AirPort Extreme Card</font></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td></td>
+<td align="left"><font size="1">Backlit Keyboard &amp; Mac
+OS</font></td>
+<td align="left"></td>
+</tr>
+</table>
+<section class="comments">
+
+<div class="comment" id="comment-89">
+On <a href="#comment-89" title="Permalink to this comment">October 29, 2003  9:19 AM</a>, marcel
+said:
+<p>First switching your system from Windows to Linux and now not enough trouble, changing to Mac. Do you have any other hobbies?</p>
+
+
+<div class="comment" id="comment-90">
+On <a href="#comment-90" title="Permalink to this comment">October 29, 2003  9:25 AM</a>, marcel
+said:
+<p>&#8230; another remark: I want to remember you that your next computer should be a notebook dummy like managers use in Dilbert comics.</p>
+
+
+<div class="comment" id="comment-91">
+On <a href="#comment-91" title="Permalink to this comment">October 29, 2003  7:36 PM</a>, <a href="http://schmidetzki.net" title="http://schmidetzki.net" rel="nofollow">Wolfgang</a>
+said:
+<p>That&#8217;s not fair.
+I&#8217;m still searching for a reason for doing the same &#8230; but &#8220;making up my mind for long time&#8221; &#8230; is that enough reason?
+Probably.</p>
+
+
+<div class="comment" id="comment-92">
+On <a href="#comment-92" title="Permalink to this comment">October 30, 2003 12:06 AM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>Marcel: One more remark of this kind and you&#8217;re fired ;-)
+Wolfgang: I&#8217;ll elaborate on the reasons in a future post.</p>
+
+
+</section>
+

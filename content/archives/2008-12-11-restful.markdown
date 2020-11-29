@@ -1,0 +1,74 @@
+---
+layout: post
+title: "RESTful"
+date: "2008-12-11T23:23:00+01:00"
+comments: false
+categories: 
+---
+
+<p>One of the claims often made against REST is that there's a lot of disagreement around it – that nobody can define whether something is RESTful or not.</p>
+
+<p>I was reminded of this in a recent discussion, and I claim it's <em>bullshit</em>. The REST community actually very easily agrees on whether or not something is RESTful or not when it's put up for judgement. And the nice thing is that you can easily get very close to answering this yourself by looking at a Web API that claims to be "RESTful", and see if it really is using a few simple questions:</p>
+
+<ul>
+<li>Do the URIs actually identify resources, or do they encode operations?</li>
+<li>Are the HTTP verbs – GET, PUT, POST, DELETE – used according to their defined meaning? Or is e.g. a GET used for operations that have side effects a client would not want when following a link?</li>
+<li>Is hypermedia used, i.e. are there links in the representations that a client can follow?</li>
+<li>Are MIME types used to differentiate data types (in Accept and Content-type) headers?</li>
+<li>Are caching and conditional GET supported, i.e. are there appropriate cache control headers and ETags?</li>
+</ul>
+
+<p>I claim that if you answer "yes" less than four times, your API is not RESTful. If you answer yes five times, you may still not have everything 100% correct – but you've built something that's very good compared to the average, and can have meaningful discussions about how to improve it even more.</p>
+
+<p>(Check out these articles for more background: <a href="http://www.infoq.com/articles/rest-introduction">intro</a>, <a href="http://www.infoq.com/articles/rest-anti-patterns">rest anti-patterns</a>.)</p>
+
+<section class="comments">
+
+
+
+<div class="comment" id="comment-1894">
+On <a href="#comment-1894" title="Permalink to this comment">December 12, 2008  5:06 PM</a>, <a href="http://colinjack.lostechies.com" title="http://colinjack.lostechies.com" rel="nofollow">Colin Jack</a>
+said:
+<p>I like this list but wanted to refer you to two other posts:</p>
+
+<p>1) Alan Dean on a RESTful basket (http://alandean.blogspot.com/2008/11/on-restful-basket-state.html).
+2) Roy Fielding on hypertext-driven constraint (http://roy.gbiv.com/untangled/2008/rest-apis-must-be-hypertext-driven) which seems to be enforce more than you do here.</p>
+
+<p>I only mention them as from what I&#8217;ve seen different people do mean different things when they describe something as RESTful, maybe the differences are subtle though?</p>
+
+<p>Also when you use the term RESTful do you always mean REST + HTTP, just interested on this point.</p>
+
+<p>I also want to report two issues with the blog software you are using:</p>
+
+<p>1) Failing to type in the captcha code correctly takes you to an error page but gives you absolutely no way to get the text you typed in back. I&#8217;ve now typed this entire post in twice and it made more sense the first time :)
+2) I now have two Movable Types accounts but neither let me login despite me asking it to generate new passwords, it won&#8217;t let me login using my OpenID either.</p>
+
+
+<div class="comment" id="comment-1896">
+On <a href="#comment-1896" title="Permalink to this comment">December 12, 2008  5:55 PM</a>, <a href="/blog/st/">Stefan Tilkov</a>
+said:
+<p>regarding 1) I&#8217;m with Subbu (if you look at his comments to Alan&#8217;s post) – I prefer to model a shopping cart as a resource in its own right. But this is IMO not  a critical issue, more of a design decision.</p>
+
+<p>regarding 2) (Roy&#8217;s post): Who am I to disagree with Roy, as anything he says about REST is almost right by defintiion. But while I believe I get his points and agree with them, I also agree with Sam Ruby that there are degrees of compliance here (see <a href="http://intertwingly.net/blog/2008/10/21/Progressive-Disclosure).">http://intertwingly.net/blog/2008/10/21/Progressive-Disclosure).</a> Thanks for pointing me to the post again, though, it&#8217;s got great comments and I&#8217;m learning a lot reading through them right now.</p>
+
+<p>As to &#8220;REST&#8221; and &#8220;RESTful&#8221;, I almost exclusively use them to describe REST as supported by HTTP, or HTTP and other Web standards used in a RESTful way, unless the distinction to REST the architectural style is important.</p>
+
+<p>And finally: sorry about your commenting trouble, I&#8217;ll try to fix it later. </p>
+
+
+<div class="comment" id="comment-1898">
+On <a href="#comment-1898" title="Permalink to this comment">December 13, 2008  1:39 PM</a>, <a href="http://colinjack.lostechies.com" title="http://colinjack.lostechies.com" rel="nofollow">Colin Jack</a>
+said:
+<p>Ta for taking the time to reply and I like the idea of degrees of compliance, I wonder how far you can go without losing the architectural advantages that REST provides though. </p>
+
+
+<div class="comment" id="comment-1899">
+On <a href="#comment-1899" title="Permalink to this comment">December 13, 2008  1:55 PM</a>, <a href="http://colinjack.blogspot.com" title="http://colinjack.blogspot.com" rel="nofollow">Colin Jack</a>
+said:
+<p>One more comment, you don&#8217;t mention standard media/content types explicitly but some people seem to see that as key. As an example Duncan Cragg (http://duncan-cragg.org/blog/post/content-types-and-uris-rest-dialogues/) has explained his views on it in some detail.</p>
+
+<p>Actually in general the I think the REST oriented design of content-types and schemas is inadequately explained. Mind you I find many things are inadequately explained which is why I&#8217;m glad some of you are now writing books! :)</p>
+
+
+</section>
+

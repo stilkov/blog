@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2003/12/information-hiding-in-web-services/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>Information Hiding in Web Services [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>Information Hiding in Web Services</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">Dec 15, 2003</time></small><p>
+	</header>
+	<section>
+	  <p><a href="http://radovanjanecek.net/blog/">Radovan</a> has written an interesting <a href="http://radovanjanecek.net/blog/archives/000032.html" title="Radovan Janecek: Nothing Impersonal: Flying Data and Business Process">piece entitled Flying Data and Business Process</a>, which reminded me of some thoughts I had a while ago.</p>
+
+<p>If you look at some of the stuff written about Web services, or XML in general, you might get the feeling that there is a huge conflict between different views on how to architect systems &#8220;the right way&#8221;. I don&#8217;t believe that this is necessarily the case; I&#8217;ll try to elaborate a bit.</p>
+
+<p>If you follow accepted design patterns in an object-oriented approach, you are likely to hide a lot of detail between interfaces. Objects are responsible for doing something; what private data they use remains hidden to the outside user.</p>
+
+<p>A component-based approach enhances this idea by creating components as larger entities (in the broadest sense of the term) that hide a lot of both operations and data behind a few, coarse-grained methods. It&#8217;s a pretty well-accepted fact that this coarse-grained aspect is a critical factor for achieving useful component abstractions; this is enhanced enormously once you are talking about components that can be invoked remotely, as the cost of operation invocation becomes ridiculously high.</p>
+
+<p>What, then, is a service? Does it have the same granularity as a component, as approaches that simply turn J2EE session beans into SOAP-accessible service implementations seem to suggest? I don&#8217;t think that this is the right way, and I seem to be not alone with this view. The emphasis on <em>data</em> in more advanced service approaches shows that for one, the granularity is even higher, and additionally, that the data becomes much more important than a set of operations.</p>
+
+<p>Should we thus abandon OO and CBD approaches? Is the answer to expose all of our data in the form of XML documents?</p>
+
+<p>Unsurprisingly, I don&#8217;t think so. </p>
+
+<p>Just as once you are talking about components, it becomes irrelevant whether you have implemented your component with a procedural or object-oriented language, a service consumer couldn&#8217;t care less about that type of component or app server or runtime environment you used to implement your service. But still, this doesn&#8217;t mean that you should simply expose all of your implementation data, since this is going the tightest coupling one can imagine &mdash; a coupling between a client and the utmost implementation detail: the persistence schema.</p>
+
+<p>So what am I getting at?</p>
+
+<p>My view is that while the by now classic approach of hiding information and exposing only the absolute minimum still holds true for the <em>most</em> of the data, you should treat the data used for <em>interaction</em> in a loosely-coupled scenario differently. Objects are an excellent implementation technique. Components, especially those deployed in an advanced infrastructure, such as a J2EE application server, greatly enhance your productivity by freeing you of tedious middleware-related tasks. But neither are in any way appropriate for communication across company boundaries, and this is the place where you should aim for very few, document-oriented service interfaces.</p>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

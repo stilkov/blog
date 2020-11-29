@@ -1,0 +1,111 @@
+---
+layout: post
+title: "\"RESTful\" Transactions"
+date: "2009-03-16T08:14:00+01:00"
+comments: false
+categories: 
+---
+
+<p>The title may well qualify as an oxymoron, but I'm sure <a href="http://www.jboss.org/feeds/post/restful_transactions_reborn">Mark Little disagrees</a>:</p>
+
+<blockquote>
+<p>So <a href="http://www.jboss.org/community/docs/DOC-10787">we originally created a student project to dust off the old REST transactions protocol(s)</a> and implement them today. This started life before JAX-RS (again) but by the time something really happened JAX-RS (and RESTeasy) was around. <a href="http://www.jboss.org/community/people/mmusgrov">Michael from the JBossTS team</a> took this work on and <a href="http://www.jboss.org/community/docs/DOC-13311">did a great job</a>. It's not finished (only the atomic outcome protocol has been implemented so far, for example). Plus the protocols haven't been changed at all since they were created back in 2000/2001. So there are still some things we need to look at and more interesting work ahead.</p>
+</blockquote>
+
+<p>If I understand the protocol correctly, transactions become resources in their own right (which I like). Even though I have some misgivings about the details of the protocol (the verb-style resources, 401 instead of 405, lack of hypermedia usage, lack of discoverability …), I'm sure these could be addressed – it really comes down to the question of whether or not distributed transactions are needed or not in a REST/HTTP scenario.</p>
+
+<section class="comments">
+
+
+
+<div class="comment" id="comment-1940">
+On <a href="#comment-1940" title="Permalink to this comment">March 16, 2009  4:58 PM</a>, <a href="http://www.ebpml.org" title="http://www.ebpml.org" rel="nofollow">Jean-Jacques Dubray</a>
+said:
+<p>Stefan:</p>
+
+<p>is this URL RESTful? TC/begin?clientId={id}  (http://www.jboss.org/community/docs/DOC-13311) </p>
+
+<p>How about this one? TC/{txid}/commit and the like P-URL/prepare, P-URL/commit</p>
+
+<p>Aren&#8217;t they just a bit too much VERBose? Shouldn&#8217;t you be talking about HTTP transactions, not RESTful transactions? Unless there is no more difference between HTTP and REST, and all that HTTP can do is RESTful by definition. </p>
+
+
+<div class="comment" id="comment-1941">
+On <a href="#comment-1941" title="Permalink to this comment">March 16, 2009  9:45 PM</a>, /blog/st/
+
+<a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>URLs are neither &#8220;RESTful&#8221; or not RESTful. But you are still right, which is why I put &#8220;RESTful&#8221; in quotes and referred to the &#8220;verb-style&#8221; resources.</p>
+
+<p>Now I&#8217;d appreciate if you blame the folks who did this instead of shooting at the messenger :-)</p>
+
+
+<div class="comment" id="comment-1942">
+On <a href="#comment-1942" title="Permalink to this comment">March 17, 2009 12:58 PM</a>, Mark Little
+said:
+<p>Don&#8217;t forget &#8220;Plus the protocols haven&#8217;t been changed at all since they were created back in 2000/2001. So there are still some things we need to look at and more interesting work ahead.&#8221;</p>
+
+<p>We&#8217;re looking at updating the protocol. It&#8217;s based on &#8220;best practices&#8221; and our (mis)understandings of things from nearly 10 years go. So give us a break ;-)</p>
+
+
+<div class="comment" id="comment-1943">
+On <a href="#comment-1943" title="Permalink to this comment">March 17, 2009  1:02 PM</a>, Mark Little
+said:
+<p>Oh and yes, you&#8217;re right, transactions become resources. Oh and of course you need transactions :-)</p>
+
+
+<div class="comment" id="comment-1944">
+On <a href="#comment-1944" title="Permalink to this comment">March 17, 2009  5:10 PM</a>, <a href="http://www.ebpml.org" title="http://www.ebpml.org" rel="nofollow">jean-jacques dubray</a>
+said:
+<p>Stefan:</p>
+
+<p>I don&#8217;t necessarily blame the messenger, I would like to ask you if we could not draw two important conclusions from this design (which is quite common amongst people using &#8220;REST&#8221;, let&#8217;s admit it):
+a) Actions are a fact of life, not artefacts of a programming model. Every resource has actions that drive its lifecycle. Using a programming model that ignores actions, inter-actions and trans-actions (as a state alignment capability) does not seem to be appealing to anyone, as every developer and their brother will eventually reinvent these semantics in a proprietary way.</p>
+
+<p>b) Resource Orientation as a programming model does not exist. There is simply no evidence of it, as  POST has the semantic of a message sent to the target resource. GET, PUT, Delete are not specific to Resource Orientation, they have CRUD semantics. Only POST, IMHO, could have made a difference at the programming model level. Unfortunately, there is no proof that POST is used with semantics other than sending a message to the target resource. Even if you disagree, the recent developments at Microsoft and IBM are re-eductating every developer that REST and WS-* are homothetic. You simply choose one over the other based on QoS requirement (including security, identity propagation, federated trust, runtime governance&#8230;), simplicity, evolution&#8230;  </p>
+
+<p>I am wondering if there is anything you see we could agree on?</p>
+
+
+<div class="comment" id="comment-1945">
+On <a href="#comment-1945" title="Permalink to this comment">March 17, 2009  5:21 PM</a>, /blog/st/
+
+<a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<blockquote>
+<p>I am wondering if there is anything you see we could agree on?</p>
+</blockquote>
+
+<p>No, I don&#8217;t agree with you here. We&#8217;ve been through this way too often, and I don&#8217;t think we&#8217;ll be able to convince one another.</p>
+
+<p>Let me ask you in turn: Surely you agree that if a technology or architectural approach is misused, this doesn&#8217;t render it invalid?</p>
+
+<p>You will find that there is vast agreement among REST proponents about what&#8217;s &#8220;RESTful&#8221; and what isn&#8217;t &#8212; way more so than for any other SOA or Web services topic. </p>
+
+
+<div class="comment" id="comment-1946">
+On <a href="#comment-1946" title="Permalink to this comment">March 17, 2009  8:08 PM</a>, <a href="http://www.ebpml.org" title="http://www.ebpml.org" rel="nofollow">Jean-Jacques Dubray</a>
+said:
+<p>hum&#8230;</p>
+
+<blockquote>
+<p>Surely you agree that if a technology or architectural approach is misused, this doesn’t render it invalid?</p>
+</blockquote>
+
+<p>Looks like you are conceding. Stefan, let&#8217;s be serious when the pattern of usage of &#8220;REST&#8221; is an homothetic mapping to WS-<em>, then that means that either Resource Orientation does not exist or WS-</em> is resource oriented, which we both know is not true.</p>
+
+<p>HTTP has become just a choice over WS-* just because Microsoft and IBM said so. You can no longer define REST outside their definition of REST. In 2009, HTTP became part of the &#8220;middleware catalog/toolbox/landscape&#8221;. It is not exactly POX but not completely REST, it is somewhere in between, and the reason is simply because behind it there is a stubborn programming model that makes all middleware look the same. It is not until we change the programming model, like SCA has tried to do it, introducing concepts such as assemblies, bidirectional interfaces and orchestrations as key elements, granted that it could be augmented with resource orientation and event orientation concepts.</p>
+
+<p>I&#8217;ll ask again the question in one year, see if you still see any Resource Orientation in the way people use HTTP. Note that I am just as sad as you, resource orientation has merit and should be a first class citizen of the programming model, then only then, the middleware would actually have to do something about it.</p>
+
+<p>JJ-</p>
+
+
+<div class="comment" id="comment-1947">
+On <a href="#comment-1947" title="Permalink to this comment">March 17, 2009  8:27 PM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>Yes, let&#8217;s talk again in a year. I&#8217;m hopeful, as REST actually <em>has</em> a definition (as opposed to many other terms in this industry).</p>
+
+
+</section>
+

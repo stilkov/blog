@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2007/10/batch/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>Batch! [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>Batch!</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">Oct 28, 2007</time></small><p>
+	</header>
+	<section>
+	  <p><a href="http://www.snellspace.com/wp/?p=788">James Snell</a> shows an example of GData batch updates and writes:</p>
+
+<blockquote>
+<p>If the mere sight of this doesn&#8217;t give you shivers and shakes, let me give you a few reasons why it should.</p>
+</blockquote>
+
+<p>Shivering and shaking, I note that in addition to his (very valid) reasons, XML fragments like</p>
+
+<pre><code>&lt;batch:operation type="insert"/&gt;
+</code></pre>
+
+<p>should make it obvious: Anytime you find yourself adding words like &#8220;operation&#8221; to your representation, you&#8217;ve violated one of the core RESTful HTTP principles, which is that the intent should be communicated using the HTTP verb.</p>
+
+<section class="comments">
+
+
+
+<div class="comment" id="comment-1498">
+On <a href="#comment-1498" title="Permalink to this comment">October 29, 2007  2:22 PM</a>, <a href="http://www.dehora.net/journal" title="http://www.dehora.net/journal" rel="nofollow">Bill de hOra</a>
+said:
+<p>I hope this helps make it clear why some of us in the Atompub WG argued batch out of the spec. There are other essential problems with batch over HTTP; I&#8217;m not sure it can be done cleanly.</p>
+
+<p>Incidentally, I don&#8217;t see how gdata batch is any worse than the features draft or requests to use Atompub to upload binary+atom in one shot for media resource handling.</p>
+
+
+<div class="comment" id="comment-1499">
+On <a href="#comment-1499" title="Permalink to this comment">October 30, 2007  1:26 AM</a>, <a href="http://appside.blogspot.com" title="http://appside.blogspot.com" rel="nofollow">Erik</a>
+said:
+<p>I started a comment but it got too long, so I put it here: <a href="http://appside.blogspot.com/2007/10/poking-at-roa.html" rel="nofollow" /><a href="http://appside.blogspot.com/2007/10/poking-at-roa.html" rel="nofollow">http://appside.blogspot.com/2007/10/poking-at-roa.html</a></p>
+
+
+<div class="comment" id="comment-1500">
+On <a href="#comment-1500" title="Permalink to this comment">October 30, 2007  5:14 AM</a>, <a href="http://www.snellspace.com" title="http://www.snellspace.com" rel="nofollow">James Snell</a>
+said:
+<p>Bill, I can understand the reference to compound posts, but I&#8217;m not sure why you&#8217;re drawing a comparison to the features draft.</p>
+
+
+</section>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

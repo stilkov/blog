@@ -1,0 +1,15 @@
+---
+layout: post
+title: "soapui"
+date: "2006-07-20T13:13:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://www.infoq.com/news/soapui-1.6beta-now-available">Miko</a> links to <a href="http://www.soapui.org/">soapui</a>:</p>
+
+<blockquote>
+<p>soapui is a desktop application for inspecting, invoking, developing and functional/load/compliance testing of web services over HTTP. It is mainly aimed at developers/testers providing and/or consuming web services (java, .net, etc). Functional and Load-Testing can be done both interactively in soapui or within an automated build/integration process using the soapui command-line tools. soapui currently requires java 1.5 and is licensed under the LGPL license.</p>
+</blockquote>
+
+

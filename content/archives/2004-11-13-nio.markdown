@@ -1,0 +1,11 @@
+---
+layout: post
+title: "NIO"
+date: "2004-11-13T23:30:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://jroller.com/page/cpurdy/">Cameron Purdy</a> has written up an excellent <a href="http://jroller.com/page/cpurdy/20041113#nio_not_insanely_obscure">explanation about Java NIO</a> (or basically, the Unix select() operation in general, which is hard to grasp at first).</p>
+
+

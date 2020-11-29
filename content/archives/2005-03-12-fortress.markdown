@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Fortress"
+date: "2005-03-12T12:01:00+01:00"
+comments: false
+categories: 
+---
+
+<p>Strangely omitting one of his most interesting <a href="http://library.readscheme.org/page1.html">contributions</a> to computer science, <a href="http://www.sun.com/presents/minds/2005-0302/">this article</a> about Guy Steele&#8217;s current project is still very interesting (via <a href="http://lambda-the-ultimate.org/node/view/574">LtU</a>).</p>
+
+

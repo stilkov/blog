@@ -1,0 +1,11 @@
+---
+layout: post
+title: "20 Questions"
+date: "2005-02-24T20:34:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://y.20q.net/">This thing</a> guesses what thing you think of in 20 questions. Pretty amazing &#8230;</p>
+
+

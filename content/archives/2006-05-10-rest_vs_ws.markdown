@@ -1,0 +1,15 @@
+---
+layout: post
+title: "REST vs. WS-*"
+date: "2006-05-10T19:17:00+01:00"
+comments: false
+categories: 
+---
+
+<p>For once, the debate centers around REST vs. WS-* (which makes more sense to me than REST vs. SOAP). It&#8217;s the same old permathread, though. <a href="http://cafe.elharo.com/">This guy</a> has something to say:</p>
+
+<p><a href="http://cafe.elharo.com/web/rest-vs-soap-a-parable/">Hi there. My name&#8217;s Rusty, and I&#8217;m an air conditioning tech.</a> </p>
+
+<p>Not bad. <a href="http://atmanes.blogspot.com/2006/05/unrest-over-ws-and-other-enterprisey_09.html">Anne Thomas Manes</a> has written a long and thoughtful entry about REST vs. WS-<em>, pitching the Harmony Solution: REST has its uses, WS-</em> has its uses, use whatever is appropriate. I find it hard to articulate the problem I have with this view &#8212; I agree to some degree and will use either one &#8230; but I fundamentally disagree with two assertions:  that REST is for simple things only, and that the automation behind Web services (as it is done today) simplifies anything.</p>
+
+

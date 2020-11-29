@@ -1,0 +1,11 @@
+---
+layout: post
+title: "WSDL 2.0 Primer"
+date: "2005-01-09T17:35:00+01:00"
+comments: false
+categories: 
+---
+
+<p>The W3C has published a working draft of the <a href="http://www.cafeconleche.org/#news2005January9">WSDL 2.0 Primer</a>.</p>
+
+

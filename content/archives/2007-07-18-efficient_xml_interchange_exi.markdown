@@ -1,0 +1,44 @@
+---
+layout: post
+title: "Efficient XML Interchange (EXI) Format WD Released"
+date: "2007-07-18T15:26:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://www.cafeconleche.org/#July_18_2007_25813">Elliotte Rusty Harold</a> on <a href="http://www.w3.org/TR/2007/WD-exi-20070716/">EXI</a>, the Efficient XML Interchange (EXI) Format:</p>
+
+<blockquote>
+<p>Whatever the EXI format is, it&#8217;s not XML and using the name &#8220;XML&#8221; to describe it an attempt by people who want something very different from XML to trade on XML&#8217;s good name. If EXI were really a good idea, it could succeed on its own merits without pretending to be something it&#8217;s not. I guess the working group members don&#8217;t really believe in it though.</p>
+</blockquote>
+
+<section class="comments">
+
+
+
+<div class="comment" id="comment-1385">
+On <a href="#comment-1385" title="Permalink to this comment">July 19, 2007  1:00 AM</a>, <a href="http://appside.blogspot.com" title="http://appside.blogspot.com" rel="nofollow">Erik Johnson</a>
+said:
+<p>I agree that it&#8217;s not XML, but it&#8217;s interesting to me.  EXI is for streaming Infosets &#8212; the data model XML is a representation of &#8212; with (hopefully) much less parsing overhead.  I haven&#8217;t looked at EXI until now, but I wouldn&#8217;t write it off too quickly.  One thing I did notice was the 2 different grammar systems.  One is just XML-based and it &#8220;evolves&#8221; as namespaces and prefixes occur.  The other is &#8220;schema-informed&#8221;, which means the stream has some schema information (XSD, RELAX, etc.) encoded and the grammar stays static.  Could be nice.</p>
+
+
+<div class="comment" id="comment-1386">
+On <a href="#comment-1386" title="Permalink to this comment">July 19, 2007  1:20 AM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>The argument against binary XML has long been that it&#8217;s easy to create a better &#8220;serialization&#8221; than text for XML for any particular purpose - but not for the general case. I admit to not having looked at EXI in detail, but it still seems hard to be to imagine how, for example, a general mechanism can meet different optimization goals, such as bandwidth vs. processing time.</p>
+
+
+<div class="comment" id="comment-1387">
+On <a href="#comment-1387" title="Permalink to this comment">July 31, 2007  2:41 PM</a>, <a href="http://cafe.elharo.com/" title="http://cafe.elharo.com/" rel="nofollow">Elliotte Rusty Harold</a>
+said:
+<p>XML is not a representation of any data model, infoset included. That&#8217;s a strength and one that EXI is trying to do away with. It&#8217;s a big reason EXI is not merely an alternate encoding of XML.</p>
+
+<p>XML is a syntax without a data model. That&#8217;s not an accident. It&#8217;s deliberate. The Infoset is only one possible data model for XML, and one that is actually not isomorphic to XML syntax. That is, there are well-formed and valid XML documents that do not have infoset representations, and infosets that do not have XML representations.</p>
+
+<p>There are other data models besides the infoset. For example, XPath 1.0 defines a data model that is different from the Infoset. This is also what XSLT 1.0 uses. </p>
+
+<p>Individual applications are free to define their own data model that meets their needs, and there is no rule that two processes reading the same document must use the same data model.</p>
+
+
+</section>
+

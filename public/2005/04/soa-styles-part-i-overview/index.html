@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2005/04/soa-styles-part-i-overview/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>SOA Styles Part I: Overview [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>SOA Styles Part I: Overview</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">Apr 17, 2005</time></small><p>
+	</header>
+	<section>
+	  <p>When people talk about Web services and Service-oriented Architecture (SOA), it&#8217;s usually a good idea
+to ask them what exactly they mean by those terms. There&#8217;s not only a
+multitude of standards in this space, but also not one, but at least
+three different architectures competing for dominance, each with their
+own history, strengths, and weaknesses; those who favor one of them
+usually have little to no tolerance for others who believe in another
+one.</p>
+
+<p>I will try to describe what I perceive to be the three most important
+styles of doing SOA. In this context, my intent is to use the term
+&#8220;SOA&#8221; as something that subsumes all of the Web-based distributed
+computing styles currently en vogue; some use SOA to describe Web
+services. I take the liberty to declare what SOA means simply because
+any definition is as good as this one, and I need some sort of
+umbrella term. (And yes, that means I actually consider REST to be
+one way of doing SOA.) </p>
+
+<h3>RPC-style Web services</h3>
+
+<p>First, there is the RPC (Remote Procedure Call) style. This style is
+rooted in distributed object technologies such as <a href="http://www.corba.org/">CORBA</a>, <a href="http://www.webopedia.com/TERM/D/DCOM.html">DCOM</a>, or <a href="http://java.sun.com/products/jdk/rmi/">RMI</a>;
+essentially, it takes the same development model, exchanges <a href="http://www.omg.org/gettingstarted/omg_idl.htm">IDL</a> for
+<a href="http://www.w3.org/TR/wsdl">WSDL</a> and <a href="http://www.w3.org/XML/Schema">XML Schema</a>, replaces the data format used to encode messages on the wire
+with XML (more specifically: <a href="http://www.w3.org/TR/soap/">SOAP</a>), and uses <a href="ftp://ftp.isi.edu/in-notes/rfc2616.txt">HTTP</a> as a transport
+protocol. The fact that HTTP, XML and SOAP are used is nothing more
+than an implementation detail. If this style is combined with
+so-called contract-first design, the WSDL becomes visible; in many
+cases, though, it is generated behind the scenes from some programming
+language construct (usually an interface or class). The most important
+construct in this style is the <em>interface</em>. Accepting some rather heavy
+oversimplification, it would be fair to call this style &#8220;WSDL-based&#8221;.</p>
+
+<h3>Message-oriented Web services</h3>
+
+<p>While the RPC style was originally very popular within the Web
+services community, in recent times there&#8217;s been a shift towards the
+idea of message-oriented (or document-oriented) Web services. With
+this style, the fact that SOAP and XML are used on the wire becomes
+more explicit and more visible to the developer; rather than talk
+about RPC requests and responses, one talks about messages and
+documents. Intermediaries, as defined in the <a href="http://www.w3.org/TR/soap12-part1/#msgexchngmdl">SOAP processing model</a>,
+play an important role during processing of messages. Whether HTTP or
+some reliable messaging technology, such as a MOM system, is used to
+transport messages from one processing node to the next is considered
+an implementation detail. It is debatable whether the interface (WSDL)
+plays a central role in this variant; obviously, though, the <em>message</em>
+is the most important concept. Recently, there have been attempts to give this style <a href="http://savas.parastatidis.name/2004/11/09/92ede84c-ca1f-41ab-8feb-8ba50d07e86f.aspx">a new name</a>; oversimplifying again, I&#8217;ll call it
+&#8220;SOAP-based&#8221;.</p>
+
+<h3>REST</h3>
+
+<p>Finally, there&#8217;s <a href="http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm">REST</a> (REpresentation State Transfer), the
+architecture behind the Web itself. The key construct in REST is the
+<em>resource</em>, which is identified by an address taking the form of a
+<a href="http://www.faqs.org/rfcs/rfc2396.html">URI</a>. Resources support a generic (uniform) interface, in case of HTTP
+consisting of the verbs GET, PUT, POST, and DELETE. With
+machine-to-machine communication, the resource representations are
+usually encoded as XML; it is debatable whether they might take the
+form of SOAP messages. In any case, the central concept is the
+resource; this style is also the only one to use HTTP as it is
+intended to be used: as an application protocol, not as a transport
+protocol. It is thus not an oversimplification to label this style
+&#8220;HTTP-based&#8221;.</p>
+
+<p>In the next three parts of this mini-series, I&#8217;ll explore the WSDL-,
+SOAP- and HTTP-based approaches to SOA, highlighting both advantages
+and disadvantages.</p>
+
+<section class="comments">
+
+<div class="comment" id="comment-516">
+On <a href="#comment-516" title="Permalink to this comment">April 18, 2005  2:41 AM</a>, <a href="http://www.markbaker.ca" title="http://www.markbaker.ca" rel="nofollow">Mark Baker</a>
+said:
+<p>Interesting.  We&#8217;ll see where you go with this, but I&#8217;d say that REST is at least as concerned with messages as Message-orientation.  Certainly most of its constraints are connector (message) constraints.</p>
+
+
+<div class="comment" id="comment-517">
+On <a href="#comment-517" title="Permalink to this comment">April 18, 2005  7:21 AM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>I picked the resource concept as the distinguishing factor for REST because it&#8217;s missing in the other two; but of course you are right that the lines are not as easy to draw as I try to make them appear :-)</p>
+
+
+</section>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

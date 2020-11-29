@@ -1,0 +1,19 @@
+---
+layout: post
+title: "InfoQ"
+date: "2006-10-27T08:00:00+01:00"
+comments: false
+categories: 
+---
+
+<p>Three excellent items at <a href="www.infoq.com">InfoQ</a> worth pointing at: </p>
+
+<ul>
+<li><p>Obie&#8217;s post about <a href="http://www.infoq.com/news/how-many-rubies-future">Ruby fragmentation</a> is a great write-up; just the right dose of reporting that you can only do if you&#8217;re not a journalist</p></li>
+<li><p>I&#8217;m not a fan of the ESB concept at all, but <a href="http://www.infoq.com/news/ESB-presentation">Mark Richards&#8217;s NFJS presentation</a> (and the fact that it&#8217;s available in this form) is just great</p></li>
+<li><p>I was actually present when Floyd recorded <a href="http://www.infoq.com/news/Interview--Ivar-Jacobson">this interview</a> with Ivar Jacobson; I find a lot of things Ivar said very questionable, but it was absolutely cool to meet him.  </p></li>
+</ul>
+
+<p>InfoQ rocks.</p>
+
+

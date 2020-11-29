@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Stefan Tilkov">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="https://www.innoq.comhttps://www.innoq.com/blog/st/2007/05/the-ui-case-for-rest/">
+  <link href="/blog/st/favicon.png" rel="icon">
+  <link href="/blog/st/atom.xml" rel="alternate" title="Stefan Tilkov's Blog" type="application/atom+xml">
+
+
+  <link rel="stylesheet" href="https://bootstrap.assets.innoq.com/css/0.0.9/innoq-bootstrap-theme.css" />
+  <link rel="stylesheet" href="/blog/st/stylesheets/blog.css" />
+
+  <title>The UI Case for REST [Stefan Tilkov’s Blog]</title>
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand m-2 p-2" href="https://www.innoq.com/"><img alt="INNOQ logo" height="40" src="https://innoq.style/assets/innoq-logo--whitered.svg" /></a>
+  <a class="navbar-brand text-light" href="/blog/st/">Stefan Tilkov’s Blog Archive</a>
+</nav>
+
+
+
+
+
+    <main class="container">
+      <p class="mt-5"><em>
+	This is a single archived entry from Stefan Tilkov’s blog. For more up-to-date content,
+	check out my <a href="https://www.innoq.com/en/staff/stefan-tilkov/">author page at INNOQ</a>,
+	which has more information about me and also contains a list of published talks, podcasts, and articles.
+	Or you can check out the <a href="/blog/st/">full archive</a>.
+
+      </em></p>
+      <article>
+	<header>
+          <h1>The UI Case for REST</h1>
+	  <p><small><a href="https://www.innoq.com/en/staff/stefan-tilkov/">Stefan Tilkov</a>, <time datetime="2017-06-26">May 26, 2007</time></small><p>
+	</header>
+	<section>
+	  <p>Yesterday, I did another one of those &#8220;<a href="http://www.bejug.org/confluenceBeJUG/display/PARLEYS/REST+-+The+Better+Web+Services+Model" title="REST - The Better Web Services Model - Parleys - The Belgian Java User Group">REST &#8212; the better Web services model</a>&#8221; talks, which are becoming routine, but still make me think each time I do them. This time, I actually illustrated a number of concepts by using <code>curl</code> to access a quick (somewhat) RESTful Web app I had built with Rails, and had to think about Paul Downey&#8217;s statement that <a href="http://blog.whatfettle.com/2007/01/11/good-web-apis-are-just-web-sites/" title="Paul Downey   ::  Web APIs Are Just Web Sites">Web APIs are just Web sites</a>.</p>
+
+<p>I remembered that we had a related discussion the first time we introduced Web services in one of our client projects. The task was to build a financial application that offered both a Web UI and a B2B Web services interface, and initially, I wondered why we had to build this as two very different channels &#8212; after all, the idea was that in general, everything that could be done via the UI was supposed to be accessible via the programmatic interface, and since the Web UI was XHTML-based, it seemed obvious that there should be some way to unify the handling of Web requests and Web services requests. (After all, XHTML is just another XML-based language, and the Web services we employed were accessible over HTTP only, so the commonality was very large. Or so we thought.)</p>
+
+<p>For a long time, I though what killed this idea was that this was the early Web services generation (around 2002, IIRC), so the focus was on serializing and deserializing Java objects to and from XML, and making everything appear as RPC-like as possible. When I made the switch &#8212; as most Web services proponents did &#8212; to a more document-oriented approach, I though the model would have to be something <a href="http://office.microsoft.com/en-us/infopath/FX100487661033.aspx" title="">InfoPath</a>-like: edit some huge document with an offline client, then send it to the same programmatic interface used by other applications. (BTW, whatever happened to InfoPath? Why isn&#8217;t anybody using it?)</p>
+
+<p>But now I&#8217;ve come to believe that the real reason was that the interaction models were so vastly different &#8212; our Web UI, based on the <a href="http://tapestry.apache.org/" title="Tapestry - Welcome to Tapestry">Tapestry UI framework</a>, obviously relied on HTTP for communication between browser and Web server, but it was in no way built according to REST principles. If it had been, the resources exposed through the Web UI would have been a perfect entry point for programmatic access, too.</p>
+
+<p>In case you&#8217;re wondering whether there&#8217;s any point to this rambling, it&#8217;s probably this: the best way to come up with a good &#8220;API&#8221; for your Web application is to take care to design the Web UI according to REST principles first, and allow for alternative representations (i.e., alternative content types such as XML or JSON) afterwards &#8212; while you&#8217;ll almost certainly need to add some aspects and tweak some details, you&#8217;ll have a tremendous head start to a &#8220;Web service&#8221; interface that merits the name.</p>
+
+<section class="comments">
+
+
+
+<div class="comment" id="comment-1316">
+On <a href="#comment-1316" title="Permalink to this comment">May 26, 2007 10:00 PM</a>, <a href="http://abstractfinal.blogspot.com" title="http://abstractfinal.blogspot.com" rel="nofollow">Keyur</a>
+said:
+<p>~ the best way to come up with a good “API” for your Web application is to take care to design the Web UI according to REST principles first</p>
+
+<p>Very true. If everything you expose is a &#8220;resource&#8221; there is no reason why html cannot be just another content type that you support. I think the only factor that differentiates an html representation from others is human interaction. Human interaction means you&#8217;ll probably have more state transitions from and to the html representation than others. But as long as the transitions themselves are again to other resources it&#8217;ll &#8220;just work.&#8221;</p>
+
+
+</section>
+
+	</section>
+      </article>
+    </main>
+
+  </body>
+</html>
+
+

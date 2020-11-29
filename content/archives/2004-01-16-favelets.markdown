@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Favelets"
+date: "2004-01-16T14:52:00+01:00"
+comments: false
+categories: 
+---
+
+<p>A quick pointer to <a href="http://validator.w3.org/favelets.html" title="Favelets For The W3C MarkUp Validation Service">Favelets For The W3C MarkUp Validation Service</a>. Maybe that little button on the right will make sense someday even for this site &#8230;</p>
+
+

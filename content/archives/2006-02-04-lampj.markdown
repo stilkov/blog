@@ -1,0 +1,11 @@
+---
+layout: post
+title: "LAMP/J"
+date: "2006-02-04T10:46:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://www.tbray.org/ongoing/When/200x/2006/02/02/LAMP-Java-Sun">Tim Bray</a> on mixing the JVM and dynamic languages &#8212; not exactly a new idea, but one that still hasn&#8217;t become mainstream for whatever reason. Ruby on Rails on a JVM would truly be a killer combination &#8230;</p>
+
+

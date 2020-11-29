@@ -1,0 +1,13 @@
+---
+layout: post
+title: "JSR 311: Done"
+date: "2008-09-23T19:55:00+01:00"
+comments: false
+categories: 
+---
+
+<blockquote>
+<p><a href="http://jcp.org/en/jsr/detail?id=311">JSR #311 JAX-RS: The JavaTM API for RESTful Web Services</a> Final Approval Ballot … <a href="http://jcp.org/en/jsr/results?id=4715">These are the final results</a> of the Final Approval Ballot for JSR #311. <b>The Executive Committee for SE/EE has approved this ballot.</b></p>
+</blockquote>
+
+

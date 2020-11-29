@@ -1,0 +1,14 @@
+---
+layout: post
+title: "WfXML-R"
+date: "2008-05-30T10:08:00+01:00"
+comments: false
+categories: 
+---
+
+<blockquote>Recently, Patrice Cappelaere <a href="http://www.geobliki.com/articles/2008/04/24/restful-wfxml-accepted-by-the-wfmc">announced</a> that&nbsp;an initiative to provide RESTful bindings to <a href="http://www.wfmc.org/standards/docs/WfXML20-200410c.pdf">WF-XML 2.0</a>&nbsp;(pdf)&nbsp; has been accepted by the <a href="javascript:void(0);/*1212066517991*/">Workflow Management Coalition</a> (WfMC) - <a href="http://groups.google.com/group/wfxml">WfXML-R</a>.
+
+<p><a href="http://www.wfmc.org/standards/referencemodel.htm"><img _href="img://processmodel_thumb.gif" src="http://www.infoq.com/resource/news/2008/05/wfxml-r/en/resources/processmodel_thumb.gif" align="right" alt="wfmc reference model diagram" /></a>WfXML-R aims to provide&nbsp;specifications around the 5 interfaces from&nbsp;the <a href="http://www.wfmc.org/standards/referencemodel.htm">WfMC's Reference Model</a>.</p></blockquote>
+
+More from Gavin Terrill at <a href="http://www.infoq.com/news/2008/05/wfxml-r">InfoQ</a>.
+

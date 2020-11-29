@@ -1,0 +1,41 @@
+---
+layout: post
+title: "Your mission-critical data may not be where you think it is"
+date: "2005-11-17T08:42:00+01:00"
+comments: false
+categories: 
+---
+
+<blockquote>
+<p>&#8220;Think of your centralized database applications as a set of large rocks. Their great strength is their solidity. Their great weakness is their lack of flexibility. Think of spreadsheets as the water that flows over and around the rocks. Their great strength is their flexibility. Their great weakness is their lack of solidity. The easiest route to the far side of a rock is to be like water and flow over or around it, rather than to change the nature of the rock.&#8221;</p>
+</blockquote>
+
+<p><a href="http://www.itworld.com/App/650/nls_ebiz_masterfoodefines051115/index.html">Master Foo</a>, as reported by the brilliant <a href="http://seanmcgrath.blogspot.com/archives/2005_11_13_seanmcgrath_archive.html#113204243284268293">Sean McGrath</a>.</p>
+
+<section class="comments">
+
+<div class="comment" id="comment-712">
+On <a href="#comment-712" title="Permalink to this comment">November 17, 2005  6:00 PM</a>, <a href="http://creativekarma.com/" title="http://creativekarma.com/" rel="nofollow">Doug</a>
+said:
+<p>Potential loss of critical enterprise data isn&#8217;t the only risk with spreadsheets. They seem to have an accuracy problem, too:
+<a href="http://www.louisepryor.com/showTopic.do?topic=31" rel="nofollow" /><a href="http://www.louisepryor.com/showTopic.do?topic=31" rel="nofollow">http://www.louisepryor.com/showTopic.do?topic=31</a></p>
+
+<p>Spreadsheets aren&#8217;t going away, but I&#8217;m not convinced that the corporate world is doing much to control the risks.</p>
+
+
+<div class="comment" id="comment-713">
+On <a href="#comment-713" title="Permalink to this comment">November 23, 2005  4:58 AM</a>, <a href="http://www.tallent.us/" title="http://www.tallent.us/" rel="nofollow">Richard Tallent</a>
+said:
+<p>I&#8217;ve taken a novel approach on the corporate web applications I develop: we have invested heavily in making sure that every application has fully integrated, robust, roundtrip Excel import/export capabilities.</p>
+
+<p>Most of our data are non-numeric, but the users are engineers who are nonetheless much more comfy within Excel. Also, our teams generally consist of 5-30 people spread out throughout the US, so simultaneous web access is a must.</p>
+
+<p>The average user&#8217;s workflow is: (1) search, (2) download to Excel, (3) edit in Excel, (4) upload. Data &#8220;unit tests&#8221; solve the validation problem on the import side while also allowing users to upload incomplete data.</p>
+
+<p>Office 2003&#8217;s SpreadsheetML has been a godsend for us&#8212;before, we were using a combination of Excel HTML on export and Excel ODBC (users had to &#8220;Save As&#8221; when opening the file for the first time off the server). Now our spreadsheets download complete with conditional formatting, validation, etc. and upload without any of the weird limits of Excel ODBC.</p>
+
+<p>Response over the past few years has been great: users can work offline, use copy/paste/formulas/conditional formatting without issue, pass around for review, combine and split data in ways they could never manage on a web form. I also teach Advanced Excel classes internally to make sure users know how to make the most of the tool and avoid the pitfalls.</p>
+
+
+</section>
+

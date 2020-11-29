@@ -1,0 +1,86 @@
+---
+layout: post
+title: "Runtime Interface Dependency"
+date: "2007-05-30T11:07:00+01:00"
+comments: false
+categories: 
+---
+
+<p><a href="http://pluralsight.com/blogs/dbox/archive/2007/05/29/47544.aspx">Don Box</a> disagrees with <a href="/blog/st/2007/05/28/does_rest_need_a_service_description_language.html#c82878">my opinion</a> that stubs and skeletons are <em>evil</em>:</p>
+
+<blockquote>
+<p>Ultimately folks who use languages with dots (e.g., Ruby, C#, Javascript) or with slashes (XPath, XSLT, XQuery) often make assumptions about the &#8220;shape&#8220; of the messages they process. At MS, we&#8217;ve built &#8220;dot-based&#8220; programming models over XML that are liberal in what they allow, but ultimately if a user depends on access to an element named &#8220;foobar&#8220; that element needs to be in the XML whether the user is using dots or slashes. Yes, people can program around missing/optional data (thank God for null), but again, most programs that consume XML make some commitment to element and attribute names that wind up being an intrinsic part of the definition of the program (even when those parts of the program are stored out of band from the code stream (e.g., attributes)). </p>
+</blockquote>
+
+<p>I agree with this &#8212; my code will depend on some elements and attributes in the document. The problem, though, is that even if my application only accesses 20% of the elements and attributes in the XML it consumes, the (un)marshaling/(de)serialization code will require a perfect match between the XML and the schema <em>that was current when the code was generated</em>. In other words: while my application code may be tolerant to at least some changes, the generated infrastructure code isn&#8217;t (at least not in the general case &#8212; <a href="http://www.urbandictionary.com/define.php?term=boctaoe">BOCTAOE</a>, possibly the MS tooling being one).</p>
+
+<p>I much prefer what Spring WS creator <a href="http://blog.springframework.com/arjen/">Arjen Poutsma</a> calls the <a href="http://blog.springframework.com/arjen/archives/2007/03/27/ws-duck-typing/">anatidaeic approach </a> ;-)</p>
+
+<section class="comments">
+
+
+
+<div class="comment" id="comment-1334">
+On <a href="#comment-1334" title="Permalink to this comment">May 30, 2007  4:22 PM</a>, <a href="http://www.dulciana.com" title="http://www.dulciana.com" rel="nofollow">Mike Glendinning</a>
+said:
+<p>Stefan,</p>
+
+<p>The truth here, of course is that the contract between service provider and consumer is [usually] unique for each consumer. In your example, by needing and using only 20% of the information returned, you&#8217;re effectively defining a new contract for yourself as consumer, incorporating just that 20%.</p>
+
+<p>Currently, many people, as well as the available tools, assume that there is a single contract defined by the provider and that this applies to all consumers, which is obviously insufficient.</p>
+
+<p>With a mechanism for realising such unique contracts (and here, like you, I would prefer a Schematron-like approach) there seems no reason why tools could not generate stub code as flexible as anything crafted by hand.</p>
+
+<p>Remember also that if the goal is loosely-coupled and autonomous services, you should not make any assumptions or enforce restrictions about how a consumer or provider is implemented. Whether it is Java, C# or Ruby should be irrelevant to you. Likewise whether it is automatically generated code or hand-crafted by an expert!</p>
+
+<p>The Robinson/Fowler paper on &#8220;Consumer-Driven Contracts&#8221; [1] was an interesting start to understanding and developing this area, but I feel that much more is still needed&#8230;</p>
+
+<p>-Mike.</p>
+
+<p>[1] <a href="http://martinfowler.com/articles/consumerDrivenContracts.html" rel="nofollow" /><a href="http://martinfowler.com/articles/consumerDrivenContracts.html" rel="nofollow">http://martinfowler.com/articles/consumerDrivenContracts.html</a></p>
+
+
+<div class="comment" id="comment-1335">
+On <a href="#comment-1335" title="Permalink to this comment">May 30, 2007  4:50 PM</a>, Sergey Beryozkin
+said:
+<p>Hi</p>
+
+<p>What about the XML versioning techniques ? Things like ignore unrecognized elements. May not always be possible to ignore but if the generated code is generated with the ignorability in mind then it might work</p>
+
+<p>Cheers, Sergey</p>
+
+
+<div class="comment" id="comment-1336">
+On <a href="#comment-1336" title="Permalink to this comment">June  6, 2007  7:25 AM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>Sergey, sorry, only just noticed your comment &#8230; I&#8217;m not aware of any WS toolkit that generates change-resistant code. Are you?</p>
+
+
+<div class="comment" id="comment-1337">
+On <a href="#comment-1337" title="Permalink to this comment">September  8, 2007  6:24 PM</a>, Oliver Newell
+said:
+<p>Hi Stefan -</p>
+
+<p>I have had some success w/respect to change-resistant code using Spring-WS in conjunction with Apache XMLBeans. XMLBeans provides some hooks which can be used to allow a message consumer to successfully read incoming messages based on new &#8216;minor releases&#8217; of a schema, where minor releases are by definition backwards-compatible. Basically, all the new elements/namespaces/whatever in the incoming message get ignored by message consumers based on older versions of the schema.</p>
+
+<p>See the post at:</p>
+
+<p><a href="http://www.nabble.com/Wildcard-matching-rule-for-XML-namespaces--tf4362130.html" rel="nofollow">http://www.nabble.com/Wildcard-matching-rule-for-XML-namespaces--tf4362130.html</a></p>
+
+
+<div class="comment" id="comment-1338">
+On <a href="#comment-1338" title="Permalink to this comment">September  8, 2007  6:44 PM</a>, Oliver Newell
+said:
+<p>For whatever reason, the double-dash &#8216;&#8212;&#8217; before the &#8216;tf4362130.html&#8217; in the link I posted above is getting converted to the string &#8216;%E2%80%94&#8217; when clicked on (and it&#8217;s not working in my browser). It does work if that escape string is hand-edited to replace the escape string with the original &#8216;&#8212;&#8217; &#8230;</p>
+
+<p>-Oliver</p>
+
+
+<div class="comment" id="comment-1339">
+On <a href="#comment-1339" title="Permalink to this comment">September  9, 2007  4:48 PM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>Thanks Oliver. The reason for the conversion is &#8220;Smartypants&#8221; which does some smart things on special sequences that turn out not to be so smart in this case. Enclosing the URL in backticks (&#8220;`&#8221;) fixes the problem.</p>
+
+
+</section>
+

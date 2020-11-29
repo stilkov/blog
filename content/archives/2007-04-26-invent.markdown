@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Invent!"
+date: "2007-04-26T17:09:00+01:00"
+comments: false
+categories: 
+---
+
+<p>I&#8217;ve wondered for a long time what this company&#8217;s strange logo actually means &#8230; now Roman Stanek, finally blogging in English, <a href="http://romanstanek.blogspot.com/2007/04/invent.html">sheds some light</a>.</p>
+
+

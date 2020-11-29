@@ -1,0 +1,10 @@
+---
+layout: post
+title: "oXygen"
+date: "2003-06-15T11:45:00+01:00"
+comments: false
+categories: 
+---
+
+<p>Note to self: Take a look at <a href="http://www.oxygenxml.com/buy.html">&lt;oXygen/&gt; XML editor</a> soon.</p>
+

@@ -1,0 +1,30 @@
+---
+layout: post
+title: "A New Toy"
+date: "2004-10-12T15:18:00+01:00"
+comments: false
+categories: 
+---
+
+<p>I got me a shiny new toy: a 17&#8221; <a href="http://www.apple.com/imac/">iMac G5</a>, 1GB RAM, 250GB HD, Airport (and associated AirportExpress to connect to my stereo), Bluetooth Keyboard and Mouse.</p>
+
+<p>It&#8217;s &#8230; pretty neat.</p>
+
+<p>Is it a worthy successor to my trusty old <a href="/blog/st/2003/03/01/apple_g4_cube.html">Cube</a>? I&#8217;m not sure. It&#8217;s definitely not as beautiful (in fact, it looks a little kludgy), and it&#8217;s definitely <strong>a lot</strong> louder (I&#8217;m not sure yet whether it works as designed or whether something is broken. Still, damn loud for a Mac is the same as whisper quiet for a PC.) And damn, it&#8217;s fast, noticeably faster than the <a href="/2003/11/26/mac_night.html">PowerBook</a>.</p>
+
+<section class="comments">
+
+<div class="comment" id="comment-375">
+On <a href="#comment-375" title="Permalink to this comment">October 12, 2004  5:07 PM</a>, <a href="http://blogs.fivesight.com/pbblog" title="http://blogs.fivesight.com/pbblog" rel="nofollow">Paul Brown</a>
+said:
+<p>I thought you mean a really old cube (http://www.homecomputermuseum.de/comp/177_de.htm)&#8230;</p>
+
+
+<div class="comment" id="comment-376">
+On <a href="#comment-376" title="Permalink to this comment">October 12, 2004  8:42 PM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>I never owned one of those, although I used it for some time &#8230; incidentally, though, the &#8220;Q&#8221; in the name of our company (innoQ)  is there because the co-founder, who was a big NextCUBE zealot, wanted to do a pun on the word &#8220;Cube&#8221; :-)</p>
+
+
+</section>
+

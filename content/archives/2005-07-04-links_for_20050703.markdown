@@ -1,0 +1,42 @@
+---
+layout: post
+title: "links for 2005-07-03"
+date: "2005-07-04T01:18:00+01:00"
+comments: false
+categories: 
+---
+
+<ul class="delicious">
+<li>
+</li>
+<li>
+</li>
+<li>
+</li>
+<li>
+</li>
+</ul>
+
+<section class="comments">
+
+<div class="comment" id="comment-584">
+On <a href="#comment-584" title="Permalink to this comment">July  4, 2005 10:57 PM</a>, <a href="http://schmidetzki.net" title="http://schmidetzki.net" rel="nofollow">Wolfgang Schmidetzki</a>
+said:
+<p>Die JavaScript links sind sehr interssant - insbesondere prototype.js.
+Aber: hast du Verstanden, was diese Library tut? Leider gibt es keine Dokumentation :-(</p>
+
+
+<div class="comment" id="comment-585">
+On <a href="#comment-585" title="Permalink to this comment">July  4, 2005 11:07 PM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>Im Prinzip erlaubt sie dir, Javascript-Code per CSS an Attribute dranzukleben. Oder meintest du das nicht?</p>
+
+
+<div class="comment" id="comment-586">
+On <a href="#comment-586" title="Permalink to this comment">July  6, 2005 12:32 AM</a>, <a href="http://schmidetzki.net" title="http://schmidetzki.net" rel="nofollow">Wolfgang Schmidetzki</a>
+said:
+<p>Ja, das mit dem Behavier ist schon klar. Ich meinte insbesondere die Bibliothek prototype.js. Ist eine einzige Trickkiste - aber ohne jede Dokumentation oder auch nur Erklärung. Im Internet ist nichts darüber zu finden - außer der Tatsache, daß es genial ist es aber niemand versteht. Ich dachte, du wüßtest mehr.</p>
+
+
+</section>
+

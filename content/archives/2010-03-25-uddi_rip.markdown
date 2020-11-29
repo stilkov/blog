@@ -1,0 +1,98 @@
+---
+layout: post
+title: "UDDI R.I.P."
+date: "2010-03-25T21:13:00+01:00"
+comments: false
+categories: 
+---
+
+<p>It does no longer come as a surprise to anyone when I criticize the SOAP/WSDL/WS-* variant of Web services, but in the last couple of weeks I've been in a few discussions where one particular piece of technology came up for discussion: UDDI, Universal Description, Dicovery and Integration, an official OASIS standard, <a href="http://www.oasis-open.org/specs/index.php#uddiv3.0.2">at version 3.0.2</a> since February 2005. In the course of these discussions, I still saw a few eyebrows raised when I explained what I consider to be the obvious:</p>
+
+<p>UDDI is dead. As in, you know, <a href="http://www.youtube.com/user/MontyPython?blend=2&amp;ob=1#p/u/33/npjOSLCR2hE">not pinin', passed on, is no more, ceased to be, expired and gone to meet 'is maker</a>.</p>
+
+<p>It started out as a global directory; visions of global e-commerce driven by dynamically emerging business relations, where a small producer of some fancy local specialty becomes listed on a large retailers Web site simply by publishing its services to the global yellow pages, which are operated for the greater good of the world by some of the most important e-commerce companies (IBM, Microsoft, SAP and Ariba, IIRC).</p>
+
+<p>Yeah, right.</p>
+
+<p>In what can only be termed an absolutely stunning example of '<a href="http://en.wikipedia.org/wiki/Spin_(public_relations)">spin</a>', the operators of this global directory, which only ever contained hello world examples and other crap left there by people playing around with it before quickly finding better ways to spend their time, shut it down after it had failed too hard to ignore this fact, and then <a href="http://uddi.microsoft.com/about/FAQshutdown.htm">declared it a success</a>! It was only an experiment to prove how well UDDI works, which was of course always intended for company-internal use only.</p>
+
+<p>So maybe this is the role for UDDI -- support SOA governance within an organization, offering a standardized way to catalog one's metadata, including ways categorize it in multiple dimensions, using a simply, yet extensible data model that is universally accepted, leading to excellent interoperability between vendors ...?</p>
+
+<p>No.</p>
+
+<p>Never mind that UDDI is the most horrible spec ever written - <a href="http://www.oasis-open.org/committees/uddi-spec/doc/spec/v3/uddi-v3.0.2-20041019.htm">420 pages stuffed with entirely useless new terminology</a>, describing what should be a very, very simple CRUD API in as complex a way as possible. Never mind that one could have done the same thing using a simple REST API, and Paul Prescod showed how to do that in 2002 (sadly I'm unable to dig up a link). Ignore the fact that as soon as you use UDDI for something useful, you have to customize it in a non-interoperable way, making the standards argument mute. </p>
+
+<p>More importantly, there is no vendor left who cares about it. The standard isn't being extended, there is no working group, there are no new initiatives, and even if you are a strong believer in SOA governance and associated tools, you'll find out that most of them no longer use UDDI (except as a checkbox feature).</p>
+
+<p>The very simple fact is: You don't have to be a RESTafarian to come to the conclusion that UDDI is, indeed, dead.</p>
+
+<section class="comments">
+
+
+
+<div class="comment" id="comment-2111">
+On <a href="#comment-2111" title="Permalink to this comment">March 26, 2010  1:05 AM</a>, <a href="http://blog.mikelorengo.com" title="http://blog.mikelorengo.com" rel="nofollow">mike lorengo</a>
+said:
+<p>No surprises here. The link you are looking for regard Paul Prescod&#8217;s article can be found here <a href="http://www.xml.com/lpt/a/915" rel="nofollow">http://www.xml.com/lpt/a/915</a></p>
+
+
+<div class="comment" id="comment-2112">
+On <a href="#comment-2112" title="Permalink to this comment">March 26, 2010 11:32 AM</a>, <a href="http://www.1060.org/blogxter/publish/5" title="http://www.1060.org/blogxter/publish/5" rel="nofollow">Steve Loughran</a>
+said:
+<p>Behind the firewall, DNS works quite well, it is a directory and naming service after all. The whole Brokerage thing never made sense to anyone except the people who wanted to be the brokers. Sadly, it turned out that you couldn&#8217;t switch service provider that dynamically anyway.</p>
+
+
+<div class="comment" id="comment-2113">
+On <a href="#comment-2113" title="Permalink to this comment">March 26, 2010  2:36 PM</a>, Anonymous
+said:
+<p>So, is there a viable commercial alternative?</p>
+
+
+<div class="comment" id="comment-2114">
+On <a href="#comment-2114" title="Permalink to this comment">March 26, 2010  8:10 PM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>Did you mean DNS or UDDI?</p>
+
+
+<div class="comment" id="comment-2115">
+On <a href="#comment-2115" title="Permalink to this comment">March 26, 2010  8:17 PM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>@Anonymous: HP Systinet, IBM WSRR, Software AG CentraSite are commercial solutions. I believe Oracle has one via the Sun acquisition, but I&#8217;m not  sure whether anybody uses it. Open source options include MuleSource Galaxy and WSO2 Registry.</p>
+
+
+<div class="comment" id="comment-2116">
+On <a href="#comment-2116" title="Permalink to this comment">March 29, 2010  8:36 AM</a>, Andrew
+said:
+<p>What I don&#8217;t get&#8230; is how so many organizations just blinding buy into stuff like this. My theory is that there&#8217;s a certain complexity level that people just turn a blind eye to how-you&#8217;d-go-about-actually-using-it and invest anyway.</p>
+
+<p>I&#8217;m guessing the thought process is something like this:  With SOA we need to understand who&#8217;s done what so I can reuse it&#8230; We need a Registry&#8230; how do we do that&#8230;. oh UDDI&#8230; how does UDDI work?  what?  what&#8217;s that word mean? uh never mind with the explanation, I&#8217;ll buy 3 of them.   </p>
+
+<p>Meanwhile REST + Linked Data is conceptually simple enough for the lay person to begin to understand the fundamentals, and yet I must constantly defend its use.  </p>
+
+<p>Their thought process: Oh so services are linked just like documents are linked&#8230; okay&#8230; but what if a page goes down&#8230; 403? that sounds bad&#8230;. <br />
+My response:  Uh&#8230; it&#8217;s no different than if your SOAP endpoint went down.
+Their thought process: What&#8217;s a SOAP endpoint?
+AH!</p>
+
+
+<div class="comment" id="comment-2119">
+On <a href="#comment-2119" title="Permalink to this comment">April  9, 2010  9:43 PM</a>, jt
+said:
+<p>I love it.  Thanks.  Couldn&#8217;t agree more.  A solution looking for a problem.  Especially like the this quote, &#8220;Ignore the fact that as soon as you use UDDI for something useful, you have to customize it in a non-interoperable way, making the standards argument mute.&#8221;</p>
+
+
+<div class="comment" id="comment-2161">
+On <a href="#comment-2161" title="Permalink to this comment">July 13, 2010 11:12 AM</a>, <a href="http://de-leusse.blogspot.com/" title="http://de-leusse.blogspot.com/" rel="nofollow">Pierre</a>
+said:
+<p>Hey there,</p>
+
+<p>Some might be interested to learn about the &#8220;SOA Repository Artifact Model &amp; Protocol (S-RAMP)&#8221; <a href="http://s-ramp.org/" rel="nofollow">http://s-ramp.org/</a></p>
+
+<p>It&#8217;s designed in a much simpler way than UDDI&#8230;I still have to use it so I cannot say more unfortunately.</p>
+
+<p>All the best,
+Pierre</p>
+
+
+</section>
+

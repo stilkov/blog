@@ -1,0 +1,155 @@
+---
+layout: post
+title: "What's wrong with JavaScript?"
+date: "2006-02-27T19:37:00+01:00"
+comments: false
+categories: 
+---
+
+<p>Reading Jon Udell&#8217;s <a href="http://www.infoworld.com/article/06/02/22/75452_09OPstrategic_1.html">excellent post</a> on languages and libraries, I wonder how we ended up with widespread support for a standardized programming language in the browser that (almost) nobody is using on the server side? I never really invested time in really learning it, but the little I know about it doesn&#8217;t suggest any reason why it should not be comparable to Ruby or Python. It&#8217;s highly dynamic, it <a href="http://www.mozilla.org/rhino/">runs on the JVM</a> and <a href="http://www.gotdotnet.com/team/jscript/">the .NET platform</a>, it&#8217;s got <a href="http://www.ecma-international.org/publications/standards/Ecma-357.htm">extremely cool support for XML programming</a> &#8230; what am I missing?</p>
+
+<p><em>Update</em>: Fascinating follow-up from IONA&#8217;s <a href="http://www.iona.com/blogs/vinoski/archives/000268.html">Steve Vinoski</a>:</p>
+
+<blockquote>
+<p>Open source middleware projects like Celtix and Tuscany are getting Javascript support. Adding such support to Celtix is what I&#8217;m personally working on at the moment, in fact.</p>
+</blockquote>
+
+<section class="comments">
+
+<div class="comment" id="comment-802">
+On <a href="#comment-802" title="Permalink to this comment">February 27, 2006 10:46 PM</a>, Brandon Corfman
+said:
+<p>Type &#8220;JavaScript sucks&#8221; into Google, and you&#8217;ll get some reasons why it&#8217;s not popular.</p>
+
+
+<div class="comment" id="comment-803">
+On <a href="#comment-803" title="Permalink to this comment">February 28, 2006 12:10 AM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>Few of them seem to be related to the language, most of them are related to the browser, their implementation, environment issues such as debugging, etc. Strangely, the Ajax wave embraces JavaScript, including all those quirks, while on the server side &#8212; where everything could, in theory, be better &#8212; it simply does not seem to exist.</p>
+
+
+<div class="comment" id="comment-804">
+On <a href="#comment-804" title="Permalink to this comment">February 28, 2006 11:33 AM</a>, <a href="http://bannkreis.de" title="http://bannkreis.de" rel="nofollow">Oliver Weise</a>
+said:
+<p>As you know we use Rhino, the JavaScript engine for Java once built by Mozilla, as server side scripting language in our CMS product Webgate Anywhere. While I still think it is a cool platform for &#8220;traditional&#8221; scripting tasks I also think it is surely no language to build larger object-oriented stuff with it. The prototypical object orientation feels only good while you keep your object library small. Otherwise it is an organizational nightmare. Also the variable scope rules of JavaScript are somewhat counter intuitive, at least to me. Besides that, JavaScript/Rhino offers many things that the other scripting languages &#8220;of the rage&#8221; are praised for, like integrated XML support, closures and the like. Networking support is somewhat missing in the spec. It surely is a clever little language, but - like I read somewhere else - it is always obvious that it was invented and implemented over a long weekend. But hell, since I do not know any other scripting language that close, maybe they are all like that :-)</p>
+
+
+<div class="comment" id="comment-805">
+On <a href="#comment-805" title="Permalink to this comment">March  1, 2006  4:44 AM</a>, <a href="http://www.redmountainsw.com/wordpress" title="http://www.redmountainsw.com/wordpress" rel="nofollow">Chui Tey</a>
+said:
+<p>I have argued that Javascript is the poor cousin of dynamic languages. </p>
+
+<p>It&#8217;s principal failure is because most common distribution of Javascript (in Browsers and in Windows Scripting) do not provide any way to import modules. Because of this, Javascript development tend to be ad hoc rather than library-based.</p>
+
+
+<div class="comment" id="comment-806">
+On <a href="#comment-806" title="Permalink to this comment">March  1, 2006  7:24 AM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>Oliver, can you elaborate on the maintenance nightmare thing? What is it that makes it more likely to build bad code in JavaScript than in, say Java? Is it the lack of module support Chui Tey mentions (although I suspect that&#8217;s not a problem for Rhino)?</p>
+
+
+<div class="comment" id="comment-807">
+On <a href="#comment-807" title="Permalink to this comment">March  1, 2006  2:38 PM</a>, <a href="http://bannkreis.de" title="http://bannkreis.de" rel="nofollow">Oliver Weise</a>
+said:
+<p>Defining object types in javascript is a rather &#8220;loosely handled&#8221; thing. Object type definitions just consist of a bunch of functions that, besides the functional code using a &#8220;this&#8221;-object, have no special indication that they form an object type. One function is the constructor. Besides normal initialisation tasks it is responsible for setting those functions, that shall become methods, as properties on the newly created object (as functions are only objects just like anything else in JavaScript).</p>
+
+<p>But again, there is no way to tell the intended usage from the definition syntax. Those functions could all just be simple flat procedures to call directly, or they could be contructor and methods of an object. Noone would keep you from calling object methods just as functions without an object, besides that the code most likely wouldn&#8217;t work. Noone would keep you from using the wrong function as a constructor.</p>
+
+<p>This, some possible variants in how to define method functions in and outside the constructor (where each developer may use her own flavor, making object definition even more messy), the lack of method scopes and the lack of any java-package-like organisational structure makes it IMHO quite easy to mess up code for large object libraries.</p>
+
+<p>As for the lack of module support: This is indeed no problem in rhino since it can use any java library in the classpath without need for any interfacing.</p>
+
+
+<div class="comment" id="comment-808">
+On <a href="#comment-808" title="Permalink to this comment">March  1, 2006 10:06 PM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>Thanks Oliver, that&#8217;s helpful. And it does indeed sound extremely messy :-)</p>
+
+
+<div class="comment" id="comment-809">
+On <a href="#comment-809" title="Permalink to this comment">March  2, 2006  8:08 PM</a>, DougHolton
+said:
+<p>See for example www.processing.org for a cool application of javascript.</p>
+
+
+<div class="comment" id="comment-810">
+On <a href="#comment-810" title="Permalink to this comment">March  6, 2006  3:25 AM</a>, Jon Perez
+said:
+<p>Errr&#8230;.</p>
+
+<p>Javascript as a server-side scripting language was one of the VERY FIRST ideas they had.</p>
+
+<p>It had its day and is now passe.  It used to be the tool of choice many years ago when Netscape&#8217;s web server was still enjoying mindshare.  It&#8217;s also still supported by IIS up to today (server-side Jscript).</p>
+
+<p>Overall, the Javascript server-side environment is inferior (e.g. neglected, impoverished) to what is provided by environments like Python, PHP, Tcl, Perl, etc&#8230;</p>
+
+
+<div class="comment" id="comment-811">
+On <a href="#comment-811" title="Permalink to this comment">March  6, 2006  7:55 AM</a>, <a href="/en/staff/st/">Stefan Tilkov</a>
+said:
+<p>I&#8217;m not suggesting JavaScript on the server side would be a new idea &#8212; I just wondered why it never really caught on.</p>
+
+
+<div class="comment" id="comment-812">
+On <a href="#comment-812" title="Permalink to this comment">March 11, 2006 11:53 AM</a>, Chui
+said:
+<p>Another point ought considering is that not many people grok prototype-based languages the way they understand OOP. </p>
+
+<p>The prototype approach is simply not taught or covered as comprehensively. This is why we see so many attempts at reproducing OO in Javascript. I also believe prototype-based languages suffer from the inherent problem of combinatorial complexity. Since an object cannot be described by a &#8220;class&#8221;, it can get awfully difficult to figure out what an object is capable of.</p>
+
+<p>Although JavaScript has introspection capabilities, they are quite weak compared to a language like Python. One has to dir() through an object to find all it&#8217;s attributes. Given that javascript functions do not have documentation strings, all one gets is </p>
+
+<blockquote>
+<p>myobject.model
+Anonymous function at @ff145</p>
+</blockquote>
+
+
+<div class="comment" id="comment-813">
+On <a href="#comment-813" title="Permalink to this comment">March 22, 2006  5:55 AM</a>, <a href="http://www.markkawakami.com" title="http://www.markkawakami.com" rel="nofollow">Mark Kawakami</a>
+said:
+<p>You know, lately I&#8217;ve been wondering exactly the same thing. It seems to me there are a couple of big benefits you could gain. The first thing you&#8217;d gain is a DOM-aware language. This is huge because you could manipulate portions of the page using DOM methods rather than constantly outputting text directly to the output. Which would be fantastic as any code generated using the DOM would, by its very nature, be standards compliant. You&#8217;d never have to remember to encode your ampersands in URls or whatever. Developers in other languages frequently have to code around how difficult it is to modify a portion of the document that has already been processed. With DOM methods, you have access to the entire document all the time, so modifying code that has already been generated is just as easy as the original generation.</p>
+
+<p>And because you&#8217;re using DOM methods, the code that generates your document on the server side can be the same code that generates it on the client side in AJAX apps. This is a huge productivity gain, you can forget about having to write two different functions in two different languages that use two wildly different methods to generate the exact same output. A well thought out implementation would even allow exposing server side objects on the client side in a very transparent manner.</p>
+
+<p>And if the implementation were especially clever, database access could be significantly easier. Specifically, data returned from the database could be automatically cast to an anonymous object, which is obviously expressible using object-literal notation. From there, it&#8217;s easy to imagine client-side XMLHttpRequest calls being little more than direct database queries, and the code that handles the response on the client side exactly the same as the code on the server side.</p>
+
+<p>The comments I&#8217;ve read here and other suggest that Server-Side Javascript has had its day in the sun. Yes it has, and it sucked. But let&#8217;s be honest here, the language itself, as well as the level of expertise in the language, has evolved dramatically from SSJS&#8217;s heyday. I think it&#8217;s time for a second pass at it.</p>
+
+
+<div class="comment" id="comment-814">
+On <a href="#comment-814" title="Permalink to this comment">May 24, 2006 10:13 AM</a>, <a href="http://mocha.ch/" title="http://mocha.ch/" rel="nofollow">Chris Zumbrunn</a>
+said:
+<p>We just released an RC1 of the new version of our open source project, the Helma Javascript Web Application Framework. If you want to explore the use of Javascript on the <em>server-side</em> for a change, this is an ideal time :-)</p>
+
+<p>Helma is an open source web application framework for fast and efficient scripting and serving of your websites and Internet applications. Our goal is exactly what Mark described, taking that second pass at Javascript on the server-side by beginning to bridge the server- and client-side like you wouldn&#8217;t be able to do it when not using the same language &#8220;on both sides of the environment&#8221;.</p>
+
+<p>Helma is written in Java and employs Javascript for its server-side scripting environment, removing the need for compilation cycles and reducing development costs while giving you instant access to leverage the whole wealth of Java libraries out there.</p>
+
+<p>Helma pioneered the simple and codeless mapping of application objects to database tables, which has only recently come into vogue with other web frameworks. In addition, an embedded object-oriented database performs automatic data persistence of unmapped objects.</p>
+
+<p>New features in Helma 1.5 include a flexible new way to load multiple code repositories, many low-level improvements and features such as updateable collections, additional web-based development tools that can run inside your applications and complement existing external debugging and database management tools, and a library of Javascript prototypes and methods that extend the Java based core of Helma.</p>
+
+<p>You can download it here and take it for a spin:</p>
+
+<p><a href="http://helma.org/download/" rel="nofollow" /><a href="http://helma.org/download/" rel="nofollow">http://helma.org/download/</a></p>
+
+<p>We have also put together a welcome application that will provide you with a quick introduction:</p>
+
+<p><a href="http://welcome.mocha.ch/" rel="nofollow" /><a href="http://welcome.mocha.ch/" rel="nofollow">http://welcome.mocha.ch/</a> </p>
+
+<p>This web app is also what will run on your local system after you download and install Helma 1.5.</p>
+
+
+<div class="comment" id="comment-815">
+On <a href="#comment-815" title="Permalink to this comment">February 26, 2007  4:48 AM</a>, <a href="http://blog.netbeans.jp/roller/page/fchoong" title="http://blog.netbeans.jp/roller/page/fchoong" rel="nofollow">David Fu</a>
+said:
+<p>Hi Stefan,</p>
+
+<p>Actually, server-side javascript(SSJS) is pretty easy to use. If Netscape had not been bought out by AOL, javascript might have been a dominant language on the server-side. Anyway, it won&#8217;t be too long before ordinary bloggers and web users want their own servers and SSJS becomes more prevalent. By the way, Helma is more like Rails. If you like php-style server-side javascript, firecat maybe a better fit:</p>
+
+<p><a href="http://firecat.nihonsoft.org" rel="nofollow" /><a href="http://firecat.nihonsoft.org" rel="nofollow">http://firecat.nihonsoft.org</a></p>
+
+
+</section>
+

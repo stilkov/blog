@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Comments"
+date: "2004-09-04T14:04:00+01:00"
+comments: false
+categories: 
+---
+
+<p>In case you tried to leave me a comment and got a strange error message, you might want to try again &#8212; I had upgraded to <a href="http://www.movabletype.org/news/2004/08/movable_type_31_launched.shtml">MT 3.1</a> recently, and somehow leftover bits from a previous <a href="http://www.jayallen.org/projects/mt-blacklist/">MT-Blacklist</a> installation caused problems. Everything should be working again now &#8230;</p>
+
+

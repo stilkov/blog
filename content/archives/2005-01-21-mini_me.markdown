@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Mini Me"
+date: "2005-01-21T21:41:00+01:00"
+comments: false
+categories: 
+---
+
+<p>Robert X. Cringely takes <a href="http://www.pbs.org/cringely/pulpit/pulpit20050120.html">a wild guess</a> at what the Mac mini is <em>really</em> about.</p>
+
+

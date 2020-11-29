@@ -1,0 +1,11 @@
+---
+layout: post
+title: "SOAP MTOM"
+date: "2003-07-22T21:09:00+01:00"
+comments: false
+categories: 
+---
+
+<p>There is a new spec, or to be more exact, a new <em>working draft</em> of a spec available at <a href="http://w3c.org">W3C</a>: <a href="http://www.w3.org/TR/2003/WD-soap12-mtom-20030721/" title="SOAP Message Transmission Optimization Mechanism">The SOAP Message Transmission Optimization Mechanism</a>.<br />
+It must have got something to do with serializing SOAP messages in a more efficient way, but either I'm too dumb or it's too late for me to make much sense of it. There is also a slight probability that it simply is a badly written spec, but who am I to say ...</p>
+
