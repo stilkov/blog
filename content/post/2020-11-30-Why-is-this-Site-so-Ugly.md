@@ -9,7 +9,7 @@ Of course even the 20 or so lines of inline CSS (yes indeed) are stolen from the
 
 Of course, things suffer on other pages, e.g. the home page itself. But I don’t really think that’s a problem either. Who would end up visiting that anyway? Chances are you arrived here because you followed a link from some social media post, or because something turned up in a Google search.
 
-I also tried to opt for the (to me) simplest possible setup with regards to authoring posts and maintaing this site. So I decided to host this on Netlify, based on a Github repo containing a very minimalistic Hugo setup. Create a post, add, commit, push, done.
+I also tried to opt for the (to me) simplest possible setup with regards to authoring posts and maintaing this site. So I decided to host this on Netlify, based on a Github repo containing a very minimalistic Hugo setup. Create a post, add, commit, push, done. It’s simple and serves its purpose, but I’m not _completely_ happy with it: For my taste, Netlify is way too slow – probably unnoticable for many sites, but in this particular case, there is really nothing to serve, and the fact that that occasionally takes more than a second is pretty ridiculous. But I’ll deal with that another time.
 
 My goal was to reduce friction, and make sure I have zero excuses left for not writing. With this and the last post out of the way, I think I may have to admit I have reached that goal.
 
