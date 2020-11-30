@@ -10,26 +10,9 @@ permalinks:
   note: "/note/:year/:month/:day/:slug/"
   post: "/post/:year/:month/:day/:slug/"
 
-menu:
-  main:
-    - name: Home
-      url: ""
-      weight: 1
-    - name: About
-      url: "about/"
-      weight: 2
-    - name: Categories
-      url: "categories/"
-      weight: 3
-    - name: Tags
-      url: "tags/"
-      weight: 4
-    - name: Subscribe
-      url: "index.xml"
-
 params:
   description: "Stefan Tilkov"
-  footer: "&copy; [Stefan Tilkov](https://tilkov.com) 2020 | [Twitter](https://twitter.com/stilkov)"
+  footer: "&copy; [Stefan Tilkov](https://www.tilkov.com/about) 2020 | [Home](/) | [RSS](/index.xml) | [Twitter](https://twitter.com/stilkov)"
 
 markup:
   goldmark:

@@ -4,16 +4,32 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ .Title }} | {{ .Site.Title }}</title>
-    <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}" />
-    <link rel="stylesheet" href="{{ "/css/fonts.css" | relURL }}" />
+    <style>
+      body {
+        max-width: 650px;
+        margin: 40px auto;
+        padding:0 10px;
+        font:18px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        color:#444
+      }
+
+      h1,h2,h3 {
+        line-height:1.2
+      }
+
+      @media (prefers-color-scheme: dark) {
+        body {
+	  color:white;
+	  background:#444
+        }
+        a:link {
+	  color:#5bf
+        }
+        a:visited {
+	  color:#ccf
+        }
+      }
+   </style>
   </head>
 
   <body>
-    <nav>
-    <ul class="menu">
-      {{ range .Site.Menus.main }}
-      <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-      {{ end }}
-    </ul>
-    <hr/>
-    </nav>
