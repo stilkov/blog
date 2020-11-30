@@ -11,3 +11,5 @@ Of course, things suffer on other pages, e.g. the home page itself. But I don’
 
 I also tried to opt for the (to me) simplest possible setup with regards to authoring posts and maintaing this site. So I decided to host this on Netlify, based on a Github repo containing a very minimalistic Hugo setup. Create a post, add, commit, push, done.
 
+My goal was to reduce friction, and make sure I have zero excuses left for not writing. With this and the last post out of the way, I think I may have to admit I have reached that goal.
+
