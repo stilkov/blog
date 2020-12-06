@@ -1,6 +1,6 @@
 ---
 title: 'Wie man die öffentliche IT rettet'
-date: '2012-12-06'
+date: '2020-12-06'
 ---
 
 Die meisten IT-Fuzzis sind gar nicht so dämlich. Es gibt genügend Leute, die gute Ideen haben und sinnvoll dazu beitragen könnten, Dinge besser zu machen. Zum Beispiel die Corona-Infektionsnachverfolgung, über die ich gerade [diese Meldung](https://www.welt.de/politik/deutschland/article221852030/Corona-Nachverfolgung-Bund-verweigert-Robert-Koch-Institut-IT-Kraefte.html) gelesen habe, die mich schier in den Wahnsinn treibt (sorry für das Medium):
