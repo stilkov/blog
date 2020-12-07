@@ -7,7 +7,7 @@
 {{ .Content }}
 
 <ul>
-  {{ $pages := .Pages }}
+  {{ $pages := .Pages.ByDate }}
   {{ if .IsHome }}{{ $pages = .Site.RegularPages }}{{ end }}
   {{ range (where $pages "Section" "!=" "") }}
   <li>
