@@ -1,6 +1,7 @@
 ---
 title: 'The Impossible Conference'
 date: '2020-12-10'
+lang: 'en'
 ---
 
 I had tons of fun yesterday at INNOQ’s first [Technology Day](https://technologyday.innoq.com), our very own litte online conference. The idea was first discussed exactly two months ago, when my co-worker Martina approached me and suggested we might do something for our customers (and for our marketing) by assembling some of the awesome people we have on board, asking them to present something they’d possibly presented this year elsewhere, or wanted to present for the first time, and adding some interesting interactive formats that highlight how we work these days.

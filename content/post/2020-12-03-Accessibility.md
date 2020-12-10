@@ -1,6 +1,7 @@
 ---
 title: 'Accessibility'
 date: '2020-12-03'
+lang: 'en'
 ---
 
 A long time ago, I recorded a podcast episode with [Artur Ortega](http://www.heise.de/developer/artikel/Episode-38-Barrierefreiheit-1780121.html) (in German, but we’ve actually got [another one coming up in English](https://www.case-podcast.org), although not about this topic; also, Artur is active on Twitter as [@DesignedByBlind](https://mobile.twitter.com/DesignedByBlind) and worth following, just saying.) We talked about accessibility, and the discussion we had before we actually started recording really opened my mind to a world I had only known extremely superficially. What was especially mind-blowing to me was that Germany, my own country, turned out to be rather not at all the model environment I had expected it to be. In fact, when you look a little more closely, Germany is actually a disaster. For example, it’s still perfectly acceptable for schools, public buildings, or cultural venues to not be accessible to wheelchair users. There is still no law mandating private web sites are accessible (although there is one for the public sector, but it’s still pretty new).

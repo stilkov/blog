@@ -1,6 +1,7 @@
 ---
 title: 'Speaking up'
 date: '2020-12-01'
+lang: 'en'
 ---
 
 Here’s one of the things I’ve started to believe in the last few years: Society has been very good to us, and we owe it to society to become more active to change it for the better (or prevent it from becoming worse). By _us_, I refer to us tech people – developers, software architects, anyone remotely connected to the highly successful “digitalization” industry. Sure, we used to be the unhappy nerds noone wanted to party with, and maybe at some point in time, self-pity was justified. But those days are long gone. These days, people in this industry make something between a comfortable and a ridiculous amount of money, and often have the luxury of being able to take their pick from multiple job offers. We’re respected, possibly envied, and not only financially: We’re also the ones who know how most of the new-fangled stuff works, at least to a larger degree than most “normal” people; we’re never the ones who are threatened by new technological developments – we’re the ones helping to create the thread. It’s nice to be in that position, and I enjoy it quite a bit. (Not threatening people; you know what I mean.)

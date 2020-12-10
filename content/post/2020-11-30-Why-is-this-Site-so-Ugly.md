@@ -1,6 +1,7 @@
 ---
 title: 'Why is this Site so Ugly?'
 date: '2020-11-30'
+lang: 'en'
 ---
 
 You might think the answer to this question is obvious: Because I don’t know CSS well enough to make it beautiful. And while technically, that’s 100% correct, there’s also a secondary reason: I wanted to reduce the effort to maintain things around here to an absolute minimum. I just wanted things to be clearly readable, and I think the current “design” serves that purpose quite well. 

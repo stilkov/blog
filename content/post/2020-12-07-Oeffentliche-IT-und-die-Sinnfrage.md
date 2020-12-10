@@ -1,6 +1,7 @@
 ---
 title: 'Öffentliche IT und die Sinnfrage'
 date: '2020-12-07'
+lang: 'de'
 ---
 
 In meinem Post zum Thema [IT bei der öffentlichen Hand](/post/2020/12/06/wie-man-die-öffentliche-it-rettet/) habe ich mich auf das Thema Gehalt konzentriert. Daraus könnte man schließen, dass ich das für das Wichtigste halte – aber das tue ich keineswegs. Es ist ein notwendiger, aber nicht hinreichender Bestandteil eines Gesamtpakets, und zwar der, der aus meiner Sicht im öffentlichen Dienst am schwierigsten zu ändern ist – deswegen habe ich zunächst dazu etwas geschrieben.
